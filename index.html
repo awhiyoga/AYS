@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWHI Yoga & Wellbeing — Wellington</title>
+  <meta name="description" content="AWHI Yoga & Wellbeing is Wellington's home for transformative yoga, pilates, meditation and community. Book a class today." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --ngahere:   #1C3829;   /* deep forest green */
+      --hua:       #F4EFE4;   /* warm cream */
+      --repo:      #C05C2C;   /* terracotta */
+      --pango:     #242424;   /* charcoal */
+      --kawakawa:  #7A9E7E;   /* sage */
+      --kowhai:    #D4A553;   /* warm gold */
+      --dusk:      #C4896A;   /* warm blush */
+
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--hua);
+      color: var(--pango);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── UTILITIES ──────────────────────────────────────── */
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1.5px;
+      background: var(--kawakawa);
+    }
+
+    .display-heading {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .te-reo { font-family: var(--font-display); font-style: italic; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled {
+      background: var(--ngahere);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: var(--hua);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-book {
+      background: var(--repo);
+      color: var(--hua) !important;
+      padding: 0.6rem 1.4rem;
+      font-weight: 700 !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 1 !important;
+      transition: background 0.25s !important;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--hua);
+    }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709289830282-8YRIDQNMJFH0CS8INE4E/Communitea.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.05);
+      transition: transform 8s ease-out;
+    }
+    .hero-bg.loaded { transform: scale(1); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(28, 56, 41, 0.82) 0%,
+        rgba(28, 56, 41, 0.55) 60%,
+        rgba(28, 56, 41, 0.3) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--hua);
+      max-width: 720px;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--kawakawa);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      color: var(--hua);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--kawakawa);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      line-height: 1.6;
+      opacity: 0.9;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--hua);
+      opacity: 0.6;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 1.5px;
+      height: 3rem;
+      background: var(--hua);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(0.7); }
+    }
+
+    /* ─── MEANING STRIP ──────────────────────────────────── */
+    .meaning-strip {
+      background: var(--ngahere);
+      padding: 1.75rem 0;
+      text-align: center;
+    }
+    .meaning-strip p {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--hua);
+      letter-spacing: 0.02em;
+    }
+    .meaning-strip strong {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--kawakawa);
+    }
+
+    /* ─── INTRO ──────────────────────────────────────────── */
+    .intro {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      background: var(--hua);
+    }
+    .intro .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .intro-text {}
+    .intro-text h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1.5rem;
+      color: var(--ngahere);
+    }
+    .intro-text p {
+      color: #4a4a4a;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .intro-text .cta-row { margin-top: 2rem; }
+    .intro-image {
+      position: relative;
+    }
+    .intro-image img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .intro-image-accent {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 180px;
+      height: 180px;
+      background: var(--repo);
+      z-index: -1;
+    }
+
+    /* ─── PILLARS ────────────────────────────────────────── */
+    .pillars {
+      background: var(--ngahere);
+      padding: clamp(4rem, 8vw, 8rem) 0;
+    }
+    .pillars-header {
+      text-align: center;
+      margin-bottom: clamp(3rem, 5vw, 5rem);
+    }
+    .pillars-header .section-label { justify-content: center; color: var(--kawakawa); }
+    .pillars-header .section-label::before { background: var(--kawakawa); }
+    .pillars-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--hua);
+      margin-bottom: 1rem;
+    }
+    .pillars-header p {
+      color: rgba(244, 239, 228, 0.75);
+      max-width: 540px;
+      margin-inline: auto;
+      font-size: 1.05rem;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5px;
+    }
+    .pillar {
+      background: rgba(244, 239, 228, 0.05);
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(244, 239, 228, 0.1);
+      transition: background 0.3s;
+    }
+    .pillar:hover { background: rgba(244, 239, 228, 0.1); }
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(122, 158, 126, 0.3);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.25rem;
+    }
+    .pillar-maori {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--kawakawa);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .pillar p {
+      color: rgba(244, 239, 228, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* ─── CLASSES ────────────────────────────────────────── */
+    .classes {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 8rem) 0;
+    }
+    .classes-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .classes-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--ngahere);
+    }
+    .classes-scroll-hint {
+      font-size: 0.8rem;
+      color: var(--kawakawa);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .class-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--ngahere);
+      cursor: pointer;
+    }
+    .class-card-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      opacity: 0.7;
+      transition: transform 0.5s ease, opacity 0.3s;
+    }
+    .class-card:hover .class-card-img { transform: scale(1.05); opacity: 0.5; }
+    .class-card-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(transparent, rgba(28,56,41,0.95));
+    }
+    .class-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.4rem;
+    }
+    .class-card p {
+      font-size: 0.9rem;
+      color: rgba(244, 239, 228, 0.75);
+      line-height: 1.5;
+    }
+    .class-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .class-tag.heated { background: var(--repo); color: var(--hua); }
+    .class-tag.gentle { background: var(--kawakawa); color: var(--hua); }
+    .class-tag.restorative { background: var(--kowhai); color: var(--ngahere); }
+    .classes-footer { text-align: center; }
+
+    /* ─── STUDIO ─────────────────────────────────────────── */
+    .studio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .studio-images {
+      position: relative;
+      min-height: 600px;
+    }
+    .studio-img-main {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .studio-img-inset {
+      position: absolute;
+      bottom: 2rem;
+      right: -3rem;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+      border: 4px solid var(--hua);
+    }
+    .studio-content {
+      background: var(--ngahere);
+      padding: clamp(3rem, 6vw, 6rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .studio-content .section-label { color: var(--kawakawa); }
+    .studio-content .section-label::before { background: var(--kawakawa); }
+    .studio-content h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      color: var(--hua);
+      margin-bottom: 1.25rem;
+    }
+    .studio-content p {
+      color: rgba(244, 239, 228, 0.8);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .studio-amenities {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 1.75rem 0;
+    }
+    .amenity {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: rgba(244, 239, 228, 0.8);
+      font-size: 0.9rem;
+    }
+    .amenity::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--kawakawa);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ─── TRAINING ───────────────────────────────────────── */
+    .training {
+      position: relative;
+      background: var(--repo);
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      overflow: hidden;
+    }
+    .training-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709289837780-24XPTGXO06CAXG30SI1F/Awhi-02.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+    .training .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .training-content .section-label { color: rgba(244, 239, 228, 0.7); }
+    .training-content .section-label::before { background: rgba(244, 239, 228, 0.7); }
+    .training-content h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      color: var(--hua);
+      margin-bottom: 1.25rem;
+    }
+    .training-content p {
+      color: rgba(244, 239, 228, 0.85);
+      line-height: 1.75;
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .training-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .stat {
+      border-left: 2px solid rgba(244, 239, 228, 0.3);
+      padding-left: 1rem;
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--hua);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: rgba(244, 239, 228, 0.7);
+      font-weight: 500;
+    }
+    .training-programs { display: flex; flex-direction: column; gap: 1rem; }
+    .program-card {
+      background: rgba(244, 239, 228, 0.1);
+      border: 1px solid rgba(244, 239, 228, 0.2);
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+    .program-card:hover { background: rgba(244, 239, 228, 0.2); }
+    .program-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--hua);
+      margin-bottom: 0.25rem;
+    }
+    .program-card p {
+      font-size: 0.9rem;
+      color: rgba(244, 239, 228, 0.7);
+      margin: 0;
+    }
+    .program-arrow {
+      float: right;
+      color: rgba(244, 239, 228, 0.5);
+      margin-left: 1rem;
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────── */
+    .testimonials {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 8rem) 0;
+    }
+    .testimonials-header { text-align: center; margin-bottom: 3.5rem; }
+    .testimonials-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--ngahere);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .testimonial {
+      background: white;
+      padding: 2.5rem;
+      border-bottom: 3px solid var(--kawakawa);
+    }
+    .testimonial-quote {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--kawakawa);
+      opacity: 0.4;
+      margin-bottom: 0.5rem;
+    }
+    .testimonial p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4a4a4a;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ngahere);
+      letter-spacing: 0.05em;
+    }
+    .stars { color: var(--kowhai); font-size: 0.9rem; margin-bottom: 1rem; }
+
+    /* ─── COMMUNITY STRIP ────────────────────────────────── */
+    .community {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 360px;
+    }
+    .community img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.8);
+      transition: filter 0.3s;
+    }
+    .community img:hover { filter: saturate(1.1); }
+
+    /* ─── GIFT VOUCHERS ──────────────────────────────────── */
+    .vouchers {
+      background: var(--ngahere);
+      padding: clamp(4rem, 8vw, 6rem) 0;
+    }
+    .vouchers .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .vouchers-text h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .vouchers-text p {
+      color: rgba(244, 239, 228, 0.75);
+      max-width: 480px;
+      font-size: 1.05rem;
+    }
+
+    /* ─── HOURS STRIP ────────────────────────────────────── */
+    .hours {
+      background: var(--pango);
+      padding: 2rem 0;
+    }
+    .hours .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .hours-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      white-space: nowrap;
+    }
+    .hours-list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .hours-item {
+      font-size: 0.85rem;
+      color: rgba(244, 239, 228, 0.75);
+    }
+    .hours-item strong {
+      color: var(--hua);
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .hours-cta { white-space: nowrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      background: var(--ngahere);
+      padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+      border-top: 1px solid rgba(244, 239, 228, 0.1);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand img { height: 40px; margin-bottom: 1.25rem; }
+    .footer-brand p {
+      color: rgba(244, 239, 228, 0.65);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .footer-socials a {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(244, 239, 228, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(244, 239, 228, 0.7);
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .footer-socials a:hover {
+      background: rgba(244, 239, 228, 0.1);
+      border-color: var(--kawakawa);
+      color: var(--hua);
+    }
+    .footer-col h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a {
+      color: rgba(244, 239, 228, 0.65);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--hua); }
+    .footer-contact p {
+      color: rgba(244, 239, 228, 0.65);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .footer-contact a {
+      color: rgba(244, 239, 228, 0.65);
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom {
+      border-top: 1px solid rgba(244, 239, 228, 0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(244, 239, 228, 0.4);
+    }
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-bottom-links a {
+      font-size: 0.8rem;
+      color: rgba(244, 239, 228, 0.4);
+      transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .classes-grid { grid-template-columns: repeat(2, 1fr); }
+      .studio { grid-template-columns: 1fr; }
+      .studio-images { min-height: 400px; }
+      .studio-img-inset { display: none; }
+      .training .container { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .community { grid-template-columns: repeat(2, 1fr); height: 480px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .intro .container { grid-template-columns: 1fr; }
+      .intro-image-accent { display: none; }
+      .intro-image img { height: 380px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .classes-grid { grid-template-columns: 1fr; }
+      .training-stats { grid-template-columns: repeat(3, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .community { grid-template-columns: repeat(2, 1fr); height: 320px; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .hours .container { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ─── SCROLL ANIMATIONS ──────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png"
+          alt="AWHI Yoga & Wellbeing"
+        />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#studio">Our Studio</a></li>
+        <li><a href="#training">Teacher Training</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://momence.com/m/623375" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Haere mai — Wellington, New Zealand</p>
+        <h1 id="hero-heading">Move.<br>Breathe.<br><em>Belong.</em></h1>
+        <p class="hero-sub">Wellington's home for yoga, pilates, and community wellbeing — rooted in te ao Māori, open to all.</p>
+        <div class="hero-ctas">
+          <a href="https://momence.com/m/623375" class="btn btn-primary" target="_blank" rel="noopener">Book a class</a>
+          <a href="#about" class="btn btn-outline-cream">Our story</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ── MEANING STRIP ──────────────────────────────────── -->
+  <div class="meaning-strip" aria-label="AWHI meaning">
+    <p><strong>AWHI</strong> ~ <span class="te-reo">to embrace, hug, support, cherish</span></p>
+  </div>
+
+  <!-- ── INTRO / ABOUT ──────────────────────────────────── -->
+  <section class="intro" id="about" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="intro-text fade-up">
+        <span class="section-label">Our kōrero</span>
+        <h2 class="display-heading" id="intro-heading">A space where every body is welcome</h2>
+        <p>We believe wellbeing isn't a luxury — it's a right. At AWHI, we've built a studio where genuine connection, mindful movement, and community sit at the heart of everything we do.</p>
+        <p>Guided by <span class="te-reo">Te Whare Tapa Whā</span>, we honour the four dimensions of wellness: body, mind, spirit, and community — because true wellbeing can't exist in isolation.</p>
+        <p>Whatever brings you to the mat, you'll find your place here.</p>
+        <div class="cta-row">
+          <a href="#pillars" class="btn btn-outline-dark">Our philosophy</a>
+        </div>
+      </div>
+      <div class="intro-image fade-up">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647332568-IW3X9OWAF44AXK8EN5YU/Awhi_tea_time-01.jpg"
+          alt="Community gathering at AWHI studio"
+          loading="lazy"
+        />
+        <div class="intro-image-accent" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PILLARS ────────────────────────────────────────── -->
+  <section class="pillars" id="pillars" aria-labelledby="pillars-heading">
+    <div class="container">
+      <div class="pillars-header fade-up">
+        <span class="section-label">Our Kaupapa</span>
+        <h2 class="display-heading" id="pillars-heading">Four pillars of wellbeing</h2>
+        <p>Everything starts with individual wellness. This leads to better relationships, a clearer purpose, and a deeper connection to the world around us.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar fade-up">
+          <div class="pillar-num">01</div>
+          <h3>Body</h3>
+          <span class="pillar-maori">Tinana</span>
+          <p>Through mindful movement we create physical health — building strength, flexibility, and a lasting relationship with our bodies.</p>
+        </div>
+        <div class="pillar fade-up">
+          <div class="pillar-num">02</div>
+          <h3>Mind</h3>
+          <span class="pillar-maori">Hinengaro</span>
+          <p>Through mindfulness practices we develop emotional awareness and the capacity to navigate life with clarity and grace.</p>
+        </div>
+        <div class="pillar fade-up">
+          <div class="pillar-num">03</div>
+          <h3>Spirit</h3>
+          <span class="pillar-maori">Wairua</span>
+          <p>Physical and mental practice opens us to something greater — a sense of connection, love, and purpose that sustains us.</p>
+        </div>
+        <div class="pillar fade-up">
+          <div class="pillar-num">04</div>
+          <h3>Community</h3>
+          <span class="pillar-maori">Whānau</span>
+          <p>We grow together. A supportive environment where collective wellbeing is as important as individual progress. <span class="te-reo">Mauri ora!</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLASSES ────────────────────────────────────────── -->
+  <section class="classes" id="classes" aria-labelledby="classes-heading">
+    <div class="container">
+      <div class="classes-header">
+        <div>
+          <span class="section-label">What we offer</span>
+          <h2 class="display-heading" id="classes-heading">Find your practice</h2>
+        </div>
+        <span class="classes-scroll-hint">All levels welcome</span>
+      </div>
+      <div class="classes-grid">
+        <div class="class-card fade-up">
+          <img class="class-card-img"
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647202762-E3WNV2KQYT6XIU5CTJUK/PowerLiving-17.jpg"
+            alt="Heated Flow yoga class" loading="lazy" />
+          <div class="class-card-body">
+            <span class="class-tag heated">Heated · 32°C</span>
+            <h3>Heated Flow</h3>
+            <p>Our most popular class — a dynamic vinyasa journey through strength and surrender.</p>
+          </div>
+        </div>
+        <div class="class-card fade-up">
+          <img class="class-card-img"
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1680925530145-RL1E6UUZ45Z0QBO89I3S/Awhi-16.jpg"
+            alt="Yin yoga class" loading="lazy" />
+          <div class="class-card-body">
+            <span class="class-tag restorative">Restorative</span>
+            <h3>Yin Yoga</h3>
+            <p>Gentle floor-based practice with long passive holds — deeply nourishing for body and mind.</p>
+          </div>
+        </div>
+        <div class="class-card fade-up">
+          <img class="class-card-img"
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/11952622-a55b-4c8f-8ae8-f56835590314/AwhibyJuliaSabugosa-012.jpg"
+            alt="Pilates class" loading="lazy" />
+          <div class="class-card-body">
+            <span class="class-tag gentle">Mat Pilates</span>
+            <h3>Pilates</h3>
+            <p>Core stability and full-body control — functional strength built from the inside out.</p>
+          </div>
+        </div>
+        <div class="class-card fade-up">
+          <img class="class-card-img"
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647979498-8OCBKC56IA1Y5GARE1DQ/Awhi-27.jpg"
+            alt="Gentle yoga class" loading="lazy" />
+          <div class="class-card-body">
+            <span class="class-tag gentle">Non-Heated</span>
+            <h3>Gentle Flow</h3>
+            <p>Slow, intentional movement incorporating active stretching for mobility and ease.</p>
+          </div>
+        </div>
+        <div class="class-card fade-up">
+          <img class="class-card-img"
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647976001-3MQMD7IXXM4WKPNKE9LY/Awhi-29.jpg"
+            alt="Meditation class" loading="lazy" />
+          <div class="class-card-body">
+            <span class="class-tag restorative">Mindfulness</span>
+            <h3>Guided Meditation</h3>
+            <p>A group practice open to all — find space and clarity in the middle of your week.</p>
+          </div>
+        </div>
+        <div class="class-card fade-up">
+          <img class="class-card-img"
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/c03a78f5-5360-447d-b47a-6373363fb2a8/AwhibyJuliaSabugosa-025.jpg"
+            alt="Prenatal yoga class" loading="lazy" />
+          <div class="class-card-body">
+            <span class="class-tag gentle">Specialist</span>
+            <h3>Prenatal Yoga</h3>
+            <p>Centred on birth physiology, mind-body connection, and functional movement for all stages of pregnancy.</p>
+          </div>
+        </div>
+      </div>
+      <div class="classes-footer">
+        <a href="https://momence.com/m/623375" class="btn btn-primary" target="_blank" rel="noopener">View full timetable</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STUDIO ─────────────────────────────────────────── -->
+  <section class="studio" id="studio" aria-labelledby="studio-heading">
+    <div class="studio-images">
+      <img class="studio-img-main"
+        src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647585755-ZSQVL2R0N0VRQNSK8KL5/PowerLiving-10.jpg"
+        alt="AWHI studio interior" loading="lazy" />
+      <img class="studio-img-inset"
+        src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647413706-T6Q5XFM9CTGMJP82PWAC/IMG_0604.jpg"
+        alt="AWHI community lounge" loading="lazy" />
+    </div>
+    <div class="studio-content">
+      <span class="section-label">Our Whare</span>
+      <h2 class="display-heading" id="studio-heading">More than a studio — a home</h2>
+      <p>Located on Level 2, 15 Johnston Street in Wellington CBD, AWHI is designed to feel like a genuine refuge in the city.</p>
+      <p>Two purpose-built spaces — <span class="te-reo">Whare Oho</span> for our main classes, and <span class="te-reo">Whare Wānanga</span> for intimate sessions and teacher training — plus a community lounge where the kettle is always on.</p>
+      <div class="studio-amenities">
+        <div class="amenity">4 shower rooms</div>
+        <div class="amenity">Herbal tea & filtered water</div>
+        <div class="amenity">Mat & towel hire</div>
+        <div class="amenity">Secure storage</div>
+        <div class="amenity">Community lounge</div>
+        <div class="amenity">Wellington CBD location</div>
+      </div>
+      <a href="#contact" class="btn btn-outline-cream">Find us</a>
+    </div>
+  </section>
+
+  <!-- ── TEACHER TRAINING ───────────────────────────────── -->
+  <section class="training" id="training" aria-labelledby="training-heading">
+    <div class="training-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="training-content fade-up">
+        <span class="section-label">Teacher Training</span>
+        <h2 class="display-heading" id="training-heading">Ready to share what you love?</h2>
+        <p>Our teacher training programmes are designed for practitioners who are ready to go deeper — whether you're beginning your teaching journey or expanding your existing practice.</p>
+        <div class="training-stats">
+          <div class="stat">
+            <div class="stat-num">200</div>
+            <div class="stat-label">Hour Vinyasa YTT</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100</div>
+            <div class="stat-label">Hour Yin Certification</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">50</div>
+            <div class="stat-label">Hour Yin Foundations</div>
+          </div>
+        </div>
+      </div>
+      <div class="training-programs fade-up">
+        <div class="program-card">
+          <h4>200hr Vinyasa Teacher Training <span class="program-arrow">→</span></h4>
+          <p>Our flagship programme. A comprehensive foundation in teaching yoga.</p>
+        </div>
+        <div class="program-card">
+          <h4>Yin Yoga Certification (50/100hr) <span class="program-arrow">→</span></h4>
+          <p>Deepen your yin practice and learn to hold space with confidence.</p>
+        </div>
+        <div class="program-card">
+          <h4>Trauma-Informed Advanced Yin (50hr) <span class="program-arrow">→</span></h4>
+          <p>For teachers who want to work skillfully with sensitive populations.</p>
+        </div>
+        <div class="program-card">
+          <h4>YTT Scholarships <span class="program-arrow">→</span></h4>
+          <p>We believe training should be accessible. Find out about our scholarship programme.</p>
+        </div>
+        <a href="#" class="btn btn-outline-cream" style="margin-top:0.5rem;">Explore all programmes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────── -->
+  <section class="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="testimonials-header fade-up">
+        <span class="section-label" style="justify-content:center;">What people are saying</span>
+        <h2 class="display-heading" id="testimonials-heading">Our community speaks</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial fade-up">
+          <div class="testimonial-quote">"</div>
+          <div class="stars">★★★★★</div>
+          <p>AWHI has become my sanctuary. The teachers are genuinely caring, the studio is beautiful, and I've never felt more welcomed anywhere.</p>
+          <div class="testimonial-author">— Sarah M., member since 2022</div>
+        </div>
+        <div class="testimonial fade-up">
+          <div class="testimonial-quote">"</div>
+          <div class="stars">★★★★★</div>
+          <p>I started as a complete beginner, terrified I'd be out of place. Within a week I felt like I'd found my people. The community here is unlike anything else in Wellington.</p>
+          <div class="testimonial-author">— James T., member since 2023</div>
+        </div>
+        <div class="testimonial fade-up">
+          <div class="testimonial-quote">"</div>
+          <div class="stars">★★★★★</div>
+          <p>The heated flow classes are incredible — challenging but never intimidating. And the herbal tea afterwards is the best way to end any morning.</p>
+          <div class="testimonial-author">— Aroha W., member since 2021</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMMUNITY IMAGE STRIP ─────────────────────────── -->
+  <div class="community" aria-label="AWHI community photos">
+    <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709289837780-24XPTGXO06CAXG30SI1F/Awhi-02.jpg" alt="AWHI yoga class" loading="lazy" />
+    <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647581717-AGRVCJKR5C8VXLRS0ATU/IMG_8770.jpg" alt="AWHI community" loading="lazy" />
+    <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647903650-KBCQGTFMNRS4T1TEVYAQ/Awhi-27.jpg" alt="AWHI studio session" loading="lazy" />
+    <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647892149-YZOQIFKCAYM652J4A1N0/Awhi-29.jpg" alt="AWHI wellbeing" loading="lazy" />
+  </div>
+
+  <!-- ── GIFT VOUCHERS ──────────────────────────────────── -->
+  <section class="vouchers" aria-labelledby="vouchers-heading">
+    <div class="container">
+      <div class="vouchers-text fade-up">
+        <h2 class="display-heading" id="vouchers-heading">Give the gift of <em class="te-reo" style="color:var(--kawakawa);">awhi</em></h2>
+        <p>Vouchers available in any amount — the perfect way to support the wellbeing of someone you love.</p>
+      </div>
+      <a href="https://momence.com/gcc/20264" class="btn btn-primary" target="_blank" rel="noopener">Purchase a voucher</a>
+    </div>
+  </section>
+
+  <!-- ── HOURS STRIP ────────────────────────────────────── -->
+  <div class="hours" id="contact">
+    <div class="container">
+      <span class="hours-label">Studio hours</span>
+      <div class="hours-list">
+        <div class="hours-item"><strong>Mon – Thu</strong>6:30am – 8:00pm</div>
+        <div class="hours-item"><strong>Friday</strong>7:00am – 7:00pm</div>
+        <div class="hours-item"><strong>Saturday</strong>8:00am – 6:00pm</div>
+        <div class="hours-item"><strong>Sunday</strong>10:00am – 6:00pm</div>
+      </div>
+      <div class="hours-cta">
+        <a href="https://maps.google.com/?q=Level+2,+15+Johnston+Street,+Wellington" class="btn btn-outline-cream" target="_blank" rel="noopener" style="font-size:0.8rem;">Get directions →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png"
+            alt="AWHI Yoga & Wellbeing"
+          />
+          <p>Wellington's home for yoga, pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">Ig</a>
+            <a href="#" aria-label="Facebook">Fb</a>
+            <a href="#" aria-label="YouTube">Yt</a>
+            <a href="#" aria-label="LinkedIn">Li</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="#">View timetable</a></li>
+            <li><a href="#">Heated Flow</a></li>
+            <li><a href="#">Yin Yoga</a></li>
+            <li><a href="#">Pilates</a></li>
+            <li><a href="#">Meditation</a></li>
+            <li><a href="#">Prenatal Yoga</a></li>
+            <li><a href="#">Conscious Dance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#">About AWHI</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Teacher Training</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Gift Vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington CBD<br>
+            New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── JAVASCRIPT ─────────────────────────────────────── -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Hero parallax + image load
+    heroBg.classList.add('loaded');
+
+    // Fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Stagger children if grid
+          const children = entry.target.parentElement.querySelectorAll('.fade-up');
+          children.forEach((el, i) => {
+            setTimeout(() => el.classList.add('visible'), i * 100);
+          });
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    document.getElementById('navToggle').addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      const isOpen = links.style.display === 'flex';
+      links.style.display = isOpen ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '80px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'var(--ngahere)';
+      links.style.padding = '1.5rem 2rem';
+      links.style.gap = '1.25rem';
+      if (isOpen) links.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

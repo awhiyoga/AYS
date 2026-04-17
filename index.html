@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AWHI Yoga & Wellbeing — Wellington</title>
-  <meta name="description" content="AWHI Yoga & Wellbeing is Wellington's home for transformative yoga, pilates, meditation and community. Book a class today." />
+  <meta name="description" content="AWHI Yoga & Wellbeing is Wellington's home for yoga, Pilates, meditation and community. Book a class today." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AWHI Yoga & Wellbeing — Wellington" />
+  <meta property="og:description" content="AWHI Yoga & Wellbeing is Wellington's home for yoga, Pilates, meditation and community. Book a class today." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,7 +102,7 @@
       line-height: 1.05;
     }
 
-    .te-reo { font-family: var(--font-display); font-style: italic; }
+    .te-reo { font-family: var(--font-display); }
 
     /* ─── NAVIGATION ─────────────────────────────────────── */
     .nav {
@@ -200,7 +207,7 @@
       font-family: var(--font-display);
       font-style: italic;
       font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--kawakawa);
+      color: var(--hua);
       margin-bottom: 1.25rem;
       letter-spacing: 0.02em;
     }
@@ -253,6 +260,57 @@
       50% { opacity: 1; transform: scaleY(0.7); }
     }
 
+    /* ─── INTRO PASS PROMO ───────────────────────────────── */
+    .intro-pass {
+      background: var(--repo);
+      padding: 3rem 0;
+    }
+    .intro-pass .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .intro-pass-text { flex: 1; min-width: 260px; }
+    .intro-pass-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244,239,228,0.7);
+      margin-bottom: 0.5rem;
+    }
+    .intro-pass-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .intro-pass-desc {
+      color: rgba(244,239,228,0.85);
+      font-size: 1rem;
+      max-width: 480px;
+    }
+    .intro-pass .btn-cream {
+      display: inline-block;
+      background: var(--hua);
+      color: var(--repo);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .intro-pass .btn-cream:hover { background: var(--ngahere); color: var(--hua); }
+
     /* ─── MEANING STRIP ──────────────────────────────────── */
     .meaning-strip {
       background: var(--ngahere);
@@ -261,7 +319,6 @@
     }
     .meaning-strip p {
       font-family: var(--font-display);
-      font-style: italic;
       font-size: clamp(1.1rem, 2.5vw, 1.5rem);
       color: var(--hua);
       letter-spacing: 0.02em;
@@ -359,17 +416,17 @@
     }
     .pillar h3 {
       font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--hua);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--kawakawa);
       margin-bottom: 0.25rem;
     }
     .pillar-maori {
       font-family: var(--font-display);
-      font-style: italic;
-      color: var(--kawakawa);
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      color: var(--hua);
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
       display: block;
     }
     .pillar p {
@@ -533,10 +590,10 @@
     .training-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709289837780-24XPTGXO06CAXG30SI1F/Awhi-02.jpg');
+      background-image: url('images/teacher-training.jpg');
       background-size: cover;
-      background-position: center;
-      opacity: 0.2;
+      background-position: center top;
+      opacity: 0.25;
     }
     .training .container {
       position: relative;
@@ -546,15 +603,15 @@
       gap: 4rem;
       align-items: center;
     }
-    .training-content .section-label { color: rgba(244, 239, 228, 0.7); }
-    .training-content .section-label::before { background: rgba(244, 239, 228, 0.7); }
+    .training-content .section-label { color: var(--hua); }
+    .training-content .section-label::before { background: var(--hua); }
     .training-content h2 {
       font-size: clamp(2.5rem, 5vw, 4.5rem);
       color: var(--hua);
       margin-bottom: 1.25rem;
     }
     .training-content p {
-      color: rgba(244, 239, 228, 0.85);
+      color: var(--hua);
       line-height: 1.75;
       font-size: 1.05rem;
       margin-bottom: 2rem;
@@ -578,7 +635,7 @@
     }
     .stat-label {
       font-size: 0.8rem;
-      color: rgba(244, 239, 228, 0.7);
+      color: var(--hua);
       font-weight: 500;
     }
     .training-programs { display: flex; flex-direction: column; gap: 1rem; }
@@ -598,12 +655,12 @@
     }
     .program-card p {
       font-size: 0.9rem;
-      color: rgba(244, 239, 228, 0.7);
+      color: var(--hua);
       margin: 0;
     }
     .program-arrow {
       float: right;
-      color: rgba(244, 239, 228, 0.5);
+      color: var(--hua);
       margin-left: 1rem;
     }
 
@@ -854,9 +911,32 @@
       opacity: 1;
       transform: translateY(0);
     }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ── NAVIGATION ─────────────────────────────────────── -->
   <nav class="nav" id="nav" aria-label="Main navigation">
@@ -868,12 +948,14 @@
         />
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="#classes">Classes</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
         <li><a href="#studio">Our Studio</a></li>
-        <li><a href="#training">Teacher Training</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="training.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://momence.com/m/623375" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Open menu" id="navToggle">
         <span></span><span></span><span></span>
@@ -881,15 +963,17 @@
     </div>
   </nav>
 
+  <main id="main-content">
+
   <!-- ── HERO ───────────────────────────────────────────── -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
-        <p class="hero-eyebrow">Haere mai — Wellington, New Zealand</p>
+        <p class="hero-eyebrow">Haere mai — Wellington, Aotearoa New Zealand</p>
         <h1 id="hero-heading">Move.<br>Breathe.<br><em>Belong.</em></h1>
-        <p class="hero-sub">Wellington's home for yoga, pilates, and community wellbeing — rooted in te ao Māori, open to all.</p>
+        <p class="hero-sub">Wellington's home for yoga, Pilates, and community wellbeing — rooted in te ao Māori, open to all.</p>
         <div class="hero-ctas">
           <a href="https://momence.com/m/623375" class="btn btn-primary" target="_blank" rel="noopener">Book a class</a>
           <a href="#about" class="btn btn-outline-cream">Our story</a>
@@ -904,14 +988,26 @@
     <p><strong>AWHI</strong> ~ <span class="te-reo">to embrace, hug, support, cherish</span></p>
   </div>
 
+  <!-- ── 30 DAY INTRO PASS ─────────────────────────────── -->
+  <div class="intro-pass">
+    <div class="container">
+      <div class="intro-pass-text">
+        <p class="intro-pass-label">New to AWHI?</p>
+        <h2 class="intro-pass-heading">30 Day Intro Pass</h2>
+        <p class="intro-pass-desc">Unlimited classes for 30 days — the perfect way to explore everything AWHI has to offer and find your practice.</p>
+      </div>
+      <a href="https://momence.com/m/623375" class="btn-cream" target="_blank" rel="noopener">Get started</a>
+    </div>
+  </div>
+
   <!-- ── INTRO / ABOUT ──────────────────────────────────── -->
   <section class="intro" id="about" aria-labelledby="intro-heading">
     <div class="container">
       <div class="intro-text fade-up">
         <span class="section-label">Our kōrero</span>
         <h2 class="display-heading" id="intro-heading">A space where every body is welcome</h2>
-        <p>We believe wellbeing isn't a luxury — it's a right. At AWHI, we've built a studio where genuine connection, mindful movement, and community sit at the heart of everything we do.</p>
-        <p>Guided by <span class="te-reo">Te Whare Tapa Whā</span>, we honour the four dimensions of wellness: body, mind, spirit, and community — because true wellbeing can't exist in isolation.</p>
+        <p>At AWHI, we've built a studio where genuine connection, mindful movement, and community sit at the heart of everything we do.</p>
+        <p>Guided by Te Whare Tapa Whā, we honour the four dimensions of wellness: body, mind, spirit, and community a holistic approach to wellbeing.</p>
         <p>Whatever brings you to the mat, you'll find your place here.</p>
         <div class="cta-row">
           <a href="#pillars" class="btn btn-outline-dark">Our philosophy</a>
@@ -919,7 +1015,7 @@
       </div>
       <div class="intro-image fade-up">
         <img
-          src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647332568-IW3X9OWAF44AXK8EN5YU/Awhi_tea_time-01.jpg"
+          src="Images/Awhi_tea_time-01.jpg"
           alt="Community gathering at AWHI studio"
           loading="lazy"
         />
@@ -939,29 +1035,30 @@
       <div class="pillars-grid">
         <div class="pillar fade-up">
           <div class="pillar-num">01</div>
-          <h3>Body</h3>
           <span class="pillar-maori">Tinana</span>
+          <h3>Body</h3>
           <p>Through mindful movement we create physical health — building strength, flexibility, and a lasting relationship with our bodies.</p>
         </div>
         <div class="pillar fade-up">
           <div class="pillar-num">02</div>
-          <h3>Mind</h3>
           <span class="pillar-maori">Hinengaro</span>
+          <h3>Mind</h3>
           <p>Through mindfulness practices we develop emotional awareness and the capacity to navigate life with clarity and grace.</p>
         </div>
         <div class="pillar fade-up">
           <div class="pillar-num">03</div>
-          <h3>Spirit</h3>
           <span class="pillar-maori">Wairua</span>
-          <p>Physical and mental practice opens us to something greater — a sense of connection, love, and purpose that sustains us.</p>
+          <h3>Spirit</h3>
+          <p>Physical and mental practice can connect us to something beyond the individual — a sense of purpose and belonging.</p>
         </div>
         <div class="pillar fade-up">
           <div class="pillar-num">04</div>
-          <h3>Community</h3>
           <span class="pillar-maori">Whānau</span>
-          <p>We grow together. A supportive environment where collective wellbeing is as important as individual progress. <span class="te-reo">Mauri ora!</span></p>
+          <h3>Community</h3>
+          <p>We grow together. A supportive environment where collective wellbeing is as important as individual progress.</p>
         </div>
       </div>
+      <p style="text-align:center; color:var(--hua); font-family:var(--font-display); font-size:1.6rem; font-weight:600; margin-top:2.5rem;">Mauri ora!</p>
     </div>
   </section>
 
@@ -978,12 +1075,12 @@
       <div class="classes-grid">
         <div class="class-card fade-up">
           <img class="class-card-img"
-            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647202762-E3WNV2KQYT6XIU5CTJUK/PowerLiving-17.jpg"
+            src="Images/PowerLiving-12.jpg"
             alt="Heated Flow yoga class" loading="lazy" />
           <div class="class-card-body">
             <span class="class-tag heated">Heated · 32°C</span>
             <h3>Heated Flow</h3>
-            <p>Our most popular class — a dynamic vinyasa journey through strength and surrender.</p>
+            <p>Our most popular class — a dynamic, heated vinyasa. Strong movement, steady breath.</p>
           </div>
         </div>
         <div class="class-card fade-up">
@@ -991,14 +1088,14 @@
             src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1680925530145-RL1E6UUZ45Z0QBO89I3S/Awhi-16.jpg"
             alt="Yin yoga class" loading="lazy" />
           <div class="class-card-body">
-            <span class="class-tag restorative">Restorative</span>
+            <span class="class-tag restorative">Stillness</span>
             <h3>Yin Yoga</h3>
             <p>Gentle floor-based practice with long passive holds — deeply nourishing for body and mind.</p>
           </div>
         </div>
         <div class="class-card fade-up">
           <img class="class-card-img"
-            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/11952622-a55b-4c8f-8ae8-f56835590314/AwhibyJuliaSabugosa-012.jpg"
+            src="Images/AwhibyJuliaSabugosa-012.jpg"
             alt="Pilates class" loading="lazy" />
           <div class="class-card-body">
             <span class="class-tag gentle">Mat Pilates</span>
@@ -1008,17 +1105,17 @@
         </div>
         <div class="class-card fade-up">
           <img class="class-card-img"
-            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647979498-8OCBKC56IA1Y5GARE1DQ/Awhi-27.jpg"
-            alt="Gentle yoga class" loading="lazy" />
+            src="Images/Awhi-27.jpg"
+            alt="Power Vinyasa class" loading="lazy" />
           <div class="class-card-body">
-            <span class="class-tag gentle">Non-Heated</span>
-            <h3>Gentle Flow</h3>
-            <p>Slow, intentional movement incorporating active stretching for mobility and ease.</p>
+            <span class="class-tag heated">Heated & Non-Heated</span>
+            <h3>Power Vinyasa</h3>
+            <p>All-levels class with varied sequencing every session. Available heated and non-heated.</p>
           </div>
         </div>
         <div class="class-card fade-up">
           <img class="class-card-img"
-            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647976001-3MQMD7IXXM4WKPNKE9LY/Awhi-29.jpg"
+            src="Images/Awhi-29.jpg"
             alt="Meditation class" loading="lazy" />
           <div class="class-card-body">
             <span class="class-tag restorative">Mindfulness</span>
@@ -1038,7 +1135,7 @@
         </div>
       </div>
       <div class="classes-footer">
-        <a href="https://momence.com/m/623375" class="btn btn-primary" target="_blank" rel="noopener">View full timetable</a>
+        <a href="classes.html" class="btn btn-primary">View full timetable</a>
       </div>
     </div>
   </section>
@@ -1047,7 +1144,7 @@
   <section class="studio" id="studio" aria-labelledby="studio-heading">
     <div class="studio-images">
       <img class="studio-img-main"
-        src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647585755-ZSQVL2R0N0VRQNSK8KL5/PowerLiving-10.jpg"
+        src="Images/PowerLiving-10.jpg"
         alt="AWHI studio interior" loading="lazy" />
       <img class="studio-img-inset"
         src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647413706-T6Q5XFM9CTGMJP82PWAC/IMG_0604.jpg"
@@ -1055,9 +1152,9 @@
     </div>
     <div class="studio-content">
       <span class="section-label">Our Whare</span>
-      <h2 class="display-heading" id="studio-heading">More than a studio — a home</h2>
+      <h2 class="display-heading" id="studio-heading">More than a studio — a whare, a home</h2>
       <p>Located on Level 2, 15 Johnston Street in Wellington CBD, AWHI is designed to feel like a genuine refuge in the city.</p>
-      <p>Two purpose-built spaces — <span class="te-reo">Whare Oho</span> for our main classes, and <span class="te-reo">Whare Wānanga</span> for intimate sessions and teacher training — plus a community lounge where the kettle is always on.</p>
+      <p>Two purpose-built spaces — Whare Oho for our main classes, and Whare Wānanga for intimate sessions and teacher training — plus a community lounge where the kettle is always on.</p>
       <div class="studio-amenities">
         <div class="amenity">4 shower rooms</div>
         <div class="amenity">Herbal tea & filtered water</div>
@@ -1099,6 +1196,10 @@
           <p>Our flagship programme. A comprehensive foundation in teaching yoga.</p>
         </div>
         <div class="program-card">
+          <h4>300hr Vinyasa Teacher Training <span class="program-arrow">→</span></h4>
+          <p>Coming soon — an advanced programme for 200hr graduates. Deepened anatomical understanding, teaching methodology, and philosophy. Register your interest to be notified first.</p>
+        </div>
+        <div class="program-card">
           <h4>Yin Yoga Certification (50/100hr) <span class="program-arrow">→</span></h4>
           <p>Deepen your yin practice and learn to hold space with confidence.</p>
         </div>
@@ -1110,7 +1211,7 @@
           <h4>YTT Scholarships <span class="program-arrow">→</span></h4>
           <p>We believe training should be accessible. Find out about our scholarship programme.</p>
         </div>
-        <a href="#" class="btn btn-outline-cream" style="margin-top:0.5rem;">Explore all programmes</a>
+        <a href="school/index.html" class="btn btn-outline-cream" style="margin-top:0.5rem;">Explore all programmes</a>
       </div>
     </div>
   </section>
@@ -1122,26 +1223,39 @@
         <span class="section-label" style="justify-content:center;">What people are saying</span>
         <h2 class="display-heading" id="testimonials-heading">Our community speaks</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial fade-up">
-          <div class="testimonial-quote">"</div>
-          <div class="stars">★★★★★</div>
-          <p>AWHI has become my sanctuary. The teachers are genuinely caring, the studio is beautiful, and I've never felt more welcomed anywhere.</p>
-          <div class="testimonial-author">— Sarah M., member since 2022</div>
-        </div>
-        <div class="testimonial fade-up">
-          <div class="testimonial-quote">"</div>
-          <div class="stars">★★★★★</div>
-          <p>I started as a complete beginner, terrified I'd be out of place. Within a week I felt like I'd found my people. The community here is unlike anything else in Wellington.</p>
-          <div class="testimonial-author">— James T., member since 2023</div>
-        </div>
-        <div class="testimonial fade-up">
-          <div class="testimonial-quote">"</div>
-          <div class="stars">★★★★★</div>
-          <p>The heated flow classes are incredible — challenging but never intimidating. And the herbal tea afterwards is the best way to end any morning.</p>
-          <div class="testimonial-author">— Aroha W., member since 2021</div>
-        </div>
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-3b235582-fe65-4ad4-853e-7db3490378ac" data-elfsight-app-lazy></div>
+      <div id="momence-plugin-reviews"></div>
+      <script
+          async
+          type="module"
+          host_id="20264"
+          is_profile_picture_enabled="true"
+          is_text_only_enabled="true"
+          is_session_and_teacher_info_enabled="true"
+          layout="horizontal"
+          signature="abf5b01bfacf967e865fac3c10fd7b7e34577c5c1b1899463f2da6d01aff8d68"
+          src="https://momence.com/plugin/reviews/reviews.js">
+      </script>
+      <style>
+          :root {
+              --momenceReviewColorBackground: #F4EFE4;
+              --momenceBorder: 0px solid #000000;
+              --momenceBorderRadius: 0px;
+              --momenceBoxShadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+          }
+      </style>
+    </div>
+  </section>
+
+  <!-- ── GIFT VOUCHERS ──────────────────────────────────── -->
+  <section class="vouchers" aria-labelledby="vouchers-heading">
+    <div class="container">
+      <div class="vouchers-text fade-up">
+        <h2 class="display-heading" id="vouchers-heading">Give the gift of <span class="te-reo" style="color:var(--kawakawa);">AWHI</span></h2>
+        <p>Vouchers available in any amount — the perfect way to support the wellbeing of someone you love.</p>
       </div>
+      <a href="https://momence.com/gcc/20264" class="btn btn-primary" target="_blank" rel="noopener">Purchase a voucher</a>
     </div>
   </section>
 
@@ -1149,20 +1263,9 @@
   <div class="community" aria-label="AWHI community photos">
     <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709289837780-24XPTGXO06CAXG30SI1F/Awhi-02.jpg" alt="AWHI yoga class" loading="lazy" />
     <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647581717-AGRVCJKR5C8VXLRS0ATU/IMG_8770.jpg" alt="AWHI community" loading="lazy" />
-    <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647903650-KBCQGTFMNRS4T1TEVYAQ/Awhi-27.jpg" alt="AWHI studio session" loading="lazy" />
-    <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647892149-YZOQIFKCAYM652J4A1N0/Awhi-29.jpg" alt="AWHI wellbeing" loading="lazy" />
+    <img src="Images/Awhi-27.jpg" alt="AWHI studio session" loading="lazy" />
+    <img src="Images/Awhi-29.jpg" alt="AWHI wellbeing" loading="lazy" />
   </div>
-
-  <!-- ── GIFT VOUCHERS ──────────────────────────────────── -->
-  <section class="vouchers" aria-labelledby="vouchers-heading">
-    <div class="container">
-      <div class="vouchers-text fade-up">
-        <h2 class="display-heading" id="vouchers-heading">Give the gift of <em class="te-reo" style="color:var(--kawakawa);">awhi</em></h2>
-        <p>Vouchers available in any amount — the perfect way to support the wellbeing of someone you love.</p>
-      </div>
-      <a href="https://momence.com/gcc/20264" class="btn btn-primary" target="_blank" rel="noopener">Purchase a voucher</a>
-    </div>
-  </section>
 
   <!-- ── HOURS STRIP ────────────────────────────────────── -->
   <div class="hours" id="contact">
@@ -1181,6 +1284,8 @@
   </div>
 
   <!-- ── FOOTER ─────────────────────────────────────────── -->
+
+  </main>
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -1189,19 +1294,20 @@
             src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png"
             alt="AWHI Yoga & Wellbeing"
           />
-          <p>Wellington's home for yoga, pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
           <div class="footer-socials">
-            <a href="#" aria-label="Instagram">Ig</a>
-            <a href="#" aria-label="Facebook">Fb</a>
-            <a href="#" aria-label="YouTube">Yt</a>
-            <a href="#" aria-label="LinkedIn">Li</a>
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener">Ig</a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener">Fb</a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener">Yt</a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener">Li</a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Classes</h4>
           <ul>
-            <li><a href="#">View timetable</a></li>
+            <li><a href="classes.html">View timetable</a></li>
             <li><a href="#">Heated Flow</a></li>
+            <li><a href="#">Power Vinyasa</a></li>
             <li><a href="#">Yin Yoga</a></li>
             <li><a href="#">Pilates</a></li>
             <li><a href="#">Meditation</a></li>
@@ -1212,12 +1318,12 @@
         <div class="footer-col">
           <h4>Studio</h4>
           <ul>
-            <li><a href="#">About AWHI</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Teacher Training</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Membership</a></li>
-            <li><a href="#">Gift Vouchers</a></li>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="training.html">Teacher Training</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Membership</a></li>
+            <li><a href="pricing.html#gift-vouchers">Gift Vouchers</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">

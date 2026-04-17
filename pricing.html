@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing & Memberships — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Flexible yoga memberships, class passes, and casual options at AWHI Yoga & Wellbeing, Wellington. Monthly direct debit from $69 fortnightly. Try us with our $99 30-day intro pass." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pricing & Memberships — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="Flexible yoga memberships, class passes, and casual options at AWHI Yoga & Wellbeing, Wellington. Monthly direct debit from $69 fortnightly. Try us with our $99 30-day intro pass." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/pricing.html" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/pricing.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+    .btn-outline-hua { background: transparent; color: var(--hua); border-color: rgba(244,239,228,0.5); }
+    .btn-outline-hua:hover { background: rgba(244,239,228,0.1); border-color: var(--hua); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 48px; width: auto; filter: brightness(10); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--hua); text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--kawakawa); }
+    .nav-book { background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem; font-weight: 700 !important; letter-spacing: 0.08em !important; transition: background 0.2s !important; }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 5rem) 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-076.jpg');
+      background-size: cover; background-position: center 30%;
+      opacity: 0.2;
+    }
+    .page-hero .container { position: relative; z-index: 1; max-width: 800px; }
+    .page-hero-eyebrow { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--hua); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 600; color: var(--hua); line-height: 0.95; margin-bottom: 1.5rem; }
+    .page-hero-sub { color: rgba(244,239,228,0.85); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 560px; }
+
+    /* ─── INTRO OFFER ────────────────────────────────────── */
+    .intro-offer {
+      background: var(--repo);
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .intro-offer .container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .intro-offer-left {}
+    .intro-offer-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,239,228,0.7); margin-bottom: 0.75rem; }
+    .intro-offer h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; color: var(--hua); line-height: 1.0; margin-bottom: 0.5rem; }
+    .intro-price { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5rem); font-weight: 700; color: var(--hua); line-height: 1; margin-bottom: 1.5rem; }
+    .intro-offer-left p { color: rgba(244,239,228,0.9); margin-bottom: 2rem; line-height: 1.7; }
+    .intro-offer-right { background: rgba(244,239,228,0.1); border: 1px solid rgba(244,239,228,0.25); padding: 2rem; }
+    .intro-offer-right h4 { font-family: var(--font-display); font-size: 1.25rem; color: var(--hua); font-weight: 600; margin-bottom: 1rem; }
+    .intro-offer-right ul { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .intro-offer-right li { font-size: 0.9rem; color: rgba(244,239,228,0.85); padding-left: 1rem; position: relative; }
+    .intro-offer-right li::before { content: '—'; position: absolute; left: 0; color: rgba(244,239,228,0.5); }
+    .intro-note { font-size: 0.8rem; color: rgba(244,239,228,0.6); border-top: 1px solid rgba(244,239,228,0.2); padding-top: 0.75rem; margin-top: 0.75rem; }
+
+    /* ─── MEMBERSHIPS ────────────────────────────────────── */
+    .memberships {
+      background: var(--ngahere);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-header .section-label { justify-content: center; }
+    .section-header .section-label::before { background: var(--kawakawa); }
+    .section-header h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; color: var(--hua); }
+    .section-header p { color: rgba(244,239,228,0.75); max-width: 560px; margin-inline: auto; margin-top: 0.75rem; }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .pricing-card {
+      background: rgba(244,239,228,0.06);
+      border: 1px solid rgba(244,239,228,0.12);
+      padding: 2rem;
+      display: flex; flex-direction: column;
+      position: relative;
+    }
+    .pricing-card.featured {
+      background: rgba(192,92,44,0.15);
+      border-color: var(--repo);
+    }
+    .pricing-badge {
+      position: absolute; top: -1px; right: 1.5rem;
+      background: var(--repo); color: var(--hua);
+      font-family: var(--font-body); font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+    }
+    .card-plan { font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.5rem; }
+    .card-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--hua); margin-bottom: 1.25rem; line-height: 1.1; }
+    .card-price { margin-bottom: 1.5rem; }
+    .price-main { font-family: var(--font-body); font-size: 2.2rem; font-weight: 700; color: var(--hua); line-height: 1; }
+    .price-period { font-size: 0.85rem; color: rgba(244,239,228,0.6); margin-left: 0.25rem; }
+    .price-alt { font-size: 0.85rem; color: rgba(244,239,228,0.6); margin-top: 0.3rem; }
+    .price-concession { font-size: 0.8rem; color: var(--kawakawa); margin-top: 0.2rem; }
+    .card-features { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.75rem; }
+    .card-features li { font-size: 0.875rem; color: rgba(244,239,228,0.8); padding-left: 1rem; position: relative; line-height: 1.5; }
+    .card-features li::before { content: '—'; position: absolute; left: 0; color: var(--kawakawa); }
+    .card-features li.excluded { color: rgba(244,239,228,0.35); }
+    .card-features li.excluded::before { color: rgba(244,239,228,0.2); }
+
+    /* ─── CLASS PASSES ───────────────────────────────────── */
+    .passes {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .passes .section-header h2 { color: var(--ngahere); }
+    .passes .section-header p { color: #666; }
+    .passes .section-header .section-label { color: var(--kawakawa); }
+
+    .pass-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .pass-card { border: 1.5px solid rgba(28,56,41,0.15); padding: 2rem; }
+    .pass-tag { font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.5rem; display: block; }
+    .pass-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--ngahere); margin-bottom: 1rem; line-height: 1.1; }
+    .pass-price { font-family: var(--font-body); font-size: 2rem; font-weight: 700; color: var(--ngahere); line-height: 1; margin-bottom: 0.35rem; }
+    .pass-price-note { font-size: 0.82rem; color: #777; margin-bottom: 1.25rem; }
+    .pass-features { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.75rem; }
+    .pass-features li { font-size: 0.875rem; color: #555; padding-left: 1rem; position: relative; }
+    .pass-features li::before { content: '—'; position: absolute; left: 0; color: var(--kawakawa); }
+
+    /* ─── WORKPLACE WELLNESS ────────────────────────────── */
+    .workplace {
+      background: var(--repo);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .workplace .container { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .workplace-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,239,228,0.65); margin-bottom: 0.75rem; }
+    .workplace h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; color: var(--hua); line-height: 1.0; margin-bottom: 1rem; }
+    .workplace-intro { color: rgba(244,239,228,0.85); line-height: 1.75; margin-bottom: 2rem; }
+    .workplace-offerings { display: flex; flex-direction: column; gap: 1rem; }
+    .workplace-card { background: rgba(244,239,228,0.1); border: 1px solid rgba(244,239,228,0.2); padding: 1.5rem; }
+    .workplace-card h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--hua); margin-bottom: 0.35rem; }
+    .workplace-card p { font-size: 0.875rem; color: rgba(244,239,228,0.8); line-height: 1.6; }
+
+    /* ─── SPECIALISED RATES ──────────────────────────────── */
+    .specialised {
+      background: #EAE5D9;
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .specialised-header { margin-bottom: 2.5rem; }
+    .specialised-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--ngahere); }
+    .specialised-header p { color: #666; max-width: 560px; margin-top: 0.5rem; }
+    .specialised-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .spec-card { background: var(--hua); padding: 1.75rem; border-top: 2px solid var(--kawakawa); }
+    .spec-card h4 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--ngahere); margin-bottom: 0.75rem; }
+    .spec-card p { font-size: 0.875rem; color: #555; line-height: 1.65; margin-bottom: 0.75rem; }
+    .spec-rates { display: flex; flex-direction: column; gap: 0.35rem; }
+    .spec-rate { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.875rem; color: #444; padding: 0.35rem 0; border-bottom: 1px solid rgba(28,56,41,0.08); }
+    .spec-rate:last-child { border-bottom: none; }
+    .spec-rate-label { color: #666; }
+    .spec-rate-price { font-weight: 700; color: var(--ngahere); }
+
+    /* ─── MEMBER BENEFITS ────────────────────────────────── */
+    .benefits {
+      background: var(--ngahere);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .benefits .container { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .benefits-left {}
+    .benefits-left .section-label { color: var(--kawakawa); }
+    .benefits-left .section-label::before { background: var(--kawakawa); }
+    .benefits-left h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 600; color: var(--hua); margin-bottom: 0.75rem; line-height: 1.0; }
+    .benefits-left > p { color: rgba(244,239,228,0.75); margin-bottom: 2.5rem; }
+    .benefit-group { margin-bottom: 2rem; }
+    .benefit-group-title { font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.75rem; }
+    .benefit-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .benefit-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .benefit-dash { color: var(--kawakawa); flex-shrink: 0; margin-top: 0.1rem; }
+    .benefit-text { font-size: 0.9rem; color: rgba(244,239,228,0.85); line-height: 1.5; }
+    .benefit-text strong { color: var(--hua); font-weight: 600; }
+    .benefits-right { position: relative; }
+    .benefits-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
+    .benefits-note { background: rgba(244,239,228,0.08); border: 1px solid rgba(244,239,228,0.15); padding: 1.25rem; margin-top: 1.5rem; }
+    .benefits-note p { font-size: 0.82rem; color: rgba(244,239,228,0.6); line-height: 1.6; }
+
+    /* ─── GIFT VOUCHERS ──────────────────────────────────── */
+    .vouchers {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .vouchers .container { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .vouchers-img-wrap { height: 500px; overflow: hidden; }
+    .vouchers-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .vouchers-content {}
+    .vouchers-content h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 600; color: var(--ngahere); line-height: 1.0; margin-bottom: 1rem; }
+    .vouchers-content p { color: #555; line-height: 1.75; margin-bottom: 1.25rem; }
+    .voucher-points { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem; }
+    .voucher-points li { font-size: 0.9rem; color: #555; padding-left: 1rem; position: relative; }
+    .voucher-points li::before { content: '—'; position: absolute; left: 0; color: var(--kawakawa); }
+
+    /* ─── T&Cs ───────────────────────────────────────────── */
+    .tcs {
+      background: #EAE5D9;
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .tcs-header { margin-bottom: 2rem; }
+    .tcs-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 600; color: var(--ngahere); }
+    .tcs-header p { color: #666; margin-top: 0.4rem; }
+    .tcs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .tcs-item { background: var(--hua); padding: 1.5rem; }
+    .tcs-item h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--ngahere); margin-bottom: 0.5rem; }
+    .tcs-item p { font-size: 0.875rem; color: #555; line-height: 1.65; }
+
+    /* ─── CTA ────────────────────────────────────────────── */
+    .pricing-cta {
+      background: var(--ngahere);
+      padding: clamp(4rem, 7vw, 6rem) 0;
+      text-align: center;
+    }
+    .pricing-cta h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); color: var(--hua); margin-bottom: 1rem; font-weight: 600; }
+    .pricing-cta p { color: rgba(244,239,228,0.8); max-width: 520px; margin-inline: auto; margin-bottom: 2.5rem; }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--ngahere); color: var(--hua); padding: clamp(3rem, 6vw, 5rem) 0 2rem; border-top: 1px solid rgba(244,239,228,0.1); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(244,239,228,0.1); }
+    .footer-brand img { height: 48px; width: auto; filter: brightness(10); margin-bottom: 1.25rem; }
+    .footer-brand p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.7; margin-bottom: 1.5rem; max-width: 280px; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a { width: 36px; height: 36px; border: 1px solid rgba(244,239,228,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(244,239,228,0.7); transition: all 0.2s; }
+    .footer-socials a:hover { border-color: var(--hua); color: var(--hua); }
+    .footer-col h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col li a { font-size: 0.9rem; color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-col li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.9; }
+    .footer-contact a { color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(244,239,228,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(244,239,228,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 1024px) {
+      .intro-offer .container { grid-template-columns: 1fr; gap: 2rem; }
+      .workplace .container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .pass-grid { grid-template-columns: 1fr 1fr; }
+      .benefits .container { grid-template-columns: 1fr; gap: 3rem; }
+      .benefits-right { display: none; }
+      .vouchers .container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .vouchers-img-wrap { height: 380px; }
+      .specialised-grid { grid-template-columns: 1fr 1fr; }
+      .tcs-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pass-grid { grid-template-columns: 1fr; }
+      .specialised-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── NAV ────────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="training.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+      <h1>Pricing &<br>Memberships</h1>
+      <p class="page-hero-sub">Flexible options for every stage of your practice — from your very first class to a daily commitment.</p>
+    </div>
+  </section>
+
+  <!-- ── INTRO OFFER ────────────────────────────────────── -->
+  <section class="intro-offer" id="intro-pass">
+    <div class="container">
+      <div class="intro-offer-left fade-up">
+        <p class="intro-offer-eyebrow">New to AWHI?</p>
+        <h2>30-Day Intro Pass</h2>
+        <p class="intro-price">$99</p>
+        <p>The best way to experience everything AWHI has to offer. Unlimited classes for a full month — including yoga, Pilates, and meditation. Mat hire included so you can arrive empty-handed.</p>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-cream" target="_blank" rel="noopener">Get started</a>
+      </div>
+      <div class="intro-offer-right fade-up">
+        <h4>What's included</h4>
+        <ul>
+          <li>Unlimited classes for 30 days</li>
+          <li>Complimentary mat hire</li>
+          <li>Access to yoga, Pilates, and meditation</li>
+          <li>No contract, no commitment</li>
+        </ul>
+        <p class="intro-note">New students only. Valid for 30 days from your first class. One per person.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── UNLIMITED MEMBERSHIPS ──────────────────────────── -->
+  <section class="memberships" id="memberships">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Unlimited access</span>
+        <h2 class="display-heading">Memberships</h2>
+        <p>All unlimited memberships include access to yoga, Pilates, and meditation classes, plus member benefits. Excludes koha classes and pregnancy yoga.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Direct Debit -->
+        <div class="pricing-card featured fade-up">
+          <span class="pricing-badge">Most popular</span>
+          <p class="card-plan">Ongoing</p>
+          <p class="card-name">Direct Debit<br>Unlimited</p>
+          <div class="card-price">
+            <span class="price-main">$69</span><span class="price-period">/ fortnight</span>
+            <p class="price-alt">or $138 / month</p>
+            <p class="price-concession">Concession: $55fn / $110pm</p>
+          </div>
+          <ul class="card-features">
+            <li>3-month minimum, then month-to-month</li>
+            <li>Fortnightly or monthly direct debit</li>
+            <li>Free mat storage</li>
+            <li>One guest pass per month</li>
+            <li>Free Yoga Nidra — quarterly, first Friday of the quarter</li>
+            <li>Pause available (2–8 weeks per quarter)</li>
+            <li>All member discounts and benefits</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-primary" target="_blank" rel="noopener">Join now</a>
+        </div>
+
+        <!-- 1-Month No Contract -->
+        <div class="pricing-card fade-up">
+          <p class="card-plan">Flexible</p>
+          <p class="card-name">1-Month<br>Unlimited</p>
+          <div class="card-price">
+            <span class="price-main">$180</span>
+            <p class="price-alt">No contract</p>
+          </div>
+          <ul class="card-features">
+            <li>No commitment required</li>
+            <li>Complimentary mat hire</li>
+            <li>Ideal for travellers or those testing a routine</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-hua" target="_blank" rel="noopener">Purchase</a>
+        </div>
+
+        <!-- 6-Month -->
+        <div class="pricing-card fade-up">
+          <p class="card-plan">Prepaid</p>
+          <p class="card-name">6-Month<br>Unlimited</p>
+          <div class="card-price">
+            <span class="price-main">$799</span>
+            <p class="price-concession">Concession: $699</p>
+          </div>
+          <ul class="card-features">
+            <li>Full prepayment, no direct debit</li>
+            <li>Free mat storage</li>
+            <li>Guest passes included</li>
+            <li>All member discounts and benefits</li>
+            <li>Non-refundable, non-transferable</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-hua" target="_blank" rel="noopener">Purchase</a>
+        </div>
+
+        <!-- 12-Month -->
+        <div class="pricing-card fade-up">
+          <p class="card-plan">Best value</p>
+          <p class="card-name">12-Month<br>Unlimited</p>
+          <div class="card-price">
+            <span class="price-main">$1,499</span>
+            <p class="price-concession">Concession: $1,299</p>
+          </div>
+          <ul class="card-features">
+            <li>Full prepayment, no direct debit</li>
+            <li>Free mat storage</li>
+            <li>Guest passes included</li>
+            <li>All member discounts and benefits</li>
+            <li>Non-refundable, non-transferable</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-hua" target="_blank" rel="noopener">Purchase</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLASS PASSES ───────────────────────────────────── -->
+  <section class="passes" id="passes">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Pay as you go</span>
+        <h2 class="display-heading">Class Passes</h2>
+        <p>Prefer to come when you can? Our passes give you flexibility without a commitment. All passes include access to yoga, Pilates, and meditation.</p>
+      </div>
+
+      <div class="pass-grid">
+
+        <!-- 10-Class Pass -->
+        <div class="pass-card fade-up">
+          <span class="pass-tag">Semi-regular</span>
+          <h3 class="pass-name">10-Class Pass</h3>
+          <p class="pass-price">From $160</p>
+          <p class="pass-price-note">BYO mat: $199 / Concession $160 &nbsp;·&nbsp; With mat hire: $210 / Concession $170</p>
+          <ul class="pass-features">
+            <li>10 visits, use at your own pace</li>
+            <li>Valid 6 months from purchase</li>
+            <li>Mat hire option available</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-dark" target="_blank" rel="noopener">Purchase</a>
+        </div>
+
+        <!-- Casual Drop-In -->
+        <div class="pass-card fade-up">
+          <span class="pass-tag">Occasional</span>
+          <h3 class="pass-name">Casual Drop-In</h3>
+          <p class="pass-price">$25</p>
+          <p class="pass-price-note">Concession $20 &nbsp;·&nbsp; Child $15 &nbsp;·&nbsp; +$2 mat hire</p>
+          <ul class="pass-features">
+            <li>Single class, no booking commitment</li>
+            <li>Valid 1 month from purchase</li>
+            <li>Mat hire available at the door</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-dark" target="_blank" rel="noopener">Book now</a>
+        </div>
+
+        <!-- Meditation -->
+        <div class="pass-card fade-up">
+          <span class="pass-tag">Meditation</span>
+          <h3 class="pass-name">Meditation Classes</h3>
+          <p class="pass-price">From $5</p>
+          <p class="pass-price-note">Single session $5 &nbsp;·&nbsp; 10-class pass $45</p>
+          <ul class="pass-features">
+            <li>Accessible, drop-in meditation sessions</li>
+            <li>Mat and cushion provided</li>
+            <li>No prior experience necessary</li>
+          </ul>
+          <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-dark" target="_blank" rel="noopener">Book now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIDEO ON DEMAND ────────────────────────────────── -->
+  <div style="background: var(--ngahere); padding: 3rem 0; border-top: 1px solid rgba(244,239,228,0.08);">
+    <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+      <div>
+        <span class="section-label" style="color:var(--kawakawa);">Practice from anywhere</span>
+        <h3 style="font-family:var(--font-display); font-size:clamp(2rem,3.5vw,3rem); font-weight:600; color:var(--hua); margin-bottom:1rem; line-height:1.0;">Video On Demand</h3>
+        <p style="color:rgba(244,239,228,0.8); line-height:1.75; margin-bottom:2rem;">Access AWHI classes from anywhere in the world. Rent a single session or subscribe for unlimited streaming.</p>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-cream" target="_blank" rel="noopener">Browse library</a>
+      </div>
+      <div style="background:rgba(244,239,228,0.06); border:1px solid rgba(244,239,228,0.12); padding:2rem;">
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.5rem 0; border-bottom:1px solid rgba(244,239,228,0.1);">
+            <span style="font-size:0.9rem; color:rgba(244,239,228,0.75);">Single video rental</span>
+            <span style="font-weight:700; color:var(--hua); font-family:var(--font-body);">$5–$15</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.5rem 0;">
+            <span style="font-size:0.9rem; color:rgba(244,239,228,0.75);">Unlimited subscription</span>
+            <span style="font-weight:700; color:var(--hua); font-family:var(--font-body);">$24.99 / month</span>
+          </div>
+          <p style="font-size:0.78rem; color:rgba(244,239,228,0.4); margin-top:0.5rem;">Rental access: 3 days. Subscription: 3-month minimum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WORKPLACE WELLNESS ───────────────────────────────── -->
+  <section class="workplace" id="workplace">
+    <div class="container">
+      <div class="fade-up">
+        <p class="workplace-label">For organisations</p>
+        <h2>Workplace<br>Wellness</h2>
+        <p class="workplace-intro">We partner with Wellington organisations to bring yoga and wellbeing into the workplace. Whether you're looking to subsidise staff memberships, arrange private classes for your team, or run workshops on stress, movement, and mindfulness — we'll put together something that actually works for your people.</p>
+        <a href="mailto:kathleen@awhiyoga.co.nz?subject=Workplace Wellness Enquiry" class="btn btn-outline-cream">Get in touch</a>
+      </div>
+      <div class="workplace-offerings fade-up">
+        <div class="workplace-card">
+          <h4>Subsidised Staff Passes</h4>
+          <p>Bulk membership packages at discounted rates — give your team unlimited access to yoga, Pilates, and meditation. We'll tailor a plan to your headcount and budget.</p>
+        </div>
+        <div class="workplace-card">
+          <h4>Private Classes</h4>
+          <p>Exclusive yoga, Pilates, or meditation sessions booked just for your team. Held at our Wellington studio or on-site at your workplace.</p>
+        </div>
+        <div class="workplace-card">
+          <h4>Wellness Seminars</h4>
+          <p>Interactive workshops and talks covering stress management, mindfulness, movement, and te ao Māori approaches to hauora. Ideal for team away days, wellbeing weeks, and staff development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GIFT VOUCHERS ──────────────────────────────────── -->
+  <section class="vouchers" id="vouchers">
+    <div class="container">
+      <div class="vouchers-img-wrap fade-up">
+        <img src="Images/Awhi_tea_time-12.jpg" alt="AWHI community" loading="lazy" />
+      </div>
+      <div class="vouchers-content fade-up">
+        <span class="section-label">Give the gift of wellbeing</span>
+        <h2 class="display-heading">Gift Vouchers</h2>
+        <p>Support the wellbeing of someone you love with an AWHI gift voucher. Available in any amount, they can be used across yoga, Pilates, meditation, events, retreats, and teacher training.</p>
+        <ul class="voucher-points">
+          <li>Available in any dollar amount</li>
+          <li>Valid for 3 years from purchase</li>
+          <li>Redeemable across all AWHI offerings</li>
+          <li>Delivered digitally — perfect for last-minute gifting</li>
+        </ul>
+        <a href="https://momence.com/gcc/20264" class="btn btn-primary" target="_blank" rel="noopener">Purchase a gift voucher</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SPECIALISED RATES ──────────────────────────────── -->
+  <section class="specialised" id="specialised">
+    <div class="container">
+      <div class="specialised-header fade-up">
+        <span class="section-label">Specialised options</span>
+        <h2 class="display-heading">Other Rates</h2>
+        <p>Concession pricing is available across most passes and memberships. Reach out if you have questions.</p>
+      </div>
+
+      <div class="specialised-grid">
+
+        <div class="spec-card fade-up">
+          <h4>Certified Yoga Teachers</h4>
+          <p>Maintain and deepen your own practice with a dedicated rate for actively teaching, credentialed yoga teachers.</p>
+          <div class="spec-rates">
+            <div class="spec-rate"><span class="spec-rate-label">Casual drop-in</span><span class="spec-rate-price">$17</span></div>
+            <div class="spec-rate"><span class="spec-rate-label">10-class pass</span><span class="spec-rate-price">$150</span></div>
+            <div class="spec-rate"><span class="spec-rate-label">Monthly membership</span><span class="spec-rate-price">$110 / month</span></div>
+          </div>
+          <p style="font-size:0.78rem; color:#777; margin-top:0.75rem; margin-bottom:0;">3-month minimum. Valid teaching credentials required.</p>
+        </div>
+
+        <div class="spec-card fade-up">
+          <h4>Mat Storage</h4>
+          <p>Keep your mat at the studio so it's always waiting for you. Tagged mats are stored securely on-site.</p>
+          <div class="spec-rates">
+            <div class="spec-rate"><span class="spec-rate-label">Annual storage</span><span class="spec-rate-price">$150 / year</span></div>
+          </div>
+          <p style="font-size:0.78rem; color:#777; margin-top:0.75rem; margin-bottom:0;">An AWHI mat tag is required. Available on request.</p>
+        </div>
+
+        <div class="spec-card fade-up">
+          <h4>Karma Yogi & Corporate</h4>
+          <p>We believe practice should be accessible. Our Karma Yogi programme and corporate packages are tailored to individual circumstances.</p>
+          <div class="spec-rates">
+            <div class="spec-rate"><span class="spec-rate-label">Karma Yogi</span><span class="spec-rate-price"><a href="mailto:tom@awhiyoga.co.nz" style="color:var(--kawakawa);">Enquire</a></span></div>
+            <div class="spec-rate"><span class="spec-rate-label">Corporate packages</span><span class="spec-rate-price"><a href="mailto:kathleen@awhiyoga.co.nz" style="color:var(--kawakawa);">Enquire</a></span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MEMBER BENEFITS ────────────────────────────────── -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="benefits-left fade-up">
+        <span class="section-label">More than a membership</span>
+        <h2 class="display-heading">Member Benefits</h2>
+        <p>Every membership includes extras beyond the mat — free quarterly events and partner discounts from local wellness providers.</p>
+
+        <div class="benefit-group">
+          <p class="benefit-group-title">Included with all unlimited memberships</p>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong>Free mat hire or storage</strong> — no need to lug your mat across town. Store it with us for free.</p>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong>Free Yoga Nidra</strong> — complimentary admission to our quarterly Yoga Nidra event, held on the first Friday of the quarter (valued at $25).</p>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong>Guest passes</strong> — one guest pass per month to share the AWHI experience with someone you love.</p>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong>SWET Fitness discount</strong> — $149 ten-class pass at SWET Fitness in Ngaio (regular $199+).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-group">
+          <p class="benefit-group-title">Partner discounts (members only)</p>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong><a href="https://www.wellkind.co.nz/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Wellkind Naturopath</a></strong> — 15% off 90-minute initial consultations with naturopath Melissa Rivard.</p>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong><a href="https://www.truecalmmassage.com/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">True Calm Massage Therapy</a></strong> — $15 off your initial 75-minute appointment with a clinical remedial massage therapist.</p>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong><a href="https://static1.squarespace.com/static/5bc9338d2727be3db78aefe5/t/65fbe8187db0d37ee4e0ce9b/1711007771036/Awhy%27sMembersSpecial%282024%29.jpg" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Julia Sabugosa Photography</a></strong> — exclusive member discount packages for portraits and event photography.</p>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-dash">—</span>
+              <p class="benefit-text"><strong><a href="https://www.lskd.co/?ref=vtbpgpad&utm_campaign=14992382&utm_medium=influencer&utm_source=collaborations&utm_term=AWHI15-FPCREW" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">LSKD Activewear</a></strong> — 15% off with code <em>AWHI15-FPCREW</em>, plus free shipping and returns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-right">
+        <img class="benefits-img" src="Images/Awhi_BookClubbyJuliaSabugosa-06.jpg" alt="AWHI community" loading="lazy" />
+        <div class="benefits-note">
+          <p>Benefits are available to all active AWHI members. Partner discounts require membership verification at time of redemption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── T&Cs ───────────────────────────────────────────── -->
+  <section class="tcs" id="terms">
+    <div class="container">
+      <div class="tcs-header fade-up">
+        <span class="section-label">Good to know</span>
+        <h2 class="display-heading">Membership Terms</h2>
+        <p>Key things to know before joining. Full terms available on request.</p>
+      </div>
+      <div class="tcs-grid fade-up">
+        <div class="tcs-item">
+          <h4>Minimum commitment</h4>
+          <p>Direct debit memberships require a 3-month minimum (minimum spend $414, or $330 concession). After that, your membership rolls month-to-month automatically.</p>
+        </div>
+        <div class="tcs-item">
+          <h4>Cancellation</h4>
+          <p>To cancel, email kiaora@awhiyoga.co.nz at least 14 days before your next payment date. Memberships cannot be cancelled before the 3-month minimum has been reached.</p>
+        </div>
+        <div class="tcs-item">
+          <h4>Pausing your membership</h4>
+          <p>Pauses are available for a minimum of 2 consecutive weeks and a maximum of 8 consecutive weeks per 3-month contract. 14 days' written notice required. No retroactive holds.</p>
+        </div>
+        <div class="tcs-item">
+          <h4>Prepaid & class passes</h4>
+          <p>Prepaid memberships (6- and 12-month) and class passes are non-refundable and non-transferable. 10-class passes are valid for 6 months; casual passes are valid for 1 month from purchase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="pricing-cta">
+    <div class="container">
+      <h2 class="display-heading">Not sure which option is right for you?</h2>
+      <p>We're happy to help you find the best fit. Get in touch and we'll talk it through.</p>
+      <div class="cta-row">
+        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-primary">Email us</a>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-outline-cream" target="_blank" rel="noopener">Book a class</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener">Ig</a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener">Fb</a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener">Yt</a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener">Li</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pricing</h4>
+          <ul>
+            <li><a href="pricing.html#intro-pass">30-Day Intro Pass</a></li>
+            <li><a href="pricing.html#memberships">Unlimited Memberships</a></li>
+            <li><a href="pricing.html#passes">Class Passes</a></li>
+            <li><a href="pricing.html#benefits">Member Benefits</a></li>
+            <li><a href="pricing.html#vouchers">Gift Vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="classes.html">Classes & Timetable</a></li>
+            <li><a href="training.html">Teacher Training</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington, Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="pricing.html#terms">Membership Terms</a>
+          <a href="mailto:kiaora@awhiyoga.co.nz">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

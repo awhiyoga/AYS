@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Workshops — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Workshops, special events and community gatherings at AWHI Yoga & Wellbeing, Wellington. Yoga Nidra, sound journeys, movement workshops and more." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Events & Workshops — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="Workshops, special events and community gatherings at AWHI Yoga & Wellbeing, Wellington. Yoga Nidra, sound journeys, movement workshops and more." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/events.html" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/events.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+    .btn-sm { padding: 0.65rem 1.4rem; font-size: 0.78rem; }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa);
+    }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled { background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a {
+      color: var(--hua); font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.04em; opacity: 0.85; transition: opacity 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; }
+    .nav-book {
+      background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem;
+      font-weight: 700 !important; font-size: 0.8rem !important; letter-spacing: 0.08em;
+      text-transform: uppercase; opacity: 1 !important; transition: background 0.25s !important;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: none; border: none; padding: 0.5rem;
+    }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .events-hero {
+      position: relative;
+      height: 65vh;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .events-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/Awhi_BookClubbyJuliaSabugosa-13.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      transform: scale(1.05);
+      transition: transform 8s ease-out;
+    }
+    .events-hero-bg.loaded { transform: scale(1); }
+    .events-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(28,56,41,0.80) 0%, rgba(28,56,41,0.52) 60%, rgba(28,56,41,0.28) 100%);
+    }
+    .events-hero-content {
+      position: relative; z-index: 1; color: var(--hua); max-width: 700px;
+    }
+    .events-hero-content .section-label { color: rgba(244,239,228,0.75); }
+    .events-hero-content .section-label::before { background: rgba(244,239,228,0.6); }
+    .events-hero-content h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1; margin-bottom: 1.25rem; color: var(--hua);
+    }
+    .events-hero-content p {
+      font-size: clamp(1rem, 1.8vw, 1.15rem); opacity: 0.88; max-width: 500px; line-height: 1.65;
+    }
+
+    /* ─── FADE UP ─────────────────────────────────────────── */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── UPCOMING EVENTS ─────────────────────────────────── */
+    .events-section {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background: var(--hua);
+    }
+    .events-section-header {
+      margin-bottom: 3rem;
+    }
+    .events-section-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--ngahere);
+      margin-bottom: 0.75rem;
+    }
+    .events-section-header p {
+      font-size: 1rem;
+      color: var(--pango);
+      max-width: 560px;
+      opacity: 0.8;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .event-card {
+      background: #fff;
+      border-top: 3px solid var(--kawakawa);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s;
+    }
+    .event-card:hover { box-shadow: 0 8px 32px rgba(28,56,41,0.1); }
+
+    .event-card.featured { border-top-color: var(--repo); }
+    .event-card.nidra { border-top-color: var(--kowhai); }
+
+    .event-date-pill {
+      display: inline-block;
+      background: var(--ngahere);
+      color: var(--hua);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      margin-bottom: 1.1rem;
+      align-self: flex-start;
+    }
+    .event-card.featured .event-date-pill { background: var(--repo); }
+    .event-card.nidra .event-date-pill { background: var(--kowhai); color: var(--ngahere); }
+
+    .event-type {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 0.4rem;
+    }
+    .event-card.featured .event-type { color: var(--repo); }
+    .event-card.nidra .event-type { color: var(--kowhai); }
+
+    .event-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--ngahere);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-time {
+      font-size: 0.82rem;
+      color: var(--kawakawa);
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+
+    .event-desc {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--pango);
+      flex: 1;
+      margin-bottom: 1.5rem;
+      opacity: 0.85;
+    }
+
+    .event-card .btn { align-self: flex-start; }
+
+    /* ─── IMAGE BREAK ─────────────────────────────────────── */
+    .image-break {
+      width: 100%;
+      height: clamp(280px, 40vw, 520px);
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+
+    /* ─── PAST EVENTS ─────────────────────────────────────── */
+    .past-events {
+      background: var(--ngahere);
+      padding: clamp(4rem, 7vw, 6rem) 0;
+      color: var(--hua);
+    }
+    .past-header { margin-bottom: 2.5rem; }
+    .past-header .section-label { color: rgba(244,239,228,0.6); }
+    .past-header .section-label::before { background: rgba(244,239,228,0.4); }
+    .past-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--hua); margin-bottom: 0.6rem; }
+    .past-header p { opacity: 0.7; max-width: 520px; }
+
+    .past-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(244,239,228,0.15);
+    }
+    .past-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(244,239,228,0.15);
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+    }
+    .past-item:nth-child(odd) { padding-right: 3rem; }
+    .past-item:nth-child(even) { padding-left: 3rem; border-left: 1px solid rgba(244,239,228,0.15); }
+    .past-date {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      white-space: nowrap;
+      min-width: 80px;
+    }
+    .past-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--hua);
+      opacity: 0.85;
+    }
+
+    .past-footer-row {
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .past-footer-row p { opacity: 0.65; font-size: 0.9rem; }
+
+    /* ─── CTA ─────────────────────────────────────────────── */
+    .events-cta {
+      background: var(--repo);
+      padding: clamp(4rem, 7vw, 6rem) 0;
+      color: var(--hua);
+      text-align: center;
+    }
+    .events-cta h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--hua);
+      margin-bottom: 1rem;
+    }
+    .events-cta p { opacity: 0.85; max-width: 520px; margin: 0 auto 2rem; }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--ngahere); color: var(--hua); padding: clamp(3rem, 6vw, 5rem) 0 2rem; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem;
+      padding-bottom: 3rem; border-bottom: 1px solid rgba(244,239,228,0.15);
+      margin-bottom: 2rem;
+    }
+    .footer-brand img { height: 40px; width: auto; margin-bottom: 1.25rem; filter: brightness(0) invert(1); opacity: 0.9; }
+    .footer-brand p { font-size: 0.88rem; opacity: 0.65; line-height: 1.7; max-width: 260px; }
+    .footer-socials { display: flex; gap: 1rem; margin-top: 1.25rem; }
+    .footer-socials a {
+      width: 36px; height: 36px; border: 1px solid rgba(244,239,228,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: 700; opacity: 0.65; transition: opacity 0.2s, border-color 0.2s;
+    }
+    .footer-socials a:hover { opacity: 1; border-color: var(--hua); }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col a { font-size: 0.88rem; opacity: 0.7; transition: opacity 0.2s; }
+    .footer-col a:hover { opacity: 1; }
+    .footer-contact p { font-size: 0.88rem; opacity: 0.7; line-height: 2; }
+    .footer-contact a { opacity: 0.7; transition: opacity 0.2s; }
+    .footer-contact a:hover { opacity: 1; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; opacity: 0.45; }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; opacity: 0.45; transition: opacity 0.2s; }
+    .footer-bottom-links a:hover { opacity: 0.8; }
+
+    /* ─── MOBILE NAV OPEN ─────────────────────────────────── */
+    .nav-links.open {
+      display: flex; flex-direction: column; align-items: flex-start;
+      position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: var(--ngahere); padding: 1.5rem 2rem 2rem; gap: 1.25rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2); z-index: 99;
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .events-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 768px) {
+      .events-grid { grid-template-columns: 1fr; }
+      .past-grid { grid-template-columns: 1fr; }
+      .past-item:nth-child(even) { padding-left: 0; border-left: none; }
+      .past-item:nth-child(odd) { padding-right: 0; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── NAV ────────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="training.html">Teacher Training</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <header class="events-hero">
+    <div class="events-hero-bg" id="heroBg"></div>
+    <div class="events-hero-overlay"></div>
+    <div class="container">
+      <div class="events-hero-content">
+        <span class="section-label">Wellington</span>
+        <h1>Events &amp;<br>Workshops</h1>
+        <p>From Yoga Nidra to sound journeys, movement workshops and community gatherings — there's always something on at AWHI.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── UPCOMING EVENTS ────────────────────────────────── -->
+  <section class="events-section" id="upcoming">
+    <div class="container">
+
+      <div class="events-section-header fade-up">
+        <span class="section-label">What's on</span>
+        <h2 class="display-heading">Upcoming Events</h2>
+        <p>Workshops, special classes and community events coming up at AWHI. All welcome — no experience needed unless stated.</p>
+      </div>
+
+      <div class="events-grid">
+
+        <!-- AWHI Book Club -->
+        <div class="event-card fade-up">
+          <span class="event-date-pill">Now on — May 6</span>
+          <p class="event-type">Community</p>
+          <h3 class="event-title">AWHI Book Club</h3>
+          <p class="event-time">Wednesdays, 6:45 pm &nbsp;·&nbsp; 1 Apr – 6 May 2026</p>
+          <p class="event-desc">No pressure, no performances, and definitely no homework policing. Just good books, good people, and a welcoming space to share ideas and stories together.</p>
+          <a href="https://www.awhiyoga.co.nz/events/2026/4/1/awhi-book-club" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
+        </div>
+
+        <!-- Power Vin(o) Happy Hour -->
+        <div class="event-card featured fade-up">
+          <span class="event-date-pill">29 April 2026</span>
+          <p class="event-type">Social</p>
+          <h3 class="event-title">Power Vin(o) Happy Hour</h3>
+          <p class="event-time">Wednesday 29 April &nbsp;·&nbsp; 5:30–7:30 pm</p>
+          <p class="event-desc">Break a sweat, then raise a glass. Join us after class for our favourite post-practice tradition — a relaxed happy hour with the AWHI community.</p>
+          <a href="https://www.awhiyoga.co.nz/events/2025/11/26/align-amp-wine-pjfty-8799x-8pr92" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
+        </div>
+
+        <!-- Workshop Series: Vinyasa -->
+        <div class="event-card featured fade-up">
+          <span class="event-date-pill">May – June 2026</span>
+          <p class="event-type">Workshop Series</p>
+          <h3 class="event-title">Vinyasa — Mai i te po ki te ao marama</h3>
+          <p class="event-time">Saturdays, 12:00–3:30 pm &nbsp;·&nbsp; 2 May – 13 Jun 2026</p>
+          <p class="event-desc">A four-session workshop series weaving yogic movement with Maori philosophy. Explore the journey from darkness into light through breath, flow and whakaaro (reflection).</p>
+          <a href="https://www.awhiyoga.co.nz/events/2026/5/2/vinyasa-mai-i-te-p-ki-te-ao-mrama" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
+        </div>
+
+        <!-- Yoga Nidra -->
+        <div class="event-card nidra fade-up">
+          <span class="event-date-pill">Quarterly</span>
+          <p class="event-type">Meditation &amp; Rest</p>
+          <h3 class="event-title">Yoga Nidra</h3>
+          <p class="event-time">First Friday of the quarter &nbsp;·&nbsp; 7:00–8:15 pm<br>5 Jun &nbsp;·&nbsp; 4 Sep &nbsp;·&nbsp; 4 Dec 2026</p>
+          <p class="event-desc">A deeply restorative practice sometimes called "yogic sleep". Lie back, follow a guided body scan, and allow your nervous system to completely unwind. Suitable for all — no prior yoga experience needed.</p>
+          <a href="https://www.awhiyoga.co.nz/events/yoganidra-rc8x4-xsyb7-snfyt-38jmh-2m4xx-wpe2c-85egh-mw45l-wp5f8-y4cr7-esnfg-2e7ly-698dg-blggs-6t2rf-cpxz3" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
+        </div>
+
+        <!-- XOCHIPILLI'S VISION -->
+        <div class="event-card featured fade-up">
+          <span class="event-date-pill">27 June 2026</span>
+          <p class="event-type">Sound &amp; Ceremony</p>
+          <h3 class="event-title">XOCHIPILLI'S VISION: A Night of Shamanic Sounds, Drumming and Ceremony</h3>
+          <p class="event-time">Saturday 27 June &nbsp;·&nbsp; 6:45–8:45 pm</p>
+          <p class="event-desc">An ancient Mexican ceremony honouring Xochipilli, the Aztec deity of music, dance and flowers. Sacred drumming, prehispanic instruments and ceremonial practice with Claudio Escutia.</p>
+          <a href="https://www.awhiyoga.co.nz/events/2026/6/27/xochipillis-vision-a-night-of-shamanic-sounds-drumming-and-ceremony" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IMAGE BREAK ─────────────────────────────────────── -->
+  <img
+    src="Images/AwhibyJuliaSabugosa-083.jpg"
+    alt="AWHI Yoga & Wellbeing community"
+    class="image-break"
+    loading="lazy"
+  />
+
+  <!-- ── PAST EVENTS ─────────────────────────────────────── -->
+  <section class="past-events" id="past">
+    <div class="container">
+
+      <div class="past-header fade-up">
+        <span class="section-label">Archive</span>
+        <h2 class="display-heading">Recent Highlights</h2>
+        <p>A flavour of what we've hosted. AWHI events span sound journeys, breathwork, workshops, seasonal rituals and more.</p>
+      </div>
+
+      <div class="past-grid fade-up">
+        <div class="past-item">
+          <span class="past-date">Mar 2026</span>
+          <span class="past-name">Power Vin(o) Happy Hour</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Mar 2026</span>
+          <span class="past-name">Yoga Nidra</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Feb 2026</span>
+          <span class="past-name">Align & Wine (Birthday Edition)</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Feb 2026</span>
+          <span class="past-name">50/100hr Yin Yoga Teacher Training</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Dec 2025</span>
+          <span class="past-name">End-of-Year Festive Celebration</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Dec 2025</span>
+          <span class="past-name">Sapphic Somatics: A Queer Embodiment Workshop</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Dec 2025</span>
+          <span class="past-name">108 Sun Salutations for Summer Solstice</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Nov 2025</span>
+          <span class="past-name">Dia de los Muertos with Claudio Escutia</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Nov 2025</span>
+          <span class="past-name">30 Day Challenge</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Oct 2025</span>
+          <span class="past-name">HineHau Breathwork for Women</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Sep 2025</span>
+          <span class="past-name">Elebreath® Somatic Breath + Sound Journey</span>
+        </div>
+        <div class="past-item">
+          <span class="past-date">Aug 2025</span>
+          <span class="past-name">She Rises: Spring Edition</span>
+        </div>
+      </div>
+
+      <div class="past-footer-row fade-up">
+        <p>For the full event archive, visit our website.</p>
+        <a href="https://www.awhiyoga.co.nz/events" class="btn btn-outline-cream btn-sm" target="_blank" rel="noopener">View all past events</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="events-cta">
+    <div class="container">
+      <h2 class="display-heading fade-up">Want to host or collaborate?</h2>
+      <p class="fade-up">We love partnering with teachers, practitioners and creators. If you have an idea for an event at AWHI, we'd love to hear from you.</p>
+      <div class="cta-row fade-up">
+        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-cream">Get in touch</a>
+        <a href="https://www.awhiyoga.co.nz/events" class="btn btn-outline-cream" target="_blank" rel="noopener">All events on Squarespace</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Maori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener">Ig</a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener">Fb</a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener">Yt</a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener">Li</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Events</h4>
+          <ul>
+            <li><a href="events.html#upcoming">Upcoming Events</a></li>
+            <li><a href="events.html#past">Past Events</a></li>
+            <li><a href="https://www.awhiyoga.co.nz/events" target="_blank" rel="noopener">Full Calendar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="classes.html">Classes & Timetable</a></li>
+            <li><a href="training.html">Teacher Training</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington, Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="pricing.html#terms">Membership Terms</a>
+          <a href="mailto:kiaora@awhiyoga.co.nz">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Hero image load
+    const heroBg = document.getElementById('heroBg');
+    const img = new Image();
+    img.onload = () => heroBg.classList.add('loaded');
+    img.src = heroBg.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1') || 'Images/Awhi_BookClubbyJuliaSabugosa-13.jpg';
+    heroBg.classList.add('loaded');
+  </script>
+</body>
+</html>

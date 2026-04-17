@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Meet the AWHI teaching whānau — Wellington's diverse community of yoga, Pilates, and meditation instructors." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Our Team — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="Meet the AWHI teaching whānau — Wellington's diverse community of yoga, Pilates, and meditation instructors." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/team.html" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/team.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 48px; width: auto; filter: brightness(10); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--hua); text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--kawakawa); }
+    .nav-book { background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem; font-weight: 700 !important; letter-spacing: 0.08em !important; transition: background 0.2s !important; }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 5rem) 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-029.jpg');
+      background-size: cover; background-position: center 40%;
+      opacity: 0.2;
+    }
+    .page-hero .container { position: relative; z-index: 1; max-width: 800px; }
+    .page-hero-eyebrow { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--hua); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 600; color: var(--hua); line-height: 0.95; margin-bottom: 1.5rem; }
+    .page-hero-sub { color: rgba(244,239,228,0.85); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 560px; }
+
+    /* ─── TEAM SECTIONS ──────────────────────────────────── */
+    .team-section {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .team-section:nth-child(odd) { background: var(--hua); }
+    .team-section:nth-child(even) { background: #EAE5D9; }
+
+    .team-section-header { margin-bottom: 3rem; }
+    .team-section-header h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; color: var(--ngahere); line-height: 1.0; }
+    .team-section-header p { color: #666; max-width: 600px; margin-top: 0.5rem; }
+
+    /* ─── TEAM GRID ──────────────────────────────────────── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .team-grid.two-col { grid-template-columns: repeat(2, 1fr); max-width: 700px; }
+    .team-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+
+    /* ─── TEAM CARD ──────────────────────────────────────── */
+    .team-card { border-top: 2px solid var(--kawakawa); padding-top: 1.25rem; }
+    .team-photo {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top;
+      margin-bottom: 1rem; display: block;
+      background: #ddd;
+    }
+    .team-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--ngahere); line-height: 1.1; margin-bottom: 0.15rem; }
+    .team-pronouns { font-size: 0.78rem; color: var(--kawakawa); font-weight: 500; margin-bottom: 0.3rem; }
+    .team-role { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--repo); margin-bottom: 0.5rem; }
+    .team-certs { font-size: 0.78rem; color: var(--kawakawa); margin-bottom: 0.6rem; line-height: 1.4; }
+    .team-bio { font-size: 0.85rem; color: #555; line-height: 1.65; }
+
+    /* ─── CTA ────────────────────────────────────────────── */
+    .team-cta {
+      background: var(--ngahere);
+      padding: clamp(4rem, 7vw, 6rem) 0;
+      text-align: center;
+    }
+    .team-cta h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); color: var(--hua); margin-bottom: 1rem; font-weight: 600; }
+    .team-cta p { color: rgba(244,239,228,0.8); max-width: 520px; margin-inline: auto; margin-bottom: 2.5rem; }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--ngahere); color: var(--hua); padding: clamp(3rem, 6vw, 5rem) 0 2rem; border-top: 1px solid rgba(244,239,228,0.1); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(244,239,228,0.1); }
+    .footer-brand img { height: 48px; width: auto; filter: brightness(10); margin-bottom: 1.25rem; }
+    .footer-brand p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.7; margin-bottom: 1.5rem; max-width: 280px; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a { width: 36px; height: 36px; border: 1px solid rgba(244,239,228,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(244,239,228,0.7); transition: all 0.2s; }
+    .footer-socials a:hover { border-color: var(--hua); color: var(--hua); }
+    .footer-col h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col li a { font-size: 0.9rem; color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-col li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.9; }
+    .footer-contact a { color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(244,239,228,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(244,239,228,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid.two-col { grid-template-columns: 1fr; max-width: 100%; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── NAV ────────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="training.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html" class="active">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+      <h1>Our Teaching<br>Whānau</h1>
+      <p class="page-hero-sub">A diverse community of teachers, practitioners, and guides who speak to the body, heart and mind.</p>
+    </div>
+  </section>
+
+  <!-- ── TEAM INTRO ────────────────────────────────────── -->
+  <div style="background: var(--repo); padding: 2.5rem 0;">
+    <div class="container">
+      <p style="color: var(--hua); font-size: 1.05rem; line-height: 1.75; max-width: 780px;">We are intentional about delivering authentic, connecting and impactful classes and you can expect a world-class Yoga, Pilates and educational experience here at AWHI! We take pride in the continued training and development of our team both on and off the mat so that our community feels held, challenged and nurtured as we grow together and support each other in our humanness.</p>
+    </div>
+  </div>
+
+  <!-- ── YOGA INSTRUCTORS ───────────────────────────────── -->
+  <section class="team-section" id="yoga-instructors">
+    <div class="container">
+      <div class="team-section-header fade-up">
+        <span class="section-label">Yoga</span>
+        <h2 class="display-heading">Yoga Instructors</h2>
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/3f369953-d1df-4f15-baf6-25d899451280/KK_smaller+size.jpg" alt="Kathleen Kuehn" loading="lazy" style="object-position:center;" />
+          <p class="team-name">Kathleen Kuehn</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Co-owner & Chief Enabling Officer</p>
+          <p class="team-certs">RYT-500 Vinyasa · 100+ hrs Yin · Yoga Nidra · Level 1 Pilates · Hot HIIT Pilates</p>
+          <p class="team-bio">Former academic with a PhD in Media & Communications. Alignment-based and purposeful in her teaching, with an approachable humour focused on self-inquiry and personal growth. Known for her sharp wit and playful approach — because growth doesn't have to be serious.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1583354211534-IHV3AAD2R6LK16ZL6F2M/Photo+2-03-20%2C+9+03+18+PM.jpg" alt="Tom Brotherstone" loading="lazy" />
+          <p class="team-name">Tom Brotherstone</p>
+          <p class="team-pronouns">he/him</p>
+          <p class="team-role">Co-owner & Staff Manager</p>
+          <p class="team-certs">E-RYT 500 · Trained in Rishikesh, India · Black belt Brazilian Jiu Jitsu</p>
+          <p class="team-bio">Teaching Yin and Vinyasa for over a decade, Tom's focus is on building community through practice — providing supportive platforms for growth and self-discovery. His easeful, approachable style puts students immediately at ease, and his classes weave yoga philosophy throughout, grounding movement in meaning.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/a8890b43-aa1b-4fd5-a777-0ca1cab00ffd/Hana+Buchanan.png" alt="Hana Buchanan" loading="lazy" />
+          <p class="team-name">Hana Buchanan</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr Vinyasa YTT · 100hr Yin YTT · Meditation teacher training (in progress)</p>
+          <p class="team-bio">Hana (Taranaki iwi, Te Ātiawa, Taranaki Whānui ki te Upoko o te Ika) brings 25+ years of yoga and pū āio practice, with a deep emphasis on mātauranga Māori and the synergies between yoga and Māori ways of knowing and being.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/7b1c6a34-bd74-4255-b17f-583902d9a9d9/Satvika.png" alt="Satvika Iyer" loading="lazy" />
+          <p class="team-name">Satvika Iyer</p>
+          <p class="team-pronouns">they/them</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr Vinyasa YTT · 400hr Hatha YTT · 100hr Yin YTT · 50hr Kundalini · 100hr Aerial Yoga</p>
+          <p class="team-bio">Raised across India, Tāmaki Makaurau, and Canada, Satvika brings a deep reverence for Indian heritage and yogic philosophy. Their teaching emphasises breath-led movement and inner wisdom.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/ce998c47-e31b-4acf-8dc4-935e6c718c9b/Lisa+Baker+.png" alt="Lisa Baker" loading="lazy" />
+          <p class="team-name">Lisa Baker</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr YTT · 50hr Yin · Meditation, Pranayama & Yoga Nidra YTT · 2nd dan Kyokushin karate</p>
+          <p class="team-bio">A primary and ECE teacher, now lecturing in the tertiary sector. A trauma survivor whose healing journey led to discovering yoga's union of mind, body, and wairua — and to sharing that with others.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/d25c958d-836f-4eb5-ae95-ea24dcf108a3/Martine.png" alt="Martine Matapo" loading="lazy" />
+          <p class="team-name">Martine Matapo</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr Vinyasa YTT</p>
+          <p class="team-bio">PhD candidate researching physical activity and public health — specifically Cook Islands women's movement experiences. Her warm teaching style emphasises accessibility and grounding for all bodies.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/7c1ad7c6-8090-454a-b260-754d9db60098/James+1.jpg" alt="James Mason-Redpath" loading="lazy" />
+          <p class="team-name">James Mason-Redpath</p>
+          <p class="team-pronouns">they/them · he/him</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">Classical Hatha YTT · Yin Yoga · Hatha in Ghosh tradition (Spain)</p>
+          <p class="team-bio">First came to yoga through car accident rehabilitation in 2002. James brings a functional, no-fuss approach that emphasises simplicity and real-world movement. Interests include pole dancing, burlesque, and outdoor exploration.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/06965646-f52f-4dc1-9810-70168b909849/Marcelly+.png" alt="Marcelly Ribeiro" loading="lazy" />
+          <p class="team-name">Marcelly Ribeiro</p>
+          <p class="team-pronouns">she/her · they/them</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">Physical Education degree · 200hr Vinyasa YTT · 200hr Hatha YTT · Childbirth & Doula · Active Birth Centre</p>
+          <p class="team-bio">From Brazil, Marcelly combines pregnancy yoga, personal training, and birth education. Her alignment-based practice blends asana and pranayama for functionality, stress relief, and full-body awareness.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/27a695ae-bed6-4e43-95da-bfa946e91534/Rosie.png" alt="Rosie Sievers" loading="lazy" />
+          <p class="team-name">Rosie Sievers</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">Vinyasa YTT · Yin yoga · Trauma-informed yoga · Embryology</p>
+          <p class="team-bio">Yoga teacher, Craniosacral therapist, and group facilitator. Rosie weaves life experience with a deep reverence for the body, and is passionate about creating space for the release of stored trauma.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/69b58a1f-c92c-4c90-86ed-350894600fca/Russell+Millar.png" alt="Russell Millar" loading="lazy" />
+          <p class="team-name">Russell Millar</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr YTT · 300hr YTT · E-RYT 200 · RYT 500 · CE Certified</p>
+          <p class="team-bio">Over 20 years of personal practice. Registered with Yoga Alliance, Russell sees teaching as personal dharma — empowering students to become their own guides rather than relying on external authority.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/c48f3d3c-c601-4ea2-898c-f9582ea635b7/Jen+Choong.png" alt="Jen Choong" loading="lazy" />
+          <p class="team-name">Jen Choong</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">Teaching since 2017 · Practising since the late 1990s</p>
+          <p class="team-bio">Originally from Singapore, Jen brings a playfulness and humour to her teaching shaped by fitness, martial arts, and multiple yoga traditions. Over two decades of practice make for a deeply considered class.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/20844ef6-837b-4ff5-8791-c91f754b72c7/Natalie+Woodhall.png" alt="Nat Woodhall" loading="lazy" />
+          <p class="team-name">Nat Woodhall</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr YTT · Yoga Medicine Anatomy & Sequencing · Myofascial release · Classical ballet instructor (20+ years)</p>
+          <p class="team-bio">A regular Ashtanga practitioner with deep roots in classical ballet, Nat's teaching emphasises accessibility, anatomical understanding, and thoughtful sequencing as tools for personal inquiry.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/34a096bc-ef3f-4a1d-b0b9-8df9e0c534c2/Claudio+Escutia.png" alt="Claudio Escutia" loading="lazy" />
+          <p class="team-name">Claudio Escutia</p>
+          <p class="team-role">Yoga Instructor & Sound Practitioner</p>
+          <p class="team-certs">300hr YTT (Sivananda Vedanta Ashram) · Sound Healing (Nepal) · Classical music · Ashtanga Vinyasa (Berlin)</p>
+          <p class="team-bio">From Mexico City, raised in a professional musician family, Claudio has lived across the world before arriving in Aotearoa in 2017. His practice explores harmonisation through sound — Tibetan bowls, mantras, and mudras.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2dbacbe-754b-44f6-b1e0-6d15bb0795b2/Flora+Burrell+Ellery+.png" alt="Flora Burrell Ellery" loading="lazy" />
+          <p class="team-name">Flora Burrell Ellery</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr Vinyasa YTT (2024)</p>
+          <p class="team-bio">Raised between Abel Tasman, the Cook Islands, and the Bay of Plenty. A student midwife who has used yoga as a healing tool since childhood, Flora brings deep reverence for the mind-body connection.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/b81f9c5d-d9e5-49b3-8a0c-9504eeceec3a/Glen+Dunbier.png" alt="Glenn Dunbier" loading="lazy" />
+          <p class="team-name">Glenn Dunbier</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">100hr Trauma-Informed Yin YTT (2024)</p>
+          <p class="team-bio">Retired after a 38-year government career in 2023. Practicing Yin yoga since 2018, Glenn now volunteers in free community classes — bringing consistency, calm, and a genuine belief in yoga's accessibility.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/5eaeb543-63b9-44db-b93a-182fd27d4ff5/Jenny+Oliver.png" alt="Jenny Oliver" loading="lazy" />
+          <p class="team-name">Jenny Oliver</p>
+          <p class="team-role">Yoga Instructor</p>
+          <p class="team-certs">200hr YTT · 13 years personal practice in Vinyasa and Yin</p>
+          <p class="team-bio">Focused on foundations and the connections between mind, body, and yoga philosophy. Jenny aims to create classes where students leave feeling stable, spacious, and a little more at home in themselves.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/0378c351-cf60-4573-8351-34e737089483/Awhi_-14.jpg" alt="Mark Pascall" loading="lazy" />
+          <p class="team-name">Mark Pascall</p>
+          <p class="team-pronouns">he/him</p>
+          <p class="team-role">Co-owner & Business Development</p>
+          <p class="team-bio">Former technology professional with eight years in cryptocurrency and blockchain. Now focused on purpose-driven organisational structures. Runs The Wellbeing Protocol and is a father of four.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PILATES INSTRUCTORS ────────────────────────────── -->
+  <section class="team-section" id="pilates-instructors">
+    <div class="container">
+      <div class="team-section-header fade-up">
+        <span class="section-label">Pilates</span>
+        <h2 class="display-heading">Pilates Instructors</h2>
+      </div>
+
+      <div class="team-grid three-col">
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/41cb3d96-62dd-4d37-b37e-cdf03a828189/Maddie.png" alt="Maddie Boyes" loading="lazy" />
+          <p class="team-name">Maddie Boyes</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Pilates Instructor</p>
+          <p class="team-certs">Level 1 Pilates — SUNA Pilates (2024)</p>
+          <p class="team-bio">Fell in love with Pilates right here at AWHI. A primary school teacher by trade, Maddie brings that same warm, patient energy to class — creating a welcoming space for every body and every level.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/674deafa-a78a-4023-b7e2-bbaf8a326d15/Luisa+Gordillo.png" alt="Luisa Gordillo" loading="lazy" />
+          <p class="team-name">Luisa Gordillo</p>
+          <p class="team-role">Pilates Instructor</p>
+          <p class="team-certs">Certified Pilates instructor · Health & Wellbeing background</p>
+          <p class="team-bio">Specialising in body awareness, injury prevention, and mindful movement. Luisa creates full-body workouts that meet students where they are — with a focus on long-term health and sustainable practice.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEACHING WHĀNAU ────────────────────────────────── -->
+  <section class="team-section" id="teaching-whanau">
+    <div class="container">
+      <div class="team-section-header fade-up">
+        <span class="section-label">Extended community</span>
+        <h2 class="display-heading">Teaching Whānau</h2>
+        <p>A wider circle of teachers and collaborators who contribute to the AWHI community.</p>
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/7ff9b5b7-5e39-4f44-9ad0-965bccefc811/3DB5BFAA-CF92-4164-850C-C0CFFF30FFC1+-+Shirley+McLeod.jpeg" alt="Shirley McLeod" loading="lazy" />
+          <p class="team-name">Shirley McLeod</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Yoga</p>
+          <p class="team-certs">200hr YTT · iRest Yoga Nidra Level 1 · Mindfulness Based Stillness Meditation · RYT-500 (in progress)</p>
+          <p class="team-bio">Self-published creator of a Yoga Deck (41 instructional cards) and co-creator of Te Reo Yoga Cards. An independent project manager and mother of two who started yoga on holiday in 2013 and never looked back.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/0e2578ba-36c3-4b85-83d9-a4be1b1aadb1/2019-04-24.jpg" alt="Maya Castrejon" loading="lazy" />
+          <p class="team-name">Maya Castrejon</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Pilates</p>
+          <p class="team-certs">Pilates Teacher Training Certificate (Kāpiti) · Teaching since 2020</p>
+          <p class="team-bio">Originally from California, Maya arrived in Aotearoa in 2015 and has been an AWHI student since 2018. Her classes emphasise whole-body connection and core awareness, with a welcoming approach for all levels.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/2a785a99-643b-4ccd-becd-1a2c66d4b42c/Charlotte.jpg" alt="Charlotte Cook" loading="lazy" />
+          <p class="team-name">Charlotte Cook</p>
+          <p class="team-pronouns">she/her</p>
+          <p class="team-role">Yoga</p>
+          <p class="team-certs">200hr YTT (AWHI)</p>
+          <p class="team-bio">Broadcast journalist by trade, Charlotte connects through stories of strength and self-discovery. Her teaching style is fun, a little daring, and rooted in the belief that everyone has something to learn about themselves on the mat.</p>
+        </div>
+
+        <div class="team-card fade-up">
+          <img class="team-photo" src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/872d9f4d-0fd3-4067-887a-fe9f0a39717b/My+Awhi+photo.jpg" alt="Mark Russell" loading="lazy" />
+          <p class="team-name">Mark Russell</p>
+          <p class="team-pronouns">he/him</p>
+          <p class="team-role">Yoga</p>
+          <p class="team-certs">600+ hours yoga teacher training · 300hr Trauma-Informed Movement Facilitator · Yin teacher training assistant</p>
+          <p class="team-bio">Nearly 20 years of personal practice — initially for flexibility, now with a strong focus on trauma-informed yoga and brave, inclusive spaces. Mark works to make every student feel genuinely seen.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="team-cta">
+    <div class="container">
+      <h2 class="display-heading">Come and practice with us</h2>
+      <p>See a name you'd like to practice with? Browse the timetable and book a class with your teacher.</p>
+      <div class="cta-row">
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-primary" target="_blank" rel="noopener">Book a class</a>
+        <a href="classes.html" class="btn btn-outline-cream">View timetable</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener">Ig</a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener">Fb</a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener">Yt</a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener">Li</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="index.html#about">Our Story</a></li>
+            <li><a href="index.html#studio">Our Studio</a></li>
+            <li><a href="training.html">Teacher Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="classes.html">Classes & Timetable</a></li>
+            <li><a href="pricing.html">Memberships</a></li>
+            <li><a href="pricing.html#workplace">Workplace Wellness</a></li>
+            <li><a href="pricing.html#vouchers">Gift Vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington, Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="pricing.html#terms">Membership Terms</a>
+          <a href="mailto:kiaora@awhiyoga.co.nz">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

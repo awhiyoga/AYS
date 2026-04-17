@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>300hr Vinyasa YTT — Tri-fold Brochure</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── A4 landscape = 297×210mm = 1123×794px at 96dpi ── */
+    /* ── Each panel = 374px wide × 794px tall            ── */
+
+    :root {
+      --ngahere:  #1C3829;
+      --hua:      #F4EFE4;
+      --repo:     #C05C2C;
+      --pango:    #242424;
+      --kawa:     #7A9E7E;
+      --kowhai:   #D4A553;
+      --fd: 'Cormorant', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #bbb9b3; font-family: var(--fb); -webkit-font-smoothing: antialiased; }
+    img  { display: block; max-width: 100%; height: auto; }
+
+    /* ── PRINT BAR ─────────────────────── */
+    .print-bar {
+      background: var(--pango);
+      padding: 0.7rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky; top: 0; z-index: 20;
+    }
+    .print-bar p { font-size: 0.78rem; color: rgba(244,239,228,0.6); }
+    .print-btn {
+      font-family: var(--fb); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--repo); color: var(--hua);
+      border: none; padding: 0.55rem 1.4rem; cursor: pointer;
+    }
+    .print-btn:hover { background: #a34a20; }
+
+    /* ── WRAPPER ───────────────────────── */
+    .wrapper {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sheet-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+
+    .sheet-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── SHEET (A4 landscape) ──────────── */
+    .sheet {
+      width: 1123px;
+      height: 794px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 48px rgba(0,0,0,0.35);
+    }
+
+    /* Fold guide lines — screen only */
+    .sheet::before, .sheet::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: rgba(0,0,0,0.18);
+      z-index: 50;
+      pointer-events: none;
+    }
+    .sheet::before { left:  calc(100% / 3); }
+    .sheet::after  { left:  calc(200% / 3); }
+
+    /* ── BASE PANEL ────────────────────── */
+    .panel {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .p-pad { padding: 2.25rem 1.85rem; }
+
+    /* ── COLOURS ───────────────────────── */
+    .bg-dark  { background: var(--ngahere); }
+    .bg-cream { background: var(--hua); }
+    .bg-repo  { background: var(--repo); }
+
+    /* ── SHARED TEXT HELPERS ───────────── */
+    .eyebrow {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--kawa);
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 1.1rem; height: 1.5px; background: var(--kawa);
+    }
+    .eyebrow-light { color: rgba(244,239,228,0.55); }
+    .eyebrow-light::before { background: rgba(244,239,228,0.4); }
+
+    .rule { height: 1px; background: rgba(28,56,41,0.12); margin: 0.9rem 0; }
+    .rule-light { background: rgba(244,239,228,0.15); }
+
+    /* ═══════════════════════════════════
+       OUTSIDE SHEET
+       Order: [inside-flap | back | front]
+    ═══════════════════════════════════ */
+
+    /* ── OUTSIDE: FRONT COVER (right) ─── */
+    .front-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-106.jpg');
+      background-size: cover;
+      background-position: center 35%;
+      opacity: 0.22;
+    }
+    .front-content {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column;
+      height: 100%;
+      padding: 2.25rem 1.85rem;
+    }
+    .front-logo { height: 110px; width: auto; align-self: flex-start; }
+    .front-loc  {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--kawa); margin-top: 0.45rem;
+    }
+    .front-title-wrap { margin-top: auto; padding-bottom: 2rem; }
+    .front-hours {
+      font-family: var(--fd);
+      font-size: 7.5rem; font-weight: 600;
+      color: var(--hua); line-height: 0.88;
+    }
+    .front-prog {
+      font-family: var(--fd);
+      font-size: 2.5rem; font-weight: 600;
+      color: var(--hua); line-height: 1.15;
+      margin-top: 1.5rem; margin-bottom: 0.9rem;
+    }
+    .front-tagline {
+      font-family: var(--fd); font-style: italic;
+      font-size: 0.95rem; color: rgba(244,239,228,0.72);
+      line-height: 1.5; max-width: 280px;
+    }
+    .front-bottom {
+      margin-top: auto;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .ya-badge {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(244,239,228,0.65);
+      border: 1px solid rgba(244,239,228,0.25);
+      padding: 0.3rem 0.65rem;
+    }
+
+    /* ── OUTSIDE: BACK COVER (middle) ─── */
+    .back-content {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .back-heading {
+      font-family: var(--fd);
+      font-size: 2.2rem; font-weight: 600;
+      color: var(--hua); line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .contact-line {
+      display: flex; flex-direction: column;
+      margin-bottom: 0.85rem;
+    }
+    .contact-key {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--kawa); margin-bottom: 0.18rem;
+    }
+    .contact-val {
+      font-size: 0.85rem; color: rgba(244,239,228,0.88);
+      line-height: 1.45;
+    }
+    .qr-wrap {
+      margin-top: auto;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0.55rem;
+    }
+    .qr-box {
+      width: 110px; height: 110px;
+      background: white;
+      border: 2px solid rgba(244,239,228,0.2);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .qr-box::before, .qr-box::after {
+      content: ''; position: absolute;
+      width: 18px; height: 18px;
+      border: 2.5px solid var(--ngahere);
+    }
+    .qr-box::before { top: 5px; left: 5px; border-right: none; border-bottom: none; }
+    .qr-box::after  { top: 5px; right: 5px; border-left: none; border-bottom: none; }
+    .qr-corner-bl {
+      position: absolute; bottom: 5px; left: 5px;
+      width: 18px; height: 18px;
+      border: 2.5px solid var(--ngahere);
+      border-top: none; border-right: none;
+    }
+    .qr-corner-br {
+      position: absolute; bottom: 5px; right: 5px;
+      width: 18px; height: 18px;
+      border: 2.5px solid var(--ngahere);
+      border-top: none; border-left: none;
+    }
+    .qr-txt {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: rgba(28,56,41,0.4); text-align: center; line-height: 1.4;
+    }
+    .qr-label {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--kawa); text-align: center;
+    }
+    .qr-url {
+      font-size: 0.62rem; color: rgba(244,239,228,0.5);
+      text-align: center;
+    }
+    .back-logo { height: 70px; width: auto; filter: brightness(10) opacity(0.85); margin-top: 1.25rem; }
+    .back-awhi-logo { height: 36px; width: auto; opacity: 0.75; margin-top: 0.75rem; }
+    .back-copy { font-size: 0.6rem; color: rgba(244,239,228,0.35); margin-top: 0.35rem; }
+
+    /* ── OUTSIDE: INSIDE FLAP (left) ──── */
+    .flap-outer {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .flap-heading {
+      font-family: var(--fd);
+      font-size: 1.9rem; font-weight: 600;
+      color: var(--ngahere); line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .details-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.75rem 1rem; margin-bottom: 1.1rem;
+    }
+    .detail-cell {}
+    .detail-key {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--kawa); margin-bottom: 0.18rem;
+    }
+    .detail-val {
+      font-family: var(--fd);
+      font-size: 1rem; font-weight: 600;
+      color: var(--ngahere); line-height: 1.2;
+    }
+    .detail-sub {
+      font-size: 0.72rem; font-weight: 400;
+      color: #666; font-family: var(--fb);
+    }
+
+    .highlights-heading {
+      font-family: var(--fd);
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--ngahere); margin-bottom: 0.6rem;
+    }
+    .hl-list { display: flex; flex-direction: column; gap: 0.32rem; }
+    .hl-item {
+      font-size: 0.78rem; color: #4a4a4a;
+      line-height: 1.4; display: flex; gap: 0.5rem;
+    }
+    .hl-item::before {
+      content: '—'; color: var(--kawa);
+      font-weight: 700; flex-shrink: 0;
+    }
+    .pathway-note {
+      margin-top: auto;
+      background: var(--ngahere);
+      padding: 0.85rem 1rem;
+    }
+    .pathway-note p {
+      font-size: 0.72rem; color: rgba(244,239,228,0.8);
+      line-height: 1.55;
+    }
+    .pathway-note strong { color: var(--kawa); }
+
+    /* ═══════════════════════════════════
+       INSIDE SHEET
+       Order: [inside-left | inside-mid | flap-inner]
+    ═══════════════════════════════════ */
+
+    /* ── INSIDE: FLAP INNER (right) ────── */
+    .fi-content {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .fi-heading {
+      font-family: var(--fd);
+      font-size: 2rem; font-weight: 600;
+      color: var(--ngahere); line-height: 1.05;
+      margin-bottom: 0.9rem;
+    }
+    .fi-body {
+      font-size: 0.82rem; color: #4a4a4a;
+      line-height: 1.7; margin-bottom: 0.65rem;
+    }
+    .phil-strip {
+      background: var(--repo);
+      padding: 1rem 1.1rem;
+      margin-top: auto;
+    }
+    .phil-strip p {
+      font-family: var(--fd);
+      font-size: 1rem; color: var(--hua); line-height: 1.5;
+    }
+
+    /* ── INSIDE: MIDDLE (modules required) */
+    .mod-panel {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .mod-heading {
+      font-family: var(--fd);
+      font-size: 1.4rem; font-weight: 600;
+      color: var(--ngahere); line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+    .mod-sub {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--kawa); margin-bottom: 0.65rem;
+    }
+    .mod-list { display: flex; flex-direction: column; }
+    .mod-row {
+      display: grid;
+      grid-template-columns: 1.1fr 1.5fr auto;
+      gap: 0 0.6rem;
+      padding: 0.48rem 0;
+      border-bottom: 1px solid rgba(28,56,41,0.07);
+      align-items: start;
+    }
+    .mod-row:last-child { border-bottom: none; }
+    .mod-name {
+      font-family: var(--fd);
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--ngahere); line-height: 1.3;
+      grid-column: 1; grid-row: 1;
+    }
+    .mod-name.elective { color: #7a5c1e; }
+    .mod-date {
+      font-size: 0.72rem; color: #666;
+      line-height: 1.3; grid-column: 2; grid-row: 1;
+    }
+    .mod-hrs {
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--kawa); white-space: nowrap;
+      grid-column: 3; grid-row: 1;
+      text-align: right;
+    }
+
+    /* ── INSIDE: LEFT (electives + note) ─ */
+    .elec-panel {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .elec-note {
+      margin-top: auto;
+      background: rgba(28,56,41,0.06);
+      border-left: 2.5px solid var(--kawa);
+      padding: 0.75rem 0.9rem;
+      font-size: 0.75rem;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    .elec-note strong { color: var(--ngahere); }
+
+    /* ── PRINT ─────────────────────────── */
+    @media print {
+      .print-bar { display: none; }
+      body { background: none; }
+      .wrapper { padding: 0; gap: 0; }
+      .sheet-group { gap: 0; }
+      .sheet-label { display: none; }
+      .sheet { box-shadow: none; page-break-after: always; break-after: page; }
+      .sheet:last-of-type { page-break-after: auto; break-after: auto; }
+      .sheet::before, .sheet::after { display: none; }
+      @page { size: A4 landscape; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  <p>300hr YTT — Tri-fold A4 brochure &nbsp;·&nbsp; Outside + Inside</p>
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<div class="wrapper">
+
+  <!-- ══════════════════════════════════
+       OUTSIDE
+       Left→Right: [inside flap | back | front]
+  ══════════════════════════════════ -->
+  <div class="sheet-group">
+    <p class="sheet-label">Outside — Side 1 &nbsp;·&nbsp; fold: left panel tucks in behind front</p>
+    <div class="sheet">
+
+      <!-- OUTSIDE: Inside flap (left) -->
+      <div class="panel bg-cream">
+        <div class="flap-outer">
+          <p class="eyebrow">Programme at a glance</p>
+          <h2 class="flap-heading">Everything<br>you need<br>to know</h2>
+
+          <div class="details-grid">
+            <div class="detail-cell">
+              <p class="detail-key">Intake</p>
+              <p class="detail-val">2026–2027<br><span class="detail-sub">Inaugural cohort</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Total hours</p>
+              <p class="detail-val">300 hrs</p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Format</p>
+              <p class="detail-val">Hybrid<br><span class="detail-sub">In-person &amp; online</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Location</p>
+              <p class="detail-val">Wellington<br><span class="detail-sub">15 Johnston St, CBD</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Prerequisite</p>
+              <p class="detail-val">200hr YTT<br><span class="detail-sub">or equivalent</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Accreditation</p>
+              <p class="detail-val">RYS 300<br><span class="detail-sub">Yoga Alliance</span></p>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+
+          <p class="highlights-heading">Programme highlights</p>
+          <div class="hl-list">
+            <div class="hl-item">8 required modules + 2 electives</div>
+            <div class="hl-item">Advanced anatomy series — hips, spine, shoulders</div>
+            <div class="hl-item">Yoga philosophy Parts I &amp; II</div>
+            <div class="hl-item">Mantra, pranayama &amp; meditation</div>
+            <div class="hl-item">Advanced vinyasa sequencing methodology</div>
+            <div class="hl-item">Monthly online wānanga throughout</div>
+            <div class="hl-item">Mentored teaching practicum</div>
+            <div class="hl-item">Pathway to Yoga Alliance RYT 500</div>
+            <div class="hl-item">Individual modules available for CE credits</div>
+          </div>
+
+          <div class="pathway-note">
+            <p><strong>Three ways to join:</strong> deepen your practice, earn CE credits, or complete the full 300hr certification.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTSIDE: Back cover (middle) -->
+      <div class="panel bg-dark">
+        <div class="back-content">
+          <p class="eyebrow eyebrow-light">Get in touch</p>
+          <h2 class="back-heading">Register<br>your interest</h2>
+
+          <div class="contact-line">
+            <span class="contact-key">Email</span>
+            <span class="contact-val">kiaora@awhiyoga.co.nz</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Phone</span>
+            <span class="contact-val">+64 4 499 5006</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Address</span>
+            <span class="contact-val">Level 2, 15 Johnston Street<br>Wellington CBD, New Zealand</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Web</span>
+            <span class="contact-val">awhiyoga.co.nz/school/300hr</span>
+          </div>
+
+          <div class="qr-wrap">
+            <div class="qr-box">
+              <div class="qr-corner-bl"></div>
+              <div class="qr-corner-br"></div>
+              <p class="qr-txt">Place<br>QR code<br>here</p>
+            </div>
+            <p class="qr-label">Scan to register interest</p>
+            <p class="qr-url">awhiyoga.co.nz/school/300hr</p>
+            <img class="back-logo" src="images/rys-300.png" alt="Yoga Alliance RYS 300" />
+            <img class="back-awhi-logo" src="images/logos/Awhi_WHITE (2).svg" alt="AWHI Yoga & Wellbeing" />
+            <p class="back-copy">© 2026 AWHI Yoga &amp; Wellbeing</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTSIDE: Front cover (right) -->
+      <div class="panel bg-dark">
+        <div class="front-bg"></div>
+        <div class="front-content">
+          <img class="front-logo" src="images/logos/Awhi_WHITE (2).svg" alt="AWHI Yoga & Wellbeing" />
+          <p class="front-loc">Wellington, Aotearoa New Zealand</p>
+
+          <div class="front-title-wrap">
+            <p class="front-hours">300hr</p>
+            <p class="front-prog">Vinyasa Yoga<br>Teacher Training</p>
+            <p class="front-tagline">A deeper journey into teaching, practice, and purpose.</p>
+          </div>
+
+          <div class="front-bottom">
+            <span class="ya-badge">Yoga Alliance Accredited</span>
+            <span class="ya-badge">RYS 300</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /outside sheet -->
+  </div>
+
+  <!-- ══════════════════════════════════
+       INSIDE
+       Left→Right: [inside-left | inside-mid | flap-inner]
+  ══════════════════════════════════ -->
+  <div class="sheet-group">
+    <p class="sheet-label">Inside — Side 2 &nbsp;·&nbsp; reading left to right when fully open</p>
+    <div class="sheet">
+
+      <!-- INSIDE: Left panel — electives + note -->
+      <div class="panel bg-cream">
+        <div class="elec-panel">
+          <p class="eyebrow">Electives — choose any two</p>
+          <p class="mod-heading">Elective modules</p>
+          <p class="mod-sub">15 hours each · also open as standalone modules</p>
+
+          <div class="rule"></div>
+
+          <div class="mod-list">
+            <div class="mod-row">
+              <div class="mod-name elective">Prenatal Yoga</div>
+              <div class="mod-hrs">15 hrs</div>
+              <div class="mod-date">Fri–Sun, 14–16 Aug 2026 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name elective">Yoga in ACTion</div>
+              <div class="mod-hrs">15 hrs</div>
+              <div class="mod-date">Saturdays, 3 Oct–21 Nov 2026 · Online</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name elective">Hands on Assists</div>
+              <div class="mod-hrs">15 hrs</div>
+              <div class="mod-date">Fri–Sun, 30 Oct–1 Nov 2026 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name elective">Yoga Nidra</div>
+              <div class="mod-hrs">15 hrs</div>
+              <div class="mod-date">Online from 1 May 2027 · 4× live calls</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name elective">Yoga Meets Matauranga Māori</div>
+              <div class="mod-hrs">15 hrs</div>
+              <div class="mod-date">Wednesday evenings, May 2027 · Studio</div>
+            </div>
+          </div>
+
+          <div class="rule" style="margin-top: 1.1rem;"></div>
+
+          <p class="mod-heading" style="margin-bottom:0.4rem;">Fees &amp; enrolment</p>
+          <div class="hl-list" style="margin-bottom:0.85rem;">
+            <div class="hl-item">Individual modules booked &amp; paid separately</div>
+            <div class="hl-item">Discounted rate for full 300hr enrolment</div>
+            <div class="hl-item">Payment plans available</div>
+          </div>
+
+          <div class="elec-note">
+            Each completed module (with assessment) delivers Yoga Alliance <strong>Continuing Education (CE) hours</strong>. Full 300hr completion qualifies for <strong>RYT 500 registration</strong>. Enquire for current pricing.
+          </div>
+        </div>
+      </div>
+
+      <!-- INSIDE: Middle panel — required modules -->
+      <div class="panel bg-cream">
+        <div class="mod-panel">
+          <p class="eyebrow">2026–2027 schedule</p>
+          <p class="mod-heading">Required modules</p>
+          <p class="mod-sub">270 hours · complete all eight</p>
+
+          <div class="rule"></div>
+
+          <div class="mod-list">
+            <div class="mod-row">
+              <div class="mod-name">Mantra, Pranayama &amp; Meditation</div>
+              <div class="mod-hrs">25 hrs</div>
+              <div class="mod-date">Sat 5 &amp; 26 Sep 2026 · Studio + Online</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Anatomy: Legs, Hips &amp; Pelvis</div>
+              <div class="mod-hrs">35 hrs</div>
+              <div class="mod-date">Fri–Sun, 22–24 Jan 2027 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Yoga Philosophy Part I</div>
+              <div class="mod-hrs">35 hrs</div>
+              <div class="mod-date">Sat–Sun 27–28 Feb + Mon 8 &amp; 22 Mar 2027</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">The (He)art of Sequencing</div>
+              <div class="mod-hrs">25 hrs</div>
+              <div class="mod-date">Sat–Sun, 13–14 Mar 2027 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Yoga Philosophy, Lifestyle &amp; Ethics Part II</div>
+              <div class="mod-hrs">25 hrs</div>
+              <div class="mod-date">Sat–Sun, 3–4 Apr 2027 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Anatomy: Spine &amp; Core</div>
+              <div class="mod-hrs">35 hrs</div>
+              <div class="mod-date">Fri–Sun, 11–13 Jun 2027 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Anatomy: Shoulders &amp; Neck</div>
+              <div class="mod-hrs">35 hrs</div>
+              <div class="mod-date">Fri–Sun, 23–25 Jul 2027 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Teaching Practicum</div>
+              <div class="mod-hrs">25 hrs</div>
+              <div class="mod-date">Fri–Sun, 10–12 Sep 2027 · Studio</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Online Wānanga</div>
+              <div class="mod-hrs">20 hrs</div>
+              <div class="mod-date">Monthly throughout 2026–2027 · Online</div>
+            </div>
+            <div class="mod-row">
+              <div class="mod-name">Wrap-Up &amp; Graduation</div>
+              <div class="mod-hrs">10 hrs</div>
+              <div class="mod-date">Saturday, 23 Oct 2027 · Studio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSIDE: Right / flap inner — about -->
+      <div class="panel bg-cream">
+        <div class="fi-content">
+          <p class="eyebrow">Advanced Teacher Training</p>
+          <h2 class="fi-heading">Go further.<br>Teach deeper.</h2>
+
+          <p class="fi-body">Building on your 200hr foundation, this advanced programme takes you deeper into teaching methodology, personal practice, and the rich intersection of yoga philosophy and Te Ao Māori wisdom.</p>
+          <p class="fi-body">Structured as standalone modules with a hybrid learning format — in-person intensives combined with online content and monthly live wānanga — you can join for a single module, collect CE credits, or complete the full 300-hour certification.</p>
+          <p class="fi-body">Complete all required modules and two electives to earn your 300hr certificate from AWHI Yoga School and qualify for <strong>Yoga Alliance RYT 500 registration</strong>.</p>
+
+          <div class="rule"></div>
+
+          <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--kawa); margin-bottom:0.5rem;">Three ways to join</p>
+          <div class="hl-list">
+            <div class="hl-item"><strong style="color:var(--ngahere);">Deepen your practice</strong> — most modules open to all, no certification required</div>
+            <div class="hl-item"><strong style="color:var(--ngahere);">Earn CE credits</strong> — for 200hr+ teachers maintaining Yoga Alliance registration</div>
+            <div class="hl-item"><strong style="color:var(--ngahere);">Full 300hr certification</strong> — pathway to RYT 500 for 200hr CYT holders</div>
+          </div>
+
+          <div class="phil-strip">
+            <p>Our training honours <strong>Te Whare Tapa Whā</strong> — weaving ancient yoga teachings with Māori ways of knowing and being.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /inside sheet -->
+  </div>
+
+</div><!-- /wrapper -->
+</body>
+</html>

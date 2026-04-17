@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes & Timetable — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Explore AWHI's full timetable — heated flow, yin, Pilates, meditation, prenatal yoga and more. Wellington CBD. Book a class today." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Classes & Timetable — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="Explore AWHI's full timetable — heated flow, yin, Pilates, meditation, prenatal yoga and more. Wellington CBD. Book a class today." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/classes.html" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/classes.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--hua);
+      color: var(--pango);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── UTILITIES ──────────────────────────────────────── */
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1.5px;
+      background: var(--kawakawa);
+    }
+    .display-heading {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    /* ─── FADE UP ────────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled { background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 48px; width: auto; filter: brightness(10); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--hua);
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--kawakawa); }
+    .nav-book {
+      background: var(--repo);
+      color: var(--hua) !important;
+      padding: 0.6rem 1.4rem;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-book:hover { background: #a34a20 !important; color: var(--hua) !important; }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); transition: 0.3s; }
+
+    /* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 4rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/1709647202762-E3WNV2KQYT6XIU5CTJUK/PowerLiving-17.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+    }
+    .page-hero .container { position: relative; z-index: 1; }
+    .page-hero-eyebrow {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.0;
+      margin-bottom: 1.25rem;
+    }
+    .page-hero-sub {
+      color: rgba(244, 239, 228, 0.85);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      max-width: 560px;
+      margin-bottom: 2rem;
+    }
+
+    /* ─── POLICIES STRIP ─────────────────────────────────── */
+    .policies {
+      background: var(--repo);
+      padding: 2rem 0;
+    }
+    .policies .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .policy-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .policy-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .policy-item h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.2rem;
+    }
+    .policy-item p {
+      font-size: 0.875rem;
+      color: rgba(244, 239, 228, 0.85);
+      line-height: 1.5;
+    }
+
+    /* ─── TIMETABLE ──────────────────────────────────────── */
+    .timetable {
+      background: var(--hua);
+      padding: clamp(4rem, 7vw, 6rem) 0;
+    }
+    .timetable-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .timetable-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--ngahere);
+      margin-bottom: 0.75rem;
+    }
+    .timetable-header p {
+      color: #666;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+    .timetable-embed {
+      background: white;
+      border-radius: 4px;
+      overflow: hidden;
+      min-height: 600px;
+    }
+    .timetable-embed iframe {
+      width: 100%;
+      min-height: 700px;
+      border: none;
+      display: block;
+    }
+
+    /* ─── CLASS TYPES ────────────────────────────────────── */
+    .class-types {
+      background: var(--ngahere);
+      padding: clamp(4rem, 7vw, 6rem) 0;
+    }
+    .class-types-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .class-types-header .section-label { justify-content: center; color: var(--kawakawa); }
+    .class-types-header .section-label::before { background: var(--kawakawa); }
+    .class-types-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--hua);
+    }
+    .class-types-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(244, 239, 228, 0.1);
+    }
+    .class-type-card {
+      background: var(--ngahere);
+      padding: 2rem;
+      border: 1px solid rgba(244, 239, 228, 0.1);
+      transition: background 0.25s;
+    }
+    .class-type-card:hover { background: rgba(244, 239, 228, 0.05); }
+    .class-tag {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+    .tag-heated { background: var(--repo); color: var(--hua); }
+    .tag-still { background: var(--kawakawa); color: var(--ngahere); }
+    .tag-pilates { background: var(--kowhai); color: var(--ngahere); }
+    .tag-meditation { background: var(--dusk); color: var(--hua); }
+    .tag-specialist { background: rgba(244,239,228,0.15); color: var(--hua); }
+    .class-type-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.5rem;
+    }
+    .class-type-card p {
+      font-size: 0.9rem;
+      color: rgba(244, 239, 228, 0.8);
+      line-height: 1.6;
+    }
+
+    /* ─── CTA STRIP ──────────────────────────────────────── */
+    .classes-cta {
+      background: var(--hua);
+      padding: 4rem 0;
+      text-align: center;
+      border-top: 1px solid rgba(28, 56, 41, 0.1);
+    }
+    .classes-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--ngahere);
+      margin-bottom: 0.75rem;
+    }
+    .classes-cta p {
+      color: #666;
+      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(244,239,228,0.1);
+    }
+    .footer-brand img { height: 48px; width: auto; filter: brightness(10); margin-bottom: 1.25rem; }
+    .footer-brand p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.7; margin-bottom: 1.5rem; max-width: 280px; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(244,239,228,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(244,239,228,0.7);
+      transition: all 0.2s;
+    }
+    .footer-socials a:hover { border-color: var(--hua); color: var(--hua); }
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col li a { font-size: 0.9rem; color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-col li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.9; }
+    .footer-contact a { color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(244,239,228,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(244,239,228,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .class-types-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .policies .container { grid-template-columns: 1fr; gap: 1.5rem; }
+      .class-types-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────── -->
+  <nav class="nav scrolled" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png"
+          alt="AWHI Yoga & Wellbeing"
+        />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html" class="active">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="training.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── PAGE HERO ──────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+      <h1>Classes &<br>Timetable</h1>
+      <p class="page-hero-sub">Something for every body, every level, every day of the week. Heated flow, yin, Pilates, meditation and more.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="#timetable" class="btn btn-primary">View timetable</a>
+        <a href="#class-types" class="btn btn-outline-cream">Explore classes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POLICIES STRIP ─────────────────────────────────── -->
+  <div class="policies">
+    <div class="container">
+      <div class="policy-item">
+        <div class="policy-icon">📅</div>
+        <div>
+          <h4>Booking recommended</h4>
+          <p>Advanced booking is optional but recommended. We have plenty of space — feel free to just show up.</p>
+        </div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-icon">⏱</div>
+        <div>
+          <h4>We start on time</h4>
+          <p>Studio doors close at the start of class for the safety and comfort of everyone inside.</p>
+        </div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-icon">🌱</div>
+        <div>
+          <h4>All levels welcome</h4>
+          <p>Every class is designed to be accessible. Our teachers will guide you wherever you are in your practice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TIMETABLE ──────────────────────────────────────── -->
+  <section class="timetable" id="timetable" aria-labelledby="timetable-heading">
+    <div class="container">
+      <div class="timetable-header fade-up">
+        <span class="section-label" style="justify-content:center;">Book a class</span>
+        <h2 class="display-heading" id="timetable-heading">This week's timetable</h2>
+        <p>Select a class to book your spot. New to AWHI? Our 30 Day Intro Pass is the perfect way to start.</p>
+      </div>
+      <div class="timetable-embed fade-up">
+        <div id="ribbon-schedule"></div>
+        <script
+          async
+          type="module"
+          host_id="20264"
+          teacher_ids="[]"
+          location_ids="[]"
+          tag_ids="[]"
+          hide_drop_in_price="true"
+          default_filter="today"
+          locale="en"
+          src="https://momence.com/plugin/host-schedule/host-schedule.js"
+        ></script>
+        <style>
+          :root {
+            --momenceColorBackground: #FBFBFB;
+            --momenceColorPrimary: 47, 71, 57;
+            --momenceColorBlack: 100, 94, 94;
+          }
+        </style>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLASS TYPES ────────────────────────────────────── -->
+  <section class="class-types" id="class-types" aria-labelledby="class-types-heading">
+    <div class="container">
+      <div class="class-types-header fade-up">
+        <span class="section-label">What we offer</span>
+        <h2 class="display-heading" id="class-types-heading">Find your practice</h2>
+      </div>
+      <div class="class-types-grid">
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-heated">Heated · 32°C</span>
+          <h3>Heated Flow</h3>
+          <p>Our most popular class — a dynamic, heated vinyasa. Strong movement, steady breath. The heat keeps the energy high.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-heated">Heated & Non-Heated</span>
+          <h3>Power Vinyasa</h3>
+          <p>All-levels class with varied sequencing every session. Available heated and non-heated — expect strength, flow, and a satisfying challenge.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-heated">Heated · Pilates</span>
+          <h3>Hot HIIT Pilates</h3>
+          <p>A 60-minute heated full-body workout combining Pilates precision with high-intensity intervals. Build strength from the inside out.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-still">Stillness</span>
+          <h3>Yin Yoga</h3>
+          <p>Gentle floor-based practice with long passive holds — deeply nourishing for the body, nervous system, and mind.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-still">Stillness · Therapy</span>
+          <h3>Yin & MFR</h3>
+          <p>Yin yoga combined with myofascial release using yoga therapy balls and foam rollers. Deeply restorative for tight connective tissue.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-still">Non-heated</span>
+          <h3>Align</h3>
+          <p>Non-heated vinyasa focused on alignment, philosophy, or a peak pose. Great for those wanting to go deeper into the detail of their practice.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-pilates">Heated & Non-Heated</span>
+          <h3>Pilates</h3>
+          <p>Core-focused classes available heated and non-heated, complementing your movement practice. Build functional strength, stability, and body awareness.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-pilates">Pilates · All levels</span>
+          <h3>Power Pilates</h3>
+          <p>All-levels non-heated Pilates using resistance bands and straps to challenge and support your full-body movement.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-still">Non-heated · Beginners</span>
+          <h3>Beginners Flow</h3>
+          <p>A slower-paced, foundational class suitable for all — especially those brand new to yoga. Learn the basics in a warm, welcoming space.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-meditation">Meditation</span>
+          <h3>Guided Meditation</h3>
+          <p>Group meditation accessible to absolutely everyone. No experience needed — just arrive and be guided into stillness.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-meditation">Deep rest</span>
+          <h3>Yoga Nidra</h3>
+          <p>A guided relaxation meditation performed lying down. Known as "yogic sleep" — profoundly restorative for body and mind.</p>
+        </div>
+
+        <div class="class-type-card fade-up">
+          <span class="class-tag tag-specialist">Specialist</span>
+          <h3>Prenatal Yoga</h3>
+          <p>Birth-focused instruction addressing the physiology of pregnancy and pelvic floor health. Safe, supportive, and specifically designed for expecting parents.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="classes-cta">
+    <div class="container">
+      <h2 class="display-heading">Ready to begin?</h2>
+      <p>New to AWHI? Our 30 Day Intro Pass gives you unlimited classes to explore everything we offer.</p>
+      <div class="cta-row">
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="btn btn-primary" target="_blank" rel="noopener">Book a class</a>
+        <a href="https://momence.com/m/623375" class="btn btn-outline-dark" target="_blank" rel="noopener">30 Day Intro Pass</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png"
+            alt="AWHI Yoga & Wellbeing"
+          />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener">Ig</a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener">Fb</a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener">Yt</a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener">Li</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">View timetable</a></li>
+            <li><a href="classes.html#class-types">Heated Flow</a></li>
+            <li><a href="classes.html#class-types">Yin Yoga</a></li>
+            <li><a href="classes.html#class-types">Pilates</a></li>
+            <li><a href="classes.html#class-types">Meditation</a></li>
+            <li><a href="classes.html#class-types">Prenatal Yoga</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="index.html#training">Teacher Training</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Membership</a></li>
+            <li><a href="pricing.html#gift-vouchers">Gift Vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington CBD<br>
+            New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── JAVASCRIPT ─────────────────────────────────────── -->
+  <script>
+    // Nav scroll effect (starts scrolled since no full hero)
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 0);
+    }, { passive: true });
+
+    // Fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          const children = entry.target.parentElement.querySelectorAll('.fade-up');
+          children.forEach((el, i) => {
+            setTimeout(() => el.classList.add('visible'), i * 80);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    document.getElementById('navToggle').addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+
+</body>
+</html>

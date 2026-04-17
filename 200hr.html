@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>200hr Vinyasa YTT — AWHI Yoga School, Wellington</title>
+  <meta name="description" content="AWHI Yoga School's flagship 200hr Vinyasa Teacher Training — Yoga Alliance accredited, rooted in te ao Maori and the traditions of yoga. Wellington, Aotearoa New Zealand." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="200hr Vinyasa YTT — AWHI Yoga School, Wellington" />
+  <meta property="og:description" content="AWHI Yoga School's flagship 200hr Vinyasa Teacher Training — Yoga Alliance accredited, rooted in te ao Maori and the traditions of yoga. Wellington, Aotearoa New Zealand." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/school/200hr.html" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/school/200hr.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --ao:        #2A2320;   /* warm charcoal */
+      --hua:       #F4EFE4;   /* warm cream */
+      --wai:       #C05C2C;   /* terracotta */
+      --pango:     #242424;   /* charcoal */
+      --kawakawa:  #7A9E7E;   /* sage */
+      --kowhai:    #D4A553;   /* warm gold */
+      --ua:        #EBE0D8;   /* warm sand */
+
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--hua);
+      color: var(--pango);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── UTILITIES ──────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.5rem, 5vw, 4rem);
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary {
+      background: var(--wai);
+      color: var(--hua);
+      border-color: var(--wai);
+    }
+    .btn-primary:hover {
+      background: #a34a20;
+      border-color: #a34a20;
+    }
+    .btn-outline-cream {
+      background: transparent;
+      color: var(--hua);
+      border-color: var(--hua);
+    }
+    .btn-outline-cream:hover {
+      background: var(--hua);
+      color: var(--ao);
+    }
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--ao);
+      border-color: var(--ao);
+    }
+    .btn-outline-dark:hover {
+      background: var(--ao);
+      color: var(--hua);
+    }
+    .btn-outline-kowhai {
+      background: transparent;
+      color: var(--ao);
+      border-color: var(--ao);
+    }
+    .btn-outline-kowhai:hover {
+      background: var(--ao);
+      color: var(--hua);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1.5px;
+      background: var(--kawakawa);
+      flex-shrink: 0;
+    }
+
+    /* ─── FADE-UP ANIMATION ──────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up.delay-1 { transition-delay: 0.1s; }
+    .fade-up.delay-2 { transition-delay: 0.2s; }
+    .fade-up.delay-3 { transition-delay: 0.3s; }
+    .fade-up.delay-4 { transition-delay: 0.4s; }
+    .fade-up.delay-5 { transition-delay: 0.5s; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled {
+      background: var(--ao);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      text-decoration: none;
+    }
+    .nav-logo-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--hua);
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+    .nav-logo-sub {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: rgba(244,239,228,0.55);
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      color: var(--hua);
+      font-size: 0.83rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      opacity: 1;
+    }
+    .nav-links a.active {
+      border-bottom: 1.5px solid var(--kowhai);
+      padding-bottom: 2px;
+    }
+    .nav-book {
+      background: var(--wai) !important;
+      color: var(--hua) !important;
+      padding: 0.6rem 1.4rem;
+      font-weight: 700 !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 1 !important;
+      transition: background 0.25s !important;
+      border: none;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--hua);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--ao);
+      padding: 1.5rem clamp(1.5rem, 5vw, 4rem) 2rem;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: var(--hua);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(244,239,228,0.08);
+      opacity: 0.85;
+    }
+    .nav-mobile a.active { opacity: 1; color: var(--kowhai); }
+    .nav-mobile .nav-book {
+      margin-top: 1.25rem;
+      text-align: center;
+      display: block;
+      padding: 0.85rem 2rem;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 65vh;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('../Images/AwhibyJuliaSabugosa-113.jpg');
+      background-size: cover;
+      background-position: center 40%;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 46, 64, 0.72);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--hua);
+      max-width: 760px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(244,239,228,0.12);
+      border: 1px solid rgba(244,239,228,0.3);
+      color: var(--hua);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      color: var(--hua);
+    }
+    .hero-sub {
+      font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+      line-height: 1.7;
+      opacity: 0.88;
+      max-width: 620px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-ya-badge {
+      display: inline-block;
+      background: var(--kowhai);
+      color: var(--ao);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* ─── STATS STRIP ────────────────────────────────────── */
+    .stats-strip {
+      background: var(--wai);
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--hua);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(244,239,228,0.75);
+    }
+
+    /* ─── ABOUT SECTION ──────────────────────────────────── */
+    .about {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .about-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .about-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .about-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 5vw, 5rem);
+      align-items: start;
+    }
+    .about-text p {
+      color: #4a4a4a;
+      font-size: 1.02rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .inclusions-box {
+      background: #fff;
+      border-top: 3px solid var(--wai);
+      padding: 2rem 1.75rem;
+    }
+    .inclusions-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+    .inclusions-list {
+      list-style: none;
+      padding: 0;
+    }
+    .inclusions-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.97rem;
+      color: #3a3a3a;
+      line-height: 1.5;
+    }
+    .inclusions-list li:last-child { border-bottom: none; }
+    .inclusions-list li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--kawakawa);
+      margin-top: 0.5em;
+      flex-shrink: 0;
+    }
+    .inclusions-list a {
+      color: var(--wai);
+      text-decoration: underline;
+    }
+    .inclusions-list a:hover { opacity: 0.75; }
+
+    /* ─── PILLARS SECTION ────────────────────────────────── */
+    .pillars {
+      background: var(--ao);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .pillars .section-label {
+      color: var(--kawakawa);
+    }
+    .pillars .section-label::before { background: var(--kawakawa); }
+    .pillars-header {
+      max-width: 700px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .pillars-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .pillars-header p {
+      color: rgba(244,239,228,0.78);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+    .pillars-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+    }
+    .pillar-card {
+      background: rgba(244,239,228,0.06);
+      border-top: 2px solid var(--wai);
+      padding: 1.75rem 1.4rem;
+      transition: background 0.25s;
+    }
+    .pillar-card:hover {
+      background: rgba(244,239,228,0.1);
+    }
+    .pillar-num {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 0.5rem;
+    }
+    .pillar-name {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.15;
+      margin-bottom: 0.25rem;
+    }
+    .pillar-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--kowhai);
+      margin-bottom: 0.75rem;
+    }
+    .pillar-dates {
+      font-size: 0.82rem;
+      color: rgba(244,239,228,0.6);
+      margin-bottom: 0.85rem;
+      font-weight: 500;
+    }
+    .pillar-desc {
+      font-size: 0.9rem;
+      color: rgba(244,239,228,0.72);
+      line-height: 1.65;
+    }
+
+    /* ─── IMAGE BREAK ────────────────────────────────────── */
+    .image-break {
+      width: 100%;
+      height: clamp(280px, 35vw, 480px);
+      overflow: hidden;
+    }
+    .image-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    /* ─── WHO IT'S FOR ───────────────────────────────────── */
+    .who {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .who-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .who-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .who-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .who-card {
+      background: #fff;
+      border-top: 3px solid var(--wai);
+      padding: 2rem 1.75rem;
+    }
+    .who-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .who-card p {
+      color: #4a4a4a;
+      font-size: 0.97rem;
+      line-height: 1.7;
+    }
+
+    /* ─── SCHOLARSHIP CALLOUT ────────────────────────────── */
+    .scholarship-callout {
+      background: var(--kowhai);
+      padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+    }
+    .scholarship-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .scholarship-text {
+      flex: 1;
+      min-width: 260px;
+    }
+    .scholarship-text p {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 500;
+      color: var(--ao);
+      line-height: 1.6;
+    }
+    .btn-scholarship {
+      background: var(--ao);
+      color: var(--hua);
+      border-color: var(--ao);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-scholarship:hover {
+      background: #111e2b;
+      border-color: #111e2b;
+    }
+
+    /* ─── CTA SECTION ────────────────────────────────────── */
+    .cta-section {
+      background: var(--wai);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: rgba(244,239,228,0.85);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 580px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+    .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      background: var(--ao);
+      padding: clamp(3.5rem, 7vw, 6rem) 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      padding-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .footer-tagline {
+      color: rgba(244,239,228,0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-col ul li a {
+      color: rgba(244,239,228,0.65);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--hua); }
+    .footer-contact p {
+      color: rgba(244,239,228,0.65);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 0.25rem;
+    }
+    .footer-contact a {
+      color: var(--kowhai);
+      transition: opacity 0.2s;
+    }
+    .footer-contact a:hover { opacity: 0.8; }
+    .footer-bottom {
+      border-top: 1px solid rgba(244,239,228,0.08);
+      padding: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-bottom p {
+      color: rgba(244,239,228,0.35);
+      font-size: 0.82rem;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .pillars-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; }
+    }
+
+    @media (max-width: 900px) {
+      .about-cols { grid-template-columns: 1fr; }
+      .pillars-row { grid-template-columns: repeat(2, 1fr); }
+      .who-cards { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-book { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero h1 { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+
+      .pillars-row { grid-template-columns: 1fr 1fr; }
+      .who-cards { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .pillars-row { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .hero-ctas { flex-direction: column; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .scholarship-inner { flex-direction: column; align-items: flex-start; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ao);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">AWHI Yoga School</span>
+        <span class="nav-logo-sub">For teachers and learners</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="200hr.html" class="active">200hr YTT</a>
+        <a href="yin-ytt.html">50/100hr Yin YTT</a>
+        <a href="300hr.html">300hr YTT</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="200hr.html" class="active">200hr YTT</a>
+    <a href="yin-ytt.html">50/100hr Yin YTT</a>
+    <a href="300hr.html">300hr YTT</a>
+    <a href="scholarships.html">Scholarships</a>
+    <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">200hr Vinyasa YTT</div>
+      <h1>Begin Your Teaching Journey</h1>
+      <p class="hero-sub">AWHI's flagship teacher training. 200 contact hours, Yoga Alliance accredited, and uniquely rooted in te ao Maori and the traditions of yoga.</p>
+      <div class="hero-ya-badge">Yoga Alliance RYS 200</div>
+      <div class="hero-ctas">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScI9q6b0vA1tgxjCAnmrdUTVMmN-g6s3xO4Ffz_4DaZ2WOWUw/viewform?usp=header" class="btn btn-primary" target="_blank" rel="noopener">Register now</a>
+        <a href="https://drive.google.com/file/d/1XrGF5sbr_NGMFIaJ1muyeUQc7k0xtrJF/view?usp=drive_link" class="btn btn-outline-cream" target="_blank" rel="noopener">Download info pack</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── SECTION 1: OVERVIEW STRIP ───────────────────────── -->
+  <section class="stats-strip" aria-label="Programme overview">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up delay-1">
+          <div class="stat-number">200</div>
+          <div class="stat-label">Contact hours</div>
+        </div>
+        <div class="stat-item fade-up delay-2">
+          <div class="stat-number">$4,599</div>
+          <div class="stat-label">NZD</div>
+        </div>
+        <div class="stat-item fade-up delay-3">
+          <div class="stat-number">Five</div>
+          <div class="stat-label">Weekend intensives</div>
+        </div>
+        <div class="stat-item fade-up delay-4">
+          <div class="stat-number">Jul–Nov</div>
+          <div class="stat-label">2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 2: ABOUT THE TRAINING ───────────────────── -->
+  <section class="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-header fade-up">
+        <div class="section-label">About the training</div>
+        <h2 id="about-heading">A uniquely Aotearoa experience</h2>
+      </div>
+      <div class="about-cols">
+        <div class="about-text fade-up delay-1">
+          <p>Our Yoga Alliance accredited 200hr Vinyasa YTT is a comprehensive journey into the art and science of yoga teaching. Structured around the five pillars of Te Whare Tapa Whā each weekend intensive explores a different dimension of the whole person — physical, mental, emotional, spiritual, and relational.</p>
+          <p>This training is equally powerful for those who want to become teachers and those who simply want to deepen their own practice. Either way, you'll leave transformed.</p>
+          <p>Basic vinyasa experience recommended (approximately six months of regular practice). All bodies and experience levels welcome.</p>
+        </div>
+        <div class="inclusions-box fade-up delay-2">
+          <h3>What's included</h3>
+          <ul class="inclusions-list">
+            <li>Unlimited AWHI membership during training</li>
+            <li>Training manual and all course materials</li>
+            <li>Graduation celebration and certificate</li>
+            <li>Lifetime discounts on AWHI memberships</li>
+            <li>Payment plans available</li>
+            <li>Scholarships available — see <a href="scholarships.html">Scholarship page</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: FIVE PILLARS ─────────────────────────── -->
+  <section class="pillars" aria-labelledby="pillars-heading">
+    <div class="container">
+      <div class="pillars-header fade-up">
+        <div class="section-label">Programme structure</div>
+        <h2 id="pillars-heading">Five pillars, five weekends</h2>
+        <p>Each intensive weekend is structured around one of the five pillars of Te Whare Tapa Whā— the Maori model of holistic health developed by Sir Mason Durie. Together, they form a complete education in yoga and in life.</p>
+      </div>
+      <div class="pillars-row">
+
+        <div class="pillar-card fade-up delay-1">
+          <div class="pillar-num">Pillar 01</div>
+          <div class="pillar-name">Whenua</div>
+          <div class="pillar-subtitle">Foundations</div>
+          <div class="pillar-dates">30 Jul – 2 Aug 2026</div>
+          <p class="pillar-desc">The ground beneath your feet. We begin with the fundamentals: yoga history, anatomy basics, the structure of safe asana, and introducing yourself as a teacher.</p>
+        </div>
+
+        <div class="pillar-card fade-up delay-2">
+          <div class="pillar-num">Pillar 02</div>
+          <div class="pillar-name">Tinana</div>
+          <div class="pillar-subtitle">Body</div>
+          <div class="pillar-dates">20–23 Aug 2026</div>
+          <p class="pillar-desc">The physical vessel. Deep-dive anatomy, biomechanics, applied physiology, and the intelligent application of alignment to a yoga class.</p>
+        </div>
+
+        <div class="pillar-card fade-up delay-3">
+          <div class="pillar-num">Pillar 03</div>
+          <div class="pillar-name">Hinengaro</div>
+          <div class="pillar-subtitle">Mind</div>
+          <div class="pillar-dates">17–20 Sep 2026</div>
+          <p class="pillar-desc">The inner landscape. Yoga philosophy, the Yoga Sutras, meditation methodology, and the psychology of teaching.</p>
+        </div>
+
+        <div class="pillar-card fade-up delay-4">
+          <div class="pillar-num">Pillar 04</div>
+          <div class="pillar-name">Wairua</div>
+          <div class="pillar-subtitle">Spirit</div>
+          <div class="pillar-dates">15–18 Oct 2026</div>
+          <p class="pillar-desc">The unseen dimension. Pranayama, chakra theory, sequencing with depth and intention, and the philosophy of service in teaching.</p>
+        </div>
+
+        <div class="pillar-card fade-up delay-5">
+          <div class="pillar-num">Pillar 05</div>
+          <div class="pillar-name">Whānau</div>
+          <div class="pillar-subtitle">Community</div>
+          <div class="pillar-dates">12–15 Nov 2026</div>
+          <p class="pillar-desc">The relational field. Practicum, peer teaching, ethics, and stepping into the world as a certified teacher.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── IMAGE BREAK ───────────────────────────────────────── -->
+  <div class="image-break">
+    <img
+      src="../Images/AwhibyJuliaSabugosa-107.jpg"
+      alt="AWHI Yoga Studio"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ─── SECTION 4: WHO IT'S FOR ─────────────────────────── -->
+  <section class="who" aria-labelledby="who-heading">
+    <div class="container">
+      <div class="who-header fade-up">
+        <div class="section-label">Who should apply</div>
+        <h2 id="who-heading">Is this training for you?</h2>
+      </div>
+      <div class="who-cards">
+        <div class="who-card fade-up delay-1">
+          <h3>Aspiring teachers</h3>
+          <p>You've found yoga and want to share it. This training gives you the skills, ethics, and confidence to teach safely and authentically.</p>
+        </div>
+        <div class="who-card fade-up delay-2">
+          <h3>Deepening practitioners</h3>
+          <p>You're not interested in teaching but want to understand yoga from the inside out. Many of our graduates never teach a class — they just become more themselves.</p>
+        </div>
+        <div class="who-card fade-up delay-3">
+          <h3>Career changers</h3>
+          <p>You're ready for something that aligns with your values. A 200hr certification opens doors to teaching in studios, workplaces, schools, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 5: SCHOLARSHIP CALLOUT ──────────────────── -->
+  <section class="scholarship-callout" aria-label="Scholarships">
+    <div class="container">
+      <div class="scholarship-inner">
+        <div class="scholarship-text fade-up">
+          <p>Scholarships available — fully funded places for Maori, Pasifika, BIPOC, LGBTQ+ and other underrepresented communities.</p>
+        </div>
+        <a href="scholarships.html" class="btn btn-scholarship fade-up delay-1">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA SECTION ───────────────────────────────────────── -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="fade-up">Ready to take the next step?</h2>
+      <p class="fade-up delay-1">Register now or get in touch with any questions. We'd love to talk through whether this training is right for you.</p>
+      <div class="cta-btns fade-up delay-2">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScI9q6b0vA1tgxjCAnmrdUTVMmN-g6s3xO4Ffz_4DaZ2WOWUw/viewform?usp=header" class="btn btn-primary" target="_blank" rel="noopener">Register now</a>
+        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-cream">Email us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">AWHI Yoga School</div>
+          <p class="footer-tagline">Teacher training rooted in community and authentic practice. Wellington, Aotearoa New Zealand.</p>
+        </div>
+        <div class="footer-col">
+          <h4>School</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="200hr.html">200hr YTT</a></li>
+            <li><a href="yin-ytt.html">50/100hr Yin YTT</a></li>
+            <li><a href="300hr.html">300hr YTT</a></li>
+            <li><a href="scholarships.html">Scholarships</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="../classes.html">Classes</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../events.html">Events</a></li>
+            <li><a href="../team.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>Level 2, 15 Johnston Street<br>Wellington</p>
+          <p><a href="tel:+6444995006">+64 4 499 5006</a></p>
+          <p><a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ───────────────────────────────────────────── -->
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // Mobile hamburger
+    const toggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-up IntersectionObserver
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

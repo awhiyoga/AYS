@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Get in touch with AWHI Yoga & Wellbeing. Visit us at Level 2, 15 Johnston Street, Wellington CBD. Call, email, or send us a message." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="Get in touch with AWHI Yoga & Wellbeing. Visit us at Level 2, 15 Johnston Street, Wellington CBD." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/contact.html" />
+  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/contact.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 48px; width: auto; filter: brightness(10); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--hua); text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--kawakawa); }
+    .nav-book { background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem; font-weight: 700 !important; letter-spacing: 0.08em !important; transition: background 0.2s !important; }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 5rem) 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/Awhi_tea_time-01.jpg');
+      background-size: cover; background-position: center 40%;
+      opacity: 0.15;
+    }
+    .page-hero .container { position: relative; z-index: 1; max-width: 800px; }
+    .page-hero-eyebrow { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--hua); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 600; color: var(--hua); line-height: 0.95; margin-bottom: 1.5rem; }
+    .page-hero-sub { color: rgba(244,239,228,0.85); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 560px; }
+
+    /* ─── CONTACT BODY ───────────────────────────────────── */
+    .contact-body {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background: var(--hua);
+    }
+    .contact-body .container {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    /* ─── CONTACT DETAILS ────────────────────────────────── */
+    .contact-details {}
+    .contact-details h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 600;
+      color: var(--ngahere);
+      margin-bottom: 2rem;
+      line-height: 1.0;
+    }
+    .contact-block { margin-bottom: 2rem; }
+    .contact-block-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 0.5rem;
+    }
+    .contact-block p, .contact-block a {
+      font-size: 1rem;
+      color: var(--pango);
+      line-height: 1.7;
+    }
+    .contact-block a { transition: color 0.2s; }
+    .contact-block a:hover { color: var(--repo); }
+
+    .contact-map { margin-top: 2.5rem; }
+    .contact-map iframe {
+      width: 100%;
+      height: 260px;
+      border: none;
+      display: block;
+      filter: saturate(0.8);
+    }
+
+    /* ─── FORM PANEL ─────────────────────────────────────── */
+    .contact-form-panel {
+      background: var(--ngahere);
+      padding: clamp(2rem, 4vw, 3rem);
+    }
+    .contact-form-panel h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    .contact-form-panel .form-sub {
+      font-size: 0.9rem;
+      color: rgba(244,239,228,0.7);
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
+    .no-spam {
+      font-size: 0.8rem;
+      color: rgba(244,239,228,0.5);
+      margin-top: 1rem;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--ngahere); color: var(--hua); padding: clamp(3rem, 6vw, 5rem) 0 2rem; border-top: 1px solid rgba(244,239,228,0.1); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(244,239,228,0.1); }
+    .footer-brand img { height: 48px; width: auto; filter: brightness(10); margin-bottom: 1.25rem; }
+    .footer-brand p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.7; margin-bottom: 1.5rem; max-width: 280px; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a { width: 36px; height: 36px; border: 1px solid rgba(244,239,228,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(244,239,228,0.7); transition: all 0.2s; }
+    .footer-socials a:hover { border-color: var(--hua); color: var(--hua); }
+    .footer-col h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col li a { font-size: 0.9rem; color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-col li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.9; }
+    .footer-contact a { color: rgba(244,239,228,0.7); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(244,239,228,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(244,239,228,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .contact-body .container { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ─── ACCESSIBILITY ──────────────────────────────────── */
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem;
+      background: var(--ngahere); color: var(--hua);
+      padding: 0.5rem 1.25rem; border-radius: 0 0 4px 4px;
+      font-size: 0.875rem; font-weight: 600; z-index: 9999;
+      transition: top 0.2s; text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid var(--kowhai); outline-offset: 3px; border-radius: 2px; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── NAV ────────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="training.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+      <h1>Get in<br>touch</h1>
+      <p class="page-hero-sub">We'd love to hear from you — whether you have a question about classes, memberships, or just want to say kia ora.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT BODY ───────────────────────────────────── -->
+  <section class="contact-body">
+    <div class="container">
+
+      <!-- Details -->
+      <div class="contact-details fade-up">
+        <h2 class="display-heading">Find us</h2>
+
+        <div class="contact-block">
+          <p class="contact-block-label">Address</p>
+          <p>Level 2, 15 Johnston Street<br>Wellington CBD<br>Aotearoa New Zealand</p>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-block-label">Phone</p>
+          <a href="tel:+6444995006">+64 4 499 5006</a>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-block-label">Email</p>
+          <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-block-label">Studio Hours</p>
+          <p>Mon – Thu &nbsp; 6:30am – 8:00pm<br>Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:00am – 7:00pm<br>Saturday &nbsp;&nbsp; 8:00am – 6:00pm<br>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10:00am – 6:00pm</p>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.7!2d174.7762!3d-41.2865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd5a6f8!2s15+Johnston+St%2C+Wellington+6011!5e0!3m2!1sen!2snz!4v1"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="AWHI Yoga & Wellbeing location">
+          </iframe>
+          <a href="https://maps.google.com/?q=Level+2,+15+Johnston+Street,+Wellington" class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:1rem;">Get directions →</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-panel fade-up">
+        <h3 class="display-heading">Questions &<br>Newsletter</h3>
+        <p class="form-sub">Send us a message or sign up to our newsletter to stay up to date with classes, events, and what's on at AWHI.</p>
+
+        <div id="momence-plugin-lead-form"></div>
+        <script
+          async
+          type="module"
+          id="momence-plugin-lead-form-src"
+          host_id="20264"
+          fields="firstName,lastName,email,phoneNumber,enquiries"
+          token="JxjQoZ38Vq"
+          country_code="nz"
+          data-field-def='{"firstName":{"type":"text","label":"First name","required":true},"lastName":{"type":"text","label":"Last name","required":true},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"enquiries":{"type":"text","label":"Questions or Inquiries?","required":false,"hidden":false}}'
+          data-redirect-after-submit-to="awhiyoga.co.nz/classes"
+          data-on-success-msg="Ngā mihi nui!"
+          src="https://momence.com/plugin/lead-form/lead-form.js"
+        ></script>
+
+        <style>
+          :root {
+            --momenceColorBackground: #1C3829;
+            --momenceColorPrimary: 122, 158, 126;
+            --momenceColorBlack: 244, 239, 228;
+          }
+        </style>
+
+        <p class="no-spam">We promise to never spam you!</p>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener">Ig</a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener">Fb</a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener">Yt</a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener">Li</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">View timetable</a></li>
+            <li><a href="classes.html#class-types">Heated Flow</a></li>
+            <li><a href="classes.html#class-types">Yin Yoga</a></li>
+            <li><a href="classes.html#class-types">Pilates</a></li>
+            <li><a href="classes.html#class-types">Meditation</a></li>
+            <li><a href="classes.html#class-types">Prenatal Yoga</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="training.html">Teacher Training</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Membership</a></li>
+            <li><a href="pricing.html#gift-vouchers">Gift Vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington CBD<br>
+            Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => {
+      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '80px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'var(--ngahere)';
+      links.style.padding = '1.5rem 2rem';
+      links.style.gap = '1.25rem';
+    });
+  </script>
+
+</body>
+</html>

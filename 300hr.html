@@ -158,7 +158,7 @@
     }
     .nav-logo {
       font-family: var(--font-display);
-      font-size: 1.35rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: var(--hua);
       letter-spacing: 0.01em;
@@ -712,7 +712,7 @@
       padding: clamp(4rem, 8vw, 7rem) 0;
     }
     .investment-header {
-      max-width: 640px;
+      max-width: 680px;
       margin-bottom: clamp(2.5rem, 5vw, 4rem);
     }
     .investment-header h2 {
@@ -728,29 +728,177 @@
       font-size: 1.05rem;
       line-height: 1.7;
     }
-    .pricing-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      max-width: 780px;
-    }
-    .pricing-card {
-      background: #fff;
-      border-top: 3px solid var(--wai);
-      padding: 2rem 1.75rem;
-    }
-    .pricing-card h3 {
+
+    /* Full programme enrolment */
+    .enrol-section { margin-bottom: clamp(3rem, 6vw, 5rem); }
+    .pricing-subhead {
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 600;
       color: var(--ao);
+      margin-bottom: 1.5rem;
+    }
+    .eb-hero {
+      background: var(--wai);
+      padding: 2.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .eb-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--hua);
+      background: rgba(255,255,255,0.2);
+      padding: 0.25rem 0.7rem;
       margin-bottom: 0.75rem;
     }
-    .pricing-card p {
-      color: #4a4a4a;
+    .eb-price {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--hua);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .eb-sub {
+      color: rgba(244,239,228,0.88);
       font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
+    }
+    .eb-cta {
+      display: inline-block;
+      background: var(--hua);
+      color: var(--wai);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.9rem 2rem;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+    }
+    .eb-cta:hover { opacity: 0.82; }
+    .other-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(42,35,32,0.12);
+      border-top: none;
+    }
+    .option-card {
+      background: #fff;
+      padding: 1.75rem;
+      border-right: 1px solid rgba(42,35,32,0.08);
+    }
+    .option-card:last-child { border-right: none; }
+    .option-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 0.6rem;
+    }
+    .option-price {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--ao);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .option-detail {
+      font-size: 0.87rem;
+      color: #5a5a5a;
+      line-height: 1.5;
+    }
+
+    /* Module pricing table */
+    .module-pricing-section { margin-top: clamp(3rem, 6vw, 5rem); }
+    .module-pricing-section > h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 0.6rem;
+    }
+    .module-pricing-section > p {
+      color: #4a4a4a;
+      font-size: 0.97rem;
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+      max-width: 680px;
+    }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table.price-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #fff;
+      border: 1px solid rgba(42,35,32,0.1);
+    }
+    table.price-table thead th {
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ao);
+      background: #ede8df;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1.5px solid rgba(42,35,32,0.12);
+      white-space: nowrap;
+    }
+    table.price-table tbody tr {
+      border-bottom: 1px solid rgba(42,35,32,0.07);
+      transition: background 0.15s;
+    }
+    table.price-table tbody tr:hover { background: #faf7f2; }
+    table.price-table td {
+      padding: 0.9rem 1rem;
+      vertical-align: top;
+      line-height: 1.45;
+      color: var(--pango);
+    }
+    table.price-table td.mod-name {
+      font-weight: 500;
+      color: var(--ao);
+      min-width: 200px;
+    }
+    table.price-table .price-eb {
+      font-weight: 600;
+      color: var(--wai);
+      white-space: nowrap;
+    }
+    table.price-table .price-full { white-space: nowrap; }
+    table.price-table .incl-note {
+      font-size: 0.83rem;
+      color: #888;
+      font-style: italic;
+    }
+    table.price-table tr.group-row td {
+      background: #ede8df;
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ao);
+      padding: 0.55rem 1rem;
+    }
+    .pricing-note {
+      margin-top: 1.25rem;
+      font-size: 0.87rem;
+      color: #666;
+      line-height: 1.65;
+    }
+    .pricing-note a {
+      color: var(--wai);
+      text-decoration: underline;
     }
 
     /* ─── IMAGE BREAK ────────────────────────────────────── */
@@ -804,7 +952,7 @@
     .footer-brand {}
     .footer-logo {
       font-family: var(--font-display);
-      font-size: 1.4rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--hua);
       margin-bottom: 0.75rem;
@@ -875,7 +1023,10 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .curriculum-cols { grid-template-columns: 1fr; }
       .assessment-cols { grid-template-columns: 1fr; }
-      .pricing-cards { grid-template-columns: 1fr; max-width: 100%; }
+      .other-options { grid-template-columns: 1fr; }
+      .option-card { border-right: none; border-bottom: 1px solid rgba(42,35,32,0.08); }
+      .option-card:last-child { border-bottom: none; }
+      .eb-hero { flex-direction: column; align-items: flex-start; }
       .footer-grid { grid-template-columns: 1fr; }
 
       table.sched { font-size: 0.83rem; }
@@ -980,7 +1131,7 @@
       <div class="hero-ya-badge">Yoga Alliance RYS 300</div>
       <div class="hero-ctas">
         <a href="#curriculum" class="btn btn-primary">View the curriculum</a>
-        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-cream">Enquire</a>
+        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-cream">Enquiries</a>
       </div>
     </div>
   </header>
@@ -1001,10 +1152,12 @@
         <div class="pathway-card fade-up delay-2">
           <h3>Earn CE credits</h3>
           <p>You hold a 200hr (or higher) certification and want to maintain or expand your Yoga Alliance registration with Continuing Education (CE) hours. Each module delivers between 15 and 35 CE hours.</p>
+          <img src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" style="height:60px; width:auto; margin-top:1.25rem;" loading="lazy" />
         </div>
         <div class="pathway-card fade-up delay-3">
           <h3>Full 300hr certification</h3>
           <p>You hold a 200hr CYT and want to add a 300-hour certification, becoming a 500-hour Certified Yoga Teacher (CYT) registered with Yoga Alliance. Complete all required modules plus two electives.</p>
+          <img src="Images/rys-300.png" alt="Yoga Alliance RYS 300" style="height:60px; width:auto; margin-top:1.25rem;" loading="lazy" />
         </div>
       </div>
     </div>
@@ -1078,7 +1231,7 @@
       <div class="schedule-header fade-up">
         <div class="section-label">2026–2027 schedule</div>
         <h2 id="schedule-heading">Upcoming module dates</h2>
-        <p>Our inaugural 300hr cohort runs across 2026–2027. Individual modules can be booked separately. Dates marked with * are confirmed.</p>
+        <p>Our inaugural 300hr cohort runs across 2026–2027. Individual modules can be booked separately.</p>
       </div>
       <div class="schedule-table-wrap fade-up delay-1">
         <table class="sched">
@@ -1095,7 +1248,7 @@
           <tbody>
             <tr class="elective-row">
               <td>Prenatal Yoga <span class="elective-tag">Elective</span></td>
-              <td>Fri–Sun, 14–16 Aug 2026</td>
+              <td>Fri–Sun, 14–16 Aug 2026<br><span class="prereq">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></td>
               <td>15 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Marcelly Ribeiro</td>
@@ -1119,7 +1272,7 @@
             </tr>
             <tr class="elective-row">
               <td>Hands on Assists <span class="elective-tag">Elective</span></td>
-              <td>Fri–Sun, 30 Oct–1 Nov or Sat–Sun, 28–29 Nov 2026</td>
+              <td>Fri–Sun, 30 Oct–1 Nov 2026<br><span class="prereq">Fri 4:30–8pm &middot; Sat 9am–4pm &middot; Sun 8:30am–3pm</span></td>
               <td>15 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Rusty Millar</td>
@@ -1127,7 +1280,7 @@
             </tr>
             <tr class="required-row">
               <td>Anatomy: Legs, Hips &amp; Pelvis</td>
-              <td>Fri–Sun, 22–24 Jan 2027</td>
+              <td>Fri–Sun, 22–24 Jan 2027<br><span class="prereq">8am–6pm daily</span></td>
               <td>35 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn</td>
@@ -1135,7 +1288,7 @@
             </tr>
             <tr class="required-row">
               <td>Yoga Philosophy Part I</td>
-              <td>Sat–Sun, 27–28 Feb 2027 + evenings 8 &amp; 22 Mar</td>
+              <td>Sat 27 Feb, 8am–4pm &middot; Sun 28 Feb, 8am–5pm<br><span class="prereq">Mon 8 &amp; 22 Mar, 5:30–8:30pm</span></td>
               <td>35 hrs</td>
               <td class="prereq">Recommended 200 CYT</td>
               <td class="facilitator">Tom Brotherstone</td>
@@ -1143,7 +1296,7 @@
             </tr>
             <tr class="required-row">
               <td>The (He)art of Sequencing</td>
-              <td>Sat–Sun, 13–14 Mar 2027</td>
+              <td>Sat–Sun, 13–14 Mar 2027<br><span class="prereq">8am–6pm</span></td>
               <td>25 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn / Tom Brotherstone</td>
@@ -1151,7 +1304,7 @@
             </tr>
             <tr class="required-row">
               <td>Yoga Philosophy, Lifestyle &amp; Ethics Part II</td>
-              <td>Sat–Sun, 3–4 Apr 2027</td>
+              <td>Sat–Sun, 3–4 Apr 2027<br><span class="prereq">8am–5pm</span></td>
               <td>25 hrs</td>
               <td class="prereq">Yoga Philosophy Part I</td>
               <td class="facilitator">Tom Brotherstone</td>
@@ -1159,7 +1312,7 @@
             </tr>
             <tr class="elective-row">
               <td>Yoga Nidra <span class="elective-tag">Elective</span></td>
-              <td>Online from 1 May 2027 · 4× live calls</td>
+              <td>1 May 2027 (self-paced online)<br><span class="prereq">Live calls: Wed 5, 12 &amp; 19 May, 7pm</span></td>
               <td>15 hrs</td>
               <td class="prereq">None</td>
               <td class="facilitator">Kathleen Kuehn</td>
@@ -1167,7 +1320,7 @@
             </tr>
             <tr class="elective-row">
               <td>Yoga Meets Matauranga Māori <span class="elective-tag">Elective</span></td>
-              <td>Wed evenings, May 2027</td>
+              <td>Wed 5, 12, 19 &amp; 26 May 2027<br><span class="prereq">5:30–8:45pm</span></td>
               <td>15 hrs</td>
               <td class="prereq">None</td>
               <td class="facilitator">Tom Brotherstone / Murray Hemi</td>
@@ -1175,7 +1328,7 @@
             </tr>
             <tr class="required-row">
               <td>Anatomy: Spine &amp; Core</td>
-              <td>Fri–Sun, 11–13 Jun 2027</td>
+              <td>Fri–Sun, 11–13 Jun 2027<br><span class="prereq">8am–6pm daily</span></td>
               <td>35 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn</td>
@@ -1183,7 +1336,7 @@
             </tr>
             <tr class="elective-row">
               <td>Prenatal Yoga (repeat) <span class="elective-tag">Elective</span></td>
-              <td>Fri–Sun, 18–20 Jun 2027</td>
+              <td>Fri–Sun, 18–20 Jun 2027<br><span class="prereq">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></td>
               <td>15 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Marcelly Ribeiro</td>
@@ -1191,7 +1344,7 @@
             </tr>
             <tr class="required-row">
               <td>Anatomy: Shoulders &amp; Neck</td>
-              <td>Fri–Sun, 23–25 Jul 2027</td>
+              <td>Fri–Sun, 23–25 Jul 2027<br><span class="prereq">8am–6pm daily</span></td>
               <td>35 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn</td>
@@ -1199,20 +1352,29 @@
             </tr>
             <tr class="required-row">
               <td>The (He)art of Sequencing (repeat)</td>
-              <td>Sat–Sun, 21–22 Aug 2027</td>
+              <td>Sat–Sun, 21–22 Aug 2027<br><span class="prereq">8am–6pm</span></td>
               <td>25 hrs</td>
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn / Tom Brotherstone</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
             </tr>
+            <tr class="elective-row">
+              <td>Yoga Nidra (repeat) <span class="elective-tag">Elective</span></td>
+              <td>1 Sep 2027 (online content)<br><span class="prereq">Live calls: Wed 8, 15 &amp; 22 Sep, 7pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">None</td>
+              <td class="facilitator">Kathleen Kuehn</td>
+              <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+            </tr>
             <tr class="required-row">
               <td>Teaching Practicum</td>
-              <td>Fri–Sun, 10–12 Sep 2027</td>
+              <td>Fri–Sun, 10–12 Sep 2027<br><span class="prereq">Fri 4–8pm &middot; Sat &amp; Sun 8am–6pm</span></td>
               <td>25 hrs</td>
               <td class="prereq">300hr YTTs only</td>
               <td class="facilitator">Tom Brotherstone / Kathleen Kuehn / Rusty Millar</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
             </tr>
+
             <tr class="required-row">
               <td>Online Wānanga</td>
               <td>TBD — throughout programme</td>
@@ -1223,7 +1385,7 @@
             </tr>
             <tr class="required-row">
               <td>Wrap-Up &amp; Graduation</td>
-              <td>Sat 23 Oct 2027</td>
+              <td>Sat 23 Oct 2027<br><span class="prereq">8am–8pm</span></td>
               <td>10 hrs</td>
               <td class="prereq">300hr YTTs only</td>
               <td class="facilitator">All Staff</td>
@@ -1256,7 +1418,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Sat 5 &amp; Sat 26 September 2026</p>
+            <p class="module-date">Sat 5 &amp; Sat 26 September 2026<br><span style="font-size:0.85em;opacity:0.75">9am–5pm + online content</span></p>
             <p>Explores the foundational theory, embodied practice, and teaching methodology of pranayama, meditation, and mantra. Covers breathing physiology and the subtle body, foundational meditation techniques across multiple lineages, the ethics of mantra, and safe trauma-aware instruction. Includes extensive practice teaching time with peer feedback.</p>
           </div>
 
@@ -1268,7 +1430,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Fri–Sun, 22–24 January 2027 · 8am–6pm daily</p>
+            <p class="module-date">Fri–Sun, 22–24 January 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm daily</span></p>
             <p>In-depth applied anatomy of the lower body — feet, knees, and hips — with a focus on how these structures function in yoga asana. Covers common injuries, contraindications, pain and injury management, and postural modifications. Includes a post-course written assessment.</p>
           </div>
 
@@ -1280,7 +1442,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Fri–Sun, 11–13 June 2027 · 8am–6pm daily</p>
+            <p class="module-date">Fri–Sun, 11–13 June 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm daily</span></p>
             <p>A deep dive into the five-component core system (diaphragm, abdominals, pelvic floor, posterior core, and psoas) and spinal mechanics. Covers lower back conditions, sacroiliac joint management, inversions, and intelligent sequencing for injury prevention. Includes a post-course written assessment.</p>
           </div>
 
@@ -1292,7 +1454,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Fri–Sun, 23–25 July 2027 · 8am–6pm daily</p>
+            <p class="module-date">Fri–Sun, 23–25 July 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm daily</span></p>
             <p>Detailed applied anatomy of the shoulder complex, rotator cuff, scapular movement, cervical spine, and upper arm. Covers common impingements and injury management, safe weight-bearing alignment in asana, wrist support, and teaching methodology for chaturanga and other demanding poses. Includes a post-course written assessment.</p>
           </div>
 
@@ -1304,7 +1466,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Sat 27 Feb, 8am–4pm · Sun 28 Feb, 8am–5pm · Mon 8 &amp; 22 Mar, 5:30–8:30pm · 2027</p>
+            <p class="module-date">Sat 27 Feb · Sun 28 Feb · Mon 8 &amp; 22 Mar 2027<br><span style="font-size:0.85em;opacity:0.75">Sat 8am–4pm · Sun 8am–5pm · Mon 5:30–8:30pm</span></p>
             <p>An in-depth study of Patanjali's Yoga Sutras, the Bhagavad Gita, and Yogananda's Autobiography of a Yogi. Examines the 16 functions of the mind, classical Indian philosophical frameworks, different paths to liberation, and the relevance of classical philosophy for contemporary teachers. Includes 10 non-contact hours for required reading and a written reflective essay.</p>
           </div>
 
@@ -1316,7 +1478,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Sat &amp; Sun, 3–4 April 2027 · 8am–5pm</p>
+            <p class="module-date">Sat &amp; Sun, 3–4 April 2027<br><span style="font-size:0.85em;opacity:0.75">8am–5pm</span></p>
             <p>Explores Ayurveda basics, the diverse historical roots of yoga (drawing on Mallinson &amp; Singleton's Roots of Yoga), yoga through the lens of Western science, business ethics through a yogic framework, and the responsibilities of acknowledging indigeneity in yoga teaching. Includes 6 non-contact hours for required reading.</p>
           </div>
 
@@ -1328,7 +1490,7 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Sat–Sun, 13–14 March 2027 &nbsp;·&nbsp; repeat: 21–22 August 2027</p>
+            <p class="module-date">Sat–Sun, 13–14 March 2027 &nbsp;·&nbsp; repeat: 21–22 August 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm</span></p>
             <p>Advanced vinyasa sequencing methodology covering two AWHI templates (Peak Pose and Vinyasa Flow), curriculum design for sustained teaching, theming with philosophical depth, and common sequencing imbalances. Includes the business of yoga: workshops, courses, marketing, and teacher sustainability. Assessment: sequence submission using one of the two templates.</p>
           </div>
 
@@ -1340,8 +1502,8 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Fri–Sun, 10–12 September 2027</p>
-            <p>Three intensive sessions refining teaching presence, voice, assists, feedback skills, and professional readiness. Includes an in-depth assists workshop with Rusty, inclusive and trauma-aware teaching practice, and a final 45–60 minute assessed class. Assessment: teach a full public class.</p>
+            <p class="module-date">Fri–Sun, 10–12 September 2027<br><span style="font-size:0.85em;opacity:0.75">Fri 4–8pm &middot; Sat &amp; Sun 8am–6pm</span></p>
+            <p>Three intensive sessions refining teaching presence, voice, assists, feedback skills, and professional readiness. Includes an in-depth assists workshop, inclusive and trauma-aware teaching practice, and a final 45–60 minute assessed class. Assessment: teach a full public class.</p>
           </div>
 
           <div class="module-card fade-up delay-1">
@@ -1353,7 +1515,7 @@
               </div>
             </div>
             <p class="module-date">Monthly throughout 2026–2027</p>
-            <p>Ten monthly live Zoom calls aligned with each module — one per required module and one per elective. Each call opens with meditation, pranayama, or movement, followed by student-led Q&amp;A and wānanga discussion. All calls are recorded for those unable to attend live.</p>
+            <p>Monthly Zoom calls aligned with each module — one per required module and one per elective. Each call opens with meditation, pranayama, or movement, followed by student-led Q&amp;A and wānanga discussion. All calls are recorded for those unable to attend live.</p>
           </div>
 
           <div class="module-card fade-up delay-2">
@@ -1364,8 +1526,8 @@
                 <span class="badge-type required">Required</span>
               </div>
             </div>
-            <p class="module-date">Saturday, 23 October 2027</p>
-            <p>A full day of integration, reflection, and ceremony. Includes a final group asana practice, embodied reflection on the training journey, professional development discussion ('what's possible with a 300hr?'), final witnessed teaching practicum, and a formal graduation ceremony.</p>
+            <p class="module-date">Saturday, 23 October 2027<br><span style="font-size:0.85em;opacity:0.75">8am–8pm</span></p>
+            <p>A full day of integration, reflection, and ceremony. Includes a final group asana practice, embodied reflection on the training journey, professional development discussion, final witnessed teaching practicum, and a formal graduation ceremony.</p>
           </div>
         </div>
       </div>
@@ -1381,7 +1543,7 @@
                 <span class="badge-type elective">Elective</span>
               </div>
             </div>
-            <p class="module-date">Online from 1 May 2027 + weekly live calls</p>
+            <p class="module-date">1 May 2027 (self-paced online)<br><span style="font-size:0.85em;opacity:0.75">Live calls: Wed 5, 12 &amp; 19 May, 7pm &nbsp;·&nbsp; Repeat intake: 1 Sep + Wed 8, 15 &amp; 22 Sep, 7pm</span></p>
             <p>An online self-paced course with three weekly live Zoom calls. Covers the history and neuroscience of Yoga Nidra, classical and modern structuring approaches, trauma-aware and inclusive delivery, and sequencing for different contexts (class endings, standalone, workshops, retreats). Assessment: write and record your own 30–45 minute Yoga Nidra script.</p>
           </div>
 
@@ -1393,8 +1555,8 @@
                 <span class="badge-type elective">Elective</span>
               </div>
             </div>
-            <p class="module-date">Wednesday evenings, May 2027</p>
-            <p>Four evening sessions exploring the synergies between Matauranga Māori (Māori knowledge systems) and yoga philosophy. Structured around four concepts — Aro-ha, Wahangū, Nohopuku, and Māramatanga — each unpacked alongside related yoga teachings. Led by Tom and Murray Hemi. Facilitated as a wānanga.</p>
+            <p class="module-date">Wed 5, 12, 19 &amp; 26 May 2027<br><span style="font-size:0.85em;opacity:0.75">5:30–8:45pm</span></p>
+            <p>Four evening sessions exploring the synergies between Matauranga Māori (Māori knowledge systems) and yoga philosophy. Structured around four concepts — Aro-ha, Wahangū, Nohopuku, and Māramatanga — each unpacked alongside related yoga teachings.</p>
           </div>
 
           <div class="module-card elective fade-up delay-1">
@@ -1405,7 +1567,7 @@
                 <span class="badge-type elective">Elective</span>
               </div>
             </div>
-            <p class="module-date">Fri–Sun, 14–16 August 2026 &nbsp;·&nbsp; repeat: 18–20 June 2027</p>
+            <p class="module-date">Fri–Sun, 14–16 August 2026 &nbsp;·&nbsp; repeat: 18–20 June 2027<br><span style="font-size:0.85em;opacity:0.75">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></p>
             <p>A foundational training for teaching pregnant students in public classes. Covers hormonal and structural changes by trimester, pelvic floor anatomy, birth-supportive movement, common pregnancy ailments, contraindications, and inclusive trauma-aware cueing. Note: this module provides base-level preparation; it does not constitute a full prenatal yoga certification.</p>
           </div>
 
@@ -1417,7 +1579,7 @@
                 <span class="badge-type elective">Elective</span>
               </div>
             </div>
-            <p class="module-date">Saturdays, Oct 3, 10, 17, 24, 31 &amp; Nov 7, 14, 21 2026 &nbsp;·&nbsp; 9–10:30am</p>
+            <p class="module-date">Saturdays, Oct 3, 10, 17, 24, 31 &amp; Nov 7, 14, 21 2026<br><span style="font-size:0.85em;opacity:0.75">9–10:30am</span></p>
             <p>Eight online sessions integrating yoga, mindfulness, and Acceptance &amp; Commitment Therapy (ACT). Based on the Mindfulness Yoga ACT (MYACT) protocol, this module provides evidence-based tools for supporting students living with stress, chronic pain, or emotional challenges. Not yoga therapy — practical classroom tools for resilience and values-aligned teaching.</p>
           </div>
 
@@ -1429,8 +1591,8 @@
                 <span class="badge-type elective">Elective</span>
               </div>
             </div>
-            <p class="module-date">Fri–Sun, 30 Oct–1 Nov 2026 &nbsp;·&nbsp; or 28–29 November 2026</p>
-            <p>A practical intensive with Rusty covering consent protocols, the three types of assists (verbal, energetic, and mechanical touch), safe and trauma-aware assist delivery, and inclusive touch practices. Provides extensive hands-on practice time with peer feedback.</p>
+            <p class="module-date">Fri–Sun, 30 Oct–1 Nov 2026<br><span style="font-size:0.85em;opacity:0.75">Fri 4:30–8pm &middot; Sat 9am–4pm &middot; Sun 8:30am–3pm</span></p>
+            <p>A practical intensive covering consent protocols, the three types of assists (verbal, energetic, and mechanical touch), safe and trauma-aware assist delivery, and inclusive touch practices. Provides extensive hands-on practice time with peer feedback.</p>
           </div>
         </div>
       </div>
@@ -1467,20 +1629,174 @@
       <div class="investment-header fade-up">
         <div class="section-label">Investment</div>
         <h2 id="investment-heading">Fees &amp; enrolment</h2>
-        <p>Individual modules can be booked and paid for separately. A reduced rate is available for full 300hr enrolment. Scholarship support is available — see our <a href="scholarship.html" style="color: var(--wai); text-decoration: underline;">Scholarship page</a>.</p>
+        <p>Individual modules can be booked separately, or commit to the full 300-hour programme for a significant saving.</p>
       </div>
-      <div class="pricing-cards fade-up delay-1">
-        <div class="pricing-card">
-          <h3>Individual modules</h3>
-          <p>Price varies by module length. Get in touch for current pricing.</p>
-          <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-dark">Enquire</a>
+
+      <!-- Full programme enrolment -->
+      <div class="enrol-section fade-up delay-1">
+        <h3 class="pricing-subhead">Full 300-hour enrolment</h3>
+
+        <div class="eb-hero">
+          <div>
+            <div class="eb-badge">Early Bird</div>
+            <div class="eb-price">$3,999 <span style="font-size:1.1rem;font-weight:400;opacity:0.85">NZD</span></div>
+            <div class="eb-sub">Pay in full by 1 August 2027 &mdash; save $500 on the standard rate</div>
+          </div>
+          <a href="mailto:kathleen@awhiyoga.co.nz" class="eb-cta">Enquiries</a>
         </div>
-        <div class="pricing-card">
-          <h3>Full 300hr enrolment</h3>
-          <p>Discounted rate for commitment to the full programme. Payment plans available.</p>
-          <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-primary">Enquire</a>
+
+        <div class="other-options">
+          <div class="option-card">
+            <h4>Pay in full</h4>
+            <div class="option-price">$4,495</div>
+            <p class="option-detail">Standard rate. Full payment at enrolment.</p>
+          </div>
+          <div class="option-card">
+            <h4>4-instalment plan</h4>
+            <div class="option-price">$4,695</div>
+            <p class="option-detail">$995 deposit now, then 3 &times; $1,233. Final instalment due June 2027.</p>
+          </div>
+          <div class="option-card">
+            <h4>Other payment options</h4>
+            <p class="option-detail" style="margin-top:0.25rem;">Need a different arrangement? Get in touch to discuss payment plan options.</p>
+            <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-dark" style="display:inline-block;margin-top:1rem;font-size:0.85rem;">Enquiries</a>
+          </div>
         </div>
       </div>
+
+      <!-- Module-by-module pricing -->
+      <div class="module-pricing-section fade-up delay-2">
+        <h3>Individual module pricing</h3>
+        <p>All required modules and electives are open to the general public — you don't need to be enrolled in the full programme to attend. Early Bird rates close 4 weeks before each module's start date. All prices in NZD.</p>
+
+        <div class="table-scroll">
+          <table class="price-table" aria-label="Module pricing 2026–2027">
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Hrs</th>
+                <th>Dates</th>
+                <th>Early Bird deadline</th>
+                <th>Early Bird price</th>
+                <th>Full price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><td colspan="6">Required modules (7 open modules + Teaching Practicum)</td></tr>
+              <tr>
+                <td class="mod-name">Mantra, Pranayama &amp; Meditation</td>
+                <td>25</td>
+                <td>Sat 5 &amp; 26 Sep 2026<br><span style="font-size:0.82rem;color:#888">9am–5pm + online content</span></td>
+                <td>8 Aug 2026</td>
+                <td class="price-eb">$399</td>
+                <td class="price-full">$499</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Anatomy: Legs, Hips &amp; Pelvis</td>
+                <td>35</td>
+                <td>Fri–Sun, 22–24 Jan 2027<br><span style="font-size:0.82rem;color:#888">8am–6pm daily</span></td>
+                <td>25 Dec 2026</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Philosophy Part I</td>
+                <td>35</td>
+                <td>Sat 27 Feb, 8am–4pm &middot; Sun 28 Feb, 8am–5pm<br><span style="font-size:0.82rem;color:#888">Mon 8 &amp; 22 Mar, 5:30–8:30pm</span></td>
+                <td>30 Jan 2027</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">The (He)art of Sequencing</td>
+                <td>25</td>
+                <td>Sat–Sun, 13–14 Mar 2027 · 8am–6pm<br><span style="font-size:0.82rem;color:#888">Also 21–22 Aug 2027 · 8am–6pm</span></td>
+                <td>13 Feb 2027</td>
+                <td class="price-eb">$399</td>
+                <td class="price-full">$499</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Philosophy, Lifestyle &amp; Ethics Part II</td>
+                <td>25</td>
+                <td>Sat–Sun, 3–4 Apr 2027<br><span style="font-size:0.82rem;color:#888">8am–5pm</span></td>
+                <td>6 Mar 2027</td>
+                <td class="price-eb">$399</td>
+                <td class="price-full">$499</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Anatomy: Spine &amp; Core</td>
+                <td>35</td>
+                <td>Fri–Sun, 11–13 Jun 2027<br><span style="font-size:0.82rem;color:#888">8am–6pm daily</span></td>
+                <td>14 May 2027</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Anatomy: Shoulders &amp; Neck</td>
+                <td>35</td>
+                <td>Fri–Sun, 23–25 Jul 2027<br><span style="font-size:0.82rem;color:#888">8am–6pm daily</span></td>
+                <td>25 Jun 2027</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Teaching Practicum</td>
+                <td>25</td>
+                <td>Fri–Sun, 10–12 Sep 2027<br><span style="font-size:0.82rem;color:#888">Fri 4–8pm &middot; Sat &amp; Sun 8am–6pm</span></td>
+                <td colspan="3" class="incl-note">YTT enrolment only &mdash; included with full programme</td>
+              </tr>
+
+              <tr class="group-row"><td colspan="6">Electives &mdash; choose any 2</td></tr>
+              <tr>
+                <td class="mod-name">Prenatal Yoga</td>
+                <td>15</td>
+                <td>Fri–Sun, 14–16 Aug 2026<br>
+                  <span style="font-size:0.82rem;color:#888">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></td>
+                <td>17 Jul 2026</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga in ACTion</td>
+                <td>15</td>
+                <td>Saturdays, Oct–Nov 2026<br><span style="font-size:0.82rem;color:#888">9–10:30am</span></td>
+                <td>5 Sep 2026</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Hands On Assists</td>
+                <td>15</td>
+                <td>Fri–Sun, 30 Oct–1 Nov 2026<br>
+                  <span style="font-size:0.82rem;color:#888">Fri 4:30–8pm &middot; Sat 9am–4pm &middot; Sun 8:30am–3pm</span></td>
+                <td>2 Oct 2026</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Nidra</td>
+                <td>15</td>
+                <td>1 May 2027 (self-paced online)<br><span style="font-size:0.82rem;color:#888">Live calls: Wed 5, 12 &amp; 19 May, 7pm</span></td>
+                <td>3 Apr 2027</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Meets Matauranga Māori</td>
+                <td>15</td>
+                <td>Wed 5, 12, 19 &amp; 26 May 2027<br><span style="font-size:0.82rem;color:#888">5:30–8:45pm</span></td>
+                <td>7 Apr 2027</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="pricing-note">Early Bird deadline is 4 weeks before each module's first session. To enquire about individual modules or payment plans:</p>
+        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-dark" style="margin-top:1rem;font-size:0.85rem;">Enquiries</a>
+      </div>
+
     </div>
   </section>
 
@@ -1499,7 +1815,7 @@
       <h2 id="cta-heading" class="fade-up">Questions? We'd love to hear from you.</h2>
       <p class="fade-up delay-1">Whether you're deciding between modules, wondering if the full 300hr is right for you, or just curious — reach out. We're happy to talk it through.</p>
       <div class="cta-btns fade-up delay-2">
-        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-cream">Email us</a>
+        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-cream">Enquiries</a>
         <a href="index.html" class="btn btn-outline-cream">View all programmes</a>
       </div>
     </div>
@@ -1546,7 +1862,7 @@
           <h4>Contact</h4>
           <p>Level 2, 15 Johnston Street<br>Wellington</p>
           <p><a href="tel:+6444995006">+64 4 499 5006</a></p>
-          <p><a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a></p>
+          <p><a href="mailto:kathleen@awhiyoga.co.nz">kathleen@awhiyoga.co.nz</a></p>
         </div>
       </div>
       <div style="margin-bottom: 1.5rem;">

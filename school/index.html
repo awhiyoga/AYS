@@ -10,7 +10,7 @@
   <meta property="og:title" content="AWHI Yoga School — Wellington Teacher Training" />
   <meta property="og:description" content="AWHI Yoga School offers rigorous, heart-centred yoga teacher training programmes in Wellington, Aotearoa New Zealand. Yoga Alliance RYS 200 & 300 registered." />
   <meta property="og:url" content="https://awhiyoga.co.nz/school/" />
-  <meta property="og:image" content="https://awhiyoga.co.nz/Images/AwhibyJuliaSabugosa-042.jpg" />
+  <meta property="og:image" content="https://awhiyoga.co.Images/AwhibyJuliaSabugosa-042.jpg" />
   <link rel="canonical" href="https://awhiyoga.co.nz/school/" />
 
   <!-- Fonts -->
@@ -166,7 +166,7 @@
     }
     .nav-logo-main {
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: var(--hua);
       letter-spacing: 0.03em;
@@ -290,16 +290,15 @@
     /* ─── HERO ──────────────────────────────────────────────── */
     .hero {
       position: relative;
-      height: 90vh;
+      min-height: 90vh;
       min-height: 600px;
       display: flex;
       align-items: center;
-      overflow: hidden;
     }
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('../Images/AwhibyJuliaSabugosa-042.jpg');
+      background-image: url('Images/AwhibyJuliaSabugosa-042.jpg');
       background-size: cover;
       background-position: center 40%;
     }
@@ -312,8 +311,9 @@
       position: relative;
       z-index: 1;
       color: var(--hua);
-      max-width: 760px;
-      padding-top: calc(var(--nav-h) + var(--subnav-h));
+      max-width: 960px;
+      padding-top: calc(var(--nav-h) + var(--subnav-h) + 2rem);
+      padding-bottom: 3rem;
     }
     .hero-eyebrow {
       font-family: var(--font-body);
@@ -350,35 +350,30 @@
       margin-bottom: 2.5rem;
     }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      display: flex;
+    .hero-scroll-hint {
+      display: inline-flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
+      margin-top: 1.75rem;
       color: var(--hua);
       opacity: 0.5;
       font-size: 0.7rem;
+      font-family: var(--font-body);
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
-    .hero-scroll::after {
+    .hero-scroll-hint:hover { opacity: 0.85; }
+    .hero-scroll-hint::after {
       content: '';
       display: block;
       width: 1.5px;
-      height: 3rem;
+      height: 2rem;
       background: var(--hua);
-      animation: scrollPulse 2s ease-in-out infinite;
     }
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.4; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(0.7); }
-    }
+
 
     /* ─── PHILOSOPHY ────────────────────────────────────────── */
     .philosophy {
@@ -411,13 +406,27 @@
     /* ─── STATS BAND ────────────────────────────────────────── */
     .stats-band {
       background: var(--wai);
-      padding: clamp(3rem, 5vw, 4.5rem) 0;
+      padding: clamp(0.75rem, 1.5vw, 1.25rem) 0;
     }
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       text-align: center;
+    }
+    .stat-badges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .stat-badges img {
+      height: 72px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
     }
     .stat-item {
       padding: 1rem;
@@ -902,15 +911,17 @@
       <div class="container">
         <div class="hero-content">
           <p class="hero-eyebrow">Wellington, Aotearoa New Zealand</p>
-          <h1>The art of teaching begins<br>with the art of learning.</h1>
+          <h1>The art of teaching<br>begins with the<br>art of learning.</h1>
           <p class="hero-sub">AWHI Yoga School offers rigorous, heart-centred yoga teacher training programmes rooted in te ao Māori and the enduring traditions of yoga.</p>
           <div class="hero-ctas">
-            <a href="#programmes" class="btn btn-outline-cream">Explore our programmes</a>
-            <a href="200hr.html" class="btn btn-primary">200hr YTT</a>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+              <a href="#philosophy-heading" class="btn btn-primary" style="width:100%;justify-content:center;">Our School</a>
+              <a href="#programmes" class="hero-scroll-hint" aria-label="Scroll down">Scroll</a>
+            </div>
+            <a href="#programmes" class="btn btn-outline-cream" style="flex:1;justify-content:center;">Explore our programmes</a>
           </div>
         </div>
       </div>
-      <div class="hero-scroll" aria-hidden="true">Scroll</div>
     </section>
 
     <!-- ─── PHILOSOPHY ───────────────────────────────────── -->
@@ -922,12 +933,12 @@
         </div>
         <div class="philosophy-grid">
           <div class="philosophy-col fade-up">
-            <p>In te reo Māori, kaiako means teacher. But like so many words in te reo, it carries more than one meaning. Kaiako is composed of two roots: kai, meaning food or sustenance, and ako, meaning to learn — or more fully, to create knowledge together. A kaiako is not merely someone who delivers information. They are someone who feeds and is fed by the learning.</p>
-            <p>At AWHI Yoga School, we hold this word close. We believe that learning is not preparation for a yogic life — it is the yogic life. And we believe that to be a good yoga teacher, you must never stop being a student.</p>
+            <p>In te reo Māori, kaiako means teacher. But like so many words in te reo Māori, it carries more than one meaning. Kaiako is composed of two root words: kai, meaning food or sustenance, and ako, meaning to learn — or more fully, to create knowledge together. A kaiako is not merely someone who delivers information. They are someone who feeds and is fed by the learning.</p>
+            <p>At AWHI Yoga School, we hold this word close. We believe that learning is not preparation for a yogic life — it <em>is</em> the yogic life. And we believe that to be a good yoga teacher, you must never stop learning.</p>
           </div>
           <div class="philosophy-col fade-up">
-            <p>Our programmes are rooted in Te Whare Tapa Whā the foundational Māori model of health developed by Sir Mason Durie. The four walls of the wharenui — taha tinana (physical health), taha hinengaro (mental and emotional health), taha wairua (spiritual health), and taha whānau (relational and community health) — mirror the four limbs of a complete yoga practice. We teach with all four walls in mind.</p>
-            <p>This is not a school that produces certificates. It is a school that produces teachers — and continues to challenge those teachers to keep learning, keep questioning, and keep showing up for their communities.</p>
+            <p>Our YTT programmes are rooted in Te Whare Tapa Whā, a Māori model of holistic health developed by Sir Mason Durie. The four walls of the wharenui — taha tinana (physical health), taha hinengaro (mental and emotional health), taha wairua (spiritual health), and taha whānau (relational and community health) — mirror the four limbs of a complete yoga practice. We teach, learn and practice with all four walls in mind.</p>
+            <p>We are not a school that produces certificates. We're a school that challenges teachers to keep learning, keep questioning, and to keep showing up for themselves and their communities.</p>
           </div>
         </div>
       </div>
@@ -938,16 +949,19 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item stat-divider fade-up">
-            <p class="stat-value">300+</p>
-            <p class="stat-label">Contact hours</p>
-          </div>
-          <div class="stat-item stat-divider fade-up">
-            <p class="stat-value">10</p>
-            <p class="stat-label">Specialist modules</p>
+            <p class="stat-value">RYS</p>
+            <p class="stat-label">Yoga Alliance registered 200 &amp; 300hr Yoga School</p>
+            <div class="stat-badges">
+              <img src="Images/RYS200.png" alt="Yoga Alliance RYS 200 registered">
+              <img src="Images/rys-300.png" alt="Yoga Alliance RYS 300 registered">
+            </div>
           </div>
           <div class="stat-item fade-up">
-            <p class="stat-value">RYS</p>
-            <p class="stat-label">Yoga Alliance registered 200 &amp; 300</p>
+            <p class="stat-value">YACEP</p>
+            <p class="stat-label">Yoga Alliance Continuing Education Provider</p>
+            <div class="stat-badges">
+              <img src="Images/YACEP (1).png" alt="Yoga Alliance YACEP badge">
+            </div>
           </div>
         </div>
       </div>
@@ -972,7 +986,7 @@
           <article class="programme-card fade-up">
             <span class="programme-badge">50 / 100 hours</span>
             <h3>50/100hr Yin YTT</h3>
-            <p>A deep dive into the art and anatomy of Yin yoga. Available as 50hr (Module 1) or full 100hr certification.</p>
+            <p>A deep dive into the art and anatomy of Yin yoga. Available as 50hr or full 100hr certification.</p>
             <a href="yin-ytt.html" class="programme-link">Learn more</a>
           </article>
 
@@ -997,7 +1011,7 @@
     <!-- ─── IMAGE BREAK ──────────────────────────────────── -->
     <div class="image-break" aria-hidden="true">
       <img
-        src="../Images/AwhibyJuliaSabugosa-030.jpg"
+        src="Images/AwhibyJuliaSabugosa-030.jpg"
         alt=""
         loading="lazy"
       />
@@ -1033,7 +1047,7 @@
           <div class="why-item fade-up">
             <span class="why-num">04</span>
             <h3>Expert local faculty</h3>
-            <p>Our teaching team brings decades of lived practice, yoga lineage, and deep community roots in Wellington.</p>
+            <p>Our teaching team brings decades of lived practice, yoga lineage, and deep community roots in Pōneke (Wellington).</p>
           </div>
 
           <div class="why-item fade-up">
@@ -1074,6 +1088,15 @@
       </div>
     </section>
 
+  <!-- ── ACCREDITATION ─────────────────────────────────── -->
+  <div style="background: var(--hua); padding: 2.5rem 0; border-top: 1px solid rgba(28,56,41,0.1);">
+    <div class="container" style="display:flex; align-items:center; justify-content:center; gap:2.5rem; flex-wrap:wrap;">
+      <p style="font-family:var(--font-body); font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--kawakawa);">Internationally Accredited by Yoga Alliance</p>
+      <img src="Images/RYS200.png" alt="Yoga Alliance RYS 200" style="height:80px; width:auto;" loading="lazy" />
+      <img src="Images/rys-300.png" alt="Yoga Alliance RYS 300" style="height:80px; width:auto;" loading="lazy" />
+      <img src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" style="height:80px; width:auto;" loading="lazy" />
+    </div>
+  </div>
   </main>
 
   <!-- ─── FOOTER ───────────────────────────────────────────── -->
@@ -1123,6 +1146,14 @@
 
       </div>
 
+      <div style="margin-bottom: 1.5rem;">
+        <div style="display:flex; gap:0.75rem;">
+          <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/Instagram_Glyph_White.png" alt="Instagram" width="20" height="20" style="display:block"></a>
+          <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/Facebook_Logo_Secondary.png" alt="Facebook" width="20" height="20" style="display:block"></a>
+          <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/yt_icon_white_digital.png" alt="YouTube" width="20" height="20" style="display:block"></a>
+          <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
       <div class="footer-bottom">
         <p>&copy; 2025 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
         <span>For teachers and learners</span>

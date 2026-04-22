@@ -205,53 +205,17 @@
       font-size: 0.85rem; color: rgba(244,239,228,0.88);
       line-height: 1.45;
     }
-    .qr-wrap {
+    .badges-wrap {
       margin-top: auto;
       display: flex; flex-direction: column;
-      align-items: center; gap: 0.55rem;
+      align-items: center; gap: 0.75rem;
     }
-    .qr-box {
-      width: 110px; height: 110px;
-      background: white;
-      border: 2px solid rgba(244,239,228,0.2);
+    .badge-row {
       display: flex; align-items: center; justify-content: center;
-      position: relative;
+      gap: 1.25rem;
     }
-    .qr-box::before, .qr-box::after {
-      content: ''; position: absolute;
-      width: 18px; height: 18px;
-      border: 2.5px solid var(--ngahere);
-    }
-    .qr-box::before { top: 5px; left: 5px; border-right: none; border-bottom: none; }
-    .qr-box::after  { top: 5px; right: 5px; border-left: none; border-bottom: none; }
-    .qr-corner-bl {
-      position: absolute; bottom: 5px; left: 5px;
-      width: 18px; height: 18px;
-      border: 2.5px solid var(--ngahere);
-      border-top: none; border-right: none;
-    }
-    .qr-corner-br {
-      position: absolute; bottom: 5px; right: 5px;
-      width: 18px; height: 18px;
-      border: 2.5px solid var(--ngahere);
-      border-top: none; border-left: none;
-    }
-    .qr-txt {
-      font-size: 0.58rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: rgba(28,56,41,0.4); text-align: center; line-height: 1.4;
-    }
-    .qr-label {
-      font-size: 0.62rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--kawa); text-align: center;
-    }
-    .qr-url {
-      font-size: 0.62rem; color: rgba(244,239,228,0.5);
-      text-align: center;
-    }
-    .back-logo { height: 70px; width: auto; filter: brightness(10) opacity(0.85); margin-top: 1.25rem; }
-    .back-awhi-logo { height: 36px; width: auto; opacity: 0.75; margin-top: 0.75rem; }
+    .cert-badge { height: 90px; width: auto; filter: brightness(10) opacity(0.9); }
+    .back-awhi-logo { height: 36px; width: auto; opacity: 0.7; }
     .back-copy { font-size: 0.6rem; color: rgba(244,239,228,0.35); margin-top: 0.35rem; }
 
     /* ── OUTSIDE: INSIDE FLAP (left) ──── */
@@ -512,15 +476,11 @@
             <span class="contact-val">awhiyoga.co.nz/school/300hr</span>
           </div>
 
-          <div class="qr-wrap">
-            <div class="qr-box">
-              <div class="qr-corner-bl"></div>
-              <div class="qr-corner-br"></div>
-              <p class="qr-txt">Place<br>QR code<br>here</p>
+          <div class="badges-wrap">
+            <div class="badge-row">
+              <img class="cert-badge" src="images/rys-300.png" alt="Yoga Alliance RYS 300" />
+              <img class="cert-badge" src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" />
             </div>
-            <p class="qr-label">Scan to register interest</p>
-            <p class="qr-url">awhiyoga.co.nz/school/300hr</p>
-            <img class="back-logo" src="images/rys-300.png" alt="Yoga Alliance RYS 300" />
             <img class="back-awhi-logo" src="images/logos/Awhi_WHITE (2).svg" alt="AWHI Yoga & Wellbeing" />
             <p class="back-copy">© 2026 AWHI Yoga &amp; Wellbeing</p>
           </div>
@@ -586,12 +546,12 @@
             <div class="mod-row">
               <div class="mod-name elective">Yoga Nidra</div>
               <div class="mod-hrs">15 hrs</div>
-              <div class="mod-date">Online from 1 May 2027 · 4× live calls</div>
+              <div class="mod-date">From 1 May 2027 · Online · Live calls Wed 5, 12 &amp; 19 May</div>
             </div>
             <div class="mod-row">
               <div class="mod-name elective">Yoga Meets Matauranga Māori</div>
               <div class="mod-hrs">15 hrs</div>
-              <div class="mod-date">Wednesday evenings, May 2027 · Studio</div>
+              <div class="mod-date">Wed 5, 12, 19 &amp; 26 May 2027 · Evenings · Studio</div>
             </div>
           </div>
 
@@ -599,13 +559,14 @@
 
           <p class="mod-heading" style="margin-bottom:0.4rem;">Fees &amp; enrolment</p>
           <div class="hl-list" style="margin-bottom:0.85rem;">
-            <div class="hl-item">Individual modules booked &amp; paid separately</div>
-            <div class="hl-item">Discounted rate for full 300hr enrolment</div>
+            <div class="hl-item">Full 300hr early bird: <strong style="color:var(--ngahere);">$3,999 NZD</strong> (pay in full by 1 Aug 2027)</div>
+            <div class="hl-item">Full 300hr standard: $4,495 NZD</div>
             <div class="hl-item">Payment plans available</div>
+            <div class="hl-item">Individual modules: $349–$549 NZD each</div>
           </div>
 
           <div class="elec-note">
-            Each completed module (with assessment) delivers Yoga Alliance <strong>Continuing Education (CE) hours</strong>. Full 300hr completion qualifies for <strong>RYT 500 registration</strong>. Enquire for current pricing.
+            Each completed module (with assessment) delivers Yoga Alliance <strong>Continuing Education (CE) hours</strong>. Full 300hr completion qualifies for <strong>RYT 500 registration</strong>. Contact us to discuss payment plan options.
           </div>
         </div>
       </div>

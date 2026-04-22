@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>200hr Vinyasa YTT — Tri-fold Brochure</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── A4 landscape = 297×210mm = 1123×794px at 96dpi ── */
+    /* ── Each panel = 374px wide × 794px tall            ── */
+
+    :root {
+      --dark:    #2A2320;   /* warm charcoal */
+      --hua:     #F4EFE4;   /* warm cream */
+      --repo:    #C05C2C;   /* terracotta */
+      --pango:   #242424;   /* near black */
+      --gold:    #D4A553;   /* warm gold — primary accent */
+      --gold-lt: #E8C98A;   /* light gold */
+      --fd: 'Cormorant', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #bbb9b3; font-family: var(--fb); -webkit-font-smoothing: antialiased; }
+    img  { display: block; max-width: 100%; height: auto; }
+
+    /* ── PRINT BAR ─────────────────────── */
+    .print-bar {
+      background: var(--pango);
+      padding: 0.7rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky; top: 0; z-index: 20;
+    }
+    .print-bar p { font-size: 0.78rem; color: rgba(244,239,228,0.6); }
+    .print-btn {
+      font-family: var(--fb); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--repo); color: var(--hua);
+      border: none; padding: 0.55rem 1.4rem; cursor: pointer;
+    }
+    .print-btn:hover { background: #a34a20; }
+
+    /* ── WRAPPER ───────────────────────── */
+    .wrapper {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sheet-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+
+    .sheet-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── SHEET (A4 landscape) ──────────── */
+    .sheet {
+      width: 1123px;
+      height: 794px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 48px rgba(0,0,0,0.35);
+    }
+
+    /* Fold guide lines — screen only */
+    .sheet::before, .sheet::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: rgba(0,0,0,0.18);
+      z-index: 50;
+      pointer-events: none;
+    }
+    .sheet::before { left:  calc(100% / 3); }
+    .sheet::after  { left:  calc(200% / 3); }
+
+    /* ── BASE PANEL ────────────────────── */
+    .panel {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .p-pad { padding: 2.25rem 1.85rem; }
+
+    /* ── COLOURS ───────────────────────── */
+    .bg-dark  { background: var(--dark); }
+    .bg-cream { background: var(--hua); }
+    .bg-repo  { background: var(--repo); }
+
+    /* ── SHARED TEXT HELPERS ───────────── */
+    .eyebrow {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold);
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 1.1rem; height: 1.5px; background: var(--gold);
+    }
+    .eyebrow-light { color: rgba(244,239,228,0.55); }
+    .eyebrow-light::before { background: rgba(244,239,228,0.4); }
+
+    .rule { height: 1px; background: rgba(42,35,32,0.12); margin: 0.9rem 0; }
+    .rule-light { background: rgba(244,239,228,0.15); }
+
+    /* ═══════════════════════════════════
+       OUTSIDE SHEET
+       Order: [inside-flap | back | front]
+    ═══════════════════════════════════ */
+
+    /* ── OUTSIDE: FRONT COVER (right) ─── */
+    .front-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-135.jpg');
+      background-size: cover;
+      background-position: center 20%;
+      opacity: 0.25;
+    }
+    .front-content {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column;
+      height: 100%;
+      padding: 2.25rem 1.85rem;
+    }
+    .front-logo { height: 110px; width: auto; align-self: flex-start; }
+    .front-loc  {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--gold); margin-top: 0.45rem;
+    }
+    .front-title-wrap { margin-top: auto; padding-bottom: 2rem; }
+    .front-year {
+      font-family: var(--fd);
+      font-size: 1.1rem; font-weight: 400;
+      color: var(--gold); letter-spacing: 0.1em;
+      margin-bottom: 0.2rem;
+    }
+    .front-hours {
+      font-family: var(--fd);
+      font-size: 7.5rem; font-weight: 600;
+      color: var(--hua); line-height: 0.88;
+    }
+    .front-prog {
+      font-family: var(--fd);
+      font-size: 2.5rem; font-weight: 600;
+      color: var(--hua); line-height: 1.15;
+      margin-top: 1.5rem; margin-bottom: 0.9rem;
+    }
+    .front-tagline {
+      font-family: var(--fd); font-style: italic;
+      font-size: 0.95rem; color: rgba(244,239,228,0.72);
+      line-height: 1.5; max-width: 280px;
+    }
+    .front-bottom {
+      margin-top: auto;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .ya-badge {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(244,239,228,0.65);
+      border: 1px solid rgba(244,239,228,0.25);
+      padding: 0.3rem 0.65rem;
+    }
+
+    /* ── OUTSIDE: BACK COVER (middle) ─── */
+    .back-content {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .back-heading {
+      font-family: var(--fd);
+      font-size: 2.2rem; font-weight: 600;
+      color: var(--hua); line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .contact-line {
+      display: flex; flex-direction: column;
+      margin-bottom: 0.85rem;
+    }
+    .contact-key {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.18rem;
+    }
+    .contact-val {
+      font-size: 0.85rem; color: rgba(244,239,228,0.88);
+      line-height: 1.45;
+    }
+    .badges-wrap {
+      margin-top: auto;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0.75rem;
+    }
+    .badge-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1.25rem;
+    }
+    .cert-badge { height: 90px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+    .back-awhi-logo { height: 36px; width: auto; opacity: 0.7; }
+    .back-copy { font-size: 0.6rem; color: rgba(244,239,228,0.35); margin-top: 0.35rem; }
+
+    /* ── OUTSIDE: INSIDE FLAP (left) ──── */
+    .flap-outer {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .flap-heading {
+      font-family: var(--fd);
+      font-size: 1.9rem; font-weight: 600;
+      color: var(--dark); line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .details-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.75rem 1rem; margin-bottom: 1.1rem;
+    }
+    .detail-key {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.18rem;
+    }
+    .detail-val {
+      font-family: var(--fd);
+      font-size: 1rem; font-weight: 600;
+      color: var(--dark); line-height: 1.2;
+    }
+    .detail-sub {
+      font-size: 0.72rem; font-weight: 400;
+      color: #666; font-family: var(--fb);
+    }
+    .highlights-heading {
+      font-family: var(--fd);
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--dark); margin-bottom: 0.6rem;
+    }
+    .hl-list { display: flex; flex-direction: column; gap: 0.32rem; }
+    .hl-item {
+      font-size: 0.78rem; color: #4a4a4a;
+      line-height: 1.4; display: flex; gap: 0.5rem;
+    }
+    .hl-item::before {
+      content: '—'; color: var(--gold);
+      font-weight: 700; flex-shrink: 0;
+    }
+    .pathway-note {
+      margin-top: auto;
+      background: var(--dark);
+      padding: 0.85rem 1rem;
+    }
+    .pathway-note p {
+      font-size: 0.72rem; color: rgba(244,239,228,0.8);
+      line-height: 1.55;
+    }
+    .pathway-note strong { color: var(--gold); }
+
+    /* ═══════════════════════════════════
+       INSIDE SHEET
+       Order: [pillars | schedule | about]
+    ═══════════════════════════════════ */
+
+    /* ── INSIDE: FLAP INNER (right) — about ── */
+    .fi-content {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .fi-heading {
+      font-family: var(--fd);
+      font-size: 2rem; font-weight: 600;
+      color: var(--dark); line-height: 1.05;
+      margin-bottom: 0.9rem;
+    }
+    .fi-body {
+      font-size: 0.82rem; color: #4a4a4a;
+      line-height: 1.7; margin-bottom: 0.65rem;
+    }
+    .phil-strip {
+      background: var(--repo);
+      padding: 1rem 1.1rem;
+      margin-top: auto;
+    }
+    .phil-strip p {
+      font-family: var(--fd);
+      font-size: 1rem; color: var(--hua); line-height: 1.5;
+    }
+
+    /* ── INSIDE: MIDDLE — schedule ── */
+    .mod-panel {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .mod-heading {
+      font-family: var(--fd);
+      font-size: 1.4rem; font-weight: 600;
+      color: var(--dark); line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+    .mod-sub {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.65rem;
+    }
+    .mod-list { display: flex; flex-direction: column; }
+    .mod-row {
+      display: grid;
+      grid-template-columns: 1.1fr 1.5fr auto;
+      gap: 0 0.6rem;
+      padding: 0.48rem 0;
+      border-bottom: 1px solid rgba(42,35,32,0.07);
+      align-items: start;
+    }
+    .mod-row:last-child { border-bottom: none; }
+    .mod-name {
+      font-family: var(--fd);
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--dark); line-height: 1.3;
+      grid-column: 1; grid-row: 1;
+    }
+    .mod-date {
+      font-size: 0.72rem; color: #666;
+      line-height: 1.3; grid-column: 2; grid-row: 1;
+    }
+    .mod-hrs {
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--gold); white-space: nowrap;
+      grid-column: 3; grid-row: 1;
+      text-align: right;
+    }
+
+    /* ── INSIDE: LEFT — pillars ── */
+    .pillars-panel {
+      padding: 2.25rem 1.85rem;
+      display: flex; flex-direction: column;
+      height: 100%;
+    }
+    .pillar-row {
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+    .pillar-item {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(42,35,32,0.07);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 0.75rem;
+      align-items: start;
+    }
+    .pillar-item:last-child { border-bottom: none; }
+    .pillar-num {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-top: 0.15rem;
+      white-space: nowrap;
+    }
+    .pillar-name {
+      font-family: var(--fd);
+      font-size: 1rem; font-weight: 600;
+      color: var(--dark); line-height: 1.1;
+    }
+    .pillar-sub {
+      font-size: 0.68rem; color: #888; font-style: italic;
+    }
+    .pillar-dates {
+      font-size: 0.72rem; color: #555;
+      margin-top: 0.1rem;
+    }
+    .pillar-desc {
+      font-size: 0.74rem; color: #4a4a4a;
+      line-height: 1.45; margin-top: 0.2rem;
+    }
+    .incl-note {
+      margin-top: auto;
+      background: rgba(42,35,32,0.06);
+      border-left: 2.5px solid var(--gold);
+      padding: 0.75rem 0.9rem;
+      font-size: 0.75rem;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    .incl-note strong { color: var(--dark); }
+
+    /* ── PRINT ─────────────────────────── */
+    @media print {
+      .print-bar { display: none; }
+      body { background: none; }
+      .wrapper { padding: 0; gap: 0; }
+      .sheet-group { gap: 0; }
+      .sheet-label { display: none; }
+      .sheet { box-shadow: none; page-break-after: always; break-after: page; }
+      .sheet:last-of-type { page-break-after: auto; break-after: auto; }
+      .sheet::before, .sheet::after { display: none; }
+      @page { size: A4 landscape; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  <p>200hr YTT — Tri-fold A4 brochure &nbsp;·&nbsp; Outside + Inside</p>
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<div class="wrapper">
+
+  <!-- ══════════════════════════════════
+       OUTSIDE
+       Left→Right: [inside flap | back | front]
+  ══════════════════════════════════ -->
+  <div class="sheet-group">
+    <p class="sheet-label">Outside — Side 1 &nbsp;·&nbsp; fold: left panel tucks in behind front</p>
+    <div class="sheet">
+
+      <!-- OUTSIDE: Inside flap (left) -->
+      <div class="panel bg-cream">
+        <div class="flap-outer">
+          <p class="eyebrow">Programme at a glance</p>
+          <h2 class="flap-heading">Everything<br>you need<br>to know</h2>
+
+          <div class="details-grid">
+            <div class="detail-cell">
+              <p class="detail-key">Intake</p>
+              <p class="detail-val">2026<br><span class="detail-sub">Jul–Nov</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Total hours</p>
+              <p class="detail-val">200 hrs</p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Format</p>
+              <p class="detail-val">In-person<br><span class="detail-sub">Weekend intensives</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Location</p>
+              <p class="detail-val">Wellington<br><span class="detail-sub">15 Johnston St, CBD</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Prerequisite</p>
+              <p class="detail-val">None<br><span class="detail-sub">6 months practice recommended</span></p>
+            </div>
+            <div class="detail-cell">
+              <p class="detail-key">Accreditation</p>
+              <p class="detail-val">RYS 200<br><span class="detail-sub">Yoga Alliance</span></p>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+
+          <p class="highlights-heading">Programme highlights</p>
+          <div class="hl-list">
+            <div class="hl-item">5 weekend intensives structured around Te Whare Tapa Whā</div>
+            <div class="hl-item">Yoga history, philosophy &amp; key yoga texts</div>
+            <div class="hl-item">Anatomy, biomechanics &amp; applied alignment</div>
+            <div class="hl-item">Pranayama, meditation &amp; sequencing methodology</div>
+            <div class="hl-item">Practicum &amp; mentored teaching hours</div>
+            <div class="hl-item">Unlimited AWHI membership during training</div>
+            <div class="hl-item">Scholarships available</div>
+            <div class="hl-item">Payment plans available</div>
+          </div>
+
+          <div class="pathway-note">
+            <p><strong>Open to all:</strong> whether you want to teach, or simply deepen your own practice. All bodies and experience levels welcome.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTSIDE: Back cover (middle) -->
+      <div class="panel bg-dark">
+        <div class="back-content">
+          <p class="eyebrow eyebrow-light">Get in touch</p>
+          <h2 class="back-heading">Register<br>your interest</h2>
+
+          <div class="contact-line">
+            <span class="contact-key">Email</span>
+            <span class="contact-val">kiaora@awhiyoga.co.nz</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Phone</span>
+            <span class="contact-val">+64 4 499 5006</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Address</span>
+            <span class="contact-val">Level 2, 15 Johnston Street<br>Wellington CBD, New Zealand</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Web</span>
+            <span class="contact-val">awhiyoga.co.nz</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-key">Social Media</span>
+            <span class="contact-val">@awhiyoga</span>
+          </div>
+
+          <div class="badges-wrap">
+            <div class="badge-row">
+              <img class="cert-badge" src="Images/RYS200.png" alt="Yoga Alliance RYS 200" />
+              <img class="cert-badge" src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" />
+            </div>
+            <img class="back-awhi-logo" src="images/logos/Awhi_WHITE (2).svg" alt="AWHI Yoga & Wellbeing" />
+            <p class="back-copy">© 2026 AWHI Yoga &amp; Wellbeing</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTSIDE: Front cover (right) -->
+      <div class="panel bg-dark">
+        <div class="front-bg"></div>
+        <div class="front-content">
+          <img class="front-logo" src="images/logos/Awhi_WHITE (2).svg" alt="AWHI Yoga & Wellbeing" />
+          <p class="front-loc">Wellington, Aotearoa New Zealand</p>
+
+          <div class="front-title-wrap">
+            <p class="front-year">2026</p>
+            <p class="front-hours">200hr</p>
+            <p class="front-prog">Vinyasa Yoga<br>Teacher Training</p>
+            <p class="front-tagline">Begin your teaching journey. Rooted in te ao Māori and the traditions of yoga.</p>
+          </div>
+
+          <div class="front-bottom">
+            <span class="ya-badge">Yoga Alliance Accredited</span>
+            <span class="ya-badge">RYS 200</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /outside sheet -->
+  </div>
+
+  <!-- ══════════════════════════════════
+       INSIDE
+       Left→Right: [pillars | schedule | about]
+  ══════════════════════════════════ -->
+  <div class="sheet-group">
+    <p class="sheet-label">Inside — Side 2 &nbsp;·&nbsp; reading left to right when fully open</p>
+    <div class="sheet">
+
+      <!-- INSIDE: Left panel — five pillars -->
+      <div class="panel bg-cream">
+        <div class="pillars-panel">
+          <p class="eyebrow">Programme structure</p>
+          <p class="mod-heading">Five pillars, five weekends</p>
+          <p class="mod-sub">Each weekend explores one pillar of holistic wellbeing</p>
+
+          <div class="rule"></div>
+
+          <div class="pillar-row">
+            <div class="pillar-item">
+              <div class="pillar-num">01</div>
+              <div>
+                <div class="pillar-name">Whenua <span class="pillar-sub">— Foundations</span></div>
+                <div class="pillar-dates">30 Jul–2 Aug 2026</div>
+                <p class="pillar-desc">Yoga history, anatomy basics, the structure of safe asana, and introducing yourself as a teacher.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">02</div>
+              <div>
+                <div class="pillar-name">Tinana <span class="pillar-sub">— Body</span></div>
+                <div class="pillar-dates">20–23 Aug 2026</div>
+                <p class="pillar-desc">Deep-dive anatomy, biomechanics, applied physiology, and intelligent alignment in asana.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">03</div>
+              <div>
+                <div class="pillar-name">Hinengaro <span class="pillar-sub">— Mind</span></div>
+                <div class="pillar-dates">17–20 Sep 2026</div>
+                <p class="pillar-desc">Yoga philosophy, the Yoga Sutras, Gita, meditation, and the psychology of teaching.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">04</div>
+              <div>
+                <div class="pillar-name">Wairua <span class="pillar-sub">— Spirit</span></div>
+                <div class="pillar-dates">15–18 Oct 2026</div>
+                <p class="pillar-desc">Pranayama, chakra theory, sequencing with depth and intention, and the philosophy of selfless service.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-num">05</div>
+              <div>
+                <div class="pillar-name">Whānau <span class="pillar-sub">— Community</span></div>
+                <div class="pillar-dates">12–15 Nov 2026</div>
+                <p class="pillar-desc">Practicum, peer teaching, ethics, and stepping into the world as a certified teacher.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSIDE: Middle panel — fees & inclusions -->
+      <div class="panel bg-cream">
+        <div class="mod-panel">
+          <p class="eyebrow">Fees &amp; enrolment</p>
+          <p class="mod-heading">Investment</p>
+          <p class="mod-sub">All prices in NZD</p>
+
+          <div class="rule"></div>
+
+          <div class="hl-list" style="margin-bottom: 1rem;">
+            <div class="hl-item">Early Bird: <strong style="color:var(--dark);">$3,999 NZD</strong> — pay in full by 1 May 2026</div>
+            <div class="hl-item">Standard: $4,599 NZD</div>
+            <div class="hl-item">Payment plans available</div>
+            <div class="hl-item">Scholarship available for Māori, Pasifika, BIPOC, LGBTQ+ and underrepresented communities</div>
+          </div>
+
+          <div class="rule"></div>
+
+          <p class="highlights-heading" style="margin-bottom:0.5rem;">What's included</p>
+          <div class="hl-list" style="margin-bottom: 1rem;">
+            <div class="hl-item">Training manual</div>
+            <div class="hl-item">Unlimited AWHI membership during training</div>
+            <div class="hl-item">Graduation celebration &amp; certificate</div>
+            <div class="hl-item">Lifetime discounts on AWHI memberships</div>
+          </div>
+
+          <div class="rule"></div>
+
+          <p class="highlights-heading" style="margin-bottom:0.5rem;">Who is this for?</p>
+          <div class="hl-list">
+            <div class="hl-item"><strong style="color:var(--dark);">Aspiring teachers</strong> — skills, ethics and confidence to teach safely</div>
+            <div class="hl-item"><strong style="color:var(--dark);">Deepening practitioners</strong> — understand yoga from the inside out</div>
+            <div class="hl-item"><strong style="color:var(--dark);">Career changers</strong> — a certification that aligns with your values</div>
+          </div>
+
+          <div class="incl-note">
+            You do not need to be "good" at yoga to join. All bodies and experience levels welcome. We recommend a minimum of six months' regular practice before enrolling.
+          </div>
+        </div>
+      </div>
+
+      <!-- INSIDE: Right panel — about -->
+      <div class="panel bg-cream">
+        <div class="fi-content">
+          <p class="eyebrow">Foundation Teacher Training</p>
+          <h2 class="fi-heading">Begin your<br>teaching journey.</h2>
+
+          <p class="fi-body">Our flagship 200hr Vinyasa YTT is a comprehensive journey into the art and science of yoga teaching. Structured around five weekends, each intensive explores one of the five pillars of Te Whare Tapa Whā — the Māori model of holistic health developed by Sir Mason Durie.</p>
+          <p class="fi-body">This training is equally powerful for those who want to become teachers and those who simply want to deepen their own practice. Either way, you'll leave transformed.</p>
+          <p class="fi-body">Complete all five intensives and earn your 200hr certificate from AWHI Yoga School, qualifying you for <strong>Yoga Alliance RYT 200 registration</strong>.</p>
+
+          <div class="rule"></div>
+
+          <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;">A uniquely Aotearoa experience</p>
+          <div class="hl-list">
+            <div class="hl-item">Rooted in te ao Māori and the traditions of yoga</div>
+            <div class="hl-item">Small, intimate cohorts with personalised support</div>
+            <div class="hl-item">Taught by experienced, passionate facilitators</div>
+            <div class="hl-item">Based at AWHI's studio in Wellington CBD</div>
+          </div>
+
+          <div class="phil-strip">
+            <p>Our training honours <strong>Te Whare Tapa Whā</strong> — five dimensions of wellbeing woven through every weekend of this programme.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /inside sheet -->
+  </div>
+
+</div><!-- /wrapper -->
+</body>
+</html>

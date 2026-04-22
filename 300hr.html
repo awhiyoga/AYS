@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>300hr Vinyasa YTT — AWHI Yoga School, Wellington</title>
+  <meta name="description" content="AWHI Yoga School's 300hr Vinyasa Teacher Training — a pathway to 500-hour certified yoga teacher status. Open to practitioners and teachers alike. Based in Wellington, Aotearoa New Zealand." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="300hr Vinyasa YTT — AWHI Yoga School, Wellington" />
+  <meta property="og:description" content="AWHI Yoga School's 300hr Vinyasa Teacher Training — a pathway to 500-hour certified yoga teacher status. Open to practitioners and teachers alike. Based in Wellington, Aotearoa New Zealand." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/school/300hr.html" />
+  <meta property="og:image" content="https://awhiyoga.co.Images/AwhibyJuliaSabugosa-042.jpg" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/school/300hr.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --ao:        #2A2320;   /* warm charcoal */
+      --hua:       #F4EFE4;   /* warm cream */
+      --wai:       #C05C2C;   /* terracotta */
+      --pango:     #242424;   /* charcoal */
+      --kawakawa:  #7A9E7E;   /* sage */
+      --kowhai:    #D4A553;   /* warm gold */
+      --ua:        #EBE0D8;   /* warm sand */
+
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--hua);
+      color: var(--pango);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── UTILITIES ──────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.5rem, 5vw, 4rem);
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary {
+      background: var(--wai);
+      color: var(--hua);
+      border-color: var(--wai);
+    }
+    .btn-primary:hover {
+      background: #a34a20;
+      border-color: #a34a20;
+    }
+    .btn-outline-cream {
+      background: transparent;
+      color: var(--hua);
+      border-color: var(--hua);
+    }
+    .btn-outline-cream:hover {
+      background: var(--hua);
+      color: var(--ao);
+    }
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--ao);
+      border-color: var(--ao);
+    }
+    .btn-outline-dark:hover {
+      background: var(--ao);
+      color: var(--hua);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1.5px;
+      background: var(--kawakawa);
+      flex-shrink: 0;
+    }
+
+    /* ─── FADE-UP ANIMATION ──────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up.delay-1 { transition-delay: 0.1s; }
+    .fade-up.delay-2 { transition-delay: 0.2s; }
+    .fade-up.delay-3 { transition-delay: 0.3s; }
+    .fade-up.delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled {
+      background: var(--ao);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--hua);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      color: var(--hua);
+      font-size: 0.83rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      opacity: 1;
+    }
+    .nav-links a.active {
+      border-bottom: 1.5px solid var(--kowhai);
+      padding-bottom: 2px;
+    }
+    .nav-book {
+      background: var(--wai) !important;
+      color: var(--hua) !important;
+      padding: 0.6rem 1.4rem;
+      font-weight: 700 !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 1 !important;
+      transition: background 0.25s !important;
+      border: none;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--hua);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--ao);
+      padding: 1.5rem clamp(1.5rem, 5vw, 4rem) 2rem;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: var(--hua);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(244,239,228,0.08);
+      opacity: 0.85;
+    }
+    .nav-mobile a.active { opacity: 1; color: var(--kowhai); }
+    .nav-mobile .nav-book {
+      margin-top: 1.25rem;
+      text-align: center;
+      display: block;
+      padding: 0.85rem 2rem;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 65vh;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-125.jpg');
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 46, 64, 0.75);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--hua);
+      max-width: 760px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(244,239,228,0.12);
+      border: 1px solid rgba(244,239,228,0.3);
+      color: var(--hua);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      color: var(--hua);
+    }
+    .hero-sub {
+      font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+      line-height: 1.7;
+      opacity: 0.88;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-ya-badge {
+      display: inline-block;
+      background: var(--kowhai);
+      color: var(--ao);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* ─── SECTION: WHO IS THIS FOR ───────────────────────── */
+    .pathways {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .pathways-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .pathways-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .pathways-header p {
+      color: #4a4a4a;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .pathway-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .pathway-card {
+      background: #fff;
+      border-top: 3px solid var(--wai);
+      padding: 2rem 1.75rem;
+    }
+    .pathway-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .pathway-card p {
+      color: #4a4a4a;
+      font-size: 0.97rem;
+      line-height: 1.7;
+    }
+
+    /* ─── SECTION: STATS ─────────────────────────────────── */
+    .stats-strip {
+      background: var(--wai);
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-item {}
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--hua);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(244,239,228,0.75);
+    }
+
+    /* ─── SECTION: CURRICULUM ────────────────────────────── */
+    .curriculum {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .curriculum-header {
+      max-width: 640px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .curriculum-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .curriculum-header p {
+      color: #4a4a4a;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .curriculum-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 4vw, 4rem);
+    }
+    .curriculum-col h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1.5px solid var(--ua);
+    }
+    .curriculum-list {
+      list-style: none;
+      padding: 0;
+    }
+    .curriculum-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.97rem;
+      color: #3a3a3a;
+    }
+    .curriculum-list li:last-child { border-bottom: none; }
+    .curriculum-list .hrs {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--kawakawa);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ─── SECTION: SCHEDULE ──────────────────────────────── */
+    .schedule {
+      background: var(--ao);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .schedule .section-label {
+      color: var(--kawakawa);
+    }
+    .schedule .section-label::before { background: var(--kawakawa); }
+    .schedule-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .schedule-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .schedule-header p {
+      color: rgba(244,239,228,0.78);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .schedule-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table.sched {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      color: rgba(244,239,228,0.88);
+    }
+    table.sched thead th {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1.5px solid rgba(244,239,228,0.12);
+      white-space: nowrap;
+    }
+    table.sched tbody tr {
+      border-bottom: 1px solid rgba(244,239,228,0.06);
+      transition: background 0.15s;
+    }
+    table.sched tbody tr:nth-child(even) {
+      background: rgba(244,239,228,0.04);
+    }
+    table.sched tbody tr:hover {
+      background: rgba(244,239,228,0.07);
+    }
+    table.sched td {
+      padding: 0.85rem 1rem;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    table.sched td:first-child {
+      font-weight: 500;
+      color: var(--hua);
+    }
+    table.sched .prereq {
+      font-size: 0.82rem;
+      color: rgba(244,239,228,0.6);
+    }
+    table.sched .facilitator {
+      font-size: 0.88rem;
+      color: rgba(244,239,228,0.7);
+    }
+
+    /* Row type borders */
+    table.sched tr.required-row td:first-child {
+      border-left: 3px solid var(--kawakawa);
+      padding-left: 0.75rem;
+    }
+    table.sched tr.elective-row td:first-child {
+      border-left: 3px solid var(--kowhai);
+      padding-left: 0.75rem;
+    }
+    .elective-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--kowhai);
+      background: rgba(212,165,83,0.12);
+      padding: 0.15rem 0.5rem;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+    .sched-note {
+      margin-top: 1.5rem;
+      font-size: 0.88rem;
+      color: rgba(244,239,228,0.55);
+      padding-left: 1rem;
+      border-left: 2px solid rgba(244,239,228,0.15);
+      line-height: 1.6;
+    }
+
+    /* ─── SECTION: MODULE DESCRIPTIONS ──────────────────── */
+    .modules {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .modules-header {
+      max-width: 640px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .modules-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .modules-header p {
+      color: #4a4a4a;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .modules-subhead {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1.5px solid var(--ua);
+    }
+    .modules-required-group {
+      margin-bottom: 3rem;
+    }
+    .modules-elective-group {}
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .module-card {
+      background: #fff;
+      padding: 1.75rem;
+      border-left: 3px solid var(--kawakawa);
+    }
+    .module-card.elective {
+      border-left-color: var(--kowhai);
+    }
+    .module-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .module-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.2;
+      flex: 1;
+    }
+    .module-badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.3rem;
+      flex-shrink: 0;
+    }
+    .badge-hrs {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      background: var(--ao);
+      color: var(--hua);
+      padding: 0.25rem 0.6rem;
+      white-space: nowrap;
+    }
+    .badge-type {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      white-space: nowrap;
+    }
+    .badge-type.required {
+      background: rgba(122,158,126,0.18);
+      color: var(--kawakawa);
+    }
+    .badge-type.elective {
+      background: rgba(212,165,83,0.18);
+      color: #b8873f;
+    }
+    .module-card p {
+      font-size: 0.93rem;
+      color: #4a4a4a;
+      line-height: 1.7;
+    }
+    .module-date {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--wai);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ─── SECTION: ASSESSMENT ────────────────────────────── */
+    .assessment {
+      background: var(--ao);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .assessment .section-label { color: var(--kawakawa); }
+    .assessment .section-label::before { background: var(--kawakawa); }
+    .assessment-header {
+      max-width: 640px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .assessment-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+    }
+    .assessment-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .assessment-col {
+      border-top: 2px solid var(--wai);
+      padding-top: 1.5rem;
+    }
+    .assessment-col h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .assessment-col p {
+      font-size: 0.95rem;
+      color: rgba(244,239,228,0.75);
+      line-height: 1.7;
+    }
+
+    /* ─── SECTION: INVESTMENT ────────────────────────────── */
+    .investment {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .investment-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .investment-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .investment-header p {
+      color: #4a4a4a;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Full programme enrolment */
+    .enrol-section { margin-bottom: clamp(3rem, 6vw, 5rem); }
+    .pricing-subhead {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 1.5rem;
+    }
+    .eb-hero {
+      background: var(--wai);
+      padding: 2.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .eb-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--hua);
+      background: rgba(255,255,255,0.2);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .eb-price {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--hua);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .eb-sub {
+      color: rgba(244,239,228,0.88);
+      font-size: 0.95rem;
+    }
+    .eb-cta {
+      display: inline-block;
+      background: var(--hua);
+      color: var(--wai);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.9rem 2rem;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+    }
+    .eb-cta:hover { opacity: 0.82; }
+    .other-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(42,35,32,0.12);
+      border-top: none;
+    }
+    .option-card {
+      background: #fff;
+      padding: 1.75rem;
+      border-right: 1px solid rgba(42,35,32,0.08);
+    }
+    .option-card:last-child { border-right: none; }
+    .option-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 0.6rem;
+    }
+    .option-price {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--ao);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .option-detail {
+      font-size: 0.87rem;
+      color: #5a5a5a;
+      line-height: 1.5;
+    }
+
+    /* Module pricing table */
+    .module-pricing-section { margin-top: clamp(3rem, 6vw, 5rem); }
+    .module-pricing-section > h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 0.6rem;
+    }
+    .module-pricing-section > p {
+      color: #4a4a4a;
+      font-size: 0.97rem;
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+      max-width: 680px;
+    }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table.price-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #fff;
+      border: 1px solid rgba(42,35,32,0.1);
+    }
+    table.price-table thead th {
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ao);
+      background: #ede8df;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1.5px solid rgba(42,35,32,0.12);
+      white-space: nowrap;
+    }
+    table.price-table tbody tr {
+      border-bottom: 1px solid rgba(42,35,32,0.07);
+      transition: background 0.15s;
+    }
+    table.price-table tbody tr:hover { background: #faf7f2; }
+    table.price-table td {
+      padding: 0.9rem 1rem;
+      vertical-align: top;
+      line-height: 1.45;
+      color: var(--pango);
+    }
+    table.price-table td.mod-name {
+      font-weight: 500;
+      color: var(--ao);
+      min-width: 200px;
+    }
+    table.price-table .price-eb {
+      font-weight: 600;
+      color: var(--wai);
+      white-space: nowrap;
+    }
+    table.price-table .price-full { white-space: nowrap; }
+    table.price-table .incl-note {
+      font-size: 0.83rem;
+      color: #888;
+      font-style: italic;
+    }
+    table.price-table tr.group-row td {
+      background: #ede8df;
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ao);
+      padding: 0.55rem 1rem;
+    }
+    .pricing-note {
+      margin-top: 1.25rem;
+      font-size: 0.87rem;
+      color: #666;
+      line-height: 1.65;
+    }
+    .pricing-note a {
+      color: var(--wai);
+      text-decoration: underline;
+    }
+
+    /* ─── IMAGE BREAK ────────────────────────────────────── */
+    .image-break {
+      width: 100%;
+      height: clamp(280px, 35vw, 480px);
+      overflow: hidden;
+    }
+    .image-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    /* ─── CTA SECTION ────────────────────────────────────── */
+    .cta-section {
+      background: var(--wai);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: rgba(244,239,228,0.85);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 560px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+    .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      background: var(--ao);
+      padding: clamp(3.5rem, 7vw, 6rem) 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      padding-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .footer-brand {}
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .footer-tagline {
+      color: rgba(244,239,228,0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-col ul li a {
+      color: rgba(244,239,228,0.65);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--hua); }
+    .footer-contact p {
+      color: rgba(244,239,228,0.65);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 0.25rem;
+    }
+    .footer-contact a {
+      color: var(--kowhai);
+      transition: opacity 0.2s;
+    }
+    .footer-contact a:hover { opacity: 0.8; }
+    .footer-bottom {
+      border-top: 1px solid rgba(244,239,228,0.08);
+      padding: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-bottom p {
+      color: rgba(244,239,228,0.35);
+      font-size: 0.82rem;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .pathway-cards { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; }
+      .modules-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-book { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero h1 { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+
+      .pathway-cards { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .curriculum-cols { grid-template-columns: 1fr; }
+      .assessment-cols { grid-template-columns: 1fr; }
+      .other-options { grid-template-columns: 1fr; }
+      .option-card { border-right: none; border-bottom: 1px solid rgba(42,35,32,0.08); }
+      .option-card:last-child { border-bottom: none; }
+      .eb-hero { flex-direction: column; align-items: flex-start; }
+      .footer-grid { grid-template-columns: 1fr; }
+
+      table.sched { font-size: 0.83rem; }
+      table.sched td,
+      table.sched thead th { padding: 0.65rem 0.6rem; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .hero-ctas { flex-direction: column; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ao);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  
+    /* ─── LOCATION BADGES ───────────────────────────────────── */
+    .loc-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      line-height: 1.6;
+    }
+    .loc-studio {
+      color: var(--kawakawa);
+      background: rgba(122,158,126,0.18);
+    }
+    .loc-online {
+      color: var(--wai);
+      background: rgba(46,110,138,0.22);
+    }
+    table.sched td.loc { white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">AWHI Yoga School</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="200hr.html">200hr YTT</a>
+        <a href="yin-ytt.html">50/100hr Yin YTT</a>
+        <a href="300hr.html" class="active">300hr YTT</a>
+        <a href="scholarship.html">Scholarships</a>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="200hr.html">200hr YTT</a>
+    <a href="yin-ytt.html">50/100hr Yin YTT</a>
+    <a href="300hr.html" class="active">300hr YTT</a>
+    <a href="scholarship.html">Scholarships</a>
+    <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">300hr Vinyasa YTT</div>
+      <h1>Advanced Vinyasa Teacher Training</h1>
+      <p class="hero-sub">A pathway to 500-hour certified yoga teacher status. Structured as standalone modules — accessible to deepening practitioners, CE-seeking teachers, and those pursuing full 300hr certification.</p>
+      <div class="hero-ya-badge">Yoga Alliance RYS 300</div>
+      <div class="hero-ctas">
+        <a href="#curriculum" class="btn btn-primary">View the curriculum</a>
+        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-cream">Enquiries</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── SECTION 1: WHO IS THIS FOR ──────────────────────── -->
+  <section class="pathways" aria-labelledby="pathways-heading">
+    <div class="container">
+      <div class="pathways-header fade-up">
+        <div class="section-label">Enrolment pathways</div>
+        <h2 id="pathways-heading">Three ways to participate</h2>
+        <p>Unlike most advanced trainings, many of our 300hr modules are open to everyone — not just certified teachers. Here's how students typically engage with the programme.</p>
+      </div>
+      <div class="pathway-cards">
+        <div class="pathway-card fade-up delay-1">
+          <h3>Deepen your practice</h3>
+          <p>You're a dedicated practitioner who wants to explore yoga anatomy, philosophy, or sequencing at an advanced level. No teaching certification required for most modules. Perfect for curious minds who simply want to go deeper.</p>
+        </div>
+        <div class="pathway-card fade-up delay-2">
+          <h3>Earn CE credits</h3>
+          <p>You hold a 200hr (or higher) certification and want to maintain or expand your Yoga Alliance registration with Continuing Education (CE) hours. Each module delivers between 15 and 35 CE hours.</p>
+          <img src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" style="height:60px; width:auto; margin-top:1.25rem;" loading="lazy" />
+        </div>
+        <div class="pathway-card fade-up delay-3">
+          <h3>Full 300hr certification</h3>
+          <p>You hold a 200hr CYT and want to add a 300-hour certification, becoming a 500-hour Certified Yoga Teacher (CYT) registered with Yoga Alliance. Complete all required modules plus two electives.</p>
+          <img src="Images/rys-300.png" alt="Yoga Alliance RYS 300" style="height:60px; width:auto; margin-top:1.25rem;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 2: STATS STRIP ───────────────────────────── -->
+  <section class="stats-strip" aria-label="Programme overview">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up delay-1">
+          <div class="stat-number">300</div>
+          <div class="stat-label">Hours total</div>
+        </div>
+        <div class="stat-item fade-up delay-2">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Required modules</div>
+        </div>
+        <div class="stat-item fade-up delay-3">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Electives — choose 2</div>
+        </div>
+        <div class="stat-item fade-up delay-4">
+          <div class="stat-number">500hr</div>
+          <div class="stat-label">CYT pathway</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: CURRICULUM ────────────────────────────── -->
+  <section class="curriculum" id="curriculum" aria-labelledby="curriculum-heading">
+    <div class="container">
+      <div class="curriculum-header fade-up">
+        <div class="section-label">The curriculum</div>
+        <h2 id="curriculum-heading">What you'll study</h2>
+        <p>The 300hr curriculum is divided into required modules and electives. Required modules total 270 hours; you select two electives (15 hours each) to reach 300 hours total. Each module can be taken independently or as part of the full certification pathway.</p>
+      </div>
+      <div class="curriculum-cols">
+        <div class="fade-up delay-1">
+          <h3>Required modules (270 hours)</h3>
+          <ul class="curriculum-list">
+            <li><span>Mantra, Pranayama &amp; Meditation</span><span class="hrs">25 hrs</span></li>
+            <li><span>Anatomy: Legs, Hips &amp; Pelvis</span><span class="hrs">35 hrs</span></li>
+            <li><span>Anatomy: Spine &amp; Core</span><span class="hrs">35 hrs</span></li>
+            <li><span>Anatomy: Shoulders &amp; Neck</span><span class="hrs">35 hrs</span></li>
+            <li><span>Yoga Philosophy Part I</span><span class="hrs">35 hrs</span></li>
+            <li><span>Yoga Philosophy, Lifestyle &amp; Ethics Part II</span><span class="hrs">25 hrs</span></li>
+            <li><span>The (He)art of Sequencing</span><span class="hrs">25 hrs</span></li>
+            <li><span>Teaching Practicum</span><span class="hrs">25 hrs</span></li>
+            <li><span>Online Wānanga (monthly live calls)</span><span class="hrs">20 hrs</span></li>
+            <li><span>Wrap-Up &amp; Graduation</span><span class="hrs">10 hrs</span></li>
+          </ul>
+        </div>
+        <div class="fade-up delay-2">
+          <h3>Electives — choose two (30 hours)</h3>
+          <ul class="curriculum-list">
+            <li><span>Yoga Nidra</span><span class="hrs">15 hrs</span></li>
+            <li><span>Yoga Meets Matauranga Māori</span><span class="hrs">15 hrs</span></li>
+            <li><span>Prenatal Yoga</span><span class="hrs">15 hrs</span></li>
+            <li><span>Yoga in ACTion</span><span class="hrs">15 hrs</span></li>
+            <li><span>Hands on Assists</span><span class="hrs">15 hrs</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 4: SCHEDULE ──────────────────────────────── -->
+  <section class="schedule" id="schedule" aria-labelledby="schedule-heading">
+    <div class="container">
+      <div class="schedule-header fade-up">
+        <div class="section-label">2026–2027 schedule</div>
+        <h2 id="schedule-heading">Upcoming module dates</h2>
+        <p>Our inaugural 300hr cohort runs across 2026–2027. Individual modules can be booked separately.</p>
+      </div>
+      <div class="schedule-table-wrap fade-up delay-1">
+        <table class="sched">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Date</th>
+              <th>Hours</th>
+              <th>Pre-requisite</th>
+              <th>Facilitator</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="elective-row">
+              <td>Prenatal Yoga <span class="elective-tag">Elective</span></td>
+              <td>Fri–Sun, 14–16 Aug 2026<br><span class="prereq">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Marcelly Ribeiro</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Mantra, Pranayama &amp; Meditation</td>
+              <td>Sat 5 &amp; 26 Sep 2026 · 9am–5pm + online content</td>
+              <td>25 hrs</td>
+              <td class="prereq">None</td>
+              <td class="facilitator">Tom Brotherstone</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span> <span class="loc-tag loc-online">+ Online</span></td>
+            </tr>
+            <tr class="elective-row">
+              <td>Yoga in ACTion <span class="elective-tag">Elective</span></td>
+              <td>Sat 3, 10, 17, 24, 31 Oct &amp; 7, 14, 21 Nov 2026 · 9–10:30am</td>
+              <td>15 hrs</td>
+              <td class="prereq">None</td>
+              <td class="facilitator">Melissa Rivard</td>
+              <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+            </tr>
+            <tr class="elective-row">
+              <td>Hands on Assists <span class="elective-tag">Elective</span></td>
+              <td>Fri–Sun, 30 Oct–1 Nov 2026<br><span class="prereq">Fri 4:30–8pm &middot; Sat 9am–4pm &middot; Sun 8:30am–3pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Rusty Millar</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Anatomy: Legs, Hips &amp; Pelvis</td>
+              <td>Fri–Sun, 22–24 Jan 2027<br><span class="prereq">8am–6pm daily</span></td>
+              <td>35 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Kathleen Kuehn</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Yoga Philosophy Part I</td>
+              <td>Sat 27 Feb, 8am–4pm &middot; Sun 28 Feb, 8am–5pm<br><span class="prereq">Mon 8 &amp; 22 Mar, 5:30–8:30pm</span></td>
+              <td>35 hrs</td>
+              <td class="prereq">Recommended 200 CYT</td>
+              <td class="facilitator">Tom Brotherstone</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>The (He)art of Sequencing</td>
+              <td>Sat–Sun, 13–14 Mar 2027<br><span class="prereq">8am–6pm</span></td>
+              <td>25 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Kathleen Kuehn / Tom Brotherstone</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Yoga Philosophy, Lifestyle &amp; Ethics Part II</td>
+              <td>Sat–Sun, 3–4 Apr 2027<br><span class="prereq">8am–5pm</span></td>
+              <td>25 hrs</td>
+              <td class="prereq">Yoga Philosophy Part I</td>
+              <td class="facilitator">Tom Brotherstone</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="elective-row">
+              <td>Yoga Nidra <span class="elective-tag">Elective</span></td>
+              <td>1 May 2027 (self-paced online)<br><span class="prereq">Live calls: Wed 5, 12 &amp; 19 May, 7pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">None</td>
+              <td class="facilitator">Kathleen Kuehn</td>
+              <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+            </tr>
+            <tr class="elective-row">
+              <td>Yoga Meets Matauranga Māori <span class="elective-tag">Elective</span></td>
+              <td>Wed 5, 12, 19 &amp; 26 May 2027<br><span class="prereq">5:30–8:45pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">None</td>
+              <td class="facilitator">Tom Brotherstone / Murray Hemi</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Anatomy: Spine &amp; Core</td>
+              <td>Fri–Sun, 11–13 Jun 2027<br><span class="prereq">8am–6pm daily</span></td>
+              <td>35 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Kathleen Kuehn</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="elective-row">
+              <td>Prenatal Yoga (repeat) <span class="elective-tag">Elective</span></td>
+              <td>Fri–Sun, 18–20 Jun 2027<br><span class="prereq">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Marcelly Ribeiro</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Anatomy: Shoulders &amp; Neck</td>
+              <td>Fri–Sun, 23–25 Jul 2027<br><span class="prereq">8am–6pm daily</span></td>
+              <td>35 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Kathleen Kuehn</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>The (He)art of Sequencing (repeat)</td>
+              <td>Sat–Sun, 21–22 Aug 2027<br><span class="prereq">8am–6pm</span></td>
+              <td>25 hrs</td>
+              <td class="prereq">200 CYT</td>
+              <td class="facilitator">Kathleen Kuehn / Tom Brotherstone</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+            <tr class="elective-row">
+              <td>Yoga Nidra (repeat) <span class="elective-tag">Elective</span></td>
+              <td>1 Sep 2027 (online content)<br><span class="prereq">Live calls: Wed 8, 15 &amp; 22 Sep, 7pm</span></td>
+              <td>15 hrs</td>
+              <td class="prereq">None</td>
+              <td class="facilitator">Kathleen Kuehn</td>
+              <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Teaching Practicum</td>
+              <td>Fri–Sun, 10–12 Sep 2027<br><span class="prereq">Fri 4–8pm &middot; Sat &amp; Sun 8am–6pm</span></td>
+              <td>25 hrs</td>
+              <td class="prereq">300hr YTTs only</td>
+              <td class="facilitator">Tom Brotherstone / Kathleen Kuehn / Rusty Millar</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+
+            <tr class="required-row">
+              <td>Online Wānanga</td>
+              <td>TBD — throughout programme</td>
+              <td>20 hrs</td>
+              <td class="prereq">300hr CYT path</td>
+              <td class="facilitator">All Staff</td>
+              <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+            </tr>
+            <tr class="required-row">
+              <td>Wrap-Up &amp; Graduation</td>
+              <td>Sat 23 Oct 2027<br><span class="prereq">8am–8pm</span></td>
+              <td>10 hrs</td>
+              <td class="prereq">300hr YTTs only</td>
+              <td class="facilitator">All Staff</td>
+              <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 5: MODULE DESCRIPTIONS ──────────────────── -->
+  <section class="modules" id="modules" aria-labelledby="modules-heading">
+    <div class="container">
+      <div class="modules-header fade-up">
+        <div class="section-label">Module breakdown</div>
+        <h2 id="modules-heading">Inside each module</h2>
+        <p>Each module combines pre-work (online lectures and reading), intensive in-person weekends, and monthly online wānanga for ongoing integration. Here's a summary of what each module covers.</p>
+      </div>
+
+      <div class="modules-required-group">
+        <div class="modules-subhead fade-up">Required modules</div>
+        <div class="modules-grid">
+          <div class="module-card fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Mantra, Pranayama &amp; Meditation</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">25 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Sat 5 &amp; Sat 26 September 2026<br><span style="font-size:0.85em;opacity:0.75">9am–5pm + online content</span></p>
+            <p>Explores the foundational theory, embodied practice, and teaching methodology of pranayama, meditation, and mantra. Covers breathing physiology and the subtle body, foundational meditation techniques across multiple lineages, the ethics of mantra, and safe trauma-aware instruction. Includes extensive practice teaching time with peer feedback.</p>
+          </div>
+
+          <div class="module-card fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Anatomy: Legs, Hips &amp; Pelvis</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">35 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Fri–Sun, 22–24 January 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm daily</span></p>
+            <p>In-depth applied anatomy of the lower body — feet, knees, and hips — with a focus on how these structures function in yoga asana. Covers common injuries, contraindications, pain and injury management, and postural modifications. Includes a post-course written assessment.</p>
+          </div>
+
+          <div class="module-card fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Anatomy: Spine &amp; Core</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">35 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Fri–Sun, 11–13 June 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm daily</span></p>
+            <p>A deep dive into the five-component core system (diaphragm, abdominals, pelvic floor, posterior core, and psoas) and spinal mechanics. Covers lower back conditions, sacroiliac joint management, inversions, and intelligent sequencing for injury prevention. Includes a post-course written assessment.</p>
+          </div>
+
+          <div class="module-card fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Anatomy: Shoulders &amp; Neck</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">35 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Fri–Sun, 23–25 July 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm daily</span></p>
+            <p>Detailed applied anatomy of the shoulder complex, rotator cuff, scapular movement, cervical spine, and upper arm. Covers common impingements and injury management, safe weight-bearing alignment in asana, wrist support, and teaching methodology for chaturanga and other demanding poses. Includes a post-course written assessment.</p>
+          </div>
+
+          <div class="module-card fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Yoga Philosophy Part I</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">35 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Sat 27 Feb · Sun 28 Feb · Mon 8 &amp; 22 Mar 2027<br><span style="font-size:0.85em;opacity:0.75">Sat 8am–4pm · Sun 8am–5pm · Mon 5:30–8:30pm</span></p>
+            <p>An in-depth study of Patanjali's Yoga Sutras, the Bhagavad Gita, and Yogananda's Autobiography of a Yogi. Examines the 16 functions of the mind, classical Indian philosophical frameworks, different paths to liberation, and the relevance of classical philosophy for contemporary teachers. Includes 10 non-contact hours for required reading and a written reflective essay.</p>
+          </div>
+
+          <div class="module-card fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Yoga Philosophy, Lifestyle &amp; Ethics Part II</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">25 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Sat &amp; Sun, 3–4 April 2027<br><span style="font-size:0.85em;opacity:0.75">8am–5pm</span></p>
+            <p>Explores Ayurveda basics, the diverse historical roots of yoga (drawing on Mallinson &amp; Singleton's Roots of Yoga), yoga through the lens of Western science, business ethics through a yogic framework, and the responsibilities of acknowledging indigeneity in yoga teaching. Includes 6 non-contact hours for required reading.</p>
+          </div>
+
+          <div class="module-card fade-up delay-1">
+            <div class="module-card-top">
+              <h3>The (He)art of Sequencing</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">25 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Sat–Sun, 13–14 March 2027 &nbsp;·&nbsp; repeat: 21–22 August 2027<br><span style="font-size:0.85em;opacity:0.75">8am–6pm</span></p>
+            <p>Advanced vinyasa sequencing methodology covering two AWHI templates (Peak Pose and Vinyasa Flow), curriculum design for sustained teaching, theming with philosophical depth, and common sequencing imbalances. Includes the business of yoga: workshops, courses, marketing, and teacher sustainability. Assessment: sequence submission using one of the two templates.</p>
+          </div>
+
+          <div class="module-card fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Teaching Practicum</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">25 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Fri–Sun, 10–12 September 2027<br><span style="font-size:0.85em;opacity:0.75">Fri 4–8pm &middot; Sat &amp; Sun 8am–6pm</span></p>
+            <p>Three intensive sessions refining teaching presence, voice, assists, feedback skills, and professional readiness. Includes an in-depth assists workshop, inclusive and trauma-aware teaching practice, and a final 45–60 minute assessed class. Assessment: teach a full public class.</p>
+          </div>
+
+          <div class="module-card fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Online Wānanga</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">20 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Monthly throughout 2026–2027</p>
+            <p>Monthly Zoom calls aligned with each module — one per required module and one per elective. Each call opens with meditation, pranayama, or movement, followed by student-led Q&amp;A and wānanga discussion. All calls are recorded for those unable to attend live.</p>
+          </div>
+
+          <div class="module-card fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Wrap-Up &amp; Graduation</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">10 hrs</span>
+                <span class="badge-type required">Required</span>
+              </div>
+            </div>
+            <p class="module-date">Saturday, 23 October 2027<br><span style="font-size:0.85em;opacity:0.75">8am–8pm</span></p>
+            <p>A full day of integration, reflection, and ceremony. Includes a final group asana practice, embodied reflection on the training journey, professional development discussion, final witnessed teaching practicum, and a formal graduation ceremony.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modules-elective-group">
+        <div class="modules-subhead fade-up">Electives</div>
+        <div class="modules-grid">
+          <div class="module-card elective fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Yoga Nidra</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">15 hrs</span>
+                <span class="badge-type elective">Elective</span>
+              </div>
+            </div>
+            <p class="module-date">1 May 2027 (self-paced online)<br><span style="font-size:0.85em;opacity:0.75">Live calls: Wed 5, 12 &amp; 19 May, 7pm &nbsp;·&nbsp; Repeat intake: 1 Sep + Wed 8, 15 &amp; 22 Sep, 7pm</span></p>
+            <p>An online self-paced course with three weekly live Zoom calls. Covers the history and neuroscience of Yoga Nidra, classical and modern structuring approaches, trauma-aware and inclusive delivery, and sequencing for different contexts (class endings, standalone, workshops, retreats). Assessment: write and record your own 30–45 minute Yoga Nidra script.</p>
+          </div>
+
+          <div class="module-card elective fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Yoga Meets Matauranga Māori</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">15 hrs</span>
+                <span class="badge-type elective">Elective</span>
+              </div>
+            </div>
+            <p class="module-date">Wed 5, 12, 19 &amp; 26 May 2027<br><span style="font-size:0.85em;opacity:0.75">5:30–8:45pm</span></p>
+            <p>Four evening sessions exploring the synergies between Matauranga Māori (Māori knowledge systems) and yoga philosophy. Structured around four concepts — Aro-ha, Wahangū, Nohopuku, and Māramatanga — each unpacked alongside related yoga teachings.</p>
+          </div>
+
+          <div class="module-card elective fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Prenatal Yoga</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">15 hrs</span>
+                <span class="badge-type elective">Elective</span>
+              </div>
+            </div>
+            <p class="module-date">Fri–Sun, 14–16 August 2026 &nbsp;·&nbsp; repeat: 18–20 June 2027<br><span style="font-size:0.85em;opacity:0.75">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></p>
+            <p>A foundational training for teaching pregnant students in public classes. Covers hormonal and structural changes by trimester, pelvic floor anatomy, birth-supportive movement, common pregnancy ailments, contraindications, and inclusive trauma-aware cueing. Note: this module provides base-level preparation; it does not constitute a full prenatal yoga certification.</p>
+          </div>
+
+          <div class="module-card elective fade-up delay-2">
+            <div class="module-card-top">
+              <h3>Yoga in ACTion</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">15 hrs</span>
+                <span class="badge-type elective">Elective</span>
+              </div>
+            </div>
+            <p class="module-date">Saturdays, Oct 3, 10, 17, 24, 31 &amp; Nov 7, 14, 21 2026<br><span style="font-size:0.85em;opacity:0.75">9–10:30am</span></p>
+            <p>Eight online sessions integrating yoga, mindfulness, and Acceptance &amp; Commitment Therapy (ACT). Based on the Mindfulness Yoga ACT (MYACT) protocol, this module provides evidence-based tools for supporting students living with stress, chronic pain, or emotional challenges. Not yoga therapy — practical classroom tools for resilience and values-aligned teaching.</p>
+          </div>
+
+          <div class="module-card elective fade-up delay-1">
+            <div class="module-card-top">
+              <h3>Hands on Assists</h3>
+              <div class="module-badges">
+                <span class="badge-hrs">15 hrs</span>
+                <span class="badge-type elective">Elective</span>
+              </div>
+            </div>
+            <p class="module-date">Fri–Sun, 30 Oct–1 Nov 2026<br><span style="font-size:0.85em;opacity:0.75">Fri 4:30–8pm &middot; Sat 9am–4pm &middot; Sun 8:30am–3pm</span></p>
+            <p>A practical intensive covering consent protocols, the three types of assists (verbal, energetic, and mechanical touch), safe and trauma-aware assist delivery, and inclusive touch practices. Provides extensive hands-on practice time with peer feedback.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 6: ASSESSMENT & CERTIFICATION ────────────── -->
+  <section class="assessment" aria-labelledby="assessment-heading">
+    <div class="container">
+      <div class="assessment-header fade-up">
+        <div class="section-label">Completing the programme</div>
+        <h2 id="assessment-heading">Assessment &amp; certification</h2>
+      </div>
+      <div class="assessment-cols">
+        <div class="assessment-col fade-up delay-1">
+          <h3>Module assessments</h3>
+          <p>Most modules include a post-course written or practical assessment (short answer exam, sequencing submission, or recorded class). Passing mark is 60% or higher.</p>
+        </div>
+        <div class="assessment-col fade-up delay-2">
+          <h3>Full certification</h3>
+          <p>Complete all required modules, two electives, and all assessments to receive your 300hr Vinyasa YTT Certificate from AWHI Yoga School and qualify for Yoga Alliance RYT 500 registration.</p>
+        </div>
+        <div class="assessment-col fade-up delay-3">
+          <h3>Individual CE credits</h3>
+          <p>Take individual modules without pursuing full certification. Each completed module (with assessment) delivers Yoga Alliance Continuing Education (CE) hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 7: INVESTMENT ─────────────────────────────── -->
+  <section class="investment" aria-labelledby="investment-heading">
+    <div class="container">
+      <div class="investment-header fade-up">
+        <div class="section-label">Investment</div>
+        <h2 id="investment-heading">Fees &amp; enrolment</h2>
+        <p>Individual modules can be booked separately, or commit to the full 300-hour programme for a significant saving.</p>
+      </div>
+
+      <!-- Full programme enrolment -->
+      <div class="enrol-section fade-up delay-1">
+        <h3 class="pricing-subhead">Full 300-hour enrolment</h3>
+
+        <div class="eb-hero">
+          <div>
+            <div class="eb-badge">Early Bird</div>
+            <div class="eb-price">$3,999 <span style="font-size:1.1rem;font-weight:400;opacity:0.85">NZD</span></div>
+            <div class="eb-sub">Pay in full by 1 August 2027 &mdash; save $500 on the standard rate</div>
+          </div>
+          <a href="mailto:kathleen@awhiyoga.co.nz" class="eb-cta">Enquiries</a>
+        </div>
+
+        <div class="other-options">
+          <div class="option-card">
+            <h4>Pay in full</h4>
+            <div class="option-price">$4,495</div>
+            <p class="option-detail">Standard rate. Full payment at enrolment.</p>
+          </div>
+          <div class="option-card">
+            <h4>4-instalment plan</h4>
+            <div class="option-price">$4,695</div>
+            <p class="option-detail">$995 deposit now, then 3 &times; $1,233. Final instalment due June 2027.</p>
+          </div>
+          <div class="option-card">
+            <h4>Other payment options</h4>
+            <p class="option-detail" style="margin-top:0.25rem;">Need a different arrangement? Get in touch to discuss payment plan options.</p>
+            <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-dark" style="display:inline-block;margin-top:1rem;font-size:0.85rem;">Enquiries</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module-by-module pricing -->
+      <div class="module-pricing-section fade-up delay-2">
+        <h3>Individual module pricing</h3>
+        <p>All required modules and electives are open to the general public — you don't need to be enrolled in the full programme to attend. Early Bird rates close 4 weeks before each module's start date. All prices in NZD.</p>
+
+        <div class="table-scroll">
+          <table class="price-table" aria-label="Module pricing 2026–2027">
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Hrs</th>
+                <th>Dates</th>
+                <th>Early Bird deadline</th>
+                <th>Early Bird price</th>
+                <th>Full price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><td colspan="6">Required modules (7 open modules + Teaching Practicum)</td></tr>
+              <tr>
+                <td class="mod-name">Mantra, Pranayama &amp; Meditation</td>
+                <td>25</td>
+                <td>Sat 5 &amp; 26 Sep 2026<br><span style="font-size:0.82rem;color:#888">9am–5pm + online content</span></td>
+                <td>8 Aug 2026</td>
+                <td class="price-eb">$399</td>
+                <td class="price-full">$499</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Anatomy: Legs, Hips &amp; Pelvis</td>
+                <td>35</td>
+                <td>Fri–Sun, 22–24 Jan 2027<br><span style="font-size:0.82rem;color:#888">8am–6pm daily</span></td>
+                <td>25 Dec 2026</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Philosophy Part I</td>
+                <td>35</td>
+                <td>Sat 27 Feb, 8am–4pm &middot; Sun 28 Feb, 8am–5pm<br><span style="font-size:0.82rem;color:#888">Mon 8 &amp; 22 Mar, 5:30–8:30pm</span></td>
+                <td>30 Jan 2027</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">The (He)art of Sequencing</td>
+                <td>25</td>
+                <td>Sat–Sun, 13–14 Mar 2027 · 8am–6pm<br><span style="font-size:0.82rem;color:#888">Also 21–22 Aug 2027 · 8am–6pm</span></td>
+                <td>13 Feb 2027</td>
+                <td class="price-eb">$399</td>
+                <td class="price-full">$499</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Philosophy, Lifestyle &amp; Ethics Part II</td>
+                <td>25</td>
+                <td>Sat–Sun, 3–4 Apr 2027<br><span style="font-size:0.82rem;color:#888">8am–5pm</span></td>
+                <td>6 Mar 2027</td>
+                <td class="price-eb">$399</td>
+                <td class="price-full">$499</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Anatomy: Spine &amp; Core</td>
+                <td>35</td>
+                <td>Fri–Sun, 11–13 Jun 2027<br><span style="font-size:0.82rem;color:#888">8am–6pm daily</span></td>
+                <td>14 May 2027</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Anatomy: Shoulders &amp; Neck</td>
+                <td>35</td>
+                <td>Fri–Sun, 23–25 Jul 2027<br><span style="font-size:0.82rem;color:#888">8am–6pm daily</span></td>
+                <td>25 Jun 2027</td>
+                <td class="price-eb">$479</td>
+                <td class="price-full">$549</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Teaching Practicum</td>
+                <td>25</td>
+                <td>Fri–Sun, 10–12 Sep 2027<br><span style="font-size:0.82rem;color:#888">Fri 4–8pm &middot; Sat &amp; Sun 8am–6pm</span></td>
+                <td colspan="3" class="incl-note">YTT enrolment only &mdash; included with full programme</td>
+              </tr>
+
+              <tr class="group-row"><td colspan="6">Electives &mdash; choose any 2</td></tr>
+              <tr>
+                <td class="mod-name">Prenatal Yoga</td>
+                <td>15</td>
+                <td>Fri–Sun, 14–16 Aug 2026<br>
+                  <span style="font-size:0.82rem;color:#888">Fri 5:30–8:30pm &middot; Sat 10am–6pm &middot; Sun 12–6pm</span></td>
+                <td>17 Jul 2026</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga in ACTion</td>
+                <td>15</td>
+                <td>Saturdays, Oct–Nov 2026<br><span style="font-size:0.82rem;color:#888">9–10:30am</span></td>
+                <td>5 Sep 2026</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Hands On Assists</td>
+                <td>15</td>
+                <td>Fri–Sun, 30 Oct–1 Nov 2026<br>
+                  <span style="font-size:0.82rem;color:#888">Fri 4:30–8pm &middot; Sat 9am–4pm &middot; Sun 8:30am–3pm</span></td>
+                <td>2 Oct 2026</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Nidra</td>
+                <td>15</td>
+                <td>1 May 2027 (self-paced online)<br><span style="font-size:0.82rem;color:#888">Live calls: Wed 5, 12 &amp; 19 May, 7pm</span></td>
+                <td>3 Apr 2027</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+              <tr>
+                <td class="mod-name">Yoga Meets Matauranga Māori</td>
+                <td>15</td>
+                <td>Wed 5, 12, 19 &amp; 26 May 2027<br><span style="font-size:0.82rem;color:#888">5:30–8:45pm</span></td>
+                <td>7 Apr 2027</td>
+                <td class="price-eb">$349</td>
+                <td class="price-full">$399</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="pricing-note">Early Bird deadline is 4 weeks before each module's first session. To enquire about individual modules or payment plans:</p>
+        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-dark" style="margin-top:1rem;font-size:0.85rem;">Enquiries</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── IMAGE BREAK ───────────────────────────────────────── -->
+  <div class="image-break">
+    <img
+      src="Images/AwhibyJuliaSabugosa-132.jpg"
+      alt="AWHI Yoga Studio"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ─── CTA SECTION ───────────────────────────────────────── -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="fade-up">Questions? We'd love to hear from you.</h2>
+      <p class="fade-up delay-1">Whether you're deciding between modules, wondering if the full 300hr is right for you, or just curious — reach out. We're happy to talk it through.</p>
+      <div class="cta-btns fade-up delay-2">
+        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-cream">Enquiries</a>
+        <a href="index.html" class="btn btn-outline-cream">View all programmes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+
+  <!-- ── ACCREDITATION ─────────────────────────────────── -->
+  <div style="background: var(--hua); padding: 2.5rem 0; border-top: 1px solid rgba(28,56,41,0.1);">
+    <div class="container" style="display:flex; align-items:center; justify-content:center; gap:2.5rem; flex-wrap:wrap;">
+      <p style="font-family:var(--font-body); font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--kawakawa);">Internationally Accredited by Yoga Alliance</p>
+      <img src="Images/rys-300.png" alt="Yoga Alliance RYS 300" style="height:80px; width:auto;" loading="lazy" />
+      <img src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" style="height:80px; width:auto;" loading="lazy" />
+    </div>
+  </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">AWHI Yoga School</div>
+          <p class="footer-tagline">Advanced yoga teacher training rooted in community and authentic practice. Wellington, Aotearoa New Zealand.</p>
+        </div>
+        <div class="footer-col">
+          <h4>School</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="200hr.html">200hr YTT</a></li>
+            <li><a href="yin-ytt.html">50/100hr Yin YTT</a></li>
+            <li><a href="300hr.html">300hr YTT</a></li>
+            <li><a href="scholarship.html">Scholarships</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="../classes.html">Classes</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../events.html">Events</a></li>
+            <li><a href="../team.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>Level 2, 15 Johnston Street<br>Wellington</p>
+          <p><a href="tel:+6444995006">+64 4 499 5006</a></p>
+          <p><a href="mailto:kathleen@awhiyoga.co.nz">kathleen@awhiyoga.co.nz</a></p>
+        </div>
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <div style="display:flex; gap:0.75rem;">
+          <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/Instagram_Glyph_White.png" alt="Instagram" width="20" height="20" style="display:block"></a>
+          <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/Facebook_Logo_Secondary.png" alt="Facebook" width="20" height="20" style="display:block"></a>
+          <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/yt_icon_white_digital.png" alt="YouTube" width="20" height="20" style="display:block"></a>
+          <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ───────────────────────────────────────────── -->
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // Mobile hamburger
+    const toggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-up IntersectionObserver
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

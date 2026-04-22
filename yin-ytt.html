@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50/100hr Yin YTT — AWHI Yoga School, Wellington</title>
+  <meta name="description" content="AWHI Yoga School's 50/100hr Yin Yoga Teacher Training — two 50-hour modules, independently certified or combined for 100 continuing education hours with Yoga Alliance. Wellington, Aotearoa New Zealand." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --ao:        #2A2320;   /* warm charcoal */
+      --hua:       #F4EFE4;   /* warm cream */
+      --wai:       #C05C2C;   /* terracotta */
+      --pango:     #242424;   /* charcoal */
+      --kawakawa:  #7A9E7E;   /* sage */
+      --kowhai:    #D4A553;   /* warm gold */
+      --ua:        #EBE0D8;   /* warm sand */
+
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--hua);
+      color: var(--pango);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── UTILITIES ──────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.5rem, 5vw, 4rem);
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary {
+      background: var(--wai);
+      color: var(--hua);
+      border-color: var(--wai);
+    }
+    .btn-primary:hover { background: #245a72; border-color: #245a72; }
+    .btn-outline-cream {
+      background: transparent;
+      color: var(--hua);
+      border-color: var(--hua);
+    }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ao); }
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--ao);
+      border-color: var(--ao);
+    }
+    .btn-outline-dark:hover { background: var(--ao); color: var(--hua); }
+    .btn-outline-wai {
+      background: transparent;
+      color: var(--wai);
+      border-color: var(--wai);
+    }
+    .btn-outline-wai:hover { background: var(--wai); color: var(--hua); }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1.5px;
+      background: var(--kawakawa);
+      flex-shrink: 0;
+    }
+    .section-label--light { color: var(--ua); }
+    .section-label--light::before { background: var(--ua); }
+
+    /* ─── FADE-UP ANIMATION ──────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up.delay-1 { transition-delay: 0.1s; }
+    .fade-up.delay-2 { transition-delay: 0.2s; }
+    .fade-up.delay-3 { transition-delay: 0.3s; }
+    .fade-up.delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled {
+      background: var(--ao);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--hua);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      color: var(--hua);
+      font-size: 0.83rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { opacity: 1; }
+    .nav-links a.active {
+      border-bottom: 1.5px solid var(--kowhai);
+      padding-bottom: 2px;
+    }
+    .nav-book {
+      background: var(--wai) !important;
+      color: var(--hua) !important;
+      padding: 0.6rem 1.4rem;
+      font-weight: 700 !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 1 !important;
+      transition: background 0.25s !important;
+      border: none;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--hua);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--ao);
+      padding: 1.5rem clamp(1.5rem, 5vw, 4rem) 2rem;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: var(--hua);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(244,239,228,0.08);
+      opacity: 0.85;
+    }
+    .nav-mobile a.active { opacity: 1; color: var(--kowhai); }
+    .nav-mobile .nav-book {
+      margin-top: 1.25rem;
+      text-align: center;
+      display: block;
+      padding: 0.85rem 2rem;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 65vh;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-086.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 46, 64, 0.72);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--hua);
+      max-width: 760px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(244,239,228,0.12);
+      border: 1px solid rgba(244,239,228,0.3);
+      color: var(--hua);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      color: var(--hua);
+    }
+    .hero-sub {
+      font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+      line-height: 1.7;
+      opacity: 0.88;
+      max-width: 620px;
+      margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* ─── SECTION: ABOUT ─────────────────────────────────── */
+    .about {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .about-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .about-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .about-cols {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: clamp(2.5rem, 5vw, 5rem);
+      align-items: start;
+    }
+    .about-text p {
+      color: #4a4a4a;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .key-facts {
+      background: #fff;
+      border-top: 3px solid var(--wai);
+      padding: 2rem 1.75rem;
+    }
+    .key-facts h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ao);
+      margin-bottom: 1.25rem;
+    }
+    .key-facts ul li {
+      font-size: 0.93rem;
+      color: #4a4a4a;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(28,46,64,0.07);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      line-height: 1.5;
+    }
+    .key-facts ul li:last-child { border-bottom: none; padding-bottom: 0; }
+    .key-facts ul li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--wai);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+
+    /* ─── SECTION: MODULES ───────────────────────────────── */
+    .modules-section {
+      background: var(--ao);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .modules-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .modules-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+    }
+    .module-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .module-card {
+      background: var(--hua);
+      border-left: 4px solid var(--wai);
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .module-card-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--wai);
+      margin-bottom: 0.75rem;
+    }
+    .module-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .module-investment {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ao);
+      margin-bottom: 1.25rem;
+    }
+    .module-meta {
+      margin-bottom: 1.5rem;
+    }
+    .module-meta dt {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-top: 0.75rem;
+      margin-bottom: 0.15rem;
+    }
+    .module-meta dd {
+      font-size: 0.93rem;
+      color: #4a4a4a;
+    }
+    .module-content-list {
+      list-style: none;
+      margin-bottom: 2rem;
+      flex: 1;
+    }
+    .module-content-list li {
+      font-size: 0.93rem;
+      color: #4a4a4a;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(28,46,64,0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      line-height: 1.5;
+    }
+    .module-content-list li:first-child { border-top: 1px solid rgba(28,46,64,0.06); }
+    .module-content-list li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--wai);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+    .bundle-band {
+      background: rgba(212,165,83,0.12);
+      border: 1px solid rgba(212,165,83,0.35);
+      margin-top: 2rem;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .bundle-pill {
+      display: inline-block;
+      background: var(--kowhai);
+      color: var(--ao);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .bundle-band p {
+      color: var(--hua);
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+
+    /* ─── SECTION: DATES ─────────────────────────────────── */
+    .dates-section {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .dates-header {
+      max-width: 680px;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .dates-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--ao);
+      line-height: 1.1;
+    }
+    .sched-wrap { overflow-x: auto; }
+    table.sched {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    table.sched thead th {
+      background: var(--ao);
+      color: var(--hua);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+    table.sched tbody tr {
+      border-bottom: 1px solid rgba(28,46,64,0.08);
+    }
+    table.sched tbody tr:hover { background: rgba(28,46,64,0.025); }
+    table.sched td {
+      padding: 1rem 1rem;
+      color: #4a4a4a;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    table.sched td:first-child {
+      font-weight: 600;
+      color: var(--ao);
+    }
+    .bundle-row td { background: rgba(212,165,83,0.06); }
+    .bundle-row td:first-child { color: var(--ao); }
+    .sched-note {
+      font-size: 0.88rem;
+      color: #6a6a6a;
+      margin-top: 1.25rem;
+      line-height: 1.7;
+      max-width: 680px;
+    }
+
+    /* ─── SCHOLARSHIP BAND ───────────────────────────────── */
+    .scholarship-band {
+      background: var(--kowhai);
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
+    }
+    .scholarship-band .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .scholarship-band p {
+      color: var(--ao);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.6;
+      max-width: 640px;
+    }
+    .btn-scholarship {
+      background: var(--ao);
+      color: var(--hua);
+      border-color: var(--ao);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-scholarship:hover { background: #0f1e2b; border-color: #0f1e2b; }
+
+    /* ─── IMAGE BREAK ────────────────────────────────────── */
+    .image-break {
+      width: 100%;
+      height: clamp(280px, 35vw, 480px);
+      overflow: hidden;
+    }
+    .image-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ─── CTA SECTION ────────────────────────────────────── */
+    .cta-section {
+      background: var(--wai);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: rgba(244,239,228,0.85);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 560px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+    .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      background: var(--ao);
+      padding: clamp(3.5rem, 7vw, 6rem) 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      padding-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .footer-tagline {
+      color: rgba(244,239,228,0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a {
+      color: rgba(244,239,228,0.65);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--hua); }
+    .footer-contact p {
+      color: rgba(244,239,228,0.65);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 0.25rem;
+    }
+    .footer-contact a {
+      color: var(--kowhai);
+      transition: opacity 0.2s;
+    }
+    .footer-contact a:hover { opacity: 0.8; }
+    .footer-bottom {
+      border-top: 1px solid rgba(244,239,228,0.08);
+      padding: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-bottom p {
+      color: rgba(244,239,228,0.35);
+      font-size: 0.82rem;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .about-cols { grid-template-columns: 1fr 340px; }
+      .module-cards { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-book { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero h1 { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+
+      .about-cols { grid-template-columns: 1fr; }
+      .module-cards { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .scholarship-band .container { flex-direction: column; align-items: flex-start; }
+
+      table.sched { font-size: 0.83rem; }
+      table.sched td,
+      table.sched thead th { padding: 0.65rem 0.6rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+  
+    /* ─── ACCESSIBILITY ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--ao);
+      color: var(--hua);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0 0 4px 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--kowhai);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">AWHI Yoga School</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="200hr.html">200hr YTT</a>
+        <a href="yin-ytt.html" class="active">50/100hr Yin YTT</a>
+        <a href="300hr.html">300hr YTT</a>
+        <a href="scholarship.html">Scholarships</a>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="200hr.html">200hr YTT</a>
+    <a href="yin-ytt.html" class="active">50/100hr Yin YTT</a>
+    <a href="300hr.html">300hr YTT</a>
+    <a href="scholarship.html">Scholarships</a>
+    <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">50/100hr Yin Yoga YTT</div>
+      <h1>The Art &amp; Anatomy of Yin</h1>
+      <p class="hero-sub">Two 50-hour modules, independently certified or combined for 100 continuing education hours with Yoga Alliance.</p>
+      <div class="hero-ctas">
+        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-primary">Register interest</a>
+        <a href="#dates" class="btn btn-outline-cream">View 2027 dates</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── SECTION 1: ABOUT ──────────────────────────────────── -->
+  <section class="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-header fade-up">
+        <div class="section-label">About the training</div>
+        <h2 id="about-heading">A thorough study of stillness</h2>
+      </div>
+      <div class="about-cols">
+        <div class="about-text fade-up delay-1">
+          <p>Yin yoga is a practice of patient attention. Unlike vinyasa, which works through dynamic movement, Yin works through sustained stillness — holding postures for extended periods to target the connective tissues: fascia, ligaments, tendons, and bones. It is a practice that changes the nervous system as much as the body.</p>
+          <p>Our 50/100hr Yin YTT is structured across two 50-hour modules. Module 1 is open to all — no teaching certification required. Module 2 requires at least 20 hours of prior Yin practice or teacher training.</p>
+        </div>
+        <div class="key-facts fade-up delay-2">
+          <h3>Key details</h3>
+          <ul>
+            <li>Module 1: open to all</li>
+            <li>Module 2: 20hr Yin pre-requisite</li>
+            <li>Both modules count toward Yoga Alliance CE hours</li>
+            <li>Full 100hr bundle available at a reduced rate</li>
+            <li>Payment plans available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 2: THE MODULES ───────────────────────────── -->
+  <section class="modules-section" aria-labelledby="modules-heading">
+    <div class="container">
+      <div class="modules-header fade-up">
+        <div class="section-label section-label--light">The curriculum</div>
+        <h2 id="modules-heading">Two modules, one complete training</h2>
+      </div>
+      <div class="module-cards">
+
+        <!-- Module 1 -->
+        <div class="module-card fade-up delay-1">
+          <div class="module-card-eyebrow">Module 1</div>
+          <h3>Foundations of Yin</h3>
+          <div class="module-investment">$1,299 NZD</div>
+          <dl class="module-meta">
+            <dt>2027 dates</dt>
+            <dd>Weekend 1: 14&ndash;16 May 2027<br>Weekend 2: 21&ndash;23 May 2027</dd>
+            <dt>Format</dt>
+            <dd>Two weekend intensives, 8am&ndash;6pm daily</dd>
+            <dt>Pre-requisite</dt>
+            <dd>None &mdash; open to all</dd>
+          </dl>
+          <ul class="module-content-list">
+            <li>Yin anatomy &mdash; connective tissue, fascia, and the fascial body</li>
+            <li>Chakra and meridian theory in yin practice</li>
+            <li>Sequencing and teaching methodology</li>
+            <li>Yoga philosophy and the yin approach to practice</li>
+            <li>Unlimited AWHI membership during training</li>
+          </ul>
+          <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-dark">Register interest</a>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module-card fade-up delay-2">
+          <div class="module-card-eyebrow">Module 2</div>
+          <h3>Advanced Yin: Trauma-Informed</h3>
+          <div class="module-investment">$1,299 NZD</div>
+          <dl class="module-meta">
+            <dt>2027&ndash;2028 dates</dt>
+            <dd>Dates TBD &mdash; likely 2028 (subject to demand)</dd>
+            <dt>Format</dt>
+            <dd>Weekend intensives, 9am&ndash;6pm daily</dd>
+            <dt>Pre-requisite</dt>
+            <dd>20 hours of prior Yin training or Module 1</dd>
+          </dl>
+          <ul class="module-content-list">
+            <li>Trauma-informed Yin practice and sequencing</li>
+            <li>Yoga Nidra and pranayama in Yin contexts</li>
+            <li>Meditation methodology</li>
+            <li>Advanced anatomy for Yin</li>
+            <li>Therapeutic applications of Yin yoga</li>
+          </ul>
+          <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-dark">Register interest</a>
+        </div>
+
+      </div>
+
+      <!-- Bundle note -->
+      <div class="bundle-band fade-up">
+        <span class="bundle-pill">Bundle</span>
+        <p>Complete both modules for the full 100hr Yin certification &mdash; bundle pricing of $2,299 NZD available.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: DATES ──────────────────────────────────── -->
+  <section class="dates-section" id="dates" aria-labelledby="dates-heading">
+    <div class="container">
+      <div class="dates-header fade-up">
+        <div class="section-label">Upcoming dates</div>
+        <h2 id="dates-heading">2027 schedule</h2>
+      </div>
+      <div class="sched-wrap fade-up delay-1">
+        <table class="sched">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Dates</th>
+              <th>Hours</th>
+              <th>Pre-requisite</th>
+              <th>Investment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Module 1 &mdash; Foundations of Yin</td>
+              <td>Weekend 1: 14&ndash;16 May 2027<br>Weekend 2: 21&ndash;23 May 2027</td>
+              <td>50 hrs</td>
+              <td>None</td>
+              <td>$1,299</td>
+            </tr>
+            <tr>
+              <td>Module 2 &mdash; Advanced Yin (Trauma-Informed)</td>
+              <td>2028 (TBC)</td>
+              <td>50 hrs</td>
+              <td>20hr Yin or Module 1</td>
+              <td>$1,299</td>
+            </tr>
+            <tr class="bundle-row">
+              <td>100hr Bundle</td>
+              <td>Both modules</td>
+              <td>100 hrs</td>
+              <td>&mdash;</td>
+              <td>$2,299</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sched-note fade-up delay-2">Module 1 runs subject to minimum enrolments. Module 2 is planned for 2028. Get in touch to express interest and be first to know when dates are confirmed.</p>
+    </div>
+  </section>
+
+  <!-- ─── IMAGE BREAK ───────────────────────────────────────── -->
+  <div class="image-break">
+    <img
+      src="Images/AwhibyJuliaSabugosa-098.jpg"
+      alt="AWHI Yoga Studio"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ─── SCHOLARSHIP BAND ──────────────────────────────────── -->
+  <section class="scholarship-band" aria-label="Scholarships">
+    <div class="container">
+      <p>Scholarships available &mdash; fully funded places for Maori, Pasifika, BIPOC, LGBTQ+ and other underrepresented communities.</p>
+      <a href="scholarship.html" class="btn btn-scholarship">Learn more</a>
+    </div>
+  </section>
+
+  <!-- ─── CTA SECTION ───────────────────────────────────────── -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="fade-up">Interested in Yin?</h2>
+      <p class="fade-up delay-1">Register your interest or get in touch with any questions.</p>
+      <div class="cta-btns fade-up delay-2">
+        <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-cream">Register interest</a>
+        <a href="index.html" class="btn btn-outline-cream">View all programmes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+
+  <!-- ── ACCREDITATION ─────────────────────────────────── -->
+  <div style="background: var(--hua); padding: 2.5rem 0; border-top: 1px solid rgba(28,56,41,0.1);">
+    <div class="container" style="display:flex; align-items:center; justify-content:center; gap:2.5rem; flex-wrap:wrap;">
+      <p style="font-family:var(--font-body); font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--kawakawa);">Yoga Alliance Continuing Education Provider</p>
+      <img src="Images/YACEP (1).png" alt="Yoga Alliance YACEP" style="height:80px; width:auto;" loading="lazy" />
+    </div>
+  </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">AWHI Yoga School</div>
+          <p class="footer-tagline">Advanced yoga teacher training rooted in community and authentic practice. Wellington, Aotearoa New Zealand.</p>
+        </div>
+        <div class="footer-col">
+          <h4>School</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="200hr.html">200hr YTT</a></li>
+            <li><a href="yin-ytt.html">50/100hr Yin YTT</a></li>
+            <li><a href="300hr.html">300hr YTT</a></li>
+            <li><a href="scholarship.html">Scholarships</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="../classes.html">Classes</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../events.html">Events</a></li>
+            <li><a href="../team.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>Level 2, 15 Johnston Street<br>Wellington</p>
+          <p><a href="tel:+6444995006">+64 4 499 5006</a></p>
+          <p><a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a></p>
+        </div>
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <div style="display:flex; gap:0.75rem;">
+          <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/Instagram_Glyph_White.png" alt="Instagram" width="20" height="20" style="display:block"></a>
+          <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/Facebook_Logo_Secondary.png" alt="Facebook" width="20" height="20" style="display:block"></a>
+          <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><img src="Images/yt_icon_white_digital.png" alt="YouTube" width="20" height="20" style="display:block"></a>
+          <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener" style="width:38px;height:38px;border:1px solid rgba(244,239,228,0.3);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--hua)'" onmouseout="this.style.borderColor='rgba(244,239,228,0.3)'"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ───────────────────────────────────────────── -->
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // Mobile hamburger
+    const toggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-up IntersectionObserver
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

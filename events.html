@@ -153,6 +153,7 @@
       opacity: 0.8;
     }
 
+    /* ─── EVENT CARDS ─────────────────────────────────────── */
     .events-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -160,43 +161,75 @@
     }
 
     .event-card {
-      background: #fff;
-      border-top: 3px solid var(--kawakawa);
-      padding: 1.75rem;
       display: flex;
       flex-direction: column;
-      transition: box-shadow 0.25s;
+      background: #fff;
+      color: var(--pango);
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      text-decoration: none;
     }
-    .event-card:hover { box-shadow: 0 8px 32px rgba(28,56,41,0.1); }
+    .event-card:hover {
+      box-shadow: 0 12px 40px rgba(28,56,41,0.13);
+      transform: translateY(-3px);
+    }
 
-    .event-card.featured { border-top-color: var(--repo); }
-    .event-card.nidra { border-top-color: var(--kowhai); }
+    .event-card-img {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: var(--ngahere);
+      flex-shrink: 0;
+    }
+    .event-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.45s ease;
+    }
+    .event-card:hover .event-card-img img { transform: scale(1.05); }
+
+    .event-card-img--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .event-date-pill {
-      display: inline-block;
-      background: var(--ngahere);
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      background: rgba(28,56,41,0.85);
       color: var(--hua);
-      font-size: 0.7rem;
+      font-family: var(--font-body);
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.3rem 0.7rem;
-      margin-bottom: 1.1rem;
-      align-self: flex-start;
+      padding: 0.3rem 0.65rem;
+      backdrop-filter: blur(4px);
     }
-    .event-card.featured .event-date-pill { background: var(--repo); }
-    .event-card.nidra .event-date-pill { background: var(--kowhai); color: var(--ngahere); }
+
+    .event-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
 
     .event-type {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--kawakawa);
       margin-bottom: 0.4rem;
     }
-    .event-card.featured .event-type { color: var(--repo); }
-    .event-card.nidra .event-type { color: var(--kowhai); }
+    .event-type.social   { color: var(--repo); }
+    .event-type.workshop { color: var(--kowhai); }
+    .event-type.ceremony { color: var(--dusk); }
+    .event-type.rest     { color: #7A7A9E; }
 
     .event-title {
       font-family: var(--font-display);
@@ -204,26 +237,57 @@
       font-weight: 600;
       color: var(--ngahere);
       line-height: 1.2;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
-    .event-time {
+    .event-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      margin-bottom: 0.9rem;
+    }
+    .event-time-text {
       font-size: 0.82rem;
       color: var(--kawakawa);
       font-weight: 600;
-      margin-bottom: 0.9rem;
     }
+    .event-price-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.5rem;
+      background: var(--ngahere);
+      color: var(--hua);
+    }
+    .event-price-tag.free { background: var(--kawakawa); }
+    .event-price-tag.free-with-class { background: var(--kawakawa); }
 
     .event-desc {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       line-height: 1.65;
       color: var(--pango);
+      opacity: 0.8;
       flex: 1;
-      margin-bottom: 1.5rem;
-      opacity: 0.85;
+      margin-bottom: 1.35rem;
     }
 
-    .event-card .btn { align-self: flex-start; }
+    .event-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ngahere);
+      transition: gap 0.2s;
+      margin-top: auto;
+    }
+    .event-cta-link .arrow { transition: transform 0.2s; }
+    .event-card:hover .event-cta-link { gap: 0.7rem; }
+    .event-card:hover .event-cta-link .arrow { transform: translateX(3px); }
 
     /* ─── IMAGE BREAK ─────────────────────────────────────── */
     .image-break {
@@ -323,6 +387,7 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .footer-socials a:hover { opacity: 1; border-color: var(--hua); }
+    .footer-socials a svg { width: 20px !important; height: 20px !important; display: block !important; }
     .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; margin-bottom: 1.25rem; }
     .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
     .footer-col a { font-size: 0.88rem; opacity: 0.7; transition: opacity 0.2s; }
@@ -362,39 +427,17 @@
     @media (max-width: 480px) {
       .footer-top { grid-template-columns: 1fr; }
     }
-  
+
     /* ─── ACCESSIBILITY ─────────────────────────────────────── */
     .skip-link {
-      position: absolute;
-      top: -100%;
-      left: 1rem;
-      background: var(--ngahere);
-      color: var(--hua);
-      padding: 0.5rem 1.25rem;
-      border-radius: 0 0 4px 4px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      z-index: 9999;
-      transition: top 0.2s;
-      text-decoration: none;
+      position: absolute; top: -100%; left: 1rem;
+      background: var(--ngahere); color: var(--hua);
+      padding: 0.5rem 1.25rem; border-radius: 0 0 4px 4px;
+      font-size: 0.875rem; font-weight: 600; z-index: 9999;
+      transition: top 0.2s; text-decoration: none;
     }
     .skip-link:focus { top: 0; }
-    :focus-visible {
-      outline: 3px solid var(--kowhai);
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
-  
-    .footer-socials a img,
-    .footer-socials a svg {
-      width: 20px !important;
-      height: 20px !important;
-      max-width: 20px !important;
-      max-height: 20px !important;
-      display: block !important;
-      flex-shrink: 0;
-      object-fit: contain;
-    }
+    :focus-visible { outline: 3px solid var(--kowhai); outline-offset: 3px; border-radius: 2px; }
   </style>
 </head>
 <body>
@@ -410,7 +453,7 @@
         <li><a href="classes.html">Classes</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="index.html#studio">Our Studio</a></li>
-        <li><a href="https://awhiyoga.github.io/AYS/" target="_blank" rel="noopener">Teacher Training</a></li>
+        <li><a href="school/index.html">Teacher Training</a></li>
         <li><a href="events.html" class="active">Events</a></li>
         <li><a href="team.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -450,54 +493,88 @@
       <div class="events-grid">
 
         <!-- AWHI Book Club -->
-        <div class="event-card fade-up">
-          <span class="event-date-pill">Now on — May 6</span>
-          <p class="event-type">Community</p>
-          <h3 class="event-title">AWHI Book Club</h3>
-          <p class="event-time">Wednesdays, 6:45 pm &nbsp;·&nbsp; 1 Apr – 6 May 2026</p>
-          <p class="event-desc">No pressure, no performances, and definitely no homework policing. Just good books, good people, and a welcoming space to share ideas and stories together.</p>
-          <a href="https://www.awhiyoga.co.nz/events/2026/4/1/awhi-book-club" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
-        </div>
+        <a href="events/book-club.html" class="event-card fade-up">
+          <div class="event-card-img">
+            <img src="events/images/Bookclub.jpg" alt="AWHI Book Club" loading="lazy">
+            <span class="event-date-pill">1st Wed each month</span>
+          </div>
+          <div class="event-card-body">
+            <p class="event-type">Community</p>
+            <h3 class="event-title">AWHI Book Club!</h3>
+            <div class="event-meta">
+              <span class="event-time-text">6:45–7:45 pm</span>
+              <span class="event-price-tag free">Free</span>
+            </div>
+            <p class="event-desc">No pressure. No performances and definitely no homework policing! Just some friendly &amp; engaged kōrero about our selected book of the month!</p>
+            <span class="event-cta-link">Find out more <span class="arrow">→</span></span>
+          </div>
+        </a>
 
         <!-- Power Vin(o) Happy Hour -->
-        <div class="event-card featured fade-up">
-          <span class="event-date-pill">29 April 2026</span>
-          <p class="event-type">Social</p>
-          <h3 class="event-title">Power Vin(o) Happy Hour</h3>
-          <p class="event-time">Wednesday 29 April &nbsp;·&nbsp; 5:30–7:30 pm</p>
-          <p class="event-desc">Break a sweat, then raise a glass. Join us after class for our favourite post-practice tradition — a relaxed happy hour with the AWHI community.</p>
-          <a href="https://www.awhiyoga.co.nz/events/2025/11/26/align-amp-wine-pjfty-8799x-8pr92" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
-        </div>
+        <a href="events/power-vino.html" class="event-card fade-up">
+          <div class="event-card-img">
+            <img src="events/images/PowerVino.png" alt="Power Vin(o) Happy Hour" loading="lazy">
+            <span class="event-date-pill">Last Wed each month</span>
+          </div>
+          <div class="event-card-body">
+            <p class="event-type social">Social</p>
+            <h3 class="event-title">Power Vin(o) Happy Hour</h3>
+            <div class="event-meta">
+              <span class="event-time-text">6:45–7:45 pm</span>
+              <span class="event-price-tag free-with-class">Free with class entry</span>
+            </div>
+            <p class="event-desc">Join us in reception after the last Wednesday PV of the month for a post-class toast!</p>
+            <span class="event-cta-link">Find out more <span class="arrow">→</span></span>
+          </div>
+        </a>
 
         <!-- Workshop Series: Vinyasa -->
-        <div class="event-card featured fade-up">
-          <span class="event-date-pill">May – June 2026</span>
-          <p class="event-type">Workshop Series</p>
-          <h3 class="event-title">Vinyasa — Mai i te po ki te ao marama</h3>
-          <p class="event-time">Saturdays, 12:00–3:30 pm &nbsp;·&nbsp; 2 May – 13 Jun 2026</p>
-          <p class="event-desc">A four-session workshop series weaving yogic movement with Māori philosophy. Explore the journey from darkness into light through breath, flow and whakaaro (reflection).</p>
-          <a href="https://www.awhiyoga.co.nz/events/2026/5/2/vinyasa-mai-i-te-p-ki-te-ao-mrama" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
-        </div>
+        <a href="https://www.awhiyoga.co.nz/events/2026/5/2/vinyasa-mai-i-te-p-ki-te-ao-mrama" class="event-card fade-up" target="_blank" rel="noopener">
+          <div class="event-card-img event-card-img--placeholder" style="background: linear-gradient(135deg, #1C3829 0%, #7A9E7E 100%);">
+            <span class="event-date-pill">May – Jun 2026</span>
+          </div>
+          <div class="event-card-body">
+            <p class="event-type workshop">Workshop Series</p>
+            <h3 class="event-title">Vinyasa — Mai i te pō ki te ao mārama</h3>
+            <div class="event-meta">
+              <span class="event-time-text">Saturdays, 12:00–3:30 pm</span>
+            </div>
+            <p class="event-desc">A four-session workshop series weaving yogic movement with Māori philosophy. Explore the journey from darkness into light through breath, flow and whakaaro (reflection).</p>
+            <span class="event-cta-link">View &amp; register <span class="arrow">→</span></span>
+          </div>
+        </a>
 
         <!-- Yoga Nidra -->
-        <div class="event-card nidra fade-up">
-          <span class="event-date-pill">Quarterly</span>
-          <p class="event-type">Meditation &amp; Rest</p>
-          <h3 class="event-title">Yoga Nidra</h3>
-          <p class="event-time">First Friday of the quarter &nbsp;·&nbsp; 7:00–8:15 pm<br>5 Jun &nbsp;·&nbsp; 4 Sep &nbsp;·&nbsp; 4 Dec 2026</p>
-          <p class="event-desc">A deeply restorative practice sometimes called "yogic sleep". Lie back, follow a guided body scan, and allow your nervous system to completely unwind. Suitable for all — no prior yoga experience needed.</p>
-          <a href="https://www.awhiyoga.co.nz/events/yoganidra-rc8x4-xsyb7-snfyt-38jmh-2m4xx-wpe2c-85egh-mw45l-wp5f8-y4cr7-esnfg-2e7ly-698dg-blggs-6t2rf-cpxz3" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
-        </div>
+        <a href="https://www.awhiyoga.co.nz/events/yoganidra-rc8x4-xsyb7-snfyt-38jmh-2m4xx-wpe2c-85egh-mw45l-wp5f8-y4cr7-esnfg-2e7ly-698dg-blggs-6t2rf-cpxz3" class="event-card fade-up" target="_blank" rel="noopener">
+          <div class="event-card-img event-card-img--placeholder" style="background: linear-gradient(135deg, #2a2a42 0%, #7A7A9E 100%);">
+            <span class="event-date-pill">Quarterly</span>
+          </div>
+          <div class="event-card-body">
+            <p class="event-type rest">Meditation &amp; Rest</p>
+            <h3 class="event-title">Yoga Nidra</h3>
+            <div class="event-meta">
+              <span class="event-time-text">First Friday of the quarter · 7:00–8:15 pm</span>
+            </div>
+            <p class="event-desc">A deeply restorative practice sometimes called "yogic sleep". Lie back, follow a guided body scan, and allow your nervous system to completely unwind. Suitable for all.</p>
+            <span class="event-cta-link">View &amp; register <span class="arrow">→</span></span>
+          </div>
+        </a>
 
         <!-- XOCHIPILLI'S VISION -->
-        <div class="event-card featured fade-up">
-          <span class="event-date-pill">27 June 2026</span>
-          <p class="event-type">Sound &amp; Ceremony</p>
-          <h3 class="event-title">XOCHIPILLI'S VISION: A Night of Shamanic Sounds, Drumming and Ceremony</h3>
-          <p class="event-time">Saturday 27 June &nbsp;·&nbsp; 6:45–8:45 pm</p>
-          <p class="event-desc">An ancient Mexican ceremony honouring Xochipilli, the Aztec deity of music, dance and flowers. Sacred drumming, prehispanic instruments and ceremonial practice with Claudio Escutia.</p>
-          <a href="https://www.awhiyoga.co.nz/events/2026/6/27/xochipillis-vision-a-night-of-shamanic-sounds-drumming-and-ceremony" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View details &amp; register</a>
-        </div>
+        <a href="https://www.awhiyoga.co.nz/events/2026/6/27/xochipillis-vision-a-night-of-shamanic-sounds-drumming-and-ceremony" class="event-card fade-up" target="_blank" rel="noopener">
+          <div class="event-card-img event-card-img--placeholder" style="background: linear-gradient(135deg, #3a1a10 0%, #C4896A 100%);">
+            <span class="event-date-pill">27 Jun 2026</span>
+          </div>
+          <div class="event-card-body">
+            <p class="event-type ceremony">Sound &amp; Ceremony</p>
+            <h3 class="event-title">XOCHIPILLI'S VISION: A Night of Shamanic Sounds, Drumming and Ceremony</h3>
+            <div class="event-meta">
+              <span class="event-time-text">Saturday 27 June · 6:45–8:45 pm</span>
+            </div>
+            <p class="event-desc">An ancient Mexican ceremony honouring Xochipilli, the Aztec deity of music, dance and flowers. Sacred drumming, prehispanic instruments and ceremonial practice with Claudio Escutia.</p>
+            <span class="event-cta-link">View &amp; register <span class="arrow">→</span></span>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -532,7 +609,7 @@
         </div>
         <div class="past-item">
           <span class="past-date">Feb 2026</span>
-          <span class="past-name">Align & Wine (Birthday Edition)</span>
+          <span class="past-name">Align &amp; Wine (Birthday Edition)</span>
         </div>
         <div class="past-item">
           <span class="past-date">Feb 2026</span>
@@ -587,14 +664,13 @@
       <p class="fade-up">We love partnering with teachers, practitioners and creators. If you have an idea for an event at AWHI, we'd love to hear from you.</p>
       <div class="cta-row fade-up">
         <a href="mailto:kiaora@awhiyoga.co.nz" class="btn btn-outline-cream">Get in touch</a>
-        <a href="https://www.awhiyoga.co.nz/events" class="btn btn-outline-cream" target="_blank" rel="noopener">All events on Squarespace</a>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────────── -->
-
   </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -621,8 +697,8 @@
           <ul>
             <li><a href="team.html">About AWHI</a></li>
             <li><a href="team.html">Our Team</a></li>
-            <li><a href="classes.html">Classes & Timetable</a></li>
-            <li><a href="https://awhiyoga.github.io/AYS/" target="_blank" rel="noopener">Teacher Training</a></li>
+            <li><a href="classes.html">Classes &amp; Timetable</a></li>
+            <li><a href="school/index.html">Teacher Training</a></li>
             <li><a href="pricing.html">Pricing</a></li>
           </ul>
         </div>
@@ -637,7 +713,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <p>© 2025 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
         <div class="footer-bottom-links">
           <a href="pricing.html#terms">Membership Terms</a>
           <a href="mailto:kiaora@awhiyoga.co.nz">Contact</a>
@@ -666,9 +742,6 @@
 
     // Hero image load
     const heroBg = document.getElementById('heroBg');
-    const img = new Image();
-    img.onload = () => heroBg.classList.add('loaded');
-    img.src = heroBg.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1') || 'Images/Awhi_BookClubbyJuliaSabugosa-13.jpg';
     heroBg.classList.add('loaded');
   </script>
 </body>

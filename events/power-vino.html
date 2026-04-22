@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AWHI Book Club — Events — AWHI Yoga & Wellbeing</title>
-  <meta name="description" content="AWHI Book Club — a low-pressure, high-quality kōrero about books, ideas and life. Free to join, Wellington CBD." />
+  <title>Power Vin(o) Happy Hour — Events — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Join us in reception after the last Wednesday Power Vinyasa of the month for a post-class toast. Free with class entry. AWHI Yoga & Wellbeing, Wellington." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="AWHI Book Club — AWHI Yoga & Wellbeing" />
-  <meta property="og:description" content="No pressure. No performative book-club energy. Just show up, join the kōrero, and see what you think." />
-  <meta property="og:url" content="https://awhiyoga.co.nz/events/book-club.html" />
-  <link rel="canonical" href="https://awhiyoga.co.nz/events/book-club.html" />
+  <meta property="og:title" content="Power Vin(o) Happy Hour — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="Break a sweat, then raise a glass. Join us after class for a post-practice toast with the AWHI community." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/events/power-vino.html" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/events/power-vino.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,8 +61,6 @@
       display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
     }
     .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
-    .section-label--light { color: var(--ua); }
-    .section-label--light::before { background: var(--ua); }
     .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
 
     /* ─── FADE UP ──────────────────────────────────────────── */
@@ -95,7 +93,7 @@
 
     /* ─── HERO ──────────────────────────────────────────────── */
     .event-hero {
-      background: var(--ngahere);
+      background: var(--repo);
       padding: calc(var(--nav-h) + 4rem) 0 4rem;
       position: relative;
       overflow: hidden;
@@ -104,7 +102,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(212,165,83,0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 80% 30%, rgba(244,239,228,0.08) 0%, transparent 60%);
       pointer-events: none;
     }
     .event-hero-inner {
@@ -120,9 +118,9 @@
       flex-wrap: wrap;
     }
     .event-type-pill {
-      background: rgba(122,158,126,0.2);
-      color: var(--kawakawa);
-      border: 1px solid rgba(122,158,126,0.4);
+      background: rgba(244,239,228,0.15);
+      color: var(--hua);
+      border: 1px solid rgba(244,239,228,0.3);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -130,7 +128,7 @@
       padding: 0.3rem 0.85rem;
     }
     .event-date-pill {
-      background: var(--repo);
+      background: rgba(28,56,41,0.35);
       color: var(--hua);
       font-size: 0.72rem;
       font-weight: 700;
@@ -148,7 +146,7 @@
     }
     .event-hero-tagline {
       font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(244,239,228,0.78);
+      color: rgba(244,239,228,0.85);
       line-height: 1.7;
       max-width: 600px;
     }
@@ -276,6 +274,13 @@
       width: 100%;
       justify-content: center;
     }
+    .no-booking-note {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      text-align: center;
+      color: rgba(244,239,228,0.55);
+      line-height: 1.5;
+    }
     .free-badge {
       display: inline-block;
       background: rgba(212,165,83,0.2);
@@ -307,6 +312,7 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .footer-socials a:hover { background: rgba(244,239,228,0.1); border-color: var(--kawakawa); color: var(--hua); }
+    .footer-socials a svg { width: 20px !important; height: 20px !important; display: block !important; }
     .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--hua); margin-bottom: 1rem; }
     .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
     .footer-col ul li a { font-size: 0.88rem; color: rgba(244,239,228,0.6); transition: color 0.2s; }
@@ -332,17 +338,6 @@
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
       .facilitator { grid-template-columns: 1fr; }
       .facilitator-avatar { display: none; }
-    }
-  
-    .footer-socials a img,
-    .footer-socials a svg {
-      width: 20px !important;
-      height: 20px !important;
-      max-width: 20px !important;
-      max-height: 20px !important;
-      display: block !important;
-      flex-shrink: 0;
-      object-fit: contain;
     }
   </style>
 </head>
@@ -380,11 +375,11 @@
       <div class="event-hero-inner">
         <a href="../events.html" class="back-link">Back to Events</a>
         <div class="event-hero-meta">
-          <span class="event-type-pill">Community</span>
-          <span class="event-date-pill">1 Apr &amp; 6 May 2026</span>
+          <span class="event-type-pill">Social</span>
+          <span class="event-date-pill">Last Wednesday each month</span>
         </div>
-        <h1>AWHI Book Club</h1>
-        <p class="event-hero-tagline">No pressure. No performative book-club energy. Definitely no homework policing. Just show up, join the kōrero, and see what you think.</p>
+        <h1>Power Vin(o)<br>Happy Hour</h1>
+        <p class="event-hero-tagline">Break a sweat, then raise a glass. Join us in reception after the last Wednesday Power Vinyasa of the month for a post-class toast!</p>
       </div>
     </div>
   </header>
@@ -394,39 +389,28 @@
     <div class="container">
       <div class="event-layout">
 
-        <!-- Description + Facilitators -->
+        <!-- Description + Facilitator -->
         <div>
           <div class="event-description fade-up">
-            <p>Planned to read more this year? Same. How's that going?</p>
-            <p>We're starting the AWHI Book Club.</p>
-            <p><strong>First read: <em>Rest Is Resistance</em> by Tricia Hersey.</strong></p>
-            <p>We'll begin with the first half of the book for session one — appropriately low-effort, given the theme.</p>
-            <p>No pressure. No performative book-club energy. Definitely no homework policing.</p>
-            <p>Just show up, join the kōrero, and see what you think!</p>
-            <p>It's free to join, but please register your interest below so we can manage the snacks properly!</p>
+            <p>Haere mai!</p>
+            <p>Let's celebrate the end of another month of Wednesday night Power Vinyasa with a post-class toast!</p>
+            <p>We close out each month's Wednesday 5:30 pm PV sessions in reception for a shared drink and a bit of friendly kōrero.</p>
+            <p>Non-alcoholic drink options available, free with class entry.</p>
+            <p>We gather in reception right after class — grab a drink, wait for the cue &amp; take a sip along with your new best yoga mates! Impromptu speeches are more than welcome.</p>
+            <p>No bookings required — just show up for the last Wednesday PV of the month and stay for the fun!</p>
           </div>
 
           <div class="facilitators fade-up">
-            <h2>Facilitators</h2>
+            <h2>Your host</h2>
             <div class="facilitator-list">
 
               <div class="facilitator">
                 <div class="facilitator-avatar">
-                  <img src="images/Kathleenkid.jpg" alt="Kathleen Kuehn">
+                  <img src="images/Kathleen.jpg" alt="Kathleen Kuehn">
                 </div>
                 <div>
                   <p class="facilitator-name">Kathleen Kuehn</p>
-                  <p class="facilitator-bio">Long-time AWHI member, ERYT-500 and co-owner of AWHI Yoga &amp; Wellbeing. Side hustles as a University lecturer in Media &amp; Comms and has been an avid reader since before she could actually read.</p>
-                </div>
-              </div>
-
-              <div class="facilitator">
-                <div class="facilitator-avatar">
-                  <img src="images/veenakid.jpeg" alt="Veena Patel">
-                </div>
-                <div>
-                  <p class="facilitator-name">Veena Patel</p>
-                  <p class="facilitator-bio">Long time AWHI member, RYT-200 and co-founder of Good Company Yoga. Lawyer by trade. Lover of books, laughs and good chats. No visual historical evidence of ever having read a book, but strong yoga posture and hot takes since roughly 4 years old.</p>
+                  <p class="facilitator-bio">ERYT-500, co-owner of AWHI Yoga &amp; Wellbeing, Wednesday night Power Vinyasa teacher &amp; toast-maker!</p>
                 </div>
               </div>
 
@@ -439,12 +423,12 @@
           <h3>Event Details</h3>
 
           <div class="detail-row">
-            <span class="detail-label">Dates</span>
-            <span class="detail-value">Wednesday 1 April &amp; Wednesday 6 May 2026</span>
+            <span class="detail-label">When</span>
+            <span class="detail-value">Last Wednesday of each month</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Time</span>
-            <span class="detail-value">6:45–7:45 pm</span>
+            <span class="detail-value">6:45–7:45 pm<br><em style="font-size:0.85em;opacity:0.7">Straight after the 5:30 pm class</em></span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Location</span>
@@ -452,14 +436,15 @@
           </div>
           <div class="detail-row">
             <span class="detail-label">Cost</span>
-            <span class="detail-value">Free <span class="free-badge">Free</span><br><em style="font-size:0.85em;opacity:0.75">BYO book</em></span>
+            <span class="detail-value">Free with class entry <span class="free-badge">Free</span><br><em style="font-size:0.85em;opacity:0.7">Alcoholic &amp; non-alcoholic options available</em></span>
           </div>
           <div class="detail-row">
-            <span class="detail-label">What to bring</span>
-            <span class="detail-value">Your book or e-reader. Pen &amp; journal optional.</span>
+            <span class="detail-label">Bookings</span>
+            <span class="detail-value">No booking required — just show up!</span>
           </div>
 
-          <a href="https://momence.com/AWHI-Yoga-%26-Wellbeing/AWHI-Book-Club!/131984967" class="btn btn-primary event-cta" target="_blank" rel="noopener">Register now</a>
+          <a href="../classes.html" class="btn btn-outline-cream event-cta">Book the class</a>
+          <p class="no-booking-note">Stay for Happy Hour after — no extra booking needed.</p>
         </aside>
 
       </div>

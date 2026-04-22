@@ -146,8 +146,18 @@
     .footer-brand img { height: 48px; width: auto; filter: brightness(10); margin-bottom: 1.25rem; }
     .footer-brand p { font-size: 0.9rem; color: rgba(244,239,228,0.7); line-height: 1.7; margin-bottom: 1.5rem; max-width: 280px; }
     .footer-socials { display: flex; gap: 1rem; }
-    .footer-socials a { width: 36px; height: 36px; border: 1px solid rgba(244,239,228,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(244,239,228,0.7); transition: all 0.2s; }
+    .footer-socials a {
+      overflow: hidden; width: 36px; height: 36px; border: 1px solid rgba(244,239,228,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: rgba(244,239,228,0.7); transition: all 0.2s; }
     .footer-socials a:hover { border-color: var(--hua); color: var(--hua); }
+    .footer-socials a img,
+    .footer-socials a svg {
+      width: 20px;
+      height: 20px;
+      max-width: 20px;
+      flex-shrink: 0;
+      object-fit: contain;
+      display: block;
+    }
     .footer-col h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 1.25rem; }
     .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
     .footer-col li a { font-size: 0.9rem; color: rgba(244,239,228,0.7); transition: color 0.2s; }

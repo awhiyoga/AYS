@@ -808,6 +808,7 @@
       flex-wrap: wrap;
     }
     .footer-socials a {
+      overflow: hidden;
       width: 38px;
       height: 38px;
       border: 1px solid rgba(244, 239, 228, 0.25);
@@ -823,6 +824,14 @@
       background: rgba(244, 239, 228, 0.1);
       border-color: var(--kawakawa);
       color: var(--hua);
+    }
+    .footer-socials a img,
+    .footer-socials a svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      object-fit: contain;
+      display: block;
     }
     .footer-col h4 {
       font-size: 0.75rem;
@@ -1298,9 +1307,9 @@
           />
           <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
           <div class="footer-socials">
-            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><img src="Images/Instagram_Glyph_White.png" alt="Instagram" width="20" height="20" style="display:block"></a>
-            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><img src="Images/Facebook_Logo_Secondary.png" alt="Facebook" width="20" height="20" style="display:block"></a>
-            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><img src="Images/yt_icon_white_digital.png" alt="YouTube" width="20" height="20" style="display:block"></a>
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><img src="Images/Instagram_Glyph_White.png" alt="Instagram"></a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><img src="Images/Facebook_Logo_Secondary.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><img src="Images/yt_icon_white_digital.png" alt="YouTube"></a>
             <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
         </div>

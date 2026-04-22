@@ -493,7 +493,7 @@
       <div class="events-grid">
 
         <!-- AWHI Book Club -->
-        <a href="events/book-club.html" class="event-card fade-up">
+        <a href="events/book-club.html" class="event-card fade-up" data-end-date="2026-12-03">
           <div class="event-card-img">
             <img src="events/images/Bookclub.jpg" alt="AWHI Book Club" loading="lazy">
             <span class="event-date-pill">1st Wed each month</span>
@@ -511,7 +511,7 @@
         </a>
 
         <!-- Power Vin(o) Happy Hour -->
-        <a href="events/power-vino.html" class="event-card fade-up">
+        <a href="events/power-vino.html" class="event-card fade-up" data-end-date="2026-12-31">
           <div class="event-card-img">
             <img src="events/images/PowerVino.png" alt="Power Vin(o) Happy Hour" loading="lazy">
             <span class="event-date-pill">Last Wed each month</span>
@@ -529,7 +529,7 @@
         </a>
 
         <!-- Workshop Series: Vinyasa -->
-        <a href="https://www.awhiyoga.co.nz/events/2026/5/2/vinyasa-mai-i-te-p-ki-te-ao-mrama" class="event-card fade-up" target="_blank" rel="noopener">
+        <a href="https://www.awhiyoga.co.nz/events/2026/5/2/vinyasa-mai-i-te-p-ki-te-ao-mrama" class="event-card fade-up" data-end-date="2026-06-14" target="_blank" rel="noopener">
           <div class="event-card-img event-card-img--placeholder" style="background: linear-gradient(135deg, #1C3829 0%, #7A9E7E 100%);">
             <span class="event-date-pill">May – Jun 2026</span>
           </div>
@@ -545,7 +545,7 @@
         </a>
 
         <!-- Yoga Nidra -->
-        <a href="https://www.awhiyoga.co.nz/events/yoganidra-rc8x4-xsyb7-snfyt-38jmh-2m4xx-wpe2c-85egh-mw45l-wp5f8-y4cr7-esnfg-2e7ly-698dg-blggs-6t2rf-cpxz3" class="event-card fade-up" target="_blank" rel="noopener">
+        <a href="https://www.awhiyoga.co.nz/events/yoganidra-rc8x4-xsyb7-snfyt-38jmh-2m4xx-wpe2c-85egh-mw45l-wp5f8-y4cr7-esnfg-2e7ly-698dg-blggs-6t2rf-cpxz3" class="event-card fade-up" data-end-date="2026-12-05" target="_blank" rel="noopener">
           <div class="event-card-img event-card-img--placeholder" style="background: linear-gradient(135deg, #2a2a42 0%, #7A7A9E 100%);">
             <span class="event-date-pill">Quarterly</span>
           </div>
@@ -561,7 +561,7 @@
         </a>
 
         <!-- XOCHIPILLI'S VISION -->
-        <a href="https://www.awhiyoga.co.nz/events/2026/6/27/xochipillis-vision-a-night-of-shamanic-sounds-drumming-and-ceremony" class="event-card fade-up" target="_blank" rel="noopener">
+        <a href="https://www.awhiyoga.co.nz/events/2026/6/27/xochipillis-vision-a-night-of-shamanic-sounds-drumming-and-ceremony" class="event-card fade-up" data-end-date="2026-06-28" target="_blank" rel="noopener">
           <div class="event-card-img event-card-img--placeholder" style="background: linear-gradient(135deg, #3a1a10 0%, #C4896A 100%);">
             <span class="event-date-pill">27 Jun 2026</span>
           </div>
@@ -577,6 +577,12 @@
         </a>
 
       </div>
+
+      <!-- shown if all events have expired -->
+      <p class="no-events-msg" style="display:none; margin-top:2rem; opacity:0.6; font-size:1rem;">
+        No upcoming events right now — check back soon, or <a href="mailto:kiaora@awhiyoga.co.nz" style="text-decoration:underline;">get in touch</a> if you'd like to collaborate.
+      </p>
+
     </div>
   </section>
 
@@ -743,6 +749,19 @@
     // Hero image load
     const heroBg = document.getElementById('heroBg');
     heroBg.classList.add('loaded');
+
+    // Auto-hide past events
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const cards = document.querySelectorAll('.event-card[data-end-date]');
+    cards.forEach(card => {
+      const endDate = new Date(card.dataset.endDate);
+      if (today >= endDate) card.style.display = 'none';
+    });
+    const visibleCards = [...cards].filter(c => c.style.display !== 'none');
+    if (visibleCards.length === 0) {
+      document.querySelector('.no-events-msg').style.display = 'block';
+    }
   </script>
 </body>
 </html>

@@ -198,5 +198,44 @@ Let's come together and discover the transformative power of Yoga Nidra Meditati
 
 **Facilitator bio: Claudio Escutia is a yoga teacher, multi-instrumentalist, and sound healer from a family of musicians in Mexico City. His path has taken him from classical guitar studies and Tai Chi in Mexico, to jazz and Kundalini Yoga in Montreal, ashram teacher training in Quebec, Ashtanga and Yin studies in Berlin, Tibetan sound healing certification in Kathmandu, and classical Indian music in Calcutta and Varanasi. Rooted in his Mexican heritage and fluent across traditions, Claudio now brings this rare depth of practice to Aotearoa — and is a much-loved presence here in Wellington and at AWHI.
 
-
 **Facilitator photo: Claudio2.jpg
+
+---
+
+## What the H***rmones? A Pilates & hormonal health masterclass that finally explains your body.
+**Date: Saturday, 6th June** 
+**Time: 1-4pmpm** 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $49 Early Bird (before 20 May); $55 Full Rate ** 
+**Image: PilatesWorkshop.jpg**
+**Booking link: https://momence.com/l/K1hGoQVq** 
+
+**Card description** (1–2 sentences for the events grid): You're training. You're eating well. You're showing up — and it's still not working. This two‑part workshop led by Luisa and Eli offers a fully integrated experience built around one idea: when you understand your body, everything changes.
+
+
+**Full description** (for the event page): Pilates Technique Breakdown with Luisa: "Move beyond simply doing Pilates and learn how to do it well. Luisa will guide you through a detailed breakdown of key Pilates movements, focusing on:
+• Proper technique and alignment
+• Breathwork and pelvic floor activation
+• How to build strength safely and effectively
+• Progressions that help you get more out of every session
+Expect a hands-on, educational experience that sharpens your practice and helps you feel more confident in your body.
+Women’s Hormonal Health & Training with Eli: "Most Women. train hard and still feel stuck - not because they are doing it wrong, but bacause htye're missing one layer: their hormones. eli will break down how your body's natural rhythms influence your energy, strenght and recovery - and to actually do with that information. You'll learn:  How hormonal phases affect your training capacity
+• How to plan your routine in a realistic, sustainable way
+• Why syncing movement with your cycle improves results and reduces burnout. She'll map each hormonal stage to the natural flow of a Pilates class — from breathwork and pelvic floor connection, to warm-up, to higher-intensity phases, and back down to cool-down. A framework you can actually use."
+
+Why This Workshop Is Special	
+"This isn't a Pilates class with a health talk tacked on. It's a fully integrated experience built around one idea: when you understand your body, everything changes.
+
+You'll leave knowing how to:
+• Move with better technique and less injury risk
+• Train in a way that actually fits your hormonal cycle
+• Build a more intuitive, sustainable relationship with exercise
+• Feel empowered in your body — at every stage of your cycle
+
+**Facilitator: Luisa Gordillo** 
+**Facilitator bio: Luisa is a Certified Pilates instructor with a passion for holistic wellbeing, specialising in body awareness, injury prevention, and mindful movement. Trained in physiology and anatomy, she creates safe and inclusive classes for all levels. Her classes offer a full-body workout that builds strength, balance, and body awareness. Luisa empowers individuals through movement to improve everyday life.time AWHI member, CYT-200 and co-founder of Good Company Yoga. Lawyer by trade. Lover of books, laughs and good chats. No visual historical evidence of ever having read a book, but strong yoga posture and hot takes since roughly 4 years old.** 
+
+**Facilitator: Eli Hoyos** 
+**Facilitator bio: Eli is a hormone specialist, as well as the CEO and founder of the fitness app, Elevate by Eli. Download her app here: https://elivatebyeli.com/ ** 
+
+**Facilitators photo: Luisa&Eli.jpeg**

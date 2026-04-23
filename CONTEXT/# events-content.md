@@ -144,7 +144,7 @@ Motivated by the values of connection, nature, and beauty, Jenny is fascinated b
 
 ## Yoga Nidra Meditation
 
-**Date: First Friday of every month
+**Date: First Fridays - Quarterly**
 **Time: 7:00-8:15pm** 
 **Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
 **Price:FREE to members; $25 Casual ** 

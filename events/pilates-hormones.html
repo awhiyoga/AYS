@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoga Nidra Meditation — Events — AWHI Yoga &amp; Wellbeing</title>
-  <meta name="description" content="Unwind from the stresses of the week and start your weekend in a state of deep relaxation. Yoga Nidra Meditation every first Friday at AWHI Yoga & Wellbeing, Wellington." />
+  <title>What the H***rmones? — Events — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="A Pilates technique breakdown and hormonal health masterclass with Luisa Gordillo and Eli Hoyos. Saturday 6 June 2026, AWHI Yoga & Wellbeing, Wellington." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Yoga Nidra Meditation — AWHI Yoga &amp; Wellbeing" />
-  <meta property="og:description" content="Unwind from the stresses of the week and start your weekend in a state of deep relaxation — your hinengaro, tinana and wairua restored." />
-  <meta property="og:url" content="https://awhiyoga.co.nz/events/yoga-nidra.html" />
-  <link rel="canonical" href="https://awhiyoga.co.nz/events/yoga-nidra.html" />
+  <meta property="og:title" content="What the H***rmones? — AWHI Yoga & Wellbeing" />
+  <meta property="og:description" content="When you understand your body, everything changes. A fully integrated Pilates and hormonal health workshop." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/events/pilates-hormones.html" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/events/pilates-hormones.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,7 +93,7 @@
 
     /* ─── HERO ──────────────────────────────────────────────── */
     .event-hero {
-      background: #1e1e35;
+      background: #3d1a3a;
       padding: calc(var(--nav-h) + 4rem) 0 4rem;
       position: relative;
       overflow: hidden;
@@ -102,7 +102,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 80% 30%, rgba(244,239,228,0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 70% 40%, rgba(212,165,83,0.07) 0%, transparent 60%);
       pointer-events: none;
     }
     .event-hero-inner {
@@ -118,9 +118,9 @@
       flex-wrap: wrap;
     }
     .event-type-pill {
-      background: rgba(244,239,228,0.15);
+      background: rgba(244,239,228,0.12);
       color: var(--hua);
-      border: 1px solid rgba(244,239,228,0.3);
+      border: 1px solid rgba(244,239,228,0.25);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -128,8 +128,8 @@
       padding: 0.3rem 0.85rem;
     }
     .event-date-pill {
-      background: rgba(28,56,41,0.35);
-      color: var(--hua);
+      background: rgba(212,165,83,0.25);
+      color: var(--kowhai);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -146,7 +146,7 @@
     }
     .event-hero-tagline {
       font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(244,239,228,0.85);
+      color: rgba(244,239,228,0.82);
       line-height: 1.7;
       max-width: 600px;
     }
@@ -160,7 +160,7 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: rgba(244,239,228,0.55);
+      color: rgba(244,239,228,0.5);
       margin-bottom: 2rem;
       transition: color 0.2s;
     }
@@ -168,9 +168,7 @@
     .back-link::before { content: '←'; }
 
     /* ─── MAIN CONTENT ──────────────────────────────────────── */
-    .event-body {
-      padding: clamp(3rem, 6vw, 6rem) 0;
-    }
+    .event-body { padding: clamp(3rem, 6vw, 6rem) 0; }
     .event-layout {
       display: grid;
       grid-template-columns: 1fr 340px;
@@ -178,7 +176,6 @@
       align-items: start;
     }
 
-    /* Left column — description */
     .event-description p {
       font-size: 1.05rem;
       line-height: 1.8;
@@ -186,7 +183,6 @@
       margin-bottom: 1.25rem;
     }
     .event-description p:last-child { margin-bottom: 0; }
-
     .event-description h3 {
       font-family: var(--font-display);
       font-size: 1.4rem;
@@ -197,13 +193,48 @@
     .event-description ul {
       list-style: disc;
       padding-left: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
     .event-description ul li {
       font-size: 1.05rem;
       line-height: 1.8;
       color: rgba(36,36,36,0.85);
       margin-bottom: 0.25rem;
+    }
+
+    /* ─── FACILITATORS ──────────────────────────────────────── */
+    .facilitators {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(36,36,36,0.1);
+    }
+    .facilitators h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--ngahere);
+    }
+    .facilitators-joint-photo {
+      width: 100%;
+      max-width: 480px;
+      height: 300px;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 2rem;
+    }
+    .facilitator-list { display: flex; flex-direction: column; gap: 2rem; }
+    .facilitator-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ngahere);
+      margin-bottom: 0.25rem;
+    }
+    .facilitator-bio {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(36,36,36,0.8);
     }
 
     /* ─── DETAILS CARD (sidebar) ────────────────────────────── */
@@ -239,8 +270,9 @@
     .detail-value {
       font-size: 0.95rem;
       color: rgba(244,239,228,0.88);
-      line-height: 1.5;
+      line-height: 1.6;
     }
+    .detail-value strong { color: var(--hua); font-weight: 600; }
     .event-cta {
       margin-top: 1.75rem;
       width: 100%;
@@ -254,14 +286,9 @@
     .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 280px; }
     .footer-socials { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
     .footer-socials a {
-      display: inline-block;
-      width: 38px;
-      height: 38px;
-      padding: 9px;
-      border: 1px solid rgba(244, 239, 228, 0.25);
-      color: rgba(244, 239, 228, 0.7);
-      line-height: 0;
-      transition: background 0.2s, border-color 0.2s;
+      display: inline-block; width: 38px; height: 38px; padding: 9px;
+      border: 1px solid rgba(244,239,228,0.25); color: rgba(244,239,228,0.7);
+      line-height: 0; transition: background 0.2s, border-color 0.2s;
     }
     .footer-socials a:hover { background: rgba(244,239,228,0.1); border-color: var(--kawakawa); color: var(--hua); }
     .footer-socials a svg { width: 20px !important; height: 20px !important; display: block !important; }
@@ -325,11 +352,11 @@
       <div class="event-hero-inner">
         <a href="../events.html" class="back-link">Back to Events</a>
         <div class="event-hero-meta">
-          <span class="event-type-pill">Meditation &amp; Rest</span>
-          <span class="event-date-pill">Quarterly</span>
+          <span class="event-type-pill">Workshop</span>
+          <span class="event-date-pill">Saturday 6 June 2026</span>
         </div>
-        <h1>Yoga Nidra Meditation</h1>
-        <p class="event-hero-tagline">Unwind from the stresses of the week and start your weekend in a state of deep relaxation — your hinengaro, tinana and wairua restored.</p>
+        <h1>What the<br>H***rmones?</h1>
+        <p class="event-hero-tagline">A Pilates technique breakdown and hormonal health masterclass. When you understand your body, everything changes.</p>
       </div>
     </div>
   </header>
@@ -339,30 +366,58 @@
     <div class="container">
       <div class="event-layout">
 
-        <!-- Description -->
+        <!-- Description + Facilitators -->
         <div>
           <div class="event-description fade-up">
-            <p>Yoga Nidra, often referred to as "yogic sleep," is a deeply restorative practice that promotes physical relaxation, mental clarity, and emotional balance. It's the perfect way to rejuvenate your mind, body, and soul.</p>
-            <p>Yoga nidra is a powerful technique that directly works to heal your mind by removing samskaras — untying knots and mental impressions. This practice of learning to relax consciously is well regarded as an antidote for stress, anxiety, and poor sleep.</p>
 
-            <h3>What to expect</h3>
+            <h3>Pilates Technique Breakdown with Luisa</h3>
+            <p>Move beyond simply doing Pilates and learn how to do it well. Luisa will guide you through a detailed breakdown of key Pilates movements, focusing on:</p>
             <ul>
-              <li>A 75-minute guided Yoga Nidra Meditation led by one of our experienced instructors</li>
-              <li>A comfortable space to lie down (mats, blankets, bolsters &amp; cushions provided)</li>
-              <li>A supportive community of fellow meditation enthusiasts</li>
-              <li>Complimentary herbal tea before and after the session</li>
-              <li>An opportunity to journal your experience, if desired</li>
+              <li>Proper technique and alignment</li>
+              <li>Breathwork and pelvic floor activation</li>
+              <li>How to build strength safely and effectively</li>
+              <li>Progressions that help you get more out of every session</li>
+            </ul>
+            <p>Expect a hands-on, educational experience that sharpens your practice and helps you feel more confident in your body.</p>
+
+            <h3>Women's Hormonal Health &amp; Training with Eli</h3>
+            <p>Most women train hard and still feel stuck — not because they're doing it wrong, but because they're missing one layer: their hormones. Eli will break down how your body's natural rhythms influence your energy, strength and recovery, and what to actually do with that information.</p>
+            <ul>
+              <li>How hormonal phases affect your training capacity</li>
+              <li>How to plan your routine in a realistic, sustainable way</li>
+              <li>Why syncing movement with your cycle improves results and reduces burnout</li>
+            </ul>
+            <p>She'll map each hormonal stage to the natural flow of a Pilates class — from breathwork and pelvic floor connection, to warm-up, to higher-intensity phases, and back down to cool-down. A framework you can actually use.</p>
+
+            <h3>Why this workshop is different</h3>
+            <p>This isn't a Pilates class with a health talk tacked on. It's a fully integrated experience built around one idea: when you understand your body, everything changes.</p>
+            <p>You'll leave knowing how to:</p>
+            <ul>
+              <li>Move with better technique and less injury risk</li>
+              <li>Train in a way that actually fits your hormonal cycle</li>
+              <li>Build a more intuitive, sustainable relationship with exercise</li>
+              <li>Feel empowered in your body — at every stage of your cycle</li>
             </ul>
 
-            <p>Wear comfortable clothes and bring an open mind. An eye mask and journal are welcome but not required.</p>
-
-            <h3>Things to consider</h3>
-            <p>Everyone is welcome and no prior experience is required. For some people, Yoga Nidra's prolonged stillness or internal focus can bring up strong emotions, memories, or sensations. You are encouraged to listen and respond in a way that feels safe for you — adjusting your position, keeping your eyes open, grounding yourself, or stepping out of the room at any time. Yoga Nidra may not be suitable for everyone. If you are experiencing acute mental health challenges, unprocessed trauma, or conditions that make stillness or internal focus difficult, we recommend seeking guidance from a qualified healthcare provider or speaking with the teacher before participating.</p>
-
-            <p>Want to become an AWHI member to receive free Yoga Nidra and other great benefits? Sign up with us today!</p>
           </div>
 
-          <p style="margin-top:2rem; font-style:italic; opacity:0.7;">Facilitated by members of the AWHI teaching team. See the class schedule for this month's teacher.</p>
+          <div class="facilitators fade-up">
+            <h2>Your facilitators</h2>
+            <img src="images/Luisa&Eli.jpeg" alt="Luisa Gordillo and Eli Hoyos" class="facilitators-joint-photo">
+            <div class="facilitator-list">
+
+              <div>
+                <p class="facilitator-name">Luisa Gordillo</p>
+                <p class="facilitator-bio">Luisa is a Certified Pilates instructor with a passion for holistic wellbeing, specialising in body awareness, injury prevention, and mindful movement. Trained in physiology and anatomy, she creates safe and inclusive classes for all levels. Her classes offer a full-body workout that builds strength, balance, and body awareness. Luisa empowers individuals through movement to improve everyday life.</p>
+              </div>
+
+              <div>
+                <p class="facilitator-name">Eli Hoyos</p>
+                <p class="facilitator-bio">Eli is a hormone specialist, CEO and founder of the fitness app Elevate by Eli. Learn more at <a href="https://elevatebyeli.com/" target="_blank" rel="noopener" style="text-decoration:underline; color:var(--ngahere);">elevatebyeli.com</a>.</p>
+              </div>
+
+            </div>
+          </div>
         </div>
 
         <!-- Details sidebar -->
@@ -370,23 +425,26 @@
           <h3>Event Details</h3>
 
           <div class="detail-row">
-            <span class="detail-label">When</span>
-            <span class="detail-value">Quarterly — first Friday of March, June, September and December</span>
+            <span class="detail-label">Date</span>
+            <span class="detail-value">Saturday 6 June 2026</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Time</span>
-            <span class="detail-value">7:00–8:15 pm</span>
+            <span class="detail-value">1:00–4:00 pm</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Location</span>
             <span class="detail-value">AWHI Yoga &amp; Wellbeing<br>Level 2, 15 Johnston Street<br>Wellington CBD</span>
           </div>
           <div class="detail-row">
-            <span class="detail-label">Cost</span>
-            <span class="detail-value">Free for members · $25 casual</span>
+            <span class="detail-label">Pricing</span>
+            <span class="detail-value">
+              <strong>Early Bird</strong> — $49 <em style="font-size:0.82em;opacity:0.7;">(before 20 May)</em><br>
+              <strong>Full Rate</strong> — $55
+            </span>
           </div>
 
-          <a href="../classes.html" class="btn btn-primary event-cta">View schedule &amp; book</a>
+          <a href="https://momence.com/l/K1hGoQVq" class="btn btn-primary event-cta" target="_blank" rel="noopener">Book now</a>
         </aside>
 
       </div>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayurvedic Herbology for Toxicosis — Events — AWHI Yoga &amp; Wellbeing</title>
+  <meta name="description" content="Discover how Ayurveda supports true inner cleansing — balancing agni, reducing ama, and restoring harmony to the tridosha. A seminar with Dr David Weller of NatuneHeal." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ayurvedic Herbology for Toxicosis — AWHI Yoga &amp; Wellbeing" />
+  <meta property="og:description" content="Discover how Ayurveda supports true inner cleansing — balancing agni, reducing ama, and restoring harmony to the tridosha." />
+  <meta property="og:url" content="https://awhiyoga.co.nz/events/ayurvedic.html" />
+  <link rel="canonical" href="https://awhiyoga.co.nz/events/ayurvedic.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --ua:        #EBE0D8;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    /* ─── FADE UP ──────────────────────────────────────────── */
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ──────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em;
+      color: rgba(244,239,228,0.8); transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--hua); }
+    .nav-book {
+      background: var(--repo); color: var(--hua) !important;
+      padding: 0.5rem 1.25rem; font-weight: 700; font-size: 0.78rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── HERO ──────────────────────────────────────────────── */
+    .event-hero {
+      background: #4a2c0a;
+      padding: calc(var(--nav-h) + 4rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .event-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 30%, rgba(244,239,228,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .event-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+    .event-hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .event-type-pill {
+      background: rgba(244,239,228,0.15);
+      color: var(--hua);
+      border: 1px solid rgba(244,239,228,0.3);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.85rem;
+    }
+    .event-date-pill {
+      background: rgba(28,56,41,0.35);
+      color: var(--hua);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.85rem;
+    }
+    .event-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 600;
+      color: var(--hua);
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+    }
+    .event-hero-tagline {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(244,239,228,0.85);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* ─── BACK LINK ─────────────────────────────────────────── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(244,239,228,0.55);
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--hua); }
+    .back-link::before { content: '←'; }
+
+    /* ─── MAIN CONTENT ──────────────────────────────────────── */
+    .event-body {
+      padding: clamp(3rem, 6vw, 6rem) 0;
+    }
+    .event-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    /* Left column — description */
+    .event-description p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(36,36,36,0.85);
+      margin-bottom: 1.25rem;
+    }
+    .event-description p:last-child { margin-bottom: 0; }
+
+    /* ─── FACILITATORS ──────────────────────────────────────── */
+    .facilitators {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(36,36,36,0.1);
+    }
+    .facilitators h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--ngahere);
+    }
+    .facilitator-list { display: flex; flex-direction: column; gap: 2rem; }
+    .facilitator {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .facilitator-avatar {
+      width: 144px;
+      height: 144px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--kawakawa);
+    }
+    .facilitator-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .facilitator-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ngahere);
+      margin-bottom: 0.25rem;
+    }
+    .facilitator-bio {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(36,36,36,0.8);
+    }
+
+    /* ─── DETAILS CARD (sidebar) ────────────────────────────── */
+    .event-details-card {
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 2rem;
+      position: sticky;
+      top: calc(var(--nav-h) + 2rem);
+    }
+    .event-details-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--hua);
+    }
+    .detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(244,239,228,0.12);
+    }
+    .detail-row:last-of-type { border-bottom: none; }
+    .detail-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+    }
+    .detail-value {
+      font-size: 0.95rem;
+      color: rgba(244,239,228,0.88);
+      line-height: 1.5;
+    }
+    .event-cta {
+      margin-top: 1.75rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ─── FOOTER ────────────────────────────────────────────── */
+    .footer { background: var(--ngahere); color: rgba(244,239,228,0.7); padding: clamp(3rem,6vw,5rem) 0 0; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(244,239,228,0.1); }
+    .footer-brand img { height: 48px; margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 280px; }
+    .footer-socials { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .footer-socials a {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      padding: 9px;
+      border: 1px solid rgba(244, 239, 228, 0.25);
+      color: rgba(244, 239, 228, 0.7);
+      line-height: 0;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .footer-socials a:hover { background: rgba(244,239,228,0.1); border-color: var(--kawakawa); color: var(--hua); }
+    .footer-socials a svg { width: 20px !important; height: 20px !important; display: block !important; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--hua); margin-bottom: 1rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul li a { font-size: 0.88rem; color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.88rem; line-height: 1.8; }
+    .footer-contact a { color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-top: 1px solid rgba(244,239,228,0.08); flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p { font-size: 0.78rem; }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.78rem; color: rgba(244,239,228,0.5); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .event-layout { grid-template-columns: 1fr; }
+      .event-details-card { position: static; order: -1; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--ngahere); padding: 1.5rem; gap: 1rem; }
+      .nav-toggle { display: flex; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .facilitator { grid-template-columns: 1fr; }
+      .facilitator-avatar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- ── NAV ────────────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list" id="navLinks">
+        <li><a href="../classes.html">Classes</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../index.html#studio">Our Studio</a></li>
+        <li><a href="../school/index.html">Teacher Training</a></li>
+        <li><a href="../events.html" class="active">Events</a></li>
+        <li><a href="../team.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <header class="event-hero">
+    <div class="container">
+      <div class="event-hero-inner">
+        <a href="../events.html" class="back-link">Back to Events</a>
+        <div class="event-hero-meta">
+          <span class="event-type-pill">Health &amp; Wellbeing</span>
+          <span class="event-date-pill">Saturday 16 May 2026</span>
+        </div>
+        <h1>Ayurvedic Herbology for Toxicosis</h1>
+        <p class="event-hero-tagline">Discover how Ayurveda supports true inner cleansing — balancing agni, reducing ama, and restoring harmony to the tridosha.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── BODY ──────────────────────────────────────────────── -->
+  <section class="event-body">
+    <div class="container">
+      <div class="event-layout">
+
+        <!-- Description + Facilitator -->
+        <div>
+          <div class="event-description fade-up">
+            <p>Ayurvedic Herbology for Toxicosis (Visha-Cikitsa): Power Detox is a unique educational seminar with qualified Ayurvedic Practitioner Dr David Weller of NatuneHeal.</p>
+            <p>This immersive session is designed for yoga practitioners and holistic health seekers who wish to deepen their understanding of how the body, mind, and energy systems interact in the process of healing and detoxification. Drawing from the ancient science of Ayurveda and integrative natural health principles, we will explore how imbalance arises through agni (digestive fire) disruption and the accumulation of ama (toxins), and how this affects the tridosha, dhatus (tissues), and srotas (body networks).</p>
+            <p>We will also explore the subtle energetic systems of nadis, ojas, and tejas, and their relationship to vitality, clarity, and resilience — both on and off the yoga mat. Practical applications will include Ayurvedic detox strategies such as pancha karma principles, herbal medicine (including Terminalia chebula and Apium graveolens), therapeutic oils, spices, and supportive lifestyle practices to enhance daily wellbeing and yogic balance.</p>
+            <p>This seminar offers a grounded yet expansive approach to understanding detoxification as a holistic process of restoring internal harmony, energetic flow, and sustainable health.</p>
+          </div>
+
+          <div class="facilitators fade-up">
+            <h2>Your facilitator</h2>
+            <div class="facilitator-list">
+
+              <div class="facilitator">
+                <div class="facilitator-avatar">
+                  <img src="images/weller.jpg" alt="Dr. David Weller">
+                </div>
+                <div>
+                  <p class="facilitator-name">Dr. David Weller</p>
+                  <p class="facilitator-bio">Dr David Weller of NatuneHeal is a CMA-registered Natural Health Specialist, Scientist, and founder of NatuneHeal Holistic Wellness &amp; BioEnergy Therapy Centre in Wellington, New Zealand.</p>
+                  <p class="facilitator-bio">With an academic background in Molecular Biology, Microbiology, and Chemistry, alongside formal training in Ayurveda, naturopathy, EMDR therapy, integrative oncology, and bioenergy medicine, Dr Weller integrates modern scientific understanding with traditional healing systems to support holistic health outcomes.</p>
+                  <p class="facilitator-bio">His seminars and consultations are designed to support individuals in restoring balance, resilience, and optimal energy flow. Learn more at natuneheal.com.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Details sidebar -->
+        <aside class="event-details-card fade-up">
+          <h3>Event Details</h3>
+
+          <div class="detail-row">
+            <span class="detail-label">Date</span>
+            <span class="detail-value">Saturday 16 May 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Time</span>
+            <span class="detail-value">7:00–8:00 pm</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">AWHI Yoga &amp; Wellbeing<br>Level 2, 15 Johnston Street<br>Wellington CBD</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Cost</span>
+            <span class="detail-value">From $33</span>
+          </div>
+
+          <a href="https://events.humanitix.com/ayurvedic-herbology-for-toxicosis-visha-cikitsa-power-detox" class="btn btn-primary event-cta" target="_blank" rel="noopener">Register now</a>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Events</h4>
+          <ul>
+            <li><a href="../events.html#upcoming">Upcoming Events</a></li>
+            <li><a href="../events.html#past">Past Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="../team.html">About AWHI</a></li>
+            <li><a href="../classes.html">Classes &amp; Timetable</a></li>
+            <li><a href="../school/index.html">Teacher Training</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington, Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="../pricing.html#terms">Membership Terms</a>
+          <a href="mailto:kiaora@awhiyoga.co.nz">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

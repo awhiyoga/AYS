@@ -50,3 +50,153 @@ No bookings required!
 **Facilitator: Kathleen Kuehn** 
 **Facilitator bio: ERYT-500, co-owner of AWHI Yoga & Wellbeing, Wednesday night Power Vinyasa teacher & toast-maker!** 
 **Facilitator photo: Kathleen.jpg**
+
+---
+
+## Power Vin(o) Happy Hour
+**Date: Last Wednesday of each month** 
+**Time: 6:45-7:45pm** 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: FREE ** 
+**Image: PowerVino.png**
+**Booking link: awhiyoga.co.nz/classes** 
+
+**Card description** (1–2 sentences for the events grid): Join us in reception after the last Wednesday PV of the month for a post-class toast!
+
+**Full description** (for the event page): Haere mai!
+
+Let’s celebrate the end of another month of Wednesday night Power Vinyasa with a post-class toast! 
+
+We close out each month’s Wednesday 5:30pm PV sessions in reception for a shared drink and a bit of friendly kōrero!  
+
+Non-alcoholic drink options available, free with class entry.
+
+We gather in reception right after class - grab a drink, wait for the cue & take a sip along with your new best yoga mates! Impromptu speeches are more than welcome, lol. 
+
+No bookings required!
+
+**Facilitator: Kathleen Kuehn** 
+**Facilitator bio: ERYT-500, co-owner of AWHI Yoga & Wellbeing, Wednesday night Power Vinyasa teacher & toast-maker!** 
+**Facilitator photo: Kathleen.jpg**
+
+---
+
+## Ayurvedic Herbology for Toxicosis (Visha-Cikitsa): Power Detox
+**Date: Saturday 16 May 2026** 
+**Time: 7-8pm** 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: Starts at $33 ** 
+**Image: Ayurvedic.png**
+**Booking link: https://events.humanitix.com/ayurvedic-herbology-for-toxicosis-visha-cikitsa-power-detox** 
+
+**Card description** (1–2 sentences for the events grid): Discover how Ayurveda supports true inner cleansing. Learn how to balance agni, reduce ama, and restore harmony to the tridosha—all essential for energy, clarity, and flow.
+
+**Full description** (for the event page): Ayurvedic Herbology for Toxicosis (Visha-Cikitsa): Power Detox is a unique educational seminar with qualified Ayurvedic Practitioner Dr David Weller of NatuneHeal.
+This immersive session is designed for yoga practitioners and holistic health seekers who wish to deepen their understanding of how the body, mind, and energy systems interact in the process of healing and detoxification. Drawing from the ancient science of Ayurveda and integrative natural health principles, we will explore how imbalance arises through agni  (digestive fire) disruption and the accumulation of ama (toxins), and how this affects the tridosha, dhatus (tissues), and srotas (body networks). We will also explore the subtle energetic systems of nadis, ojas, and tejas, and their relationship to vitality, clarity, and resilience—both on and off the yoga mat. Practical applications will include Ayurvedic detox strategies such as pancha karma principles, herbal medicine (including Terminalia chebula and Apium graveolens), therapeutic oils, spices, and supportive lifestyle practices to enhance daily wellbeing and yogic balance. This seminar offers a grounded yet expansive approach to understanding detoxification as a holistic process of restoring internal harmony, energetic flow, and sustainable health.
+
+**Facilitator: Dr. David Weller
+**Facilitator bio: Dr David Weller of NatuneHeal is a CMA-registered Natural Health Specialist, Scientist, and and founder of NatuneHeal Holistic Wellness & BioEnergy Therapy Centre in Wellington, New Zealand.
+
+With an academic background in Molecular Biology, Microbiology, and Chemistry, alongside formal training and experience in Ayurveda, naturopathy, EMDR therapy, integrative oncology, and bioenergy medicine, Dr Weller integrates modern scientific understanding with traditional healing systems to support holistic health outcomes. His work focuses on identifying and addressing the root causes of imbalance through a combination of Ayurvedic medicine, herbal therapy, detoxification principles, and energetic health models. This includes a deep exploration of how lifestyle, environment, emotional wellbeing, and subtle bioenergetic factors influence physiological function and long-term vitality. As the founder of NatuneHeal, he has developed integrative health programmes that combine Ayurvedic principles such as agni, ama, doshas, and dhatus with contemporary bioenergy and functional approaches to wellbeing. His seminars and consultations are designed to support individuals in restoring balance, resilience, and optimal energy flow.
+Dr Weller is also an experienced educator and international workshop facilitator and speaker, presenting on holistic health, consciousness, and integrative healing approaches across New Zealand.
+
+LEARN MORE: www.natuneheal.com
+
+
+**Facilitator photo: Weller.jpg
+
+
+Workshop Series: Vinyasa – Mai i te pō ki te ao mārama
+
+---
+
+## Vinyasa – Mai i te Pō ki te Ao Mārama (From Darkness to Light)
+**Date: Saturday, 2 May, 16 May, 30 May, and 13 June (fortnightly)
+**Time: 12-3:30pm** 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $299 for the series or $69.00 per session** 
+**Image: fiordland.jpg**
+**Booking link: https://momence.com/AWHI-Yoga-%26-Wellbeing/Vinyasa-%E2%80%93-Mai-i-te-p%C5%8D-ki-te-ao-m%C4%81rama/131860025** 
+
+**Card description** (1–2 sentences for the events grid): A vinyasa and wānanga series that moves through the Māori creation story.
+
+**Full description** (for the event page): Vinyasa – Mai i te pō ki te ao mārama is a four part workshop series themed on the phases of the Māori creation story (te kore, te pō, te whaiao, and te ao mārama) as a metaphor and framework for confronting the cyclical nature of life. Through vinyasa practice, we explore and embody the phases of the creation story, drawing parallels to yogic wisdom and setting a foundation and spark of curiosity for the wānanga that follows. After a short break, we'll reconvene in a wānanga space to further explore the deep wisdom of the creation story, learn more about the roles of the atua, and begin to unearth the relevance of it all to our own lives.
+
+No prior experience of knowledge required. All are welcome - haere mai!
+
+**Facilitator: Ani Morris
+**Facilitator bio: Iwi affiliations: Ngāti Kahungunu, Te Āti Awa, Rangitāne, Ngāti Mutunga, Rongowhakaata, Ngāti Tūkorehe, Tūhoe, Ngāti Pāhauwera. I pakeke mai a Ani i Te Matau a Māui, Te Papaioea me Te Awakairangi. Kei Te Whanganui a Tara rātau ko tōna whānau e noho ana.
+
+Ani is passionate about hauora and the ongoing journey of strengthening her connection to whakapapa, identity, and wellbeing. With a background in Education, Te Ao Māori facilitation, and cultural services for marae and central government, she brings deep cultural insight to her mahi as a public servant.
+
+Ani is committed to kaupapa that elevates communities and empower rangatahi, contributing voluntarily to national movements such as Tuia, Matariki, and Te Ara ki Mātangireia. She aspires to continue growing with her whānau as they explore mana motuhake and tino rangatiratanga for future generations and mokopuna.
+
+**Facilitator photo: ani.jpg
+
+**Facilitator: Jenny Oliver
+**Facilitator bio: is a 200 hr certified yoga teacher with a career in the public service and background in marine science. After 13 years in central government, she is now returning to her marine roots and working towards a PhD in marine biology. 
+
+Motivated by the values of connection, nature, and beauty, Jenny is fascinated by systems – ecological systems, thought systems, social systems – and particularly how different thought systems and cosmologies can offer an antidote to the overly rationalistic and individualistic culture that currently dominates our society. 
+
+**Facilitator photo: jennyoliver.jpg
+
+---
+
+## Yoga Nidra Meditation
+
+**Date: First Friday of every month
+**Time: 7:00-8:15pm** 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price:FREE to members; $25 Casual ** 
+**Image: yoganidra.jpg**
+**Booking link: awhiyoga.co.nz/classes** 
+
+**Card description**: An opportunity to find your inner calm and embark on a journey towards holistic well-being.
+
+**Full description** (for the event page): Unwind from the stresses of the week and start your weekend in a state of relaxation. Yoga Nidra, often referred to as "yogic sleep," is a deeply restorative practice that promotes physical relaxation, mental clarity, and emotional balance. It's the perfect way to rejuvenate your mind, body, and soul: your hinengaro, tinana and wairua.  
+
+Yoga nidra is a powerful technique that directly works to heal your mind by removing samskaras - untying knots and mental impressions. This practice of learning to relax consciously is well regarded as an antidote for stress, anxiety, poor sleep amongst other health benefits.
+
+What to Expect:
+- A 75-minute guided Yoga Nidra Meditation led by one of our experienced instructors
+- A comfortable space to lie down (mats, blankets, bolsters & cushions provided)
+- A supportive community of fellow meditation enthusiasts
+- Complementary herbal tea before/after the session;
+- An opportunity to journal your experience, if desired
+- A chance to destress and cultivate inner calm
+
+Wear comfortable clothes, and bring an open mind, a journal and eye mask if you have one (not required).  
+
+Things to Consider: Everyone is welcome to experience the profound benefits of Yoga Nidra, and no prior experience is required. For some people, however, Yoga Nidra’s prolonged stillness or internal focus can bring up strong emotions, memories, and/or sensations. You are encouraged to listen and respond in a way that feels safe for you — adjusting your position, keeping your eyes open, grounding yourself, or stepping out of the room at any time. 
+
+Yoga Nidra may not be suitable for everyone. If you are experiencing acute mental health challenges, unprocessed trauma, or conditions that make stillness or internal focus difficult, we recommend seeking guidance from a qualified healthcare provider or speaking with the teacher before participating.
+
+Want to become an AWHI member to receive free Yoga Nidra and other great benefits? Sign up with us today! 
+
+Let's come together and discover the transformative power of Yoga Nidra Meditation. See you there! 🌟
+
+**Facilitator:  Varies - see schedule for details!
+
+---
+
+## XOCHIPILLI'S VISION: A Night of Shamanic Sounds, Drumming and Ceremony
+
+**Date: Saturday 27 June 2026
+**Time: 6:45-8:45pm** 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price:Early Bird (first 10 registrations) - $45; General Admission - $49; Member Discount - 15% off GA pricing for AWHI members on 3/6/12 month contract); Concession Rate: $42 - Full-time students, Gold Card & Community Service card holders (you’ll need to present valid ID at door for entry); Children (under 16) - $30** 
+**Image: Claudio1.jpg**
+**Booking link: awhiyoga.co.nz/classes** 
+
+**Card description**: Enter the world of Xochipilli — where ancient Mexican ceremony, sacred drumming, and prehispanic sound carry you on an inner journey unlike anything you've experienced in Aotearoa!
+
+**Full description** (for the event page): A transformative evening where ancient Mexico and Native American cultures land in Aotearoa. Inspired by recent pilgrimages home to Mexico City, Claudio has gathered new songs, instruments, stories, and wisdom to share. This unique event will center around a magnificent Pow Wow drum—a living entity that calls us to gather, drum, sing and play together in call-and-response fashion. Feel the vibration as we create a circle of sound, learning chants that have echoed for generations.
+ The journey begins with a copal cleansing and an opening ceremony. We prepare ourselves for drumming with a sacred prehispanic drink (vegan, gluten free) to open your senses and hearts to the experience.  We’ll honour the four directions with the call of the conch, and be carried away by the ethereal sounds of prehispanic flutes, rattles, rain sticks, ocarinas, shamanic drums and natural environment atmospheres. Let the music guide you on an inner journey, whether in quiet contemplation or joyful, liberating movement.  We close the evening with a deep, shamanic relaxation. Wear comfortable clothing; bring an open heart & mind willing to  learn and receive. You are welcome to bring a fruit and or a flower to contribute to the altar. No previous experience is required!
+
+
+**Facilitator: Claudio Escutia 
+
+**Facilitator bio: Claudio Escutia is a yoga teacher, multi-instrumentalist, and sound healer from a family of musicians in Mexico City. His path has taken him from classical guitar studies and Tai Chi in Mexico, to jazz and Kundalini Yoga in Montreal, ashram teacher training in Quebec, Ashtanga and Yin studies in Berlin, Tibetan sound healing certification in Kathmandu, and classical Indian music in Calcutta and Varanasi. Rooted in his Mexican heritage and fluent across traditions, Claudio now brings this rare depth of practice to Aotearoa — and is a much-loved presence here in Wellington and at AWHI.
+
+
+**Facilitator photo: Claudio2.jpg

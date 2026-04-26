@@ -186,7 +186,7 @@ Let's come together and discover the transformative power of Yoga Nidra Meditati
 **Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
 **Price:Early Bird (first 10 registrations) - $45; General Admission - $49; Member Discount - 15% off GA pricing for AWHI members on 3/6/12 month contract); Concession Rate: $42 - Full-time students, Gold Card & Community Service card holders (you’ll need to present valid ID at door for entry); Children (under 16) - $30** 
 **Image: Claudio1.jpg**
-**Booking link: awhiyoga.co.nz/classes** 
+**Booking link: https://momence.com/l/g7hglOEj 
 
 **Card description**: Enter the world of Xochipilli — where ancient Mexican ceremony, sacred drumming, and prehispanic sound carry you on an inner journey unlike anything you've experienced in Aotearoa!
 
@@ -238,4 +238,6 @@ You'll leave knowing how to:
 **Facilitator: Eli Hoyos** 
 **Facilitator bio: Eli is a hormone specialist, as well as the CEO and founder of the fitness app, Elevate by Eli. Download her app here: https://elivatebyeli.com/ ** 
 
-**Facilitators photo: Luisa&Eli.jpeg**
+**Facilitators photo: Luisa&Eli.jpeg
+
+---

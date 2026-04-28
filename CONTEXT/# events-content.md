@@ -204,7 +204,7 @@ Let's come together and discover the transformative power of Yoga Nidra Meditati
 
 ## What the H***rmones? A Pilates & hormonal health masterclass that finally explains your body.
 **Date: Saturday, 6th June** 
-**Time: 1-4pmpm** 
+**Time: 1-4pm** 
 **Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
 **Price: $49 Early Bird (before 20 May); $55 Full Rate ** 
 **Image: PilatesWorkshop.jpg**
@@ -219,7 +219,7 @@ Let's come together and discover the transformative power of Yoga Nidra Meditati
 • How to build strength safely and effectively
 • Progressions that help you get more out of every session
 Expect a hands-on, educational experience that sharpens your practice and helps you feel more confident in your body.
-Women’s Hormonal Health & Training with Eli: "Most Women. train hard and still feel stuck - not because they are doing it wrong, but bacause htye're missing one layer: their hormones. eli will break down how your body's natural rhythms influence your energy, strenght and recovery - and to actually do with that information. You'll learn:  How hormonal phases affect your training capacity
+Women’s Hormonal Health & Training with Eli: "Most Women. train hard and still feel stuck - not because they are doing it wrong, but because they're missing one layer: their hormones. eli will break down how your body's natural rhythms influence your energy, strength and recovery - and to actually do with that information. You'll learn:  How hormonal phases affect your training capacity
 • How to plan your routine in a realistic, sustainable way
 • Why syncing movement with your cycle improves results and reduces burnout. She'll map each hormonal stage to the natural flow of a Pilates class — from breathwork and pelvic floor connection, to warm-up, to higher-intensity phases, and back down to cool-down. A framework you can actually use."
 

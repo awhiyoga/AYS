@@ -233,8 +233,7 @@ You'll leave knowing how to:
 • Feel empowered in your body — at every stage of your cycle
 
 **Facilitator: Luisa Gordillo** 
-**Facilitator bio: Luisa is a Certified Pilates instructor with a passion for holistic wellbeing, specialising in body awareness, injury prevention, and mindful movement. Trained in physiology and anatomy, she creates safe and inclusive classes for all levels. Her classes offer a full-body workout that builds strength, balance, and body awareness. Luisa empowers individuals through movement to improve everyday life.time AWHI member, CYT-200 and co-founder of Good Company Yoga. Lawyer by trade. Lover of books, laughs and good chats. No visual historical evidence of ever having read a book, but strong yoga posture and hot takes since roughly 4 years old.** 
-
+**Facilitator bio: Luisa is a Certified Pilates instructor with a passion for holistic wellbeing, specialising in body awareness, injury prevention, and mindful movement. Trained in physiology and anatomy, she creates safe and inclusive classes for all levels. Her classes offer a full-body workout that builds strength, balance, and body awareness. Luisa empowers individuals through movement to improve everyday life.
 **Facilitator: Eli Hoyos** 
 **Facilitator bio: Eli is a hormone specialist, as well as the CEO and founder of the fitness app, Elevate by Eli. Download her app here: https://elivatebyeli.com/ ** 
 

@@ -105,41 +105,6 @@ LEARN MORE: www.natuneheal.com
 
 **Facilitator photo: Weller.jpg
 
-
-Workshop Series: Vinyasa – Mai i te pō ki te ao mārama
-
----
-
-## Vinyasa – Mai i te Pō ki te Ao Mārama (From Darkness to Light)
-**Date: Saturday, 2 May, 16 May, 30 May, and 13 June (fortnightly)
-**Time: 12-3:30pm** 
-**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
-**Price: $299 for the series or $69.00 per session** 
-**Image: fiordland.jpg**
-**Booking link: https://momence.com/AWHI-Yoga-%26-Wellbeing/Vinyasa-%E2%80%93-Mai-i-te-p%C5%8D-ki-te-ao-m%C4%81rama/131860025** 
-
-**Card description** (1–2 sentences for the events grid): A vinyasa and wānanga series that moves through the Māori creation story.
-
-**Full description** (for the event page): Vinyasa – Mai i te pō ki te ao mārama is a four part workshop series themed on the phases of the Māori creation story (te kore, te pō, te whaiao, and te ao mārama) as a metaphor and framework for confronting the cyclical nature of life. Through vinyasa practice, we explore and embody the phases of the creation story, drawing parallels to yogic wisdom and setting a foundation and spark of curiosity for the wānanga that follows. After a short break, we'll reconvene in a wānanga space to further explore the deep wisdom of the creation story, learn more about the roles of the atua, and begin to unearth the relevance of it all to our own lives.
-
-No prior experience of knowledge required. All are welcome - haere mai!
-
-**Facilitator: Ani Morris
-**Facilitator bio: Iwi affiliations: Ngāti Kahungunu, Te Āti Awa, Rangitāne, Ngāti Mutunga, Rongowhakaata, Ngāti Tūkorehe, Tūhoe, Ngāti Pāhauwera. I pakeke mai a Ani i Te Matau a Māui, Te Papaioea me Te Awakairangi. Kei Te Whanganui a Tara rātau ko tōna whānau e noho ana.
-
-Ani is passionate about hauora and the ongoing journey of strengthening her connection to whakapapa, identity, and wellbeing. With a background in Education, Te Ao Māori facilitation, and cultural services for marae and central government, she brings deep cultural insight to her mahi as a public servant.
-
-Ani is committed to kaupapa that elevates communities and empower rangatahi, contributing voluntarily to national movements such as Tuia, Matariki, and Te Ara ki Mātangireia. She aspires to continue growing with her whānau as they explore mana motuhake and tino rangatiratanga for future generations and mokopuna.
-
-**Facilitator photo: ani.jpg
-
-**Facilitator: Jenny Oliver
-**Facilitator bio: is a 200 hr certified yoga teacher with a career in the public service and background in marine science. After 13 years in central government, she is now returning to her marine roots and working towards a PhD in marine biology. 
-
-Motivated by the values of connection, nature, and beauty, Jenny is fascinated by systems – ecological systems, thought systems, social systems – and particularly how different thought systems and cosmologies can offer an antidote to the overly rationalistic and individualistic culture that currently dominates our society. 
-
-**Facilitator photo: jennyoliver.jpg
-
 ---
 
 ## Yoga Nidra Meditation
@@ -233,7 +198,8 @@ You'll leave knowing how to:
 • Feel empowered in your body — at every stage of your cycle
 
 **Facilitator: Luisa Gordillo** 
-**Facilitator bio: Luisa is a Certified Pilates instructor with a passion for holistic wellbeing, specialising in body awareness, injury prevention, and mindful movement. Trained in physiology and anatomy, she creates safe and inclusive classes for all levels. Her classes offer a full-body workout that builds strength, balance, and body awareness. Luisa empowers individuals through movement to improve everyday life.
+**Facilitator bio: Luisa is a Certified Pilates instructor with a passion for holistic wellbeing, specialising in body awareness, injury prevention, and mindful movement. Trained in physiology and anatomy, she creates safe and inclusive classes for all levels. Her classes offer a full-body workout that builds strength, balance, and body awareness. Luisa empowers individuals through movement to improve everyday life.time AWHI member, CYT-200 and co-founder of Good Company Yoga. Lawyer by trade. Lover of books, laughs and good chats. No visual historical evidence of ever having read a book, but strong yoga posture and hot takes since roughly 4 years old.** 
+
 **Facilitator: Eli Hoyos** 
 **Facilitator bio: Eli is a hormone specialist, as well as the CEO and founder of the fitness app, Elevate by Eli. Download her app here: https://elivatebyeli.com/ ** 
 

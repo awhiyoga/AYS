@@ -205,6 +205,6 @@ You'll leave knowing how to:
 
 Download her app here: https://elivatebyeli.com/ ** 
 
-**Facilitators photo: Luisa&Eli.jpeg
+**Facilitators photo: Luisa&Eli.jpg
 
 ---

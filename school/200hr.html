@@ -606,6 +606,71 @@
       border-color: #111e2b;
     }
 
+    /* ─── FACILITATORS ──────────────────────────────────── */
+    .facilitators-section {
+      background: var(--hua);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .facilitators-section .section-label { color: var(--kawakawa); }
+    .facilitators-section .section-label::before { background: var(--kawakawa); }
+    .facilitators-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--ngahere);
+      margin-bottom: 3rem;
+    }
+    .facilitators-group-label {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--kawakawa);
+      border-bottom: 1px solid rgba(28,56,41,0.12);
+      padding-bottom: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .facilitators-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+    .facilitators-grid.assistants {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .facilitator-card { display: flex; flex-direction: column; gap: 1.25rem; }
+    .facilitator-card .avatar {
+      width: 144px; height: 144px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+    }
+    .facilitator-card .avatar img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    }
+    .facilitator-card .name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ngahere);
+      margin-bottom: 0.1rem;
+    }
+    .facilitator-card .pronouns {
+      font-size: 0.78rem;
+      color: var(--kawakawa);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .facilitator-card .bio {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: rgba(36,36,36,0.82);
+    }
+    @media (max-width: 900px) {
+      .facilitators-grid { grid-template-columns: 1fr; }
+      .facilitators-grid.assistants { grid-template-columns: 1fr; }
+    }
+
     /* ─── CTA SECTION ────────────────────────────────────── */
     .cta-section {
       background: var(--wai);
@@ -986,6 +1051,74 @@
   </section>
 
   <!-- ─── CTA SECTION ───────────────────────────────────────── -->
+  <!-- ─── FACILITATORS ─────────────────────────────────── -->
+  <section class="facilitators-section" aria-labelledby="facilitators-heading">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">Your facilitators</div>
+        <h2 id="facilitators-heading">Meet the team</h2>
+      </div>
+
+      <!-- Lead facilitators -->
+      <p class="facilitators-group-label fade-up">Lead facilitators</p>
+      <div class="facilitators-grid fade-up">
+
+        <div class="facilitator-card">
+          <div class="avatar">
+            <img src="../Images/staff/Tom.jpg" alt="Tom Brotherstone" />
+          </div>
+          <div>
+            <p class="name">Tom Brotherstone</p>
+            <p class="pronouns">he/him</p>
+            <p class="bio">Tom is the co-owner, staff manager and lead facilitator at AWHI Yoga &amp; Wellbeing. A 500-ERYT, Tom completed all of his training in Rishikesh, India and has been teaching Yin and Vinyasa for over a decade. As co-owner of AWHI, his focus is now on building community through both practices, providing a supportive platform for the growth and self-discovery of others. Tom is an expert facilitator, having led numerous yoga and meditation workshops, seminars, teacher trainings and private classes in corporate, one-on-one, and studio environments. His facilitation style is easeful and approachable, with just the right amount of humour.</p>
+          </div>
+        </div>
+
+        <div class="facilitator-card">
+          <div class="avatar">
+            <img src="../Images/staff/Kathleen.jpg" alt="Kathleen Kuehn" />
+          </div>
+          <div>
+            <p class="name">Kathleen Kuehn</p>
+            <p class="pronouns">she/her</p>
+            <p class="bio">Kathleen is a 500-ERYT co-owner and Chief Enabling Officer at AWHI Yoga &amp; Wellbeing. A lifelong kaiako, KK has trained and earned certification in vinyasa, yin, yoga nidra and Pilates, and has been facilitating yoga/meditation classes and yoga teacher training courses since 2019. She also holds a PhD in Media &amp; Communications with nearly two decades teaching at the tertiary level and curriculum design. KK is a passionate, unpretentious and down-to-earth facilitator who places high value on openness, authenticity and holistic understandings of wellness. Her goal is to create safe spaces for self-exploration, self-expression, inquiry and community.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Assistants -->
+      <p class="facilitators-group-label fade-up">Assistants</p>
+      <div class="facilitators-grid assistants fade-up">
+
+        <div class="facilitator-card">
+          <div>
+            <p class="name">Murray Hemi</p>
+            <p class="pronouns">he/him</p>
+            <p class="bio">Murray is from the small Māori community, Papawai. A 200-CYT in vinyasa with trauma-informed training from Yoga Education in Prison Trust and a Certified Hakomi Therapist practising as a men's relationship coach. A forever learner, Murray brings a strong mātauranga background and understanding of the many synergies between the traditional wisdoms of Te Ao Māori and yoga. Murray always brings with him his stories, insights, and understandings of Mātauranga Māori as a parallel window into understanding or re-considering our knowledge of the human condition. He shares with a compassion and wisdom gained through experience, with a strong desire to build learning experiences through collective group wisdom.</p>
+          </div>
+        </div>
+
+        <div class="facilitator-card">
+          <div>
+            <p class="name">Marcelly Ribeiro</p>
+            <p class="pronouns">she/her · they/them</p>
+            <p class="bio">Marcelly is a Brazilian-born yoga teacher and dancer based in Aotearoa New Zealand for the past 10 years. She holds a degree in Physical Education, 200-hour Vinyasa and Hatha Yoga Teacher Trainings, and certifications in Childbirth Education, Doula support, and Active Birth. Her teaching blends alignment-based yoga with the fluidity and expression of dance, reflecting her belief that both practices are powerful tools for connection, presence, and self-awareness. Specialising in prenatal yoga, Marcelly integrates asana, pranayama, and birth education to support women in preparing their bodies and minds for labour.</p>
+          </div>
+        </div>
+
+        <div class="facilitator-card">
+          <div>
+            <p class="name">Hana Buchanan</p>
+            <p class="pronouns">she/ia</p>
+            <p class="bio">Hana (Taranaki iwi, Te Ātiawa, Taranaki Whānui ki te Upoko o te Ika) has been developing her own yoga / pū āio practice for over 25 years. She loves exploring the synergies between mātauranga Māori and yoga philosophies — centuries old indigenous wisdoms supporting contemporary holistic wellbeing. Hana completed her 200-hour Vinyasa and 100-hour Yin teacher training with AWHI Yoga &amp; Wellbeing and hopes to share the love, joy and challenge of yoga / pū āio with others. She is an established writer and poet from Te Aro Pā. Nau mai, haere mai e hoa mā!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section" aria-labelledby="cta-heading">
     <div class="container">
       <h2 id="cta-heading" class="fade-up">Ready to take the next step?</h2>

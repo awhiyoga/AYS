@@ -208,3 +208,25 @@ Download her app here: https://elivatebyeli.com/ **
 **Facilitators photo: Luisa&Eli.jpg
 
 ---
+## Prenatal Yoga
+**Date: Fri–Sun, 14–16 August 2026
+**Time: Fri 5:30–8:30pm · Sat 10am–6pm · Sun 12–6pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $349 Early Bird (before 17 Jul7); $399 Full Rate 
+**Image: bubs.jpg
+**Booking link: https://momence.com/l/b8h56DjJ
+
+**Card description** (1–2 sentences for the events grid):
+**Full description** (for the event page): A foundational training for teaching pregnant students in public classes. Covers hormonal and structural changes by trimester, pelvic floor anatomy, birth-supportive movement, common pregnancy ailments, contraindications, and inclusive trauma-aware cueing. 
+
+This module provides base-level preparation; it does not constitute a full prenatal yoga certification.
+
+Can be taken towards AWHI Yoga School's 300 Hour Vinyasa Certification or 15 Hours Continuing Education with Yoga Alliance. 
+
+**Facilitator: Marcelly Ribeiro
+**Facilitator bio: Marcelly Ribeiro (she/her; they/them) is a Brazilian-born yoga teacher and dancer based in Aotearoa New Zealand for the past 10 years. She holds a degree in Physical Education, 200-hour Vinyasa and Hatha Yoga Teacher Trainings, and certifications in Childbirth Education, Doula support, and Active Birth.
+
+Her teaching blends alignment-based yoga with the fluidity and expression of dance, reflecting her belief that both practices are powerful tools for connection, presence, and self-awareness. Specialising in prenatal yoga, Marcelly integrates asana, pranayama, and birth education to support women in preparing their bodies and minds for labour.
+**Facilitator photo: Marcelly.jpeg
+
+---

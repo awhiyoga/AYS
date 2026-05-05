@@ -230,3 +230,19 @@ Her teaching blends alignment-based yoga with the fluidity and expression of dan
 **Facilitator photo: Marcelly.jpeg
 
 ---
+## Mantra, Pranayama & Meditation
+
+**Date: Sat 5th September & Sat 26 Sept + pre-recorded content
+**Time: 9am - 5pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $349 Early Bird (before 8 August); $399 Full Rate 
+**Image: Tom_pranayama.jpg
+**Booking link: https://momence.com/l/k8hwo416
+
+**Card description** (1–2 sentences for the events grid): Explore the foundational theory, embodied practice, and teaching methodology of Pranayama, Meditation, and Mantra as core limbs of yoga.
+
+**Full description** Explores the foundational theory, embodied practice, and teaching methodology of pranayama, meditation, and mantra. Covers breathing physiology and the subtle body, foundational meditation techniques across multiple lineages, the ethics of mantra, and safe trauma-aware instruction. Includes extensive practice teaching time with peer feedback.
+
+**Facilitator: Tom Brotherstone
+
+**Facilitator bio:  E-RYT 500 and AWHI co-owner with over a decade teaching experience in Yin and Vinyasa yoga. Tom trained in Rishikesh, India and his focus is on building community through practice — providing supportive platforms for growth and self-discovery. His easeful, approachable style puts students immediately at ease, and his classes weave yoga philosophy throughout, grounding movement in meaning.

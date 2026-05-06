@@ -1083,6 +1083,28 @@
       background: rgba(46,110,138,0.22);
     }
     table.sched td.loc { white-space: nowrap; }
+    table.sched td.sched-reg { white-space: nowrap; }
+    .sched-reg-btn {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      background: var(--repo); color: var(--hua);
+      transition: background 0.2s;
+    }
+    .sched-reg-btn:hover { background: #a34a20; }
+    .sched-reg-enquire {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      background: transparent; color: rgba(244,239,228,0.5);
+      border: 1px solid rgba(244,239,228,0.2);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .sched-reg-enquire:hover { color: var(--hua); border-color: rgba(244,239,228,0.5); }
+    .sched-reg-pathway {
+      font-size: 0.72rem; color: rgba(244,239,228,0.35);
+      font-style: italic;
+    }
 
     .footer-socials { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
     .footer-socials a {
@@ -1268,6 +1290,7 @@
               <th>Pre-requisite</th>
               <th>Facilitator</th>
               <th>Location</th>
+              <th>Register</th>
             </tr>
           </thead>
           <tbody>
@@ -1278,6 +1301,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Marcelly Ribeiro</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="https://momence.com/l/b8h56DjJ" class="sched-reg-btn" target="_blank" rel="noopener">Book now</a></td>
             </tr>
             <tr class="required-row">
               <td>Mantra, Pranayama &amp; Meditation</td>
@@ -1286,6 +1310,7 @@
               <td class="prereq">None</td>
               <td class="facilitator">Tom Brotherstone</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span> <span class="loc-tag loc-online">+ Online</span></td>
+              <td class="sched-reg"><a href="https://momence.com/l/k8hwo416" class="sched-reg-btn" target="_blank" rel="noopener">Book now</a></td>
             </tr>
             <tr class="elective-row">
               <td>Yoga in ACTion <span class="elective-tag">Elective</span></td>
@@ -1294,6 +1319,7 @@
               <td class="prereq">None</td>
               <td class="facilitator">Melissa Rivard</td>
               <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="elective-row">
               <td>Hands on Assists <span class="elective-tag">Elective</span></td>
@@ -1302,6 +1328,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Rusty Millar</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>Anatomy: Legs, Hips &amp; Pelvis</td>
@@ -1310,6 +1337,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>Yoga Philosophy Part I</td>
@@ -1318,6 +1346,7 @@
               <td class="prereq">Recommended 200 CYT</td>
               <td class="facilitator">Tom Brotherstone</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>The (He)art of Sequencing</td>
@@ -1326,6 +1355,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn / Tom Brotherstone</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>Yoga Philosophy, Lifestyle &amp; Ethics Part II</td>
@@ -1334,6 +1364,7 @@
               <td class="prereq">Yoga Philosophy Part I</td>
               <td class="facilitator">Tom Brotherstone</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="elective-row">
               <td>Yoga Nidra <span class="elective-tag">Elective</span></td>
@@ -1342,6 +1373,7 @@
               <td class="prereq">None</td>
               <td class="facilitator">Kathleen Kuehn</td>
               <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="elective-row">
               <td>Yoga Meets Matauranga Māori <span class="elective-tag">Elective</span></td>
@@ -1350,6 +1382,7 @@
               <td class="prereq">None</td>
               <td class="facilitator">Tom Brotherstone / Murray Hemi</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>Anatomy: Spine &amp; Core</td>
@@ -1358,6 +1391,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="elective-row">
               <td>Prenatal Yoga (repeat) <span class="elective-tag">Elective</span></td>
@@ -1366,6 +1400,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Marcelly Ribeiro</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>Anatomy: Shoulders &amp; Neck</td>
@@ -1374,6 +1409,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>The (He)art of Sequencing (repeat)</td>
@@ -1382,6 +1418,7 @@
               <td class="prereq">200 CYT</td>
               <td class="facilitator">Kathleen Kuehn / Tom Brotherstone</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="elective-row">
               <td>Yoga Nidra (repeat) <span class="elective-tag">Elective</span></td>
@@ -1390,6 +1427,7 @@
               <td class="prereq">None</td>
               <td class="facilitator">Kathleen Kuehn</td>
               <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+              <td class="sched-reg"><a href="mailto:kiaora@awhiyoga.co.nz" class="sched-reg-enquire">Enquire</a></td>
             </tr>
             <tr class="required-row">
               <td>Teaching Practicum</td>
@@ -1398,6 +1436,7 @@
               <td class="prereq">300hr YTTs only</td>
               <td class="facilitator">Tom Brotherstone / Kathleen Kuehn / Rusty Millar</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><span class="sched-reg-pathway">Full pathway only</span></td>
             </tr>
 
             <tr class="required-row">
@@ -1407,6 +1446,7 @@
               <td class="prereq">300hr CYT path</td>
               <td class="facilitator">All Staff</td>
               <td class="loc"><span class="loc-tag loc-online">Online</span></td>
+              <td class="sched-reg"><span class="sched-reg-pathway">Full pathway only</span></td>
             </tr>
             <tr class="required-row">
               <td>Wrap-Up &amp; Graduation</td>
@@ -1415,6 +1455,7 @@
               <td class="prereq">300hr YTTs only</td>
               <td class="facilitator">All Staff</td>
               <td class="loc"><span class="loc-tag loc-studio">Studio</span></td>
+              <td class="sched-reg"><span class="sched-reg-pathway">Full pathway only</span></td>
             </tr>
           </tbody>
         </table>

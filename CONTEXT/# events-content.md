@@ -223,6 +223,8 @@ This module provides base-level preparation; it does not constitute a full prena
 
 Can be taken towards AWHI Yoga School's 300 Hour Vinyasa Certification or 15 Hours Continuing Education with Yoga Alliance. 
 
+**Images: YACEP (1).png rys-300.png
+
 **Facilitator: Marcelly Ribeiro
 **Facilitator bio: Marcelly Ribeiro (she/her; they/them) is a Brazilian-born yoga teacher and dancer based in Aotearoa New Zealand for the past 10 years. She holds a degree in Physical Education, 200-hour Vinyasa and Hatha Yoga Teacher Trainings, and certifications in Childbirth Education, Doula support, and Active Birth.
 
@@ -242,6 +244,12 @@ Her teaching blends alignment-based yoga with the fluidity and expression of dan
 **Card description** (1–2 sentences for the events grid): Explore the foundational theory, embodied practice, and teaching methodology of Pranayama, Meditation, and Mantra as core limbs of yoga.
 
 **Full description** Explores the foundational theory, embodied practice, and teaching methodology of pranayama, meditation, and mantra. Covers breathing physiology and the subtle body, foundational meditation techniques across multiple lineages, the ethics of mantra, and safe trauma-aware instruction. Includes extensive practice teaching time with peer feedback.
+
+This workshop is a required module in the AWHI 300-hour Advanced Teacher Training, and is also open to anyone who wants to deepen their knowledge — no enrolment in the full programme required. 
+
+This workshop can also be taken by certified yoga teachers for 25 Continuing Education Credits with Yoga Alliance.
+
+**Images** YACEP (1).png rys-300.png
 
 **Facilitator: Tom Brotherstone
 

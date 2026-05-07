@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmed — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Your class booking at AWHI Yoga & Wellbeing is confirmed. We look forward to seeing you on the mat." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMH30J5X50"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMH30J5X50');
+  </script>
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 48px; width: auto; filter: brightness(10); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--hua); text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--kawakawa); }
+    .nav-book { background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem; font-weight: 700 !important; letter-spacing: 0.08em !important; transition: background 0.2s !important; }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 5rem) 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/Awhi_BookClubbyJuliaSabugosa-16-crop.jpg');
+      background-size: cover; background-position: center 40%;
+      opacity: 0.12;
+    }
+    .page-hero .container { position: relative; z-index: 1; max-width: 800px; }
+    .page-hero-eyebrow { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--hua); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 600; color: var(--hua); line-height: 0.95; margin-bottom: 1.5rem; }
+    .page-hero-sub { color: rgba(244,239,228,0.85); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 560px; }
+
+    /* ─── CONFIRMATION BODY ──────────────────────────────── */
+    .confirmation-body {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background: var(--hua);
+    }
+    .confirmation-body .container {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    /* left column */
+    .confirmation-aside h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ngahere);
+      margin-bottom: 1.5rem;
+    }
+    .confirmation-aside p {
+      color: #555;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .checkin-list {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .checkin-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--pango);
+    }
+    .checkin-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--kawakawa);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .checkin-icon svg { width: 12px; height: 12px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* right column */
+    .confirmation-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .confirmation-card {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 2rem 2.25rem;
+    }
+    .confirmation-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--ngahere);
+      margin-bottom: 0.75rem;
+    }
+    .confirmation-card p {
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 0.6rem;
+    }
+    .confirmation-card p:last-child { margin-bottom: 0; }
+    .confirmation-card a {
+      color: var(--repo);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .confirmation-card a:hover { color: #a34a20; }
+
+    .policy-card {
+      background: var(--ngahere);
+      color: var(--hua);
+      padding: 2rem 2.25rem;
+    }
+    .policy-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--hua);
+      margin-bottom: 0.75rem;
+    }
+    .policy-card p {
+      color: rgba(244,239,228,0.85);
+      line-height: 1.7;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+    .policy-card p:last-child { margin-bottom: 0; }
+    .policy-card strong { color: var(--hua); }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--ngahere); color: var(--hua); padding: 5rem 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(244,239,228,0.12); }
+    .footer-brand img { height: 48px; margin-bottom: 1.25rem; filter: brightness(10); }
+    .footer-brand p { font-size: 0.9rem; opacity: 0.7; max-width: 280px; line-height: 1.6; }
+    .footer-socials { display: flex; gap: 1rem; margin-top: 1.25rem; }
+    .footer-socials a { color: var(--hua); opacity: 0.7; transition: opacity 0.2s; }
+    .footer-socials a:hover { opacity: 1; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; margin-bottom: 1rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { font-size: 0.9rem; opacity: 0.75; transition: opacity 0.2s; }
+    .footer-col a:hover { opacity: 1; }
+    .footer-contact p { font-size: 0.9rem; opacity: 0.75; line-height: 1.8; }
+    .footer-contact a { opacity: 1; color: var(--kawakawa); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; font-size: 0.8rem; opacity: 0.5; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .confirmation-body .container { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--ngahere); padding: 1.5rem 2rem; gap: 1.25rem; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      .footer-top { grid-template-columns: 1fr; }
+      .confirmation-card, .policy-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- ── NAV ────────────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="school/index.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ───────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container">
+        <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+        <h1>See you<br>on the mat</h1>
+        <p class="page-hero-sub">Your booking is confirmed — we can't wait to welcome you.</p>
+      </div>
+    </section>
+
+    <!-- ── CONFIRMATION BODY ───────────────────────────────── -->
+    <section class="confirmation-body">
+      <div class="container">
+
+        <!-- Left: summary + checklist -->
+        <div class="confirmation-aside fade-up">
+          <h2>Ngā mihi nui — your class is booked!</h2>
+          <p>We're so glad you're joining us. Here's what to know before you arrive:</p>
+          <ul class="checkin-list">
+            <li class="checkin-item">
+              <span class="checkin-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Arrive 5–10 minutes early to settle in, especially if it's your first visit.
+            </li>
+            <li class="checkin-item">
+              <span class="checkin-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              We're on Level 2, 15 Johnston Street, Wellington CBD.
+            </li>
+            <li class="checkin-item">
+              <span class="checkin-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Mat hire is available — bring water and wear comfortable clothing.
+            </li>
+            <li class="checkin-item">
+              <span class="checkin-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              New to AWHI? Our team will be there to welcome you personally.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: cards -->
+        <div class="confirmation-main fade-up">
+
+          <!-- Confirmation message -->
+          <div class="confirmation-card">
+            <h3>Booking confirmed</h3>
+            <p>Ngā mihi! Your class booking is confirmed and we look forward to seeing you there. A confirmation email has been sent to you from Momence — check your inbox (or junk folder, just in case).</p>
+            <p>If you have any questions before your class, please get in touch at <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>.</p>
+          </div>
+
+          <!-- Cancellation policy -->
+          <div class="policy-card">
+            <h3>Cancellation policy</h3>
+            <p>Kei te mai — it's all good if your plans change! If you need to cancel, please do so <strong>before the start of class</strong> to receive your class credit back.</p>
+            <p>Cancellations made after the class has started cannot be refunded or credited. You can manage your booking directly through your Momence account or the confirmation email you received.</p>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-row">
+            <a href="classes.html" class="btn btn-primary">Book another class</a>
+            <a href="contact.html" class="btn btn-outline-dark">Get in touch</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">View timetable</a></li>
+            <li><a href="classes.html#class-types">Heated Flow</a></li>
+            <li><a href="classes.html#class-types">Yin Yoga</a></li>
+            <li><a href="classes.html#class-types">Pilates</a></li>
+            <li><a href="classes.html#class-types">Meditation</a></li>
+            <li><a href="classes.html#class-types">Prenatal Yoga</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="school/index.html">Teacher Training</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Membership</a></li>
+            <li><a href="pricing.html#gift-vouchers">Gift Vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington CBD<br>
+            Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

@@ -1,5 +1,21 @@
 # Events Content
 
+##Title of Event 
+
+**Date: 
+**Time: 
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: 
+**Image: 
+**Booking link: 
+
+**Card description** (1–2 sentences for the events grid): 
+**Full description** 
+**Images**
+**Facilitator: 
+**Facilitator bio:  
+**Facilitator photo: 
+
 ---
 
 ## AWHI Book Club!
@@ -208,7 +224,7 @@ Download her app here: https://elivatebyeli.com/ **
 **Facilitators photo: Luisa&Eli.jpg
 
 ---
-## Prenatal Yoga
+## Prenatal Yoga - Teaching Pregnant Bodies
 **Date: Fri–Sun, 14–16 August 2026
 **Time: Fri 5:30–8:30pm · Sat 10am–6pm · Sun 12–6pm
 **Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
@@ -237,7 +253,7 @@ Her teaching blends alignment-based yoga with the fluidity and expression of dan
 **Date: Sat 5th September & Sat 26 Sept + pre-recorded content
 **Time: 9am - 5pm
 **Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
-**Price: $349 Early Bird (before 8 August); $399 Full Rate 
+**Price: $399 Early Bird (before 8 August); $499 Full Rate 
 **Image: Tom_pranayama.jpg
 **Booking link: https://momence.com/l/k8hwo416
 
@@ -254,3 +270,26 @@ This workshop can also be taken by certified yoga teachers for 25 Continuing Edu
 **Facilitator: Tom Brotherstone
 
 **Facilitator bio:  E-RYT 500 and AWHI co-owner with over a decade teaching experience in Yin and Vinyasa yoga. Tom trained in Rishikesh, India and his focus is on building community through practice — providing supportive platforms for growth and self-discovery. His easeful, approachable style puts students immediately at ease, and his classes weave yoga philosophy throughout, grounding movement in meaning.
+
+---
+##Hands On Assisting Workshop
+
+**Date: 30 October - 1 November, 2026 
+**Time: Friday, 30th October, 4:30-8pm; Saturday, 31st October, 9am-4pm; Sunday, 1st November, 8:30-3pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $349 Early Bird (by 2 October) ; $399 Full Rate 
+**Image: Standin.jpg
+**Booking link: https://momence.com/l/x9h6JvRX
+
+**Card description** (1–2 sentences for the events grid): The art and ethics of delivering hands-on assists — a weekend intensive for yoga teachers.
+**Full description**: A practical weekend intensive for yoga teachers to develop skills and learn the art of delivering effective assists in the classroom. These are not 'adjustments', nor 'corrections' -- but assists designed to enhance our students' practice. 
+ 
+The course will cover consent protocols, the three types of assists (verbal, energetic, and mechanical touch), safe and trauma-aware assist delivery, and inclusive touch practices. There will be extensive hands-on practice time with peer feedback.
+
+Who is this course for:
+
+Certified Yoga Teachers looking to deepen their knowledge, understanding and competency in providing verbal and manual assists in order to add depth and connection in your teachings.  This course can be taken as an elective towards AWHI's 300hr Vinyasa YTT certification and/or as 15 hours Continuing Education Credits with Yoga Alliance.  The course can also be taken for the purpose of professional development with some level of yoga teacher training - please get in touch if you'd like to discuss!
+
+**Facilitator: Rusty Millar
+**Facilitator bio: Russell (he/him) is RYT-500 with Yoga Alliance and has over 20 years of personal practice. Russell sees teaching as personal dharma — empowering students to become their own guides rather than relying on external authority.
+**Facilitator photo: Rusty.jpeg

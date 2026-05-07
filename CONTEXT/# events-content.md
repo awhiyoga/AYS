@@ -26,9 +26,11 @@
 **Image: Bookclub.jpg**
 **Booking link: https://momence.com/l/P0hX9qov** 
 
-**Card description** (1–2 sentences for the events grid): No pressure. No performances and definitely no homework policing!  Just some friendly & engaged kōrero about our selected book of the month!
+**Card description** (1–2 sentences for the events grid): No pressure. No performances and definitely no homework policing!  Just some friendly & engaged kōrero about our selected book of the month! June/July Read: The Web of Meaning: Integrating Science and Traditional Wisdom to Find our Place in the Universe, by Jeremy Lent.
 
-**Full description** (for the event page): No pressure. No performative book-club energy. Definitely no homework policing. Just show up, join the kōrero, and see what you think! It’s free to join, but please register your interest below so we can manage the snacks properly! For 6th May, we'll be reading Chapters 3 & 4 of the book "Rest Is Resistance" by Tricia Hersey!
+**Full description** (for the event page): No pressure. No performative book-club energy. Definitely no homework policing. Just show up, join the kōrero, and see what you think! It’s free to join, but please register your interest below so we can manage the snacks properly! For 3 June, we'll be reading the first half of The Web of Meaning: Integrating Science and Traditional Wisdom to Find our Place in the Universe, by Jeremy Lent (Parts 1-3). For July, we'll read Parts 4-6 of the same text. 
+
+You don't have to complete the entire reading to join! The book can be loaned from the Wellington Library, purchased online or streamed online free with Spotify Premium.
 
 Facilitated by AWHI member and co-founder of Good Company Yoga, Veena Patel, with low-level support from full-time book nerd, KK!
 

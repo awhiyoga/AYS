@@ -326,5 +326,5 @@ We  have copies of Kupu Whenua for sale at the studio for $32.  You can get your
 **Facilitator: Hana Buchanan
 **Facilitator bio: Hana (Taranaki iwi, Te Ātiawa, Taranaki Whānui ki te Upoko o te Ika) is a tangata toikupu — poet, kaikaranga, kaitito and working from her ancestral lands in Te Whanganui-a-Tara. Her most recent publication, Kupu Whenua (Steel Roberts, 2026), is a collection of toikupu that takes us through mountains and waterways, layers of history, time, language and perspective -- inviting a fresh look at the once familiar. Hana is also one of our most beloved CYT-200 kaiako with 25+ years of yoga and pū āio practice. Her teaching deeply emphasises mātauranga Māori and the synergies between yoga and Māori ways of knowing and being.
 **Facilitator photo: Hana-walking.JPG
-
+**Photo credit: Julia Sabugosa Photography
 ---

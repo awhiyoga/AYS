@@ -295,3 +295,36 @@ Certified Yoga Teachers looking to deepen their knowledge, understanding and com
 **Facilitator: Rusty Millar
 **Facilitator bio: Russell (he/him) is RYT-500 with Yoga Alliance and has over 20 years of personal practice. Russell sees teaching as personal dharma — empowering students to become their own guides rather than relying on external authority.
 **Facilitator photo: Rusty.jpeg
+
+---
+
+##Hīkoi with Hana
+
+**Date: Saturday, 29 August, 2026
+**Time: 11:30-12:45pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD
+**Price: $25 ($20 students/concession card holders and Members on 3/6/12 month contract)
+**Image: Hana-walking.JPG
+**Booking link: https://momence.com/l/R5hJ69o0
+
+**Card description** (1–2 sentences for the events grid): A pre-spring event with AWHI kaiako and author Hana Buchanan that weaves words, walking & talking -- nourishing all aspects of your whare tapawhā! 
+**Full description: Join AWHI kaiako and author Hana Buchanan for a pre-spring event that weaves words, walking & talking, and will nourish all aspects of your whare tapawhā! 
+
+The event starts at AWHI (Whare Oho) where Hana will introduce the kaupapa of her book Kupu Whenua and its connection to holistic wellbeing. Delight in listening to a curated selection of toikupu - poems from her pukapuka, Kupu Whenua, as well as the kōrero that sits behind and within those words. We'll then move beyond the whare for a short hīkoi to neighbouring sites where the words, the kupu, the whenua, the land, and the tangata (Tangata Whenua, Tangata Tiriti) will come to life! 
+
+Further information on timings and locations:
+
+Hīkoi with Hana will start at AWHI (intro & readings up to 30 minutes) & we will then have a short hīkoi together (approx 30-45 minutes), where these works and their kōrero will connect to place. Our walk will be going from AWHI to two sites at nearby: Kumutoto Wharf then towards the Beehive via Lambton Quay.  Our hīkoi will end outside the Cenotaph (corner Bowen St and Lambton Quay) at 12.45pm.  
+Please wear comfortable shoes, bring a jacket, water bottle or any snacks you might need!
+
+In case of inclement weather:
+
+If the weather is really terrible on the day, the Hīkoi with Hana will still go ahead - all inside AWHI with our imaginations doing the walking ;)
+
+Kupu Whenua 
+We  have copies of Kupu Whenua for sale at the studio for $32.  You can get yours on the day if you don't have one already...and BONUS, get it signed by Hana!  
+**Facilitator: Hana Buchanan
+**Facilitator bio: Hana (Taranaki iwi, Te Ātiawa, Taranaki Whānui ki te Upoko o te Ika) is a tangata toikupu — poet, kaikaranga, kaitito and working from her ancestral lands in Te Whanganui-a-Tara. Her most recent publication, Kupu Whenua (Steel Roberts, 2026), is a collection of toikupu that takes us through mountains and waterways, layers of history, time, language and perspective -- inviting a fresh look at the once familiar. Hana is also one of our most beloved CYT-200 kaiako with 25+ years of yoga and pū āio practice. Her teaching deeply emphasises mātauranga Māori and the synergies between yoga and Māori ways of knowing and being.
+**Facilitator photo: Hana-walking.JPG
+
+---

@@ -322,9 +322,10 @@ In case of inclement weather:
 If the weather is really terrible on the day, the Hīkoi with Hana will still go ahead - all inside AWHI with our imaginations doing the walking ;)
 
 Kupu Whenua 
-We  have copies of Kupu Whenua for sale at the studio for $32.  You can get yours on the day if you don't have one already...and BONUS, get it signed by Hana!  
+We have copies of Kupu Whenua for sale at the studio for $32.  You can get yours on the day if you don't have one already...and BONUS, get it signed by Hana!  
 **Facilitator: Hana Buchanan
 **Facilitator bio: Hana (Taranaki iwi, Te Ātiawa, Taranaki Whānui ki te Upoko o te Ika) is a tangata toikupu — poet, kaikaranga, kaitito and working from her ancestral lands in Te Whanganui-a-Tara. Her most recent publication, Kupu Whenua (Steel Roberts, 2026), is a collection of toikupu that takes us through mountains and waterways, layers of history, time, language and perspective -- inviting a fresh look at the once familiar. Hana is also one of our most beloved CYT-200 kaiako with 25+ years of yoga and pū āio practice. Her teaching deeply emphasises mātauranga Māori and the synergies between yoga and Māori ways of knowing and being.
 **Facilitator photo: Hana-walking.JPG
 **Photo credit: Julia Sabugosa Photography
 ---
+

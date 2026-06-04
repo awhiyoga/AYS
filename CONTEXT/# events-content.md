@@ -329,3 +329,22 @@ We have copies of Kupu Whenua for sale at the studio for $32.  You can get yours
 **Photo credit: Julia Sabugosa Photography
 ---
 
+##The Pattern Shift
+
+**Date: 15 July
+**Time: 5:30-9:30pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $88
+**Image: PatternShift.jpg
+**Booking link: https://thepatternshift.com/#events
+
+**Card description** (1–2 sentences for the events grid): Spend four hours with Allura Halliwell understanding how you can shift from within.
+**Full description**: Most people who find their way here have already done a lot of work on themselves. Maybe you've read the books. Sat with the therapists. Tried the breathwork, the meditation, the weekend workshops. And in many ways it has helped.
+
+But underneath all of it, something hasn't shifted. The same feelings keep returning. The same dynamics play out. The same inner voice. The same loops.
+
+This event is for people who are ready to understand why. You'll leave with a clear map of your core wound, a lived experience of beginning to move through it, and a practical framework to continue the work.
+**Images**
+**Facilitator: Allura Halliwell
+**Facilitator bio:  Allura Halliwell is Australia's leading core wound healer and founder of The Consciousness Method™. With a background in psychology and advanced training in Quantum Meditation, Allura has helped hundreds of people access a deeper relationship with their authentic, whole self — by returning them to what was always already there. The Pattern Shift is the entry point into her deeper work.
+**Facilitator photo: PatternShift.jpg

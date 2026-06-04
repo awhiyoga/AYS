@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Hire — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Hire one or both of AWHI Yoga & Wellbeing's studios for private events. View rates, availability, and booking terms." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMH30J5X50"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMH30J5X50');
+  </script>
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+    .display-heading { font-family: var(--font-display); font-weight: 600; line-height: 1.05; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      transition: background 0.3s;
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { color: var(--hua); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; opacity: 0.85; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-book { background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem; font-weight: 700 !important; font-size: 0.8rem !important; letter-spacing: 0.08em; text-transform: uppercase; opacity: 1 !important; transition: background 0.25s !important; }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 5rem) 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/Awhi_BookClubbyJuliaSabugosa-16-crop.jpg');
+      background-size: cover; background-position: center 40%;
+      opacity: 0.1;
+    }
+    .page-hero .container { position: relative; z-index: 1; max-width: 800px; }
+    .page-hero-eyebrow { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--hua); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 600; color: var(--hua); line-height: 0.95; margin-bottom: 1.5rem; }
+    .page-hero-sub { color: rgba(244,239,228,0.85); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 600px; line-height: 1.7; }
+
+    /* ─── WHAT'S INCLUDED ────────────────────────────────── */
+    .included {
+      background: white;
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .included .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+    .included h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; color: var(--ngahere); line-height: 1.1; }
+    .included-items { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .included-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.95rem; color: var(--pango);
+    }
+    .included-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--kawakawa); flex-shrink: 0; }
+
+    /* ─── SECTION WRAPPER ────────────────────────────────── */
+    .hire-section { padding: clamp(4rem, 7vw, 6rem) 0; }
+    .hire-section + .hire-section { border-top: 1px solid rgba(0,0,0,0.07); }
+    .hire-section.bg-green { background: var(--ngahere); color: var(--hua); }
+    .hire-section.bg-cream { background: var(--hua); }
+    .hire-section.bg-off { background: #f0ebe0; }
+
+    .hire-section h2 {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 600; line-height: 1.05; margin-bottom: 0.5rem;
+    }
+    .hire-section.bg-green h2 { color: var(--hua); }
+    .hire-section.bg-cream h2,
+    .hire-section.bg-off h2 { color: var(--ngahere); }
+
+    .section-intro { font-size: 1rem; opacity: 0.8; max-width: 640px; margin-bottom: 2.5rem; line-height: 1.7; }
+    .hire-section.bg-green .section-intro { color: rgba(244,239,228,0.8); }
+
+    /* ─── RATE CARDS ─────────────────────────────────────── */
+    .rate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .rate-card {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 2rem 2.25rem;
+    }
+    .hire-section.bg-green .rate-card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
+    .rate-card-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.5rem;
+    }
+    .rate-card h3 {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 600;
+      color: var(--ngahere); margin-bottom: 0.4rem; line-height: 1.1;
+    }
+    .hire-section.bg-green .rate-card h3 { color: var(--hua); }
+    .rate-card .capacity {
+      font-size: 0.8rem; color: #888; margin-bottom: 1.5rem;
+    }
+    .hire-section.bg-green .rate-card .capacity { color: rgba(244,239,228,0.5); }
+
+    .rate-rows { display: flex; flex-direction: column; gap: 0; }
+    .rate-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.95rem;
+    }
+    .hire-section.bg-green .rate-row { border-bottom-color: rgba(255,255,255,0.1); }
+    .rate-row:last-child { border-bottom: none; }
+    .rate-row .duration { color: #555; }
+    .hire-section.bg-green .rate-row .duration { color: rgba(244,239,228,0.7); }
+    .rate-row .price { font-weight: 700; color: var(--ngahere); }
+    .hire-section.bg-green .rate-row .price { color: var(--hua); }
+
+    /* cleaning fee notice */
+    .cleaning-notice {
+      margin-top: 2rem;
+      background: rgba(192,92,44,0.08);
+      border-left: 3px solid var(--repo);
+      padding: 1.25rem 1.5rem;
+      font-size: 0.9rem; line-height: 1.7;
+    }
+    .hire-section.bg-green .cleaning-notice { background: rgba(255,255,255,0.06); border-left-color: var(--dusk); }
+    .cleaning-notice strong { color: var(--repo); display: block; margin-bottom: 0.25rem; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .hire-section.bg-green .cleaning-notice strong { color: var(--dusk); }
+    .hire-section.bg-green .cleaning-notice { color: rgba(244,239,228,0.8); }
+
+    /* ─── PROMO OPTIONS ──────────────────────────────────── */
+    .promo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .promo-card {
+      border: 2px solid rgba(28,56,41,0.15);
+      padding: 2.25rem;
+      position: relative;
+    }
+    .promo-card.featured { border-color: var(--repo); }
+    .promo-badge {
+      position: absolute; top: -1px; right: 2rem;
+      background: var(--repo); color: var(--hua);
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.3rem 0.85rem;
+    }
+    .promo-card h3 {
+      font-family: var(--font-display); font-size: 1.75rem; font-weight: 600;
+      color: var(--ngahere); margin-bottom: 0.25rem; line-height: 1.1;
+    }
+    .promo-card .promo-subtitle { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
+
+    .promo-rates { margin-bottom: 1.75rem; }
+    .promo-rates h4 {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.75rem;
+    }
+    .promo-rate-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.9rem;
+    }
+    .promo-rate-row:last-child { border-bottom: none; }
+    .promo-rate-row .duration { color: #555; }
+    .promo-rate-row .price { font-weight: 700; color: var(--ngahere); }
+
+    .promo-includes { margin-top: 1.5rem; }
+    .promo-includes h4 {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.75rem;
+    }
+    .promo-includes ul { display: flex; flex-direction: column; gap: 0.5rem; }
+    .promo-includes li {
+      display: flex; align-items: flex-start; gap: 0.65rem;
+      font-size: 0.9rem; color: #444; line-height: 1.5;
+    }
+    .promo-includes li::before {
+      content: '✓'; color: var(--kawakawa); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .promo-note {
+      margin-top: 2rem;
+      background: rgba(122,158,126,0.1);
+      border-left: 3px solid var(--kawakawa);
+      padding: 1.25rem 1.5rem;
+      font-size: 0.9rem; line-height: 1.7; color: #444;
+    }
+    .promo-note strong { display: block; color: var(--ngahere); margin-bottom: 0.25rem; }
+
+    /* ─── AVAILABILITY ───────────────────────────────────── */
+    .availability-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1rem;
+    }
+    .avail-day {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 1.25rem 1rem;
+    }
+    .avail-day h4 {
+      font-family: var(--font-body); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa);
+      margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .avail-day ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .avail-day li {
+      font-size: 0.8rem; line-height: 1.4; color: #444;
+      padding: 0.4rem 0.6rem;
+      background: rgba(122,158,126,0.08);
+      border-left: 2px solid var(--kawakawa);
+    }
+    .avail-day li.small-only {
+      background: rgba(192,92,44,0.06);
+      border-left-color: var(--dusk);
+      color: #666;
+    }
+    .avail-day li.small-only::after {
+      content: ' ·  small studio only';
+      font-size: 0.7rem; opacity: 0.7; display: block;
+    }
+    .avail-day li.large-only {
+      background: rgba(28,56,41,0.06);
+      border-left-color: var(--kawakawa);
+      color: #555;
+    }
+    .avail-day li.large-only::after {
+      content: ' ·  large studio only';
+      font-size: 0.7rem; opacity: 0.7; display: block;
+    }
+    .avail-note {
+      margin-top: 1.5rem;
+      font-size: 0.875rem; color: #666;
+      padding: 1rem 1.25rem;
+      background: rgba(122,158,126,0.08);
+      border-left: 3px solid var(--kawakawa);
+      line-height: 1.6;
+    }
+
+    /* ─── T&CS ───────────────────────────────────────────── */
+    .tcs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .tc-block {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 2rem 2.25rem;
+    }
+    .tc-block h3 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 600;
+      color: var(--ngahere); margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .tc-block p, .tc-block li {
+      font-size: 0.9rem; line-height: 1.75; color: #444;
+      margin-bottom: 0.75rem;
+    }
+    .tc-block li { padding-left: 1rem; position: relative; }
+    .tc-block li::before { content: '—'; position: absolute; left: 0; color: var(--kawakawa); }
+    .tc-block ul { display: flex; flex-direction: column; gap: 0; }
+    .tc-block p:last-child { margin-bottom: 0; }
+
+    /* ─── CTA BAND ───────────────────────────────────────── */
+    .cta-band {
+      background: var(--ngahere);
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600; color: var(--hua); margin-bottom: 1rem;
+    }
+    .cta-band p { color: rgba(244,239,228,0.8); font-size: 1rem; margin-bottom: 2rem; }
+    .cta-band .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer { background: var(--pango); padding: clamp(3rem,6vw,5rem) 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand img { height: 48px; margin-bottom: 1rem; filter: brightness(10); }
+    .footer-brand p { font-size: 0.875rem; color: rgba(244,239,228,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a { color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-socials a:hover { color: var(--hua); }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,239,228,0.4); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col li a { font-size: 0.875rem; color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-col li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.875rem; color: rgba(244,239,228,0.6); line-height: 1.8; }
+    .footer-contact a { color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom { border-top: 1px solid rgba(244,239,228,0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(244,239,228,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(244,239,228,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .availability-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .rate-grid, .promo-grid, .tcs-grid { grid-template-columns: 1fr; }
+      .included .container { grid-template-columns: 1fr; }
+      .included-items { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .availability-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .availability-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="school/index.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+        <h1>Studio<br>Hire</h1>
+        <p class="page-hero-sub">AWHI Yoga & Wellbeing offers beautiful, purpose-built studio space for private events, workshops, and gatherings. Everything you need — we'll take care of the rest.</p>
+      </div>
+    </section>
+
+    <!-- ── WHAT'S INCLUDED ────────────────────────────────── -->
+    <section class="included fade-up">
+      <div class="container">
+        <div>
+          <span class="section-label">All hires include</span>
+          <h2>Everything you need<br>to run your event.</h2>
+        </div>
+        <div class="included-items">
+          <div class="included-item"><span class="included-dot"></span>Full studio access</div>
+          <div class="included-item"><span class="included-dot"></span>Reception area</div>
+          <div class="included-item"><span class="included-dot"></span>Yoga mats</div>
+          <div class="included-item"><span class="included-dot"></span>Blocks &amp; bolsters</div>
+          <div class="included-item"><span class="included-dot"></span>Pillows &amp; blankets</div>
+          <div class="included-item"><span class="included-dot"></span>Straps</div>
+          <div class="included-item"><span class="included-dot"></span>Sound system</div>
+          <div class="included-item"><span class="included-dot"></span>Complimentary herbal tea</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HIRE ONLY RATES ───────────────────────────────── -->
+    <section class="hire-section bg-cream" id="hire-only">
+      <div class="container">
+        <span class="section-label">Studio Hire Only</span>
+        <h2>Hire Only Rates</h2>
+        <p class="section-intro">Rates effective 1 December 2025. You handle all ticket sales, marketing, promotion, and clean-up. Pricing assumes no food or drink outside of our complimentary herbal tea. All prices exclude GST.</p>
+
+        <div class="rate-grid fade-up">
+          <!-- Large Studio -->
+          <div class="rate-card">
+            <p class="rate-card-label">Option 1</p>
+            <h3>Large Studio<br>or Both Studios</h3>
+            <p class="capacity">Large studio: max 60 people · Both studios: max 80 people</p>
+            <div class="rate-rows">
+              <div class="rate-row"><span class="duration">1st hour</span><span class="price">$95</span></div>
+              <div class="rate-row"><span class="duration">1–2 hours</span><span class="price">$150</span></div>
+              <div class="rate-row"><span class="duration">2–3 hours</span><span class="price">$200</span></div>
+              <div class="rate-row"><span class="duration">Each additional hour past 3 hrs</span><span class="price">+$50</span></div>
+            </div>
+          </div>
+
+          <!-- Small Studio -->
+          <div class="rate-card">
+            <p class="rate-card-label">Option 2</p>
+            <h3>Small Studio</h3>
+            <p class="capacity">Capacity: 15 mats · 20 people (no mats)</p>
+            <div class="rate-rows">
+              <div class="rate-row"><span class="duration">1st hour</span><span class="price">$60</span></div>
+              <div class="rate-row"><span class="duration">2 hours</span><span class="price">$110</span></div>
+              <div class="rate-row"><span class="duration">3–4 hours</span><span class="price">$160</span></div>
+              <div class="rate-row"><span class="duration">Over 4 hours</span><span class="price">$250</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cleaning-notice fade-up">
+          <strong>Cleaning Fee — $50</strong>
+          Added to any event that includes food or drink outside of our complimentary herbal tea. The cleaning fee ensures the studio is up to standard for incoming classes. If the cleaning fee is not paid for events where outside food or drink is present, we will be unable to approve future hire requests.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HIRE + PROMO ──────────────────────────────────── -->
+    <section class="hire-section bg-green" id="hire-promo">
+      <div class="container">
+        <span class="section-label" style="color: var(--kawakawa);">Studio Hire + Promotion</span>
+        <h2>Hire + Promo Support</h2>
+        <p class="section-intro">Need help getting the word out? We offer two promotional support packages to market your event to the AWHI community. All prices exclude GST.</p>
+
+        <div class="promo-grid fade-up">
+          <!-- Option 1 -->
+          <div class="promo-card">
+            <p class="rate-card-label" style="color: var(--kawakawa);">Option 1</p>
+            <h3>Basic Promo Support</h3>
+            <p class="promo-subtitle" style="color: rgba(244,239,228,0.6);">Hire + foundational marketing</p>
+
+            <div class="promo-rates">
+              <h4>Whole Studio</h4>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">1st hour</span><span class="price" style="color:var(--hua)">$275</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">½ day (2–3 hours)</span><span class="price" style="color:var(--hua)">$350</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">Full day</span><span class="price" style="color:var(--hua)">$550</span></div>
+            </div>
+            <div class="promo-rates">
+              <h4>Small Studio</h4>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">1st hour</span><span class="price" style="color:var(--hua)">$240</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">½ day (2–3 hours)</span><span class="price" style="color:var(--hua)">$310</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">Full day</span><span class="price" style="color:var(--hua)">$450</span></div>
+            </div>
+
+            <div class="promo-includes">
+              <h4>What's included</h4>
+              <ul style="color: rgba(244,239,228,0.8);">
+                <li>Event in our monthly newsletter</li>
+                <li>Event featured on AWHI website</li>
+                <li>Facebook event page + 1 post (1 week prior)</li>
+                <li>1 × Instagram story</li>
+                <li>1 × Instagram post</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="promo-card featured">
+            <div class="promo-badge">Most support</div>
+            <p class="rate-card-label" style="color: var(--kawakawa);">Option 2</p>
+            <h3>Extra Promo Support</h3>
+            <p class="promo-subtitle" style="color: rgba(244,239,228,0.6);">Hire + full marketing package (~8 hrs)</p>
+
+            <div class="promo-rates">
+              <h4>Whole Studio</h4>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">1st hour</span><span class="price" style="color:var(--hua)">$375</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">½ day (2–3 hours)</span><span class="price" style="color:var(--hua)">$450</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">Full day</span><span class="price" style="color:var(--hua)">$650</span></div>
+            </div>
+            <div class="promo-rates">
+              <h4>Small Studio</h4>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">1st hour</span><span class="price" style="color:var(--hua)">$350</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">½ day (2–3 hours)</span><span class="price" style="color:var(--hua)">$420</span></div>
+              <div class="promo-rate-row"><span class="duration" style="color:rgba(244,239,228,0.7)">Full day</span><span class="price" style="color:var(--hua)">$580</span></div>
+            </div>
+
+            <div class="promo-includes">
+              <h4>What's included</h4>
+              <ul style="color: rgba(244,239,228,0.8);">
+                <li>Event in our monthly newsletter</li>
+                <li>Event featured on AWHI website</li>
+                <li>Facebook event page + 2 posts prior to event</li>
+                <li>3 × Instagram stories</li>
+                <li>2 × Instagram posts</li>
+                <li>Event poster designed &amp; printed (10 copies + 1 for AWHI studio)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cleaning-notice fade-up">
+          <strong>* Required for Options 1 &amp; 2</strong>
+          We'll need a couple of good quality images, an event description, and links to relevant websites and social media handles for promotional purposes. We require a minimum of <strong>4 weeks lead time</strong> to promote events — we are unable to offer promotional support if marketing materials are not received within this timeframe.
+        </div>
+
+        <div class="cleaning-notice fade-up" style="margin-top: 1rem;">
+          <strong>Cleaning Fee — $50</strong>
+          Added to any event that includes food or drink outside of our complimentary herbal tea.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AVAILABILITY ──────────────────────────────────── -->
+    <section class="hire-section bg-off" id="availability">
+      <div class="container">
+        <span class="section-label">Studio Availability</span>
+        <h2>Available Time Slots</h2>
+        <p class="section-intro">The following are our general available times for studio hire. This excludes special events and teacher trainings that may already be scheduled — please provide more than one preferred option where possible.</p>
+
+        <div class="availability-grid fade-up">
+          <div class="avail-day">
+            <h4>Monday</h4>
+            <ul>
+              <li>7:45am – 11:45am</li>
+              <li>1:45pm – 5:00pm</li>
+              <li class="small-only">After 7pm</li>
+              <li>After 8pm</li>
+            </ul>
+          </div>
+          <div class="avail-day">
+            <h4>Tuesday</h4>
+            <ul>
+              <li>7:45am – 9:15am</li>
+              <li>10:45am – 12pm</li>
+              <li>1:45pm – 5pm</li>
+              <li>After 8pm</li>
+            </ul>
+          </div>
+          <div class="avail-day">
+            <h4>Wednesday</h4>
+            <ul>
+              <li>8:45am – 11:45am</li>
+              <li>1:30pm – 3:45pm</li>
+              <li class="small-only">After 3:45pm</li>
+              <li class="large-only">After 7:30pm</li>
+            </ul>
+          </div>
+          <div class="avail-day">
+            <h4>Thursday</h4>
+            <ul>
+              <li>7:45am – 12pm</li>
+              <li class="small-only">12pm – 5:30pm</li>
+              <li>1:30pm – 5pm</li>
+              <li>After 8pm</li>
+            </ul>
+          </div>
+          <div class="avail-day">
+            <h4>Friday</h4>
+            <ul>
+              <li>8:15am – 9:15am</li>
+              <li class="small-only">10:30am – 1:15pm</li>
+              <li>1:30pm – 4pm</li>
+              <li>After 7pm</li>
+            </ul>
+          </div>
+          <div class="avail-day">
+            <h4>Saturday</h4>
+            <ul>
+              <li>11:30am – 4pm</li>
+              <li>After 6pm</li>
+            </ul>
+          </div>
+          <div class="avail-day">
+            <h4>Sunday</h4>
+            <ul>
+              <li>12pm – 2:30pm</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="avail-note fade-up">
+          <strong>Please note:</strong> These slots are subject to change based on scheduled classes, events, and teacher trainings. We recommend providing multiple preferred date and time options when enquiring.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── T&CS ───────────────────────────────────────────── -->
+    <section class="hire-section bg-cream" id="terms">
+      <div class="container">
+        <span class="section-label">Booking &amp; Terms</span>
+        <h2>How to Reserve<br>Our Studio</h2>
+        <p class="section-intro">Once studio availability has been confirmed, please read, complete and return the Hire Agreement to reserve your booking.</p>
+
+        <div class="tcs-grid fade-up">
+          <div class="tc-block">
+            <h3>Hire Only — Payment &amp; Holding</h3>
+            <p>Payment is due within <strong>48 hours</strong> of your event or booking date.</p>
+            <p>We will hold your booking for free unless another party requests the studio on your reserved date. If a competing enquiry is received, you will need to pay your hire fee (non-refundable) in full within <strong>3 days</strong> to hold the space.</p>
+            <p>If you decide not to proceed at that point, the booking will be offered to the other enquiring party.</p>
+          </div>
+
+          <div class="tc-block">
+            <h3>Hire + Promo — Payment Terms</h3>
+            <ul>
+              <li><strong>50% deposit</strong> is required before any promotions are made or posted, to cover marketing staff costs. This deposit is non-refundable on cancellation.</li>
+              <li>A minimum of <strong>4 weeks lead time</strong> is required to promote your event. Promotional support cannot be provided if marketing materials (images, description, bio, etc.) are not received in time.</li>
+              <li>The <strong>remaining balance</strong> is due within 48 hours of your event or booking date.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BAND ───────────────────────────────────────── -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to enquire?</h2>
+        <p>Check your preferred dates against our availability above, then get in touch — we'd love to host your event.</p>
+        <div class="cta-buttons">
+          <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-primary">Email us to enquire</a>
+          <a href="contact.html" class="btn btn-outline-cream">Contact page</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">View timetable</a></li>
+            <li><a href="pricing.html">Pricing &amp; Membership</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="school/index.html">Teacher Training</a></li>
+            <li><a href="studio-hire.html">Studio Hire</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington CBD<br>
+            Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kathleen@awhiyoga.co.nz">kathleen@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => {
+      const isOpen = navLinks.style.display === 'flex';
+      navLinks.style.display = isOpen ? 'none' : 'flex';
+      if (!isOpen) {
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '80px';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = 'var(--ngahere)';
+        navLinks.style.padding = '1.5rem 2rem';
+        navLinks.style.gap = '1.25rem';
+      }
+    });
+  </script>
+
+</body>
+</html>

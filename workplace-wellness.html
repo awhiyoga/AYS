@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workplace Wellness — AWHI Yoga & Wellbeing</title>
+  <meta name="description" content="Strengthen your workplace with wellbeing. AWHI offers corporate yoga passes, private group classes, and educational workshops for organisations in Wellington." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMH30J5X50"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMH30J5X50');
+  </script>
+
+  <style>
+    :root {
+      --ngahere:   #1C3829;
+      --hua:       #F4EFE4;
+      --repo:      #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --dusk:      #C4896A;
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--hua); color: var(--pango); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 2px solid transparent; cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-primary { background: var(--repo); color: var(--hua); border-color: var(--repo); }
+    .btn-primary:hover { background: #a34a20; border-color: #a34a20; }
+    .btn-outline-cream { background: transparent; color: var(--hua); border-color: var(--hua); }
+    .btn-outline-cream:hover { background: var(--hua); color: var(--ngahere); }
+    .btn-outline-dark { background: transparent; color: var(--ngahere); border-color: var(--ngahere); }
+    .btn-outline-dark:hover { background: var(--ngahere); color: var(--hua); }
+
+    .section-label {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa);
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1.5px; background: var(--kawakawa); }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ─── NAV ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: var(--ngahere); box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      transition: background 0.3s;
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { color: var(--hua); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; opacity: 0.85; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-book { background: var(--repo); color: var(--hua) !important; padding: 0.6rem 1.4rem; font-weight: 700 !important; font-size: 0.8rem !important; letter-spacing: 0.08em; text-transform: uppercase; opacity: 1 !important; transition: background 0.25s !important; }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    .page-hero {
+      background: var(--ngahere);
+      padding: calc(var(--nav-h) + 5rem) 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('Images/AwhibyJuliaSabugosa-095.jpg');
+      background-size: cover; background-position: center 30%;
+      opacity: 0.3;
+    }
+    .page-hero .container { position: relative; z-index: 1; max-width: 800px; }
+    .page-hero-eyebrow { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.2rem); color: var(--hua); margin-bottom: 0.75rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 600; color: var(--hua); line-height: 0.95; margin-bottom: 1.5rem; }
+    .page-hero-sub { color: rgba(244,239,228,0.9); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 600px; line-height: 1.7; }
+
+    /* ─── INTRO STRIP ─────────────────────────────────────── */
+    .intro-strip {
+      background: white;
+      padding: clamp(3rem, 5vw, 4.5rem) 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .intro-strip .container {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .intro-strip h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; color: var(--ngahere); line-height: 1.1; }
+    .intro-strip p { color: #555; line-height: 1.8; font-size: 0.975rem; }
+    .intro-strip p + p { margin-top: 0.75rem; }
+
+    /* ─── SECTION WRAPPER ─────────────────────────────────── */
+    .ww-section { padding: clamp(4rem, 7vw, 6rem) 0; }
+    .ww-section.bg-green { background: var(--ngahere); }
+    .ww-section.bg-cream { background: var(--hua); }
+    .ww-section.bg-off { background: #f0ebe0; }
+    .ww-section.bg-white { background: white; }
+    .ww-section + .ww-section { border-top: 1px solid rgba(0,0,0,0.07); }
+    .ww-section.bg-green + .ww-section { border-top: none; }
+
+    .ww-section h2 {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 600; line-height: 1.05; margin-bottom: 0.5rem;
+    }
+    .ww-section.bg-green h2 { color: var(--hua); }
+    .ww-section.bg-cream h2,
+    .ww-section.bg-off h2,
+    .ww-section.bg-white h2 { color: var(--ngahere); }
+    .section-intro { font-size: 1rem; max-width: 680px; margin-bottom: 2.5rem; line-height: 1.75; opacity: 0.85; }
+    .ww-section.bg-green .section-intro { color: var(--hua); }
+
+    /* ─── PASS CARDS ──────────────────────────────────────── */
+    .pass-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .pass-card {
+      background: white; border: 1px solid rgba(0,0,0,0.07);
+      padding: 1.75rem 1.5rem; text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .pass-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .pass-card .pass-qty { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--ngahere); line-height: 1; margin-bottom: 0.25rem; }
+    .pass-card .pass-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 1.25rem; }
+    .pass-card .pass-price { font-size: 1.75rem; font-weight: 700; color: var(--repo); margin-bottom: 0.25rem; }
+    .pass-card .pass-per { font-size: 0.8rem; color: #888; }
+    .pass-note { margin-top: 1.5rem; font-size: 0.875rem; color: #666; line-height: 1.7; padding: 1rem 1.25rem; background: rgba(122,158,126,0.08); border-left: 3px solid var(--kawakawa); }
+
+    /* ─── PRIVATE CLASS CARDS ─────────────────────────────── */
+    .class-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .class-card {
+      background: white; border: 1px solid rgba(0,0,0,0.07);
+      padding: 2rem 2.25rem;
+    }
+    .class-card-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.5rem; }
+    .class-card h3 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 600; color: var(--ngahere); line-height: 1.1; margin-bottom: 0.4rem; }
+    .class-card .class-price { font-size: 2.25rem; font-weight: 700; color: var(--repo); margin: 1rem 0 0.25rem; font-family: var(--font-display); }
+    .class-card .class-duration { font-size: 0.85rem; color: #777; margin-bottom: 1.25rem; }
+    .class-card ul { display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 1.25rem; }
+    .class-card li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.9rem; color: #444; line-height: 1.5; }
+    .class-card li::before { content: '✓'; color: var(--kawakawa); font-weight: 700; flex-shrink: 0; }
+    .virtual-note {
+      margin-top: 1.5rem; padding: 1.25rem 1.5rem;
+      background: rgba(192,92,44,0.07); border-left: 3px solid var(--repo);
+      font-size: 0.9rem; line-height: 1.7; color: #444;
+    }
+    .virtual-note strong { color: var(--repo); display: block; margin-bottom: 0.2rem; }
+
+    /* ─── WORKSHOP CARDS ──────────────────────────────────── */
+    .workshop-intro-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .workshop-type-card {
+      padding: 1.75rem 2rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+    }
+    .workshop-type-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--hua); margin-bottom: 0.75rem; }
+    .workshop-type-card p { font-size: 0.9rem; color: rgba(244,239,228,0.85); line-height: 1.75; }
+
+    .workshop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .workshop-card {
+      background: white; border: 1px solid rgba(0,0,0,0.07);
+      padding: 1.75rem 1.75rem;
+    }
+    .workshop-card h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--ngahere); margin-bottom: 0.6rem; line-height: 1.2; }
+    .workshop-card p { font-size: 0.875rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
+    .workshop-card p:last-child { margin-bottom: 0; }
+    .workshop-covers { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); }
+    .workshop-covers-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--kawakawa); margin-bottom: 0.6rem; }
+    .workshop-covers ul { display: flex; flex-direction: column; gap: 0.3rem; }
+    .workshop-covers li { font-size: 0.8rem; color: #666; display: flex; gap: 0.5rem; align-items: flex-start; }
+    .workshop-covers li::before { content: '—'; color: var(--kawakawa); flex-shrink: 0; }
+
+    .custom-note {
+      margin-top: 1.5rem; padding: 1.25rem 1.5rem;
+      background: rgba(255,255,255,0.07); border-left: 3px solid var(--kawakawa);
+      font-size: 0.9rem; color: rgba(244,239,228,0.9); line-height: 1.7;
+    }
+
+    /* ─── IMAGE BREAK ─────────────────────────────────────── */
+    .img-break { height: clamp(280px, 35vw, 480px); overflow: hidden; }
+    .img-break img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ─── TWO-COL CTA ─────────────────────────────────────── */
+    .cta-split {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+    }
+    .cta-split-img { overflow: hidden; }
+    .cta-split-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .cta-split-content {
+      background: var(--ngahere);
+      padding: clamp(3rem, 6vw, 5rem);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .cta-split-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--hua); line-height: 1.05; margin-bottom: 1rem; }
+    .cta-split-content p { color: rgba(244,239,228,0.85); font-size: 0.975rem; line-height: 1.8; margin-bottom: 0.5rem; }
+    .cta-split-content a { color: var(--hua); text-decoration: underline; text-underline-offset: 3px; }
+    .cta-split-content .cta-buttons { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; align-items: flex-start; }
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    .footer { background: var(--pango); padding: clamp(3rem,6vw,5rem) 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand img { height: 48px; margin-bottom: 1rem; filter: brightness(10); }
+    .footer-brand p { font-size: 0.875rem; color: rgba(244,239,228,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a { color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-socials a:hover { color: var(--hua); }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,239,228,0.4); margin-bottom: 1.25rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col li a { font-size: 0.875rem; color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-col li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.875rem; color: rgba(244,239,228,0.6); line-height: 1.8; }
+    .footer-contact a { color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-bottom { border-top: 1px solid rgba(244,239,228,0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(244,239,228,0.4); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(244,239,228,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--hua); }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .pass-grid { grid-template-columns: repeat(2, 1fr); }
+      .workshop-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .intro-strip .container { grid-template-columns: 1fr; }
+      .class-grid, .workshop-intro-grid, .cta-split { grid-template-columns: 1fr; }
+      .cta-split-img { height: 300px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .pass-grid { grid-template-columns: 1fr 1fr; }
+      .workshop-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="AWHI Yoga & Wellbeing home">
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#studio">Our Studio</a></li>
+        <li><a href="school/index.html">Teacher Training</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <p class="page-hero-eyebrow">Wellington, Aotearoa New Zealand</p>
+        <h1>Workplace<br>Wellness</h1>
+        <p class="page-hero-sub">Strengthen your workplace with wellbeing. AWHI offers a range of programmes designed to support the health and hauora of your team — at our studio, at your workplace, or online.</p>
+      </div>
+    </section>
+
+    <!-- ── INTRO ─────────────────────────────────────────────── -->
+    <section class="intro-strip fade-up">
+      <div class="container">
+        <div>
+          <span class="section-label">What we offer</span>
+          <h2>Three ways to bring<br>wellbeing to your team.</h2>
+        </div>
+        <div>
+          <p>Our Workplace Wellness programme is built around Te Whare Tapa Whā — honouring the four dimensions of wellbeing: body, mind, spirit, and community. Whether you're looking for discounted class passes for your staff, a one-off private group session, or a workshop on stress and mindfulness, we'll work with you to find the right fit.</p>
+          <p>All offerings can be delivered at our Wellington CBD studio, at your workplace, or as a webinar. Get in touch to discuss a custom programme for your organisation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CORPORATE PASSES ───────────────────────────────── -->
+    <section class="ww-section bg-cream" id="passes">
+      <div class="container">
+        <span class="section-label">Option 1</span>
+        <h2>Corporate Passes</h2>
+        <p class="section-intro">Bulk buy a package of classes for any employee within your organisation to use at our studio. Once purchased, employees can book into classes (or simply turn up) and let reception know they work for your organisation at check-in. We track usage and send you a weekly report. Valid for 1 year from date of purchase. All prices exclude GST.</p>
+
+        <div class="pass-grid fade-up">
+          <div class="pass-card">
+            <div class="pass-qty">10</div>
+            <div class="pass-label">Class Card</div>
+            <div class="pass-price">$180</div>
+            <div class="pass-per">$18 per class</div>
+          </div>
+          <div class="pass-card">
+            <div class="pass-qty">50</div>
+            <div class="pass-label">Class Card</div>
+            <div class="pass-price">$850</div>
+            <div class="pass-per">$17 per class</div>
+          </div>
+          <div class="pass-card">
+            <div class="pass-qty">100</div>
+            <div class="pass-label">Class Card</div>
+            <div class="pass-price">$1,600</div>
+            <div class="pass-per">$16 per class</div>
+          </div>
+          <div class="pass-card">
+            <div class="pass-qty">200</div>
+            <div class="pass-label">Class Card</div>
+            <div class="pass-price">$3,000</div>
+            <div class="pass-per">$15 per class</div>
+          </div>
+        </div>
+
+        <p class="pass-note fade-up">These classes are deeply discounted from our standard drop-in rate of $25. Classes can be used across yoga, Pilates, meditation and more — any class on the regular timetable.</p>
+      </div>
+    </section>
+
+    <!-- ── PRIVATE GROUP CLASSES ──────────────────────────── -->
+    <section class="ww-section bg-off" id="private-classes">
+      <div class="container">
+        <span class="section-label">Option 2</span>
+        <h2>Private Group Classes</h2>
+        <p class="section-intro">Book a private yoga, Pilates, or meditation session exclusively for your team. All classes include mats, props, music, a qualified instructor, complimentary herbal tea, and full access to our lounge, toilets, and showers. Towels available for hire ($3 each). All prices exclude GST.</p>
+
+        <div class="class-grid fade-up">
+          <div class="class-card">
+            <p class="class-card-label">Private Group</p>
+            <h3>Yoga or Pilates Class</h3>
+            <div class="class-price">$300</div>
+            <p class="class-duration">60–75 minute session · +$25 per additional 15 minutes</p>
+            <ul>
+              <li>Mats, blocks, bolsters and all props included</li>
+              <li>Qualified AWHI instructor</li>
+              <li>Complimentary herbal tea</li>
+              <li>Full lounge, toilet and shower access</li>
+              <li>Available at our studio or your workplace</li>
+            </ul>
+          </div>
+          <div class="class-card">
+            <p class="class-card-label">Private Group</p>
+            <h3>Meditation Session</h3>
+            <div class="class-price">$200</div>
+            <p class="class-duration">Minimum 30 minutes · +$25 per additional 15 minutes</p>
+            <ul>
+              <li>Guided by a qualified meditation facilitator</li>
+              <li>Complimentary herbal tea</li>
+              <li>Full lounge, toilet and shower access</li>
+              <li>Available at our studio, your workplace, or as a webinar</li>
+              <li>Tailored to your team's needs on request</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="virtual-note fade-up">
+          <strong>Virtual &amp; Off-site Options</strong>
+          Virtual classes and sessions at your workplace are available. For off-site sessions requiring us to bring props (mats, blocks, etc.) to your place of business, an additional $50 transport fee applies. Please get in touch to arrange the specifics.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── IMAGE BREAK ─────────────────────────────────────── -->
+    <div class="img-break">
+      <img src="Images/AwhibyJuliaSabugosa-083.jpg" alt="Group meditation session at AWHI studio" />
+    </div>
+
+    <!-- ── WORKSHOPS ──────────────────────────────────────── -->
+    <section class="ww-section bg-green" id="workshops">
+      <div class="container">
+        <span class="section-label" style="color:var(--kawakawa);">Option 3</span>
+        <h2>Educational Presentations<br>&amp; Workshops</h2>
+        <p class="section-intro">Our workshops and seminars are delivered by highly qualified senior facilitators — as webinars, face-to-face (at our studio or your offices), or in a dual-delivery format. Tailored to corporate and organisational environments.</p>
+
+        <div class="workshop-intro-grid fade-up">
+          <div class="workshop-type-card">
+            <h3>Presentations</h3>
+            <p>Shorter informational seminars — generally 30–60 minutes — that introduce key concepts without requiring pre/post assessments or movement practice. Conclude with a Q&amp;A.</p>
+          </div>
+          <div class="workshop-type-card">
+            <h3>Workshops</h3>
+            <p>Longer, practice-based offerings that can be adapted to run as 1–2 hour seminars, half-day, full-day, or multi-day interactive courses. Include movement and/or meditation, practical activities, and applicable tools for everyday life.</p>
+          </div>
+        </div>
+
+        <div class="workshop-grid fade-up">
+          <div class="workshop-card">
+            <h3>The Science of Stress, Yoga &amp; Meditation</h3>
+            <p>Introduces the science behind the benefits of yoga and meditation — including the effects of work-related stress and burnout on the nervous system, current research on yoga and meditation, and the relationship between mindfulness and hauora.</p>
+            <p>Delivered as a 30–60 min seminar or webinar. We discuss yoga and meditation through the kaupapa of Te Whare Tapa Whā.</p>
+            <div class="workshop-covers">
+              <p class="workshop-covers-label">Covers</p>
+              <ul>
+                <li>Work-related burnout</li>
+                <li>Stress and the nervous system</li>
+                <li>Mindfulness</li>
+                <li>Empirical support for yoga &amp; meditation</li>
+                <li>Te Whare Tapa Whā integration</li>
+              </ul>
+            </div>
+          </div>
+          <div class="workshop-card">
+            <h3>Mindfulness &amp; Meditation</h3>
+            <p>Introduces the basics of mindfulness and meditation — the 'what, why and how' of beginning a practice. Participants are taken through mindfulness techniques including dyadic conversation, journaling, breathwork, and meditation.</p>
+            <p>Available as a 30–60 min presentation or a longer practice-based workshop (1–2 hours, half-day, or multi-day).</p>
+            <div class="workshop-covers">
+              <p class="workshop-covers-label">Covers</p>
+              <ul>
+                <li>Stress and health</li>
+                <li>Mindfulness</li>
+                <li>Journaling as self-inquiry</li>
+                <li>Breathwork</li>
+                <li>Meditation techniques</li>
+              </ul>
+            </div>
+          </div>
+          <div class="workshop-card">
+            <h3>Engagement at Work: Strengths &amp; Values</h3>
+            <p>Explores the connections between performance and engagement, offering tools for creating an upwards spiral of positive emotion and engagement in the workplace. Grounded in positive psychology research on flow and strengths.</p>
+            <p>Adaptable to a 1–2 hour seminar, half-day, or full-day format.</p>
+            <div class="workshop-covers">
+              <p class="workshop-covers-label">Covers</p>
+              <ul>
+                <li>Engagement at work</li>
+                <li>Flow theory of optimal performance</li>
+                <li>Digital wellbeing</li>
+                <li>Using strengths at work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-note fade-up">
+          <strong>Don't see what you're looking for?</strong> We're happy to create new courses or tailor our current offerings to make them relevant to your specific workplace needs. Get in touch to discuss. More information on our facilitators available upon request.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA SPLIT ───────────────────────────────────────── -->
+    <div class="cta-split">
+      <div class="cta-split-img">
+        <img src="Images/Awhi_BookClubbyJuliaSabugosa-03.jpg" alt="People connecting over tea at AWHI studio" />
+      </div>
+      <div class="cta-split-content">
+        <span class="section-label" style="color:var(--kawakawa);">Get in touch</span>
+        <h2>Let's design something<br>for your team.</h2>
+        <p>If you're interested in any of our Workplace Wellness options, or would like to chat about how we can create something that meets your specific needs, please get in touch with Kathleen.</p>
+        <p>📧 <a href="mailto:kathleen@awhiyoga.co.nz">kathleen@awhiyoga.co.nz</a></p>
+        <p>📞 <a href="tel:+64210286328">021 028 63284</a></p>
+        <p style="margin-top:0.5rem; font-size:0.875rem; color:rgba(244,239,228,0.6);">Level 2 / 15 Johnston Street, Wellington Central</p>
+        <div class="cta-buttons">
+          <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-primary">Email Kathleen</a>
+          <a href="contact.html" class="btn btn-outline-cream">Contact page</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://images.squarespace-cdn.com/content/v1/5bc9338d2727be3db78aefe5/e2638b9b-96be-4857-882a-e660992b4d27/imageonline-co-transparentimage.png" alt="AWHI Yoga & Wellbeing" />
+          <p>Wellington's home for yoga, Pilates, meditation and community wellbeing — rooted in te ao Māori, open to all.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">View timetable</a></li>
+            <li><a href="pricing.html">Pricing &amp; Membership</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="team.html">About AWHI</a></li>
+            <li><a href="school/index.html">Teacher Training</a></li>
+            <li><a href="studio-hire.html">Studio Hire</a></li>
+            <li><a href="workplace-wellness.html">Workplace Wellness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Find us</h4>
+          <p>
+            Level 2, 15 Johnston Street<br>
+            Wellington CBD<br>
+            Aotearoa New Zealand<br><br>
+            <a href="tel:+6444995006">+64 4 499 5006</a><br>
+            <a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AWHI Yoga & Wellbeing. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => {
+      const isOpen = navLinks.style.display === 'flex';
+      navLinks.style.display = isOpen ? 'none' : 'flex';
+      if (!isOpen) {
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '80px';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = 'var(--ngahere)';
+        navLinks.style.padding = '1.5rem 2rem';
+        navLinks.style.gap = '1.25rem';
+      }
+    });
+  </script>
+
+</body>
+</html>

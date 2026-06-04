@@ -344,7 +344,8 @@ We have copies of Kupu Whenua for sale at the studio for $32.  You can get yours
 But underneath all of it, something hasn't shifted. The same feelings keep returning. The same dynamics play out. The same inner voice. The same loops.
 
 This event is for people who are ready to understand why. You'll leave with a clear map of your core wound, a lived experience of beginning to move through it, and a practical framework to continue the work.
-**Images**
+
+AWHI is offering promotional support only, so all enquiries about the event must be directed to the facilitator. You can learn more through her website at thepatternshift.com
 **Facilitator: Allura Halliwell
 **Facilitator bio:  Allura Halliwell is Australia's leading core wound healer and founder of The Consciousness Method™. With a background in psychology and advanced training in Quantum Meditation, Allura has helped hundreds of people access a deeper relationship with their authentic, whole self — by returning them to what was always already there. The Pattern Shift is the entry point into her deeper work.
 **Facilitator photo: PatternShift.jpg

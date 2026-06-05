@@ -339,11 +339,9 @@ We have copies of Kupu Whenua for sale at the studio for $32.  You can get yours
 **Booking link: https://thepatternshift.com/#events
 
 **Card description** (1–2 sentences for the events grid): Spend four hours with Allura Halliwell understanding how you can shift from within.
-**Full description**: Most people who find their way here have already done a lot of work on themselves. Maybe you've read the books. Sat with the therapists. Tried the breathwork, the meditation, the weekend workshops. And in many ways it has helped.
-
-But underneath all of it, something hasn't shifted. The same feelings keep returning. The same dynamics play out. The same inner voice. The same loops.
-
-This event is for people who are ready to understand why. You'll leave with a clear map of your core wound, a lived experience of beginning to move through it, and a practical framework to continue the work.
+**Full description**: Spend four hours with Allura Halliwell and discover the single pattern that has quietly shaped your choices, relationships, and sense of self. Then shift it.
+Maybe you've done the therapy, the workshops, the inner work. And in many ways, it has helped. But underneath it all, something still hasn't shifted. The same feelings keep returning. The same loops. The same inner voice. That's because most approaches work on the surface without ever reaching the root.
+Beneath every recurring relationship pattern, confidence struggle, or motivation block is a core wound formed early. One that has quietly been organising your reality ever since. Until it's seen clearly, the pattern cannot change. The Pattern Shift goes to the right layer.
 
 AWHI is offering promotional support only, so all enquiries about the event must be directed to the facilitator. You can learn more through her website at thepatternshift.com
 **Facilitator: Allura Halliwell

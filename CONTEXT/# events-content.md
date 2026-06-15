@@ -227,7 +227,7 @@ Download her app here: https://elivatebyeli.com/ **
 
 ---
 ## Prenatal Yoga - Teaching Pregnant Bodies
-**Date: Fri–Sun, 14–16 August 2026
+**Date: Fri–Sun, 7-9 August 2026
 **Time: Fri 5:30–8:30pm · Sat 10am–6pm · Sun 12–6pm
 **Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
 **Price: $349 Early Bird (before 17 Jul7); $399 Full Rate 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AWHI Yoga School — Logo Export</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    body { background: #bbb9b3; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 2rem; gap: 1.5rem; }
+    .card { background: white; padding: 3rem 4rem; box-shadow: 0 4px 32px rgba(0,0,0,0.25); }
+    #preview { display: block; width: 500px; height: auto; }
+    .controls { display: flex; gap: 1rem; }
+    button {
+      font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      border: none; padding: 0.65rem 1.5rem; cursor: pointer;
+    }
+    .btn-dl { background: #1C3829; color: #F4EFE4; }
+    .btn-dl:hover { background: #142a1f; }
+    .btn-tr { background: transparent; border: 1.5px solid #1C3829; color: #1C3829; }
+    .btn-tr:hover { background: rgba(28,56,41,0.06); }
+    p { font-size: 0.8rem; color: rgba(0,0,0,0.45); margin: 0; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <img id="preview" src="images/LOGOS/Awhi_YogaSchool.svg" alt="AWHI Yoga School logo" />
+</div>
+
+<div class="controls">
+  <button class="btn-dl" onclick="exportPNG(false)">Download PNG (white bg)</button>
+  <button class="btn-tr" onclick="exportPNG(true)">Download PNG (transparent)</button>
+</div>
+<p>Exports at 2× resolution (≈ 1479 × 599 px)</p>
+
+<canvas id="canvas" style="display:none"></canvas>
+
+<script>
+  const SCALE = 2;
+  const W = 739.21332;
+  const H = 299.30667;
+
+  async function exportPNG(transparent) {
+    // Fetch SVG and strip external font import (prevents canvas taint)
+    const response = await fetch('images/LOGOS/Awhi_YogaSchool.svg');
+    let svgText = await response.text();
+    svgText = svgText.replace(/<defs>[\s\S]*?<\/defs>/, '<defs/>');
+
+    const canvas = document.getElementById('canvas');
+    canvas.width  = Math.round(W * SCALE);
+    canvas.height = Math.round(H * SCALE);
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (!transparent) {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    const dataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgText);
+    const img = new Image();
+    await new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; img.src = dataUrl; });
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    const link = document.createElement('a');
+    link.download = transparent ? 'AWHI_YogaSchool_transparent.png' : 'AWHI_YogaSchool_white.png';
+    link.href = canvas.toDataURL('image/png');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+
+</body>
+</html>

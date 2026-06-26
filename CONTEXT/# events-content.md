@@ -347,3 +347,29 @@ AWHI is offering promotional support only, so all enquiries about the event must
 **Facilitator: Allura Halliwell
 **Facilitator bio:  Allura Halliwell is Australia's leading core wound healer and founder of The Consciousness Method™. With a background in psychology and advanced training in Quantum Meditation, Allura has helped hundreds of people access a deeper relationship with their authentic, whole self — by returning them to what was always already there. The Pattern Shift is the entry point into her deeper work.
 **Facilitator photo: PatternShift.jpg
+___
+##Title of Event: Tricky Transitions: Advanced Asana Workshop
+
+**Date: Sunday, 19th July
+**Time: 12-2pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: $35 (15% off AWHI contract members)
+**Image: Awhi-169.jpg
+**Booking link: https://momence.com/l/k8hayBWO
+
+**Card description** (1–2 sentences for the events grid): Play with poses and the space in between!
+**Full description**: A fun, interactive workshop that'll take you through a variety of asana and then link them together in creative and challenging ways!  
+
+We'll start by workshopping various intermediate/advanced asana (eg, binds, arm balances and standing balances -- the ones that humble you). Then, we'll work through creative ways of linking them together, letting it flow or fall apart in the best possible way!
+
+Expect to work hard, laugh a lot, and play with your edges. Ask questions and learn something new about your asana practice. 
+
+This 2 hour workshop is all levels, but come with some vinyasa experience under your belt and *definitely* leave your ego at the door! 
+
+Includes mat hire & props. 
+
+15% off AWHI members on 3/6/12 month contracts! 
+**Images**
+**Facilitator: Kathleen Kuehn
+**Facilitator bio:  KK (500-ERYT) is the co-owner and chief enabler at AWHI Yoga (meaning: she makes things happen!). She takes an alignment-based, purposeful approach to teaching that focuses on self-inquiry and personal growth. Mostly known for her sharp wit and playful approach — because learning doesn't always have to be serious!
+**Facilitator photo: Kathleen.jpg

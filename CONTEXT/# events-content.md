@@ -373,3 +373,35 @@ Includes mat hire & props.
 **Facilitator: Kathleen Kuehn
 **Facilitator bio:  KK (500-ERYT) is the co-owner and chief enabler at AWHI Yoga (meaning: she makes things happen!). She takes an alignment-based, purposeful approach to teaching that focuses on self-inquiry and personal growth. Mostly known for her sharp wit and playful approach — because learning doesn't always have to be serious!
 **Facilitator photo: Kathleen.jpg
+
+---
+##Yoga in ACTion 
+
+**Date: Saturdays through October & November (3, 10, 17, 24, 31 Oct & 7, 14, 21 Nov 2026) 
+**Time: · 9–10:30am
+**Location: Online (Meeting Link TBD)
+**Price: $349 (before 5th Sept) / $399 Full
+**Image: Mel.png
+**Booking link: https://momence.com/l/b8hyJ6W0
+
+**Card description** (1–2 sentences for the events grid): 
+**Full description: Eight online sessions integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT). Based on the Mindfulness Yoga ACT (MYACT) protocol, this module provides evidence-based tools for supporting students living with stress, chronic pain, or emotional challenges. Not yoga therapy — practical classroom tools for resilience and values-aligned teaching.
+
+Course Format:  
+The course is modelled on the 8 Limbs of Yoga, with each week focused on one of these limbs;
+Self-paced reflective tasks assigned over the week related to each week's focus (limb); of the  Weekly 90-min online group discussions via Google Meets that reflect on the week's tasks and learnings. Each call begins with some light movement, meditation and/or breath work. Each call will be recorded in case you miss one and kept confidential amongst group participants only. 
+
+Who this is for:
+Yoga teachers and practitioners interested in supporting holistic wellbeing through traditional yogic wisdom and contemporary ACT therapy principles. 
+
+Existing RYTs can take this course for 15 CE Credits with Yoga Alliance or as a 15 hour Elective towards AWHI Yoga School's 300hr Yoga certification.
+
+**Facilitator: Melissa Rivard
+**Facilitator bio:  Melissa is a registered clinical naturopath and nutritionist, health coach and AWHI yoga teacher currently residing in New York City. 
+
+She is the founder of Wellkind.co.nz. helping busy professionals to restore health and reclaim vitality by addressing the key drivers of health concerns. 
+
+Through personalised, evidence-based strategies, she works with her clients to reconnect with the essential foundations of health and wellbeing fostering resilience and sustainable health. Learn more at https://www.wellkind.co.nz/
+**Facilitator photo: Mel.png
+
+---

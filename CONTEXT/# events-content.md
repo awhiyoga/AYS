@@ -384,17 +384,26 @@ Includes mat hire & props.
 **Image: Mel.png
 **Booking link: https://momence.com/l/b8hyJ6W0
 
-**Card description** (1–2 sentences for the events grid): 
-**Full description: Eight online sessions integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT). Based on the Mindfulness Yoga ACT (MYACT) protocol, this module provides evidence-based tools for supporting students living with stress, chronic pain, or emotional challenges. Not yoga therapy — practical classroom tools for resilience and values-aligned teaching.
+**Card description** (1–2 sentences for the events grid): An 8-week course integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT) to support holistic mental and emotional wellbeing.
+**Full description: Eight online sessions integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT). This module provides evidence-based tools for supporting students living with stress, chronic pain, or emotional challenges. 
+
+What is ACT?
+Imagine you're rowing a boat and a storm hits. You can spend all your energy trying to make the storm stop (which is out of your control) or you can put your hands back on the oars and keep rowing toward where you want to go, storm and all. ACT is teaching people to keep rowing - in alignment with matters.
+
+It's an evidence-based approach built around a few key principles: being more present, making space for a full range of thoughts and feelings rather than fighting them, and having the courage to act in line with what matters to you - your values. These tools have been shown to help people better manage stress, mild-to-moderate emotional distress such as anxiety, and even chronic pain.
+
+
+Who is this for?
+Yoga teachers and practitioners interested in supporting general holistic mental and emotional wellbeing through traditional yogic wisdom and contemporary ACT principles.
+Existing RYTs can take this course for 15 CE Credits with Yoga Alliance or as a 15 hour Elective towards AWHI Yoga School's 300hr Yoga certification.
 
 Course Format:  
-The course is modelled on the 8 Limbs of Yoga, with each week focused on one of these limbs;
-Self-paced reflective tasks assigned over the week related to each week's focus (limb); of the  Weekly 90-min online group discussions via Google Meets that reflect on the week's tasks and learnings. Each call begins with some light movement, meditation and/or breath work. Each call will be recorded in case you miss one and kept confidential amongst group participants only. 
+The course is will explore a range of yoga philosophical concepts including ‘Dhāranā, Samskāra, Dyāna, Karma, Svarūpa, Karunā, samādhi.
 
-Who this is for:
-Yoga teachers and practitioners interested in supporting holistic wellbeing through traditional yogic wisdom and contemporary ACT therapy principles. 
+Self-paced reflective tasks assigned over the week related to each week's conceptual focus; Weekly 90-min online group discussions via Google Meets that reflect on the week's tasks and learnings. Each call begins with some light movement, meditation and/or breath work. Each call will be recorded in case you miss one and kept confidential amongst group participants only. 
 
-Existing RYTs can take this course for 15 CE Credits with Yoga Alliance or as a 15 hour Elective towards AWHI Yoga School's 300hr Yoga certification.
+Caveat:
+This course is not yoga therapy, nor does it qualify you in ACT. It's designed to help you make connections between yogic wisdom and behavioural science principles, and to integrate simple, complementary tools into your existing teaching. 
 
 **Facilitator: Melissa Rivard
 **Facilitator bio:  Melissa is a registered clinical naturopath and nutritionist, health coach and AWHI yoga teacher currently residing in New York City. 

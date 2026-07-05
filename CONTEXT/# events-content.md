@@ -384,7 +384,7 @@ Includes mat hire & props.
 **Image: Mel.png
 **Booking link: https://momence.com/l/b8hyJ6W0
 
-**Card description** (1–2 sentences for the events grid): An 8-week course integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT) to support holistic mental and emotional wellbeing.
+**Card description** (1–2 sentences for the events grid): An 8-week course integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT) to support resilience, holistic mental and emotional wellbeing and values-aligned teaching & living.
 **Full description: Eight online sessions integrating yoga, mindfulness, and Acceptance & Commitment Therapy (ACT). This module provides evidence-based tools for supporting students living with stress, chronic pain, or emotional challenges. 
 
 What is ACT?

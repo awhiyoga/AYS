@@ -916,7 +916,7 @@
 
     /* ─── CTA SECTION ────────────────────────────────────── */
     .cta-section {
-      background: var(--wai);
+      background: var(--ngahere);
       padding: clamp(4rem, 8vw, 7rem) 0;
       text-align: center;
     }
@@ -1862,7 +1862,7 @@
         </div>
 
         <p class="pricing-note">Early Bird deadline is 4 weeks before each module's first session. To enquire about individual modules or payment plans:</p>
-        <a href="mailto:kathleen@awhiyoga.co.nz" class="btn btn-outline-dark" style="margin-top:1rem;font-size:0.85rem;">Enquiries</a>
+        <a href="#enquire" class="btn btn-outline-dark" style="margin-top:1rem;font-size:0.85rem;">Enquiries</a>
       </div>
 
     </div>
@@ -1878,13 +1878,34 @@
   </div>
 
   <!-- ─── CTA SECTION ───────────────────────────────────────── -->
-  <section class="cta-section" aria-labelledby="cta-heading">
+  <section class="cta-section" id="enquire" aria-labelledby="cta-heading">
     <div class="container">
       <h2 id="cta-heading" class="fade-up">Questions? We'd love to hear from you.</h2>
       <p class="fade-up delay-1">Whether you're deciding between modules, wondering if the full 300hr is right for you, or just curious — reach out. We're happy to talk it through.</p>
-      <div class="cta-btns fade-up delay-2">
-        <a href="https://momence.com/dashboard/intake-form/PlXwEldG71" class="btn btn-outline-cream" target="_blank" rel="noopener">Register</a>
-        <a href="index.html" class="btn btn-outline-cream">View all programmes</a>
+      <div class="fade-up delay-2" style="max-width:560px;margin-inline:auto;margin-top:2rem;">
+        <div id="momence-plugin-lead-form"></div>
+        <script
+          async
+          type="module"
+          id="momence-plugin-lead-form-src"
+          host_id="20264"
+          fields="firstName,lastName,email,phoneNumber,enquiries"
+          token="JxjQoZ38Vq"
+          country_code="nz"
+          source_id="183094"
+          data_collect_consent="required"
+          data-field-def='{"firstName":{"type":"text","label":"First name","required":true},"lastName":{"type":"text","label":"Last name","required":true},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"enquiries":{"type":"text","label":"Questions or Inquiries?","required":false,"hidden":false}}'
+          data-redirect-after-submit-to="https://awhiyoga.co.nz/school/300hr-thankyou.html"
+          data-on-success-msg="Ngā mihi nui!"
+          src="https://momence.com/plugin/lead-form/lead-form.js"
+        ></script>
+        <style>
+          :root {
+            --momenceColorBackground: #F4EFE4;
+            --momenceColorPrimary: 28, 56, 41;
+            --momenceColorBlack: 36, 36, 36;
+          }
+        </style>
       </div>
     </div>
   </section>

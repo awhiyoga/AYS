@@ -414,3 +414,26 @@ Through personalised, evidence-based strategies, she works with her clients to r
 **Facilitator photo: Mel.png
 
 ---
+##Title of Event: RECLAIM: A Nervous System and Identity Reset
+
+**Date: Saturday, 15 August
+**Time: 12-3pm
+**Location: AWHI Yoga & Wellbeing, Level 2, 15 Johnston Street, Wellington CBD** 
+**Price: Early Bird $89 (until 8 August), Full Price $130 (from 9 August)
+**Image: Reclaim.jpg
+**Booking link: https://buy.stripe.com/9B628s0fC266cVH0IJefC00
+
+**Card description** (1–2 sentences for the events grid): RECLAIM is a powerful 3-hour nervous system and identity reset experience designed to help you reconnect to yourself beyond survival mode. 
+**Full description: RECLAIM is a powerful 3-hour nervous system and identity reset experience designed to help you reconnect to yourself beyond survival mode. Through teaching, embodiment movement, breathwork, music, and future-self integration, this workshop will guide you to release emotional patterns, reconnect to your body, and reclaim the version of you that feels grounded, safe, powerful, and fully alive.
+
+This experience is for anyone feeling stuck in repeating relationship patterns, emotional exhaustion, self-abandonment, anxiety, or disconnection from themselves. Expect a deeply transformative experience combining nervous system education, somatic movement, guided breathwork, and hypnosis-based future self anchoring.
+
+You are not broken. Your body adapted to survive. Now it’s time to come home to yourself.
+
+**Images: Reclaimheader.jpg
+**Facilitator: Linda Wysocka
+**Facilitator bio: Linda is here to guide you on a journey to uncover your authentic self, heal deeply, and step boldly into the life you were meant to live. Her path has been one of transformation, blending profound personal growth with professional expertise. With certifications in NLP, Time Line Therapy™, Hypnosis, Breathwork, and Yoga Teacher Training, she brings together powerful tools to help clients master mind, body, and soul, creating alignment and confidence in every aspect of life and business.
+As a former clinical manager and seasoned investor, Linda also understands the demands of leadership and the importance of resilience and clarity in achieving success. This unique blend of transformational coaching and real-world experience allows her to empower individuals to unlock their potential, reconnect with their purpose, and create meaningful change.
+Through her Authentic Self Mastery coaching and transformational retreats, Linda creates immersive experiences designed to help clients release what no longer serves them, reconnect with their inner wisdom, and embrace a life filled with authenticity, joy, and purpose. Whether someone is looking to heal, grow, or transform their life and relationships, Linda is there to support them every step of the way.
+It's time to let go of the old and step into your power. Linda helps create a future that feels true to you. 
+**Facilitator photo: Reclaim.jpg

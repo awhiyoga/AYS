@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>300hr YTT Payment Plans — AWHI Yoga School, Wellington</title>
+  <meta name="description" content="Extended payment plan options for the AWHI 300hr Vinyasa YTT — 6, 8, and 10 instalment arrangements." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ao:        #2A2320;
+      --hua:       #F4EFE4;
+      --wai:       #C05C2C;
+      --pango:     #242424;
+      --kawakawa:  #7A9E7E;
+      --kowhai:    #D4A553;
+      --ua:        #EBE0D8;
+      --ngahere:   #1C3829;
+
+      --font-display: 'Cormorant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --max-w: 1280px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--hua);
+      color: var(--pango);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem;
+      background: var(--ao); color: var(--hua);
+      padding: 0.5rem 1.25rem; font-size: 0.875rem; font-weight: 600;
+      z-index: 9999; transition: top 0.2s; text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid var(--kowhai); outline-offset: 3px; }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100; height: var(--nav-h);
+      display: flex; align-items: center;
+      background: var(--ao);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo {
+      font-family: var(--font-display); font-size: 1.9rem; font-weight: 700;
+      color: var(--hua); letter-spacing: 0.01em; white-space: nowrap;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.75rem; }
+    .nav-links a {
+      color: var(--hua); font-size: 0.83rem; font-weight: 500;
+      letter-spacing: 0.04em; opacity: 0.8; transition: opacity 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; }
+    .nav-links a.active { border-bottom: 1.5px solid var(--kowhai); padding-bottom: 2px; }
+    .nav-book {
+      background: var(--wai) !important; color: var(--hua) !important;
+      padding: 0.6rem 1.4rem; font-weight: 700 !important; font-size: 0.8rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; opacity: 1 !important;
+      transition: background 0.25s !important; border: none;
+    }
+    .nav-book:hover { background: #a34a20 !important; }
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 0.5rem;
+    }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--hua); }
+    .nav-mobile {
+      display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: var(--ao); padding: 1.5rem clamp(1.5rem, 5vw, 4rem) 2rem;
+      z-index: 99; flex-direction: column; gap: 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: var(--hua); font-size: 1rem; font-weight: 500;
+      padding: 0.9rem 0; border-bottom: 1px solid rgba(244,239,228,0.08); opacity: 0.85;
+    }
+    .nav-mobile a.active { opacity: 1; color: var(--kowhai); }
+    .nav-mobile .nav-book { margin-top: 1.25rem; text-align: center; display: block; padding: 0.85rem 2rem; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--ao);
+      padding: calc(var(--nav-h) + 3.5rem) 0 3rem;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(244,239,228,0.5);
+      margin-bottom: 1.5rem; transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--hua); }
+    .back-link::before { content: '←'; }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 600; color: var(--hua); line-height: 1.05;
+      margin-bottom: 1rem; text-wrap: balance;
+    }
+    .page-header p {
+      font-size: 1rem; color: rgba(244,239,228,0.7);
+      max-width: 58ch; line-height: 1.75;
+      border-left: 2px solid var(--kawakawa); padding-left: 1rem;
+    }
+
+    /* ── CONTENT ── */
+    .content { padding: clamp(3rem, 6vw, 5rem) 0; }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* ── PLAN CARD ── */
+    .plan-card {
+      background: #fff;
+      border: 1px solid rgba(28,56,41,0.1);
+    }
+    .plan-card-header {
+      background: var(--ngahere);
+      padding: 1.25rem 1.5rem;
+    }
+    .plan-card-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem; font-weight: 600; color: var(--hua);
+      margin-bottom: 0.2rem;
+    }
+    .plan-card-header p {
+      font-size: 0.78rem; color: rgba(244,239,228,0.6);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.875rem; font-variant-numeric: tabular-nums;
+    }
+    thead th {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--kawakawa);
+      padding: 0.7rem 1rem 0.6rem;
+      text-align: left; background: rgba(122,158,126,0.07);
+      border-bottom: 1px solid rgba(28,56,41,0.1);
+    }
+    thead th:last-child { text-align: right; }
+    tbody td {
+      padding: 0.6rem 1rem; color: var(--pango);
+      border-bottom: 1px solid rgba(28,56,41,0.07);
+      vertical-align: middle; font-size: 0.9rem;
+    }
+    tbody td:last-child { text-align: right; }
+    tbody tr:last-child td { border-bottom: none; }
+    td.col-date { color: #888; font-size: 0.82rem; }
+    .row-deposit td {
+      background: rgba(28,56,41,0.04);
+      font-weight: 600;
+    }
+    .row-total {
+      border-top: 2px solid rgba(28,56,41,0.15);
+    }
+    .row-total td {
+      font-weight: 700; color: var(--ngahere);
+      font-size: 0.9rem; border-bottom: none;
+    }
+    .row-total td:first-child {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; vertical-align: middle;
+    }
+
+    /* ── NOTE ── */
+    .note {
+      margin-top: 2.5rem;
+      border-left: 2px solid var(--kawakawa);
+      padding: 1rem 1.25rem;
+      background: rgba(122,158,126,0.07);
+    }
+    .note p {
+      font-size: 0.875rem; color: rgba(42,35,32,0.65); line-height: 1.75;
+    }
+    .note p + p { margin-top: 0.5rem; }
+    .note strong { color: var(--pango); font-weight: 600; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--ao); color: rgba(244,239,228,0.7);
+      padding: clamp(3rem,6vw,5rem) 0 0;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(244,239,228,0.08);
+    }
+    .footer-logo {
+      font-family: var(--font-display); font-size: 1.6rem;
+      font-weight: 700; color: var(--hua); margin-bottom: 0.75rem;
+    }
+    .footer-tagline { font-size: 0.9rem; line-height: 1.7; max-width: 260px; }
+    .footer-col h4 {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--hua); margin-bottom: 1rem;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul li a { font-size: 0.875rem; color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--hua); }
+    .footer-contact p { font-size: 0.875rem; line-height: 1.8; }
+    .footer-contact a { color: rgba(244,239,228,0.6); transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--hua); }
+    .footer-socials { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .footer-socials a {
+      display: inline-block; width: 38px; height: 38px; padding: 9px;
+      border: 1px solid rgba(244,239,228,0.25); color: rgba(244,239,228,0.7);
+      line-height: 0; transition: background 0.2s, border-color 0.2s;
+    }
+    .footer-socials a:hover { background: rgba(244,239,228,0.1); border-color: rgba(244,239,228,0.5); color: rgba(244,239,228,1); }
+    .footer-socials a svg { width: 20px !important; height: 20px !important; display: block !important; }
+    .footer-bottom {
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(244,239,228,0.08);
+    }
+    .footer-bottom p { font-size: 0.78rem; }
+
+    @media (max-width: 1024px) {
+      .plans-grid { grid-template-columns: 1fr; max-width: 520px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMH30J5X50"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-WMH30J5X50');
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">AWHI Yoga School</a>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="200hr.html">200hr YTT</a>
+        <a href="yin-ytt.html">50/100hr Yin YTT</a>
+        <a href="300hr.html" class="active">300hr YTT</a>
+        <a href="scholarship.html">Scholarships</a>
+        <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
+    <a href="/index.html">Home</a>
+    <a href="200hr.html">200hr YTT</a>
+    <a href="yin-ytt.html">50/100hr Yin YTT</a>
+    <a href="300hr.html" class="active">300hr YTT</a>
+    <a href="scholarship.html">Scholarships</a>
+    <a href="https://momence.com/u/awhi-yoga-&-wellbeing-o3iqV3" class="nav-book" target="_blank" rel="noopener">Book a class</a>
+  </nav>
+
+  <main id="main-content">
+
+    <header class="page-header">
+      <div class="container">
+        <a href="300hr.html" class="back-link">Back to 300hr YTT</a>
+        <h1>Revised Payment Plan Options</h1>
+        <p>The following options extend the original 4-instalment plan (total $4,695 NZD) over more, smaller payments. First payment (deposit) due 15 August 2026, with the balance settled by 30 June 2027.</p>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="container">
+
+        <div class="plans-grid">
+
+          <!-- 6-instalment -->
+          <div class="plan-card">
+            <div class="plan-card-header">
+              <h2>6-instalment plan</h2>
+              <p>$995 deposit · then 5 × $740 · total $4,695</p>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Payment</th><th>Due date</th><th>Amount (NZD)</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="row-deposit"><td>Deposit</td><td class="col-date">15 Aug 2026</td><td>$995.00</td></tr>
+                  <tr><td>Instalment 2</td><td class="col-date">18 Oct 2026</td><td>$740.00</td></tr>
+                  <tr><td>Instalment 3</td><td class="col-date">21 Dec 2026</td><td>$740.00</td></tr>
+                  <tr><td>Instalment 4</td><td class="col-date">22 Feb 2027</td><td>$740.00</td></tr>
+                  <tr><td>Instalment 5</td><td class="col-date">27 Apr 2027</td><td>$740.00</td></tr>
+                  <tr><td>Instalment 6</td><td class="col-date">30 Jun 2027</td><td>$740.00</td></tr>
+                  <tr class="row-total"><td>Total</td><td></td><td>$4,695.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 8-instalment -->
+          <div class="plan-card">
+            <div class="plan-card-header">
+              <h2>8-instalment plan</h2>
+              <p>$995 deposit · then 7 × $528.57 · total $4,695</p>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Payment</th><th>Due date</th><th>Amount (NZD)</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="row-deposit"><td>Deposit</td><td class="col-date">15 Aug 2026</td><td>$995.00</td></tr>
+                  <tr><td>Instalment 2</td><td class="col-date">30 Sep 2026</td><td>$528.57</td></tr>
+                  <tr><td>Instalment 3</td><td class="col-date">14 Nov 2026</td><td>$528.57</td></tr>
+                  <tr><td>Instalment 4</td><td class="col-date">30 Dec 2026</td><td>$528.57</td></tr>
+                  <tr><td>Instalment 5</td><td class="col-date">13 Feb 2027</td><td>$528.57</td></tr>
+                  <tr><td>Instalment 6</td><td class="col-date">31 Mar 2027</td><td>$528.57</td></tr>
+                  <tr><td>Instalment 7</td><td class="col-date">15 May 2027</td><td>$528.57</td></tr>
+                  <tr><td>Instalment 8</td><td class="col-date">30 Jun 2027</td><td>$528.58</td></tr>
+                  <tr class="row-total"><td>Total</td><td></td><td>$4,695.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 10-instalment -->
+          <div class="plan-card">
+            <div class="plan-card-header">
+              <h2>10-instalment plan</h2>
+              <p>$995 deposit · then 9 × $411.11 · total $4,695</p>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Payment</th><th>Due date</th><th>Amount (NZD)</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="row-deposit"><td>Deposit</td><td class="col-date">15 Aug 2026</td><td>$995.00</td></tr>
+                  <tr><td>Instalment 2</td><td class="col-date">19 Sep 2026</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 3</td><td class="col-date">25 Oct 2026</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 4</td><td class="col-date">29 Nov 2026</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 5</td><td class="col-date">04 Jan 2027</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 6</td><td class="col-date">08 Feb 2027</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 7</td><td class="col-date">16 Mar 2027</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 8</td><td class="col-date">20 Apr 2027</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 9</td><td class="col-date">26 May 2027</td><td>$411.11</td></tr>
+                  <tr><td>Instalment 10</td><td class="col-date">30 Jun 2027</td><td>$411.12</td></tr>
+                  <tr class="row-total"><td>Total</td><td></td><td>$4,695.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="note">
+          <p><strong>All plans total $4,695 NZD</strong> — the same as the standard 4-instalment rate. No additional fees apply for choosing an extended plan.</p>
+          <p><strong>Please note:</strong> full programme enrolment guarantees your place across all required modules and your chosen electives. Students who enrol module by module do not hold a guaranteed space — if a module reaches capacity before you register, we cannot guarantee availability. Enrolling in full is the only way to secure priority access to every module and elective you need.</p>
+          <p>To confirm your preferred plan or ask any questions, get in touch: <a href="mailto:kathleen@awhiyoga.co.nz" style="color:var(--kawakawa);">kathleen@awhiyoga.co.nz</a></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">AWHI Yoga School</div>
+          <p class="footer-tagline">Advanced yoga teacher training rooted in community and authentic practice. Wellington, Aotearoa New Zealand.</p>
+          <div class="footer-socials">
+            <a href="http://instagram.com/awhiyoga" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="http://facebook.com/awhiyoga" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCsPwhhwAvLk2ibuEWj-HcUA" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            <a href="https://www.linkedin.com/company/awhi-yoga" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>School</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="200hr.html">200hr YTT</a></li>
+            <li><a href="yin-ytt.html">50/100hr Yin YTT</a></li>
+            <li><a href="300hr.html">300hr YTT</a></li>
+            <li><a href="scholarship.html">Scholarships</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="../classes.html">Classes</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../events.html">Events</a></li>
+            <li><a href="../team.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>Level 2, 15 Johnston Street<br>Wellington</p>
+          <p><a href="tel:+6444995006">+64 4 499 5006</a></p>
+          <p><a href="mailto:kiaora@awhiyoga.co.nz">kiaora@awhiyoga.co.nz</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 AWHI Yoga &amp; Wellbeing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobile = document.getElementById('navMobile');
+    if (toggle) toggle.addEventListener('click', () => {
+      const open = mobile.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

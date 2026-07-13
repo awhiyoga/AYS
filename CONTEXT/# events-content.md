@@ -436,4 +436,7 @@ You are not broken. Your body adapted to survive. Now it’s time to come home t
 As a former clinical manager and seasoned investor, Linda also understands the demands of leadership and the importance of resilience and clarity in achieving success. This unique blend of transformational coaching and real-world experience allows her to empower individuals to unlock their potential, reconnect with their purpose, and create meaningful change.
 Through her Authentic Self Mastery coaching and transformational retreats, Linda creates immersive experiences designed to help clients release what no longer serves them, reconnect with their inner wisdom, and embrace a life filled with authenticity, joy, and purpose. Whether someone is looking to heal, grow, or transform their life and relationships, Linda is there to support them every step of the way.
 It's time to let go of the old and step into your power. Linda helps create a future that feels true to you. 
+
+AWHI is providing promotional support for this event, so please direct all enquiries to Linda at https://lindawysocka.com/
+
 **Facilitator photo: Reclaim.jpg

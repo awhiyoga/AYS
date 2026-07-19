@@ -432,10 +432,13 @@ You are not broken. Your body adapted to survive. Now it’s time to come home t
 
 **Images: Reclaimheader.jpg
 **Facilitator: Linda Wysocka
-**Facilitator bio: Linda is here to guide you on a journey to uncover your authentic self, heal deeply, and step boldly into the life you were meant to live. Her path has been one of transformation, blending profound personal growth with professional expertise. With certifications in NLP, Time Line Therapy™, Hypnosis, Breathwork, and Yoga Teacher Training, she brings together powerful tools to help clients master mind, body, and soul, creating alignment and confidence in every aspect of life and business.
-As a former clinical manager and seasoned investor, Linda also understands the demands of leadership and the importance of resilience and clarity in achieving success. This unique blend of transformational coaching and real-world experience allows her to empower individuals to unlock their potential, reconnect with their purpose, and create meaningful change.
-Through her Authentic Self Mastery coaching and transformational retreats, Linda creates immersive experiences designed to help clients release what no longer serves them, reconnect with their inner wisdom, and embrace a life filled with authenticity, joy, and purpose. Whether someone is looking to heal, grow, or transform their life and relationships, Linda is there to support them every step of the way.
-It's time to let go of the old and step into your power. Linda helps create a future that feels true to you. 
+**Facilitator bio: LLinda Wysocka is the creator of Rebirth Rhythm™, a transformational method that combines original music, breathwork, somatic movement, nervous system regulation, and feminine embodiment practices to support people in rebuilding themselves after life’s most challenging transitions.
+
+
+Based in Nelson/Tasman, New Zealand, Linda is a registered nurse, singer, sound healer, coach, and facilitator with advanced training in NLP, hypnosis, Timeline Therapy™, breathwork, yoga, Reiki, and shamanic practices. Drawing on both modern neuroscience and ancient healing traditions including wisdom from her Polish and German ancestry she creates powerful experiences that help people reconnect with their bodies, reclaim their voice, and step into a more authentic and empowered way of living.
+
+
+Through workshops, retreats, speaking engagements, and immersive experiences, Linda guides participants from survival mode into self-trust, resilience, joy, and personal transformation.
 
 AWHI is providing promotional support for this event, so please direct all enquiries to Linda at https://lindawysocka.com/
 
